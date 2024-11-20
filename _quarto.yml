@@ -8,16 +8,17 @@ execute:
 format:
   html:
     theme: 
-      - spacelab
-      - styles.css
+      - flatly
+      # - styles.css
     
     toc: true
     toc-depth: 5
     toc-expand: 1
-    # toc-title: Table of content
+    toc-title: Table of content
     
     citations-hover: true
     footnotes-hover: true
+    reference-location: margin
 
 website:
   title: "OutbreakTools training"
@@ -40,18 +41,36 @@ website:
         
     right: 
       - text: Module 1
-        # menu: 
-        #   - text: Download and prepare the tools
-        #     href: getting_started/download.qmd
+        menu:
+          - text: Module presentation
+            href: module_1/m1_objectives.qmd
+          - text: Introduction to OutbreakTools
+            href: module_1/m1_intro.qmd
+          - text: Tutorial
+            href: module_1/m1_tutorial.qmd
           
-          
-            
       
       - text: Module 2
-        # menu: 
-        #   - text: Dictionary sheet
-        #     href: reference/dictionary_sheet.qmd
+        menu:
+          - text: Module presentation
+            href: module_2/m2_objectives.qmd
+          - text: Introduction to the setup file
+            href: module_2/m2_intro.qmd
+          - text: Tutorial
+            href: module_2/m2_tutorial.qmd
+          
+      - text: How to
+        menu:
+          - text: Unblock files
+            href: how_to/unblock_files.qmd
+          - text: Download geobase
+            href: how_to/download_geobase.qmd
             
+      - text: Reference
+        menu: 
+          - text: Ribbons
+            href: reference/ribbons.qmd
+        
         
     tools:
       - icon: github

@@ -1,0 +1,94 @@
+---
+title: "Tutorial"
+---
+
+## Introduction
+
+In this tutorial you will get to familiarise yourself with OBT the OBT linelist interface [Remember all OBT linelist have the same type of interface]{.aside} and the corresponding dashboard.
+
+### Objectives
+
+- Explore analyses functionalities of the OBT linelist
+- Explore the intersection dashboard
+
+
+### Context of the tutorial
+
+A measles outbreak started in Chad, MSF decides to get involved in the response. A linelist is needed to collect patient data in structures. You are the epidemiologist responsible for Chad, or a referent epidemiologist for a zone. 
+
+XXX
+
+OBT or not OBT
+
+
+
+## Get the tutorial materials
+
+### Download and unzip the materials 📦
+
+The files that you are going to use are stored on Github, bundled in a `zip` archive. 
+
+1. Go to the [Github page](XXXXX) to download the archive. Save it on your computer (in your Downloads folder for example). 
+
+2. Unzip the whole archive and save the files locally. It is better to save the unzipped folder in a location that is not actively synchronised with Onedrive at the moment.
+
+
+### Description of the folder content
+
+XXX
+
+FALSE DATA...
+
+
+## Unblock OBT linelists and authorise macros
+
+OBT linelist use VBA macros to add functionalities. As a consequence, linelists that comes from the internet often need to be unblocked, and macro enabled in them. Follow the steps from [this page](../how_to/unblock_files.qmd)
+
+::: {.callout-note}
+You may need to perform some or all these steps on your computer, but you will certainly have to explain them to your collaborators using the linelist.
+:::
+
+
+
+
+## Prepare and deploy a linelist
+
+### Get an empty template
+
+As of now, there is no open SharePoint with all the OBT linelist accessible, but there are several ways to obtain a template:[There are discussions in the Epinetwork to setup an open SharePoint with all the latest versions of tools from the Epinetwork, so this part should be much straighforward soon]{.aside}
+
+- You have access to the current Epinetwork SharePoint, where all the last versions of the existing OBT tools are stored, go and get the most recent one for measles
+- This is a big project, maybe with several OCs and a SharePoint was setup with the linelist template (as was the case for Haiti, EastAfrica measles and cholera, mpox etc.)
+- You ask your epi-advisor (or equivalent position from your OC) who can access the Epinetwork Sharepoint
+- You can contact the EpiDS team who can send you the last version.
+
+::: {.callout}
+Always check the date in the template files name! As OBT tools are still in development, there are often new versions of the designer corresponding to new interface functionalities or bug fixes. Dictionaries might also be updated if there was a request for it. So if the date is more than 4 or five months old, you can bet there are newer versions, and if not, the EpiDS team can quickly re-generate the linelist for this disease to make sure the linelist has all the recent improvements.
+
+If someone handled you a file that is more than one year old, definitely ask around for newer versions!
+:::
+
+
+
+
+### General workflow (HERE OR IN LESSON?)
+
+
+### Fill the metadata
+### Import a geobase
+
+Download an import a country specific geobase in the linelist to populate dropdown menus of columns describing locations.
+
+1. Download the geobase following [these steps](../how_to/download_geobase.qmd) and save it locally
+2. Open the linelist
+3. Go to the [OutbreakTools Menu](../reference/ribbons.qmd#sec-linelist-ribbon)
+4. Click on the ["Import geobase" button](../reference/ribbons.qmd#sec-import-geobase)
+
+
+Geographical location are encoded using four columns that can accommodate up to four administrative levels, and these columns have a special status in OBT. You can recognize them by the orange background of their labels. 
+When you import a geobase in a linelist:
+•	The labels of the columns are updated with the administrative levels present in the geobase (e.g. “adm1_name” will change to “Province” for DRC).
+•	The categories of the dropdown menus update. 
+You can fill the variables either by using the cascading dropdown menus, or by using the GeoHelper button from the ribbon.
+
+

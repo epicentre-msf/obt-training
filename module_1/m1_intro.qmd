@@ -1,0 +1,112 @@
+---
+title: "What you need to know"
+---
+
+## Introduction
+
+### Linelists
+
+::: {.callout-tip title="Too Long; Did Not Read" collapse="true"}
+There are *many* excel linelists around, a lot of them are bad and generate data of terrible quality. The good ones are all different, and it is still often hard to gather data from different places. OubreakTools aims at providing robust, standardised linelists, with a system to send, centralise and visualise data.
+:::
+
+
+In order to run its projects, MSF and other organisation rely on patient level data during outbreak response. It is often recorded in several files (register, patient file, case investigation form, etc.) but some of it is usually gathered in so-called **linelists** files. These files are used by epidemiologists to describe outbreaks, but also by the medical team and HQ to monitor activities at a local or higher level. Good quality patient data can be further analysed to provide additional information such as risk factors, or pluged in models for forecasting.
+
+Linelists are, in essence, *flat tables* where one line represent one patient, and one column represents one variable for this patient. As such, linelists can be created in many software. Excel, while not the only available tool, has been massively used to collect linelist data across the world.
+
+#### Advantages of using Excel to build linelists
+
+- It is easy to create a table in Excel to collect data: most people can do it
+- It is easy to further customise (adding variables, changing labels etc.), making the file adaptable
+- It is easy to deploy because everybody knows a bit of Excel, minimal training is necessary
+- You can have some descriptive analyses within the file, which helps user have direct information on site
+- Excel is accessible offline, which is practical in places where internet access is limited
+- You can share the file with partners such as the MoH if needed
+
+In short, pretty much everybody can make a linelist if they need to, and many people *do*.
+
+#### Drawbacks of using Excel to build linelists
+
+Of course, Excel linelists have their drawbacks too:
+
+- Developing a *good* linelist that fosters data quality takes much more time than just setting up a table, and not everybody knows the Excel functionalities to do so. The consequence of that is that there are *a lot* of terrible linelists around
+- Files for different diseases usually differ a lot. They may have been developped by different people with different skills. Perhaps the developper used a common template at the start and re-used code, but usually the file diverge. Bringing the same functionalities to all of them takes time and effort
+- Consequently, maintenance of the files is time consuming. Using VBA scripts to easily get data in and out of your linelist helps, but does not solve all the problem.
+- The files can get heavy and finicky when they get too complicated
+- Data protection is not as good as dedicated clinical software such as RedCap
+- Excel files are not centralised by default: each site has its own data. Even if the linelist template is the same, it takes manual actions to gather the data and centralise it
+
+### An ecosystem of files
+
+As a result, there is a **whole ecosystem of files** used in and outside MSF, with different interfaces, dictionaries, functionalities, languages. The data is fragmented, hard to reconcile and often of bad quality. This makes it is hard to have visibility on MSF activities and to exploit the data.
+
+To alleviate some of the above problems, MSF OCs try to provide linelists on which disease referent and epidemiologists agreed upon, to standardise data collection within OC. Some of these files are quite good, some of them not so much. The quality and functionalities included tend to depend on both OC and disease.
+
+Better, for some diseases, OCs reached an agreement on a dictionary and a common tool. Epicentre has provided a number of these "intersection" linelists in the recent years. This files however also suffered from some problems: they were hard to maintain and had different functionalities depending on diseases [The number of functionalities, and the general data quality increased with time as skills grew, which resulted in very different linelist in terms of both interface and capacities]{.aside}. 
+
+Epicentre tried to go a step further, capitalising on what was learned developing and maintaining these tools, and developed **OutbreakTools** a set of tools to improve data collection, quality and visualisation. A good part of OutbreakTools it to help generating good quality, robust linelists.
+
+
+## OutbreakTools
+
+### Concept
+
+The main idea of OutbreakTools linelist generation is to separate the content of the linelist (which *variables* and *analyses* are in the linelist) from the file interface and functionalities.^[An idea that is not novel, as separating content and presentation (or style) is a classic idea, that you find in HTML/CSS, Markdown, Latex or even using styles in Word]
+
+The content is described in a **setup file**, a special Excel file that allows describing all the variables and the analyses that should go in the linelist.[You can think of the **setup file** as a _recipe_ for a given linelist.]{.aside} Another Excel file, the **designer**, reads the **setup file** and runs scripts to generate a linelist. The designer creates the whole linelist structure, adds the buttons and many functionalities.[If you think of the **setup file** as a recipe, the designer is the food processor.]{.aside}
+
+![Creating a linelist with Outbreaktools](images/002-img-obt-concept.png){fig-align="center" fig-alt="A diagram with three boxes illustrating the workflow to create a linelist, with a setup file and a designer file."}
+
+::: {.callout-note}
+See the Module 2 to learn how to modify a setup file and compile a linelist
+:::
+
+The advantages of this approach are: 
+
+- Someone with no knowledge of VBA can use the OBT to build or modify a linelist, as long as they know how to fill a setup file. 
+
+- The maintenance of functionalities is done by a specialist in Epicentre, who generates new versions of the designer. Upon update of the designer, linelists can be regenerated in a couple of minutes to incorporate the updates.^[Which is not an instantaneous process, but infinitely faster than manually porting code and fixes from one linelist to a different one with lots of code adaptation, and then migrating data more or less by hand depending on the linelist.]  
+ 
+
+### OutbreakTools Workflow
+
+In addition linelists development, OutbreakTools contains tools that rely on the standardised nature of the created linelists to build data cleaning workflow and dashboard much faster than ever before. When a new linelist is created, a simple functional dashboard can be build in a couple of days, with automatic data gathering from a mail address.
+
+
+The full workflow allows epidemiologists or data teams to send their data to Epicentre for it to be displayed on a dashboard. The data will usually be displayed between one or two hours after being sent.
+ 
+
+![The linelist-to-dashboard workflow](images/001-img-obt-workflow.png){fig-align="center" fig-alt="A diagram showing excel files being sent to Epicentre or partners. When the data is sent to Epicentre, the data is then sent to a dashboard.."}
+
+
+## OutbreakTools linelists
+
+This section will describe linelist functionalities.
+
+
+
+
+#### A note on languages
+
+A given setup file can contain several languages, so as long as the translation for a language is provided, the designer can compile a linelist in this language. All the created linelists will thus have the same interface, variable names and functionalities.
+
+::: {.callout-note}
+Because the translations of all labels and categories are available in the setup file, the compilation scripts can automatically translate the data received in different language to English, which allow to gather all the data in the dashboard.
+:::
+
+
+#### A note on geographic data
+
+Describing geographic data is a huge challenge for patient data (independently of the software used). The problem is usually that it is hard to access geographic levels to describe places in al the countries that we work in, these data may change overtime, is often incomplete, and sometimes several source of data contradict themselves.
+
+In OBT linelists, as in many linelists developed before, we made the arbitrary choice to describe geographic locations with fours hierarchical administrative levels. So each location is associated with four columns with cascading dropdown menus (and several hidden calculated columns). 
+
+The categories with which to populate dropdown menus are country specific. A member of the EpiDS team is tasked to gather geographic data from different places (GIS unit, OCHA HDX, local GIS officers etc.) and create database of geographic locations associated with shapefiles (files to plot geographic data). As a part of OutbreakTools, we provide Excel tabulated versions of this data, the so-called **geobases**, which can be imported very easily in OBT linelists to fill the dropdown menus for locations. These geobases are accessible online in the [Geoapp](https://reports.msf.net/secure/app/outbreak-tools-geoapp).
+
+
+
+
+## Dashboards
+
+## Workflow to deploy a loinelist???

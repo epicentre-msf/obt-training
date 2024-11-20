@@ -1,0 +1,42 @@
+---
+title: "Module presentation and objectives"
+---
+
+
+This module presents the **OutbreakTools toolkit** (OBT), with a focus on OBT linelists. 
+
+It is dedicated to people who prepare and deploy linelists on the field, as well as support colleagues with linelist data (from HQ or in the field).
+
+The training aims at giving you autonomy with the preparation, use and troubleshooting of the file.
+
+**Tentative length:** 3h
+
+
+## Objectives
+
+After this training, you should be able to:
+
+-	Explain what is the OutbreakTools (OBT) toolkit and make decisions about when it is appropriate to use it
+-	Retrieve a linelist, prepare it for deployment
+-	Explain the functionalities of the file to others
+-	Use the main functionalities (import data, export data, migrate data etc.) as well as well less known tricks
+-	Troubleshoot the most commons problems
+-	Navigate to the intersection dashboard to monitor data
+
+## Prerequiste
+
+A good experience of Excel files. There is no need for VBA esoteric skills nor even advanced formula wizardry. Instead, we expect you to know your way around a multi-sheets Excel file, to know of filters, how to force calculation, use dropdown menus, modify graph appearance, use basic pivot tables etc.
+
+
+## Syllabus
+
+The training is based on a mix of slides/text and tutorial The tutorial will be based on three situations that you are likely to encounter:
+
+-	You want to deploy a linelist in a country: getting the file, preparing it for deployment
+- You sent the file to the field but a data encoder has issues with it: you need to know how to troubleshoot the most common ones.
+-	The file is in use, you monitor data and perform data management tasks
+
+
+1. Read the [introduction material](../module_1/m1_intro.qmd)
+
+2. Follow the [tutorial](../module_1/m1_tutorial.qmd)

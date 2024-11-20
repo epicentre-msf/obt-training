@@ -1,0 +1,65 @@
+---
+title: "Unlock files and authorise macros"
+---
+
+OubreakTools linelists rely on VBA macros for most of their functionalities. Windows often blocks files with macro when they come from the web (*i.e.* received through mail, or Teams, or from a `zip` archive as we just did) [You can read the [full explanation](https://learn.microsoft.com/en-us/microsoft-365-apps/security/internet-macros-blocked) of why and when this happens to better predict when you can expect it.]{.aside} so extra steps might are often necessary to access the file full functionalities.
+
+::: {.callout-note}
+This protection is independant from the password protection that a user or a developper can add to an Excel file.
+:::
+
+
+## Unblock files {#sec-unblock-file}
+
+When you receive a file, before opening it, always check whether Windows blocked it or not, and unbloc it if needed:
+
+1. Right click on the file (the locally saved Excel file) and select "Properties" from the menu
+
+![Access the property menu of a file](../how_to/images/001-img-right-click-properties.png){fig-align="center" fig-alt="A screeshot of the Property menu of an Excel linelist, accessed by right-clicking on a file."}
+
+3. Check the *Unblock* box on the bottom right. If you don't see such a button on the bottom right it means that the file is already unblocked.
+
+![State of the property menu for a blocked file](../how_to/images/002-img-unblock-file.png){fig-align="center" fig-alt="A screeshot of the Property menu of a blocked word file."}
+
+4. Click OK and you can proceed to open the file.
+
+See the [Microsoft Help page on how to unblock a file](https://learn.microsoft.com/en-us/microsoft-365-apps/security/internet-macros-blocked#remove-mark-of-the-web-from-a-file) for more explanations.
+
+
+## Enable macros {#sec-enable-macros}
+
+Once the file is open, you need to enable and authorise macros in Excel to use the file.
+
+
+1.	Make sure the file is not *protected* (see section above)
+ 
+2.	Open the file (a password may be needed at this stage)
+
+3. If this is the first time you use an Excel file with VBA macros, you probably need to go and enable them in the Trust Center. To do that:
+    a) In the Excel file, select the *File* tab at the top, and open the *Options* popup window
+    
+    b) Select the *Trust Center* tab, and open the Trust Center settings window
+    
+    c) In the Trust Center, select the *Macro Settings* tab.
+    
+![Trust Center menu for macros](../how_to/images/003-img-trust-center.png){fig-align="center" fig-alt="A screeshot of the trust center popup windows, on the Macro settings tab"}
+   
+    d) Tick the "Disable all macros with notification", or the "Enable all macros".
+   
+    e) Restart Excel and reopen the file.
+    
+4. With this setting, you get a notification when you open the file if the macros had been disabled. The notification manifests with a yellow band at the top of the sheets informing you that the macros have been disabled. Click on the "Enable content" button to authorise them for this file.
+
+![Trust Center menu for macros](../how_to/images/004-macros-disabled.png){fig-align="center" fig-alt="A screeshot of the yellow band informing an Excel user that macros have been disabled in an Excel file."}
+
+You can read more about [authorising VBA macros on the Microsoft help page](https://support.microsoft.com/en-us/office/enable-or-disable-macros-in-microsoft-365-files-12b036fd-d140-4e74-b45e-16fed1a7e5c6).
+
+::: {.callout-warning}
+If you have a red band informing you that macros have been disabled, but no button to authorise them, it means that the Trust Center option is to block them. Go check the Trust Ceenter options, as in step 3.
+
+![Trust Center menu for macros](../how_to/images/005-macros-disabled-red.png){fig-align="center" fig-alt="A screeshot of the red band informing an Excel user that macros have been disabled in an Excel file."}
+:::
+
+::: {.callout-note}
+These steps are common to all files with VBA macros in it, not just OBT files; you may have to do the same for a number of other linelist templates.
+:::

@@ -2,16 +2,16 @@
 title: "Unlock files and authorise macros"
 ---
 
-OubreakTools linelists rely on VBA macros for most of their functionalities. Windows often blocks files with macro when they come from the web (*i.e.* received through mail, or Teams, or from a `zip` archive as we just did) [You can read the [full explanation](https://learn.microsoft.com/en-us/microsoft-365-apps/security/internet-macros-blocked) of why and when this happens to better predict when you can expect it.]{.aside} so extra steps might are often necessary to access the file full functionalities.
+OubreakTools linelists rely on VBA macros for most of their functionalities. Microsoft Office often blocks files with macro when they come from the web (*i.e.* received through mail, or Teams, or from a `zip` archive as we just did)^[You can [go read the full explanation](https://learn.microsoft.com/en-us/microsoft-365-apps/security/internet-macros-blocked) of why and when this happens to better predict when you can expect it.] so extra steps are often necessary to access the file full functionalities.
 
 ::: {.callout-note}
-This protection is independant from the password protection that a user or a developper can add to an Excel file.
+This protection is independent from the password protection that a user or a developer may add to an Excel file.
 :::
 
 
 ## Unblock files {#sec-unblock-file}
 
-When you receive a file, before opening it, always check whether Windows blocked it or not, and unbloc it if needed:
+When you receive a file, before opening it, always check whether Windows blocked it or not, and unblock it if needed:
 
 1. Right click on the file (the locally saved Excel file) and select "Properties" from the menu
 
@@ -35,7 +35,7 @@ Once the file is open, you need to enable and authorise macros in Excel to use t
  
 2.	Open the file (a password may be needed at this stage)
 
-3. If this is the first time you use an Excel file with VBA macros, you probably need to go and enable them in the Trust Center. To do that:
+3. If this is the first time you use an Excel file with VBA macros, you probably need to go and **enable them in the Trust Center**. To do that:
     a) In the Excel file, select the *File* tab at the top, and open the *Options* popup window
     
     b) Select the *Trust Center* tab, and open the Trust Center settings window
@@ -44,7 +44,7 @@ Once the file is open, you need to enable and authorise macros in Excel to use t
     
 ![Trust Center menu for macros](../how_to/images/003-img-trust-center.png){fig-align="center" fig-alt="A screeshot of the trust center popup windows, on the Macro settings tab"}
    
-    d) Tick the "Disable all macros with notification", or the "Enable all macros".
+    d) Tick the "Disable all macros with notification".
    
     e) Restart Excel and reopen the file.
     
@@ -55,7 +55,7 @@ Once the file is open, you need to enable and authorise macros in Excel to use t
 You can read more about [authorising VBA macros on the Microsoft help page](https://support.microsoft.com/en-us/office/enable-or-disable-macros-in-microsoft-365-files-12b036fd-d140-4e74-b45e-16fed1a7e5c6).
 
 ::: {.callout-warning}
-If you have a red band informing you that macros have been disabled, but no button to authorise them, it means that the Trust Center option is to block them. Go check the Trust Ceenter options, as in step 3.
+If you have a red band informing you that macros have been disabled, but no button to authorise them, it means that the Trust Center option is to block them. Go check the Trust Center options, as in step 3.
 
 ![Trust Center menu for macros](../how_to/images/005-macros-disabled-red.png){fig-align="center" fig-alt="A screeshot of the red band informing an Excel user that macros have been disabled in an Excel file."}
 :::

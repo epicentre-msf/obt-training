@@ -4,7 +4,7 @@ title: "Tutorial"
 
 ## Introduction
 
-In this tutorial you will get to familiarise yourself with OBT the OBT linelist interface [Remember all OBT linelist have the same type of interface]{.aside} and the corresponding dashboard.
+In this tutorial you will get to familiarise yourself with the OBT linelist interface [Remember all OBT linelist have the same type of interface]{.aside} and the corresponding dashboard.
 
 ### Objectives
 

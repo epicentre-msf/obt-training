@@ -16,6 +16,8 @@ Geobases contain description of geographic locations, encoded by four aministrat
 5. Click on the "Download Geobase" button to download the data for the selected regions in an excel format that can be directly imported into an OutbreakTools Linelist.
 
 
+![Screenshot of the GeoApp site](../how_to/images/006-download-geobase.png){fig-align="center" fig-alt="A screenshot of the GeoApp site, with several regions at the frontier of Sudan and South Sudan selected and thus red. The dropdown menu is highlighted in yellow, the button to select all regions is highlighted in green, and the button to download the geobase as an Excel file is highlighted in blue."}
+
 ::: {.callout-tip}
 You can select one or more countries. And you can select one or more regions of these countries. This allow you to select (cross-border) zones of interest or to restrain yourself to lighter geobases if linelist file size is critical.
 :::

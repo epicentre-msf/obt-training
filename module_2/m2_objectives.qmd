@@ -3,7 +3,8 @@ title: "Module presentation and objectives"
 ---
 
 This training will teach you how to use OutbreakTools (OBT) tools to generate an OBT linelist from a dictionary. You will then learn how to modify a setup to perform common tasks, such as adding a specific export of data for a MoH, and adding some analyses that you need in the field.
-Tentative length: 3h
+
+**Tentative length: 3h**
 
 ## Objectives
 
@@ -25,5 +26,5 @@ You should have completed the first module on [OutbreakTools linelists](../modul
 
 ## Content of the training
 
-The training will be based on a mix of slides and exercises. The exercise will be based on a common situation: an (intersection) linelist already exists, but needs to be customised a bit: you want to add an export for your country, and some additional analyses.
+The training will be based on a mix of slides and exercises. The exercise will be based on a common situation: a linelist already exists, but needs to be customised a bit. You want to add an export for your country, and some additional analyses.
 

@@ -30,7 +30,7 @@ A good experience of Excel files. There is no need for VBA esoteric skills nor e
 
 ## Syllabus
 
-The training is based on a mix of slides/text and tutorial The tutorial will be based on three situations that you are likely to encounter:
+The training is based on a mix of slides/text and tutorial. The tutorial will be based on three situations that you are likely to encounter:
 
 -	You want to deploy a linelist in a country: getting the file, preparing it for deployment
 - You sent the file to the field but a data encoder has issues with it: you need to know how to troubleshoot the most common ones.

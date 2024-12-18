@@ -120,7 +120,7 @@ Make sure the data is not overlapping before importing, as the import will just 
 
 #### Import geobase {#sec-import-geobase}
 
-The "Import geobase" button allows you to import a [geobase](../how_to/import_geobase.qmd#sec-geobase-download) in the linelist. If the current linelist had already a geobase, it will be replaced.
+The "Import geobase" button allows you to import a [geobase](../how_to/download_geobase.qmd#sec-geobase-download) in the linelist. If the current linelist had already a geobase, it will be replaced.
 
 ::: {.callout-warning}
 The import of the geobase does not affect the data already entered in the linelist, it only fills the modalities offered by dropdown menus. If data is already present in the linelist and the new geobase has different levels, you need to correct them yourselves.
@@ -290,38 +290,35 @@ This button adds a new column to translations sheet, to add a new linelist langu
 1. Fill the name of the language in the box
 2. Click on the button: it will add a new empty column on the right of the columns already present.
 
-[More information to add a language](../how_to/add_language.qmd)
 
 #### Update translation table
 
 Click on this button to update the whole translation table. You can use it whether there is only one language or more.
 
-The script will scrap the setup and import all the fields to be translated into the table, listed in alphabetical order.
+The script will scrap the setup file and import all the fields to be translated into the table, listed in alphabetical order.
 
 At the end, it will open a popup window with information on the update of the translation table.
 
-![Message of end of translation update](../reference/images/im-112-translations-sheet.png){fig-align="center"}
-
-Go to the [Translation sheet](../reference/translations_sheet.qmd) for more information on translations.
+![Message of end of translation update](../reference/images/ribbons-015-st-translations-sheet.png){fig-align="center"}
 
 
 ### Import
 
-These buttons allow to import data into an empty setup.
+These buttons allow to import data into an empty setup file.
 
-![Import section](images/img-003-ribbon-setup-import.png){fig-align="center"}
+![Import section](../reference/images/ribbons-016-st-import.png){fig-align="center"}
 
 #### Import data from another setup
 
-Use this button to migrate data from one **setup file** to another empty setup file^[An upgraded version, or an empty file fo the same version in case the original file got corrupted.].
+Use this button to migrate data from one **setup file** to another empty setup file.^[An upgraded version, or an empty file of the same version in case the original file got corrupted.]
 
 1. Click on the button; it opens a popup window
 2. Click on the "Load another setup file" button. It will open a window to select the file to import data from.
 3. Select what to import from the original by ticking the boxes.
-4. Decide if you want to run a checkup of the **setup** file after import by ticking the box or not
+4. Decide if you want to run a check-up of the **setup file** after import by ticking the box or not
 5. Click on the "Import" button and wait.
 
-![](images/img-004-import-setup.png){fig-align="center"}
+![](../reference/images/ribbons-017-st-import-setup.png){fig-align="center"}
 
 ::: {.callout-note}
 If you are migrating a setup to a new **setup file**, you should check all boxes to import everything.
@@ -332,12 +329,12 @@ You can run the coherence checks now, or do it at a later stage with the [Check 
 
 #### Import from disease (in developpment)
 
-This button is used to import a "disease setup" from a disease **Master file**. This file is being piloted for Epinetwork discussions.
+This button is used to import a "disease setup" from a disease **Master file**. This file is being piloted for Epinetwork discussions. You can ignore it for now.
 
 
 ### Advanced {#sec-advanced}
 
-![Advanced section](images/img-003-ribbon-setup-advanced.png){fig-align="center"}
+![Advanced section](../reference/images/ribbons-018-st-advanced.png){fig-align="center"}
 
 #### Check current setup for errors {#sec-check-setup}
 
@@ -349,18 +346,18 @@ There is a table for each sheet or section (in the case of analyses), with the f
 
 -   **Where?**, which shows the name of the sheet or section and the line where the incoherence is located,  
 
--   **Details**, which gives details of the incoherence.
+-   **Details**, which gives details about the incoherence.
 
 
-There are several types information that could appear in the Incoherence column:
+There are several types information that could appear in the incoherence column:
 
 -   **Info** (in grey): this is not an inconsistency, but simply a piece of information about something that will not block the compilation of the linelist.    
 
--   **Warning** (in yellow): these are problems that need to be fixed because there is a real inconsistency or problem. It could be an error in a formula, for example.^[Note that the checkup does its best, but some formula errors can be missed and create problems in your formulas. Always test the calculated columns after compilation!]  
+-   **Warning** (in yellow): these are problems that need to be fixed because there is a real inconsistency or problem. It could be an error in a formula, for example.^[Note that the check-up does its best, but some formula errors can be missed and create problems in your formulas. Always test the calculated columns after generating the linelist!]  
 
 -   **Note** (in blue): this is something that has been defined in the setup, but will not be applied, and is therefore not blocking. For example, in the analyses, certain choices are contradictory by design, such as the display of percentages, which is not authorised when you choose to invert the display of the table (horizontal display instead of vertical).
 
-![](../images/im-121-check-current-setup-for-errors.png){fig-align="center"}
+![](../reference/images/ribbons-019-st-checkup.png){fig-align="center"}
 
 #### Clear data in current setup
 
@@ -370,16 +367,18 @@ This feature allows you to delete all the data entered in the **setup file**.
 2. Tick boxes to select sheets to clean
 3. Click on the "Clear" button. It will open a window to ask you if you are very sure.
 
-![](images/img-005-clear-setup.png){fig-align="center"}
+![](../reference/images/ribbons-020-st-clear-setup.png){fig-align="center"}
 
 
 ### Dev 
 
 The dev tab is for the OBT developer and you can ignore it.
 
+
+
 ## Designer  {#sec-designer-ribbon}
 
-![OutbreakTools tab in the designer](../images/img-003-ribbon-designer.png){fig-align="center"}
+![OutbreakTools tab in the designer](../reference/images/ribbons-021-des-ribbon.png){fig-align="center"}
 
 ### Manage the designer
 
@@ -393,7 +392,9 @@ Remove all user entered data from fields.
 
 #### Language of the designer
 
-Use the dropdown menu to change the language of the designer interface. Available languages: English, French, Arabic, Spanish and Portuguese. 
+Use the dropdown menu to change the language of the designer interface. 
+
+**Available languages**: English, French, Arabic, Spanish and Portuguese. 
 
 
 
@@ -405,7 +406,7 @@ If the user wishes to modify the linelist interface translations, it is possible
 
 #### Import passwords
 
-The designer is loaded with a pasword table, with private and public keys to protect export if the user want a password-protected export. However, the designer is on Github, in a public repo, so if you compile a linelist that needs a password protection, it is best to ask for the config file to EpiDS/Yves Amevoin and import it using the "Import button".
+The designer is loaded with a password table, with private and public keys to protect export if the user want a password-protected export. However, the designer is on Github, in a public repo, so if you compile a linelist that needs a password protection, it is best to ask for the config file to EpiDS/Yves Amevoin and import it using the "Import button".
 
 #### Import styles {#sec-setup-styles}
 

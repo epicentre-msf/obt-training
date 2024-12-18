@@ -13,23 +13,23 @@ If you are using a linelist for which a dashboard was developed, you can send da
 
 2.	Make sure that the general information metadata is properly filled (country, site name, section) as this data is used by the compilation script.
 
-3. Clear filters: you need to send the whole dataset, not only the current week. (see @imp-whole-data) 
+3. Clear filters: you need to send the whole dataset, not only the current week  (see @imp-whole-data) 
 
 4. Hit F9/"Recalculate now" Excel button to update all formulas.
 
 5. Export data using the "Export data" button of the [OutbreakTools menu](../reference/ribbons.qmd#sec-export-data), and chose the “Anonymous export to MSF” option (or a similar name). You will be prompted for a place to save the genarated export.
 
-6. Send the data to epi-data@epicentre.msf.org **without renaming the file**.
+6. Send the data to epi-data [at] epicentre.msf.org **without renaming the file**.
 
 7. Rince and repeat for all the sites/linelists.
 
-The file generated is a password protected excel file, which you can open if you want to see what it looks like. It has the Info sheet and patient data, as well as some automatically generated metadata (language, linelist version etc.). **The name of the export file is generated automatically based on the matadata you filled** so make sure these data are filled correctly once and for all.
+The file generated is a password protected excel file, which you can open if you want to see what it looks like. It has the "Info" sheet and patient data, as well as some automatically generated metadata (language, linelist version etc.). **The name of the export file is generated automatically based on the matadata you filled** so make sure these data are filled correctly once and for all.
 
 If their metadata are filled correctly^[Yes, we are insisting on this part. Ask us why.], you can send several exports in the same mail (from different sites, or even different diseases), the scripts will parse the name of the export to sort the files on our side.
 
 
 ::: {#nte-geomatching .callout-note title="Geodata matching"}
-The dashboard displays a map where you can visualise data at several administrative levels (1 up to 4 but it of course depends on the resolution of the data you and other send). For patients to appear on the map at a given resolution level, their geolocations needs to match the geobase for this level because the geobase loaded with the linelist corresponds to shapes used to create maps. 
+The dashboard displays a map where you can visualise data at several administrative levels (1 up to 4 depending on the resolution of the data sent). For patients to appear on the map at a given resolution level, their geolocations needs to match the geobase for this level because the geobase loaded with the linelist corresponds to shapes used to create maps. 
 
 If a place of origin cannot be matched for a given level (*e.g.* health area), the patient will not be included on the map at the "health area" level resolution.^[There is a small note under the graph telling you how many patients are not matched] If the above level (here the health zone) is matched, the patient will be accounted in the health zone resolution map. 
 

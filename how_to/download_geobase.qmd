@@ -5,9 +5,9 @@ title: "Get a geobase"
 
 Geobases contain description of geographic locations, encoded by four administrative levels. You can download one for your linelist with the following steps: 
 
-1. In you internet browser, go to the [Geoapp](https://reports.msf.net/secure/app/outbreak-tools-geoapp). 
+1. In you internet browser, go to the [GeoApp](https://reports.msf.net/secure/app/outbreak-tools-geoapp). 
 
-2. Use your account to connect. If you do not have one already, create one [here]( https://reports.msf.net/signup/) first then connect to the Geoapp.
+2. Use your account to connect. If you do not have one already, create one [here]( https://reports.msf.net/signup/) first^[You will need an MSF mail adress] then connect to the GeoApp.
 
 3. Select one *or more* countries from the dropdown menu in the top left of the screen. The Admin 1 regions of each country will be rendered on the map.
 

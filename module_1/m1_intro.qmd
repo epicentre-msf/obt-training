@@ -43,7 +43,7 @@ As a result, there is a **whole ecosystem of files** used in and outside MSF, wi
 
 To alleviate some of the above problems, MSF OCs try to provide linelists on which disease referents and epidemiologists agreed upon, to standardise data collection within OC. The quality and functionalities included tend to depend on both OC and disease.
 
-Better, for some diseases, OCs reached an agreement on a minimal dictionary and sometimes a common tool. Epicentre has provided a number of these "intersection" linelists in the recent years. This files however also suffered from some problems: they were hard to maintain and had different functionalities depending on diseases [The number of functionalities, and the general data quality increased with time as skills grew, which resulted in very different linelist in terms of both interface and capacities]{.aside}. 
+Better, for some diseases, OCs reached an agreement on a minimal dictionary and sometimes a common tool. Epicentre has provided a number of these "intersection" linelists in the recent years. This files however also suffered from some problems: they were hard to maintain and had different functionalities depending on diseases^[The number of functionalities, and the general data quality increased with time as skills grew, which resulted in very different linelist in terms of both interface and capacities]. 
 
 Epicentre tried to go a step further, capitalising on what was learned developing and maintaining these tools, and developed **OutbreakTools** a set of tools to improve data collection, quality and visualisation. A good part of OutbreakTools it to help generating good quality, robust linelists.
 
@@ -77,10 +77,10 @@ In addition to linelist development, OBT contains tools that rely on the standar
 The full workflow allows epidemiologists or data teams to send their data to Epicentre for it to be displayed on a dashboard. The data will usually be displayed between one or two hours after being sent.
  
 
-![The linelist-to-dashboard workflow](images/001-img-obt-workflow.png){fig-align="center" fig-alt="A diagram showing excel files being sent to Epicentre or partners. When the data is sent to Epicentre, the data is then sent to a dashboard.."}
+![The linelist-to-dashboard workflow](images/001-img-obt-workflow.png){fig-align="center" fig-alt="A diagram showing excel files being sent to Epicentre or partners. When the data is sent to Epicentre, the data is then sent to a dashboard."}
 
 
-## OutbreakTools linelists
+## XXXX OutbreakTools linelists
 
 This section will describe linelists functionalities.
 
@@ -107,6 +107,46 @@ The categories with which to populate dropdown menus are country specific. A mem
 
 
 
-## Dashboards
 
-## Workflow to deploy a loinelist???
+Geographical location are encoded using four columns that can accommodate up to four administrative levels, and these columns have a special status in OBT. You can recognize them by the orange background of their labels. 
+When you import a geobase in a linelist:
+
+- The labels of the columns are updated with the administrative levels present in the geobase (e.g. “adm1_name” will change to “Province” for DRC).
+- The categories of the dropdown menus update. 
+You can fill the variables either by using the cascading dropdown menus, or by using the GeoHelper button from the ribbon.
+
+
+## XXXX Dashboard
+
+
+- [exporting files](../how_to/export_data_dashboard.qmd)
+
+
+## XXXX Prepare a linelist for deployment {#sec-deployment}
+
+
+1. Download an empty linelist template, and the accompanying documentation
+
+Go to the Epinetwork SharePoint or ask a referent epi/disease focal point^^[Unless you already have a *recent* version]. See [here](../how_to/get_template.qmd) for more information.
+
+::: {.callout-note}
+There may be several languages available. In general you can expect English and French as default for well established linelists. Spanish, Portuguese or Arabic translations may be developed when needed, don't hesitate to ask.
+:::
+
+2. [Get a geobase for your area](../how_to/download_geobase.qmd) from the [Geoapp](https://reports.msf.net/secure/app/outbreak-tools-geoapp)
+
+3. Fill the linelist metadata: section, country etc.^[It is very important to fill the country, name of the facility and section, as these are used to name exports.]
+
+4. Customise the linelist:
+    a. Select the optional variables you want to show or hide
+    b. Define the start of the week for your country
+    c. Import the geobase in the linelist
+    d. Customise some dropdown menus
+    e. Tweak columns width
+    f. Tweak graphs
+    
+5. Optional: prepare and print a register and/or a Case Report Form to enter data on paper
+    
+5. Send the linelist to the sites with the documentation. In many settings there should be one linelist per site.
+
+6. Ask the site to fill the remaining metadata from the Info sheet (site, sometimes site location etc.)

@@ -12,7 +12,7 @@ The training aims at giving you autonomy with the preparation, use and troublesh
 **Tentative length:** 3h
 
 
-## Objectives
+## Objectives 🎯
 
 After this training, you should be able to:
 
@@ -22,6 +22,7 @@ After this training, you should be able to:
 -	Use the main functionalities (import data, export data, migrate data etc.) as well as well less known tricks
 -	Troubleshoot the most commons problems
 -	Navigate to the intersection dashboard to monitor data
+
 
 ## Prerequiste
 

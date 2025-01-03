@@ -6,6 +6,7 @@ $grey:       #95a5a6;  // default: #95a5a6
 $blue-green: #18bc9c;  // default: #18bc9c
 $purple:     #7d12ba;  // default: #7d12ba
 $white:      white;
+
 $pink:       palevioletred;
 $light-grey: whitesmoke;
 
@@ -56,29 +57,48 @@ code {
 /* Box to give instructions */
 
 .instructions {
-  
-  background-color: $white;
-  
+  background-color: mix($pink, $white, 5%); // Get the opacity
+    
   border: 1px solid $light-grey;
   border-left: 6px solid $pink; 
   border-radius: 4px;
-  
-  
-  margin: 10px 0px 10px 0px;
-  padding: 10px 10px 10px 10px;
-
-  //color: $primary;
+    
+  margin: 10px 0px 10px 0px; // Pour que la boite ne soit pas collée au texte
+      
   //font-size: 1em;
   box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
+    
+  // Si on voulait que les boîtes ne prennent pas toutes la ligne : 
+  //width: fit-content;  
   
-  //width: fit-content;
   position: relative;
   
+  // Pour que le header ne dépasse pas :
+  overflow: hidden; 
+    
 }
 
+// Add a title
+.instructions::before{
+  display:block;  // as opposed to inline
+  content: 'Instructions';  // Fixed title
+  font-weight:bold;
+  background-color: mix($pink, $white, 20%); // Opacity
+  width:100%;
+  padding: .3em 0 .3em 9px;
+}
 
-// I apparently need this one so that my text is vertically centered...
-.instructions p {
- width: fit-content; 
- margin: 0;
+// Center text vertically
+// Parce que bootstrap ajoute de la marge en bas, mais pas pareil pour le texte p,
+// les listes à puces et les listes à nombres
+// > = enfants immédiats, et * = tous les éléments => tous les enfants immédiats 
+.instructions>* {
+  //width: fit-content; // Si on voulait que les boîtes ne prennent pas toutes la ligne
+  margin: 0; // Dit qu'en fait non.
+  padding: 10px;
+}
+
+// Gère les liste items en particulier (ol et ul)
+.instructions li{
+  margin-left: 20px;
 }

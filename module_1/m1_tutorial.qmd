@@ -19,6 +19,28 @@ A measles outbreak started in Chad, MSF decides to get involved in the response.
 You discussed with the MedRef and the MedCo, and you came to the decision to deploy the OBT linelist.
 
 
+### Activities
+
+In this tutorial, you will get access to an empty linelist, to learn how to prepare a file before deployment, and to a linelist with false data to replicate a linelist in use.
+
+You then will visit the Intersection dashboard to explore MSF measles data.
+
+
+Explanations about the files will be given in simple text, or in "Tips" or "Note" boxes. Instructions for you to follow will be given in instructions boxes:
+
+::: {.instructions}
+This is an instruction: you will be asked to **do something**
+:::
+
+::: {.callout-warning}
+This is a warning, it contains important information
+:::
+
+::: {.callout-tip}
+This box contains tips: they are handy bits of informations that may be omitted in a first reading if you are in a hurry, but totally deserve some attention at some point.
+:::
+
+
 
 ## Get ready
 

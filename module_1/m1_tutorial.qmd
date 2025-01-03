@@ -426,6 +426,131 @@ The last analysis sheet that may be in an OBT linelist is a mix between the temp
 
 ## Part 3: Troubleshooting
 
+### 🧭 Context
+
+You have sent a linelist for deployment to the field. The data encoder may have some questions or problems.
+
+For the following problem, identify the source of the problem and the solution.
+
+
+### Opening the file and getting it to work
+
+**Problem**: your colleague opens the file
+
+
+The user tells you that the file is broken and that they cannot open it
+
+
+### General file management
+
+Often people do not read the documentation, do not know the existence of the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon), or know it be never checked it out. A lot of the requests you might get derive from this and the good news is that they are pretty straightforward to solve.
+
+
+#### No more rows!
+
+You receive the following mail:
+
+> Hello, attached is a linelist that is giving us trouble. Some cells are locked, so we cannot add new cases. We can't work, please help.
+
+What do you answer?
+
+::: {.callout-tip title="Answer" collapse=true style="width:300px"}
+Use the "Add rows" button from the OBT menu to add lines at the bottom of the file.
+
+**Note**: recent versions of the linelist automaticcaly add five lines at the bottom of the file when someone enters data in the last line, so this should be less common that what it used to be. If this happens to you check whether there is a more recent version of the linelist to use!
+:::
+
+
+#### Remove empty rows
+
+You receive the following email:
+
+> Hi, I need support on the linelist. There are empty lines (colored in red) and I can't remove them because the file is protected, help please.
+
+What do you answer?
+
+::: {.callout-tip title="Answer"  collapse=true}
+Use the "Resize table" button from the OBT menu.
+:::
+
+#### Missing rows
+
+You get this mail:
+
+> Good evening, we entered data but some rows seem to be missing now but we did not delete them.
+
+This one is trickier, because this could be caused by several problems, including unsaved documents (data from "yesterday" or "this morning") and synchronisation errors (the last file got replaced by an older version from the server). Since the sheet is protected, it is hard to delete data in bulk though.
+
+Your best hope is that there is a filter applied somewhere on the data and the rows are merely hidden. You can solve this problem in one click though. Which button would you use?
+
+#### Analyses not up-to-date
+
+You receive the following email:
+
+> Good morning, I added data to the file but the analyses are empty / not to date.
+
+What do you answer?
+
+::: {.callout-tip title="Answer"  collapse=true}
+Use the "Refresh analyses" button from the OBT menu
+:::
+
+Addendum from January 2025:
+
+The day after they contact you again:
+
+> Good morning, I used the refresh button yesterday to update the analyses and it woked. But today I entered new data, refreshed but all the data on the analyses sheets are striken. I cannot remove the strikethrough and I did not do anything, just enter data.
+
+A recent update in Excel 365 uses [strikethrough](https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) to label what Excel considers "stale values" (values that depend on other cells, which were modified). For some obscure reason, the "Refresh analyses" does not trigger the removal of the strikethrough (despite recalculating the ranges). A fix in the OBT is coming from 2025, but meanwhile, if it happens:
+
+- Hit the F9 shortcut to force recalculation (or use the "Calculate now" button from the "Formula" Exce native menu)
+- Then hit the "Refresh analyses" button
+
+Alternately, you can [turn off](https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) this option if it bothers you in your files in general.^[Maybe you use VBA in your own files and are bothered that Range.Calculate does _not_ remove the strikethrough, just Sheet.Caluclate or Application.Caclulate.]
+
+
+#### Sending the data to the dashboard
+
+Another source of friction is the sharing step of the linelist. In all cases, it is good to brief them again on the [steps](../how_to/export_data_dashboard.qmd) to send data to the dashboard, but see if you can find the exact problems with the files sent below.
+
+- They send the file `measles_linelist_moissala.xlsb` to <EPI-DATA@epicentre.msf.org> and received an error
+
+- They used OneDrive to share the linelist with <EPI-DATA@epicentre.msf.org> and received an error
+
+- They sent `measles_linelist_moissala_export_data_20250203-1136.xlsx` to <EPI-DATA@epicentre.msf.org> and received an error
+
+- They sent `MSL_linelist__MSL24__info_country_code__info_organisation__info_facility_name__anonymous__vb-1003__20250103-1541` to <EPI-DATA@epicentre.msf.org> and probably did not receive an error, but the data does not appear in Chad in the dashboard
+
+
+::: {.callout-tip collapse=true title="Tip"}
+The file to send should be named `MSL_linelist__MSL24__TCD__MSF-OCP__Mandoul Hospital__anonymous__vb-1003__20250103-1541`
+:::
+
+
+::: {.callout-tip collapse=true title="Answers"}
+Either they sent the linelist itself, the wrong export, or the good xport but they did not fill the "Info" sheet so the metadata could not be used in the name
+:::
+
+
+In the following steps
+
+
+
+#### Other TODO
+
+- Calculated columns not calculating: use the F9 button to force recalculation
+- A place is not appeasing on the dashboard on the map -> not matched
+
+### Advanced
+
+Sometimes the content of the file is to blame.
+
+
+
+
+
+
+
 ## Part 4: Dashboard
 
 ### 🧭 Context

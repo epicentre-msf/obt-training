@@ -6,15 +6,16 @@ title: "Tutorial"
 
 In this tutorial you will get to familiarise yourself with the OBT linelist interface^[Remember all OBT linelist have the same type of interface] and the corresponding dashboard.
 
+
 ### 🎯 Objectives 
 
-- Explore analyses functionalities of the OBT linelist
-- Explore the intersection dashboard
+- Explore functionalities of the OBT linelist, with a focus on troubleshooting the file and exploring analyses.
+- Get access and understand how to use the intersection dashboard
 
 
 ### 🧭 Context
 
-A measles outbreak started in Chad, MSF decides to get involved in the response. A linelist is needed to collect patient data in structures. You are the epidemiologist responsible for Chad, or deployed to the Mandoul region.
+A measles outbreak started in Chad, MSF decides to get involved in the response. A linelist is needed to collect patient data in structures. 
 
 You discussed with the MedRef and the MedCo, and you came to the decision to deploy the OBT linelist.
 
@@ -62,7 +63,7 @@ The files that you are going to use are stored on Github, bundled in a `zip` arc
 - A text file with the password
 
 
-## Unlock files and functionalities 🔓
+## Part 0: Unlock files and functionalities 🔓
 
 OBT linelists use VBA macros to add functionalities. As a consequence, linelists that comes from the internet often need to be unblocked, and macro enabled in them. 
 
@@ -81,7 +82,7 @@ You may need to perform some or all these steps on your computer, but you will c
 
 #### Get a linelist template
 
-In real life you should [get an empty template](../how_to/get_template.qmd) but for this exercise you will use the template in in the archive you downloaded.
+In real life you should [get an empty template](../how_to/get_template.qmd) but for this exercise you will use the template provided in the archive you downloaded.
 
 ::: {.instructions}
 Identify the file and make a copy on which you can work.
@@ -109,7 +110,7 @@ Open the linelist (password: `measles2024`) and  inspect sheet names.
 
 - The first sheet contains some instructions, but there is nothing special to do with it
 - The second sheet ("Info") contains project and site information
-- The third sheet is to enter patient data
+- The third sheet ("Linelist Patients") is to enter patient data
 - Most of the following sheets are analyses.
 
 ::: {.instructions}
@@ -131,7 +132,7 @@ Fill the Information sheet (metadata):
 - `Name of facility`: Moïssala Hospital
 :::
 
-Once these fields are correctly filled, they should not be modified: the information will be used to name the exports.^[You may enter the name the site yourself (if you are sending one or two linelists) or let the data encoders of each site enter fill it (if you are sending a linelist to many sites).]
+Once these fields are correctly filled, they should not be modified: the information will be used to name the exports.^[You may enter the name of the site yourself (if you are sending one or two linelists) or let the data encoders of each site enter fill it (if you are sending a linelist to many sites).]
 
 **Optional metadata**
 
@@ -144,7 +145,7 @@ Fill the following fields: `Admin 1` (Mandoul) and `Admin 2` (Moissala)
 You think that you do not need the rest of the fields. Let's hide them!
 
 ::: {.instructions}
-Keep the "Info" sheet in focus, but go to the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon). Click on the "Show / Hide variables" button.
+Keep the "Info" sheet in focus and go to the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon). Click on the "Show / Hide variables" button.
 :::
 
 It opens a popup window:
@@ -161,7 +162,7 @@ Hide the variables that we do not plan to fill. You can either hide them one by 
 #### Import the geobase
 
 ::: {.instructions} 
-Use the "Import geobase" button from the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon) to import the geobase that you downloaded in the previous steps.
+Use the "Import geobase" button from the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon) to import the geobase that you downloaded previously.
 :::
 
 #### Choose the start of the week.
@@ -172,7 +173,7 @@ Click on the "Week start" button to set up "Monday" as the first day of the week
 
 #### Modify variable visibility
 
-As for the "Info" sheet, there is a tool to show and hide optional variables. When you prepare a linelist, you need to decide which variables to keep based on the needed information for this outbreak.^^[You can hide or unhide variables at a later stage. Of course, you will need to keep in mind that the data will be only partial for these variables (you have it only up to a date, or conversely from a date onwards).]
+As for the "Info" sheet, you can hide or show optional variables in the patient data sheet. When you prepare a linelist, you will need to decide which variables to keep based on the needed information for this outbreak.^^[You can hide or unhide variables at a later stage. Of course, you will need to keep in mind that the data will be only partial for these variables (you have it only up to a date, or conversely from a date onwards).]
 
 For the sake of brevity of the exercise, here you will only perform a couple of actions.
 
@@ -204,7 +205,7 @@ Typically, there will be less columns in the register than the full linelist, as
 
 ::: {.instructions}
 
-1. Click on the Show/Hide button to open the popup window for the register.
+1. Click on the "Show/Hide variables" button to open the popup window for the register.
 
 2. Click on the "Match the show/hide from linelist" to align the register visibility on the linelist configuration as a start.
 
@@ -216,7 +217,7 @@ Now that you have selected the variables to print, you will likely have to adjus
 
 - Tweak column width so that the data encoder have the space to write
 - Change labels orientation, to save some space (for columns with short content)
-- Add rows to the table until it fits one page =^[Hint: there is a button in the OBT menu for that!]
+- Add rows to the table until it fits one page^[Hint: there is a button in the OBT menu for that!]
 
 ::: {.instructions}
 Adjust the width of the following columns:
@@ -233,7 +234,7 @@ When you are finished, you can exit the Print Preview, and hit the "Close Regist
 
 #### Prepare a Case Report Form
 
-Similarly to what you did for the register, it is possible to print a CRF from the linelist if you don't have one available. A button unhides a sheet displaying an automatically prepared draft for a CRF. There is still work to do on it to make it user-friendly.
+Similarly to what you did for the register, it is possible to print a CRF from the linelist if you don't have one available. A button unhides a sheet displaying an automatically prepared draft for a CRF. There is still work to do on it to make it user-friendly but it's a start.
 
 Things that you might do: 
 
@@ -250,10 +251,11 @@ You have done the main customisation of the linelist. Do not forget to save the 
 
 You can now send you to your colleagues. If they have worked with OBT linelist before (even for other diseases) this should be easy: all the OBT linelists have the same functionalities. If they have not worked with OBT linelist before, you should brief them on:
 
-- [unblocking the file and authorising VBA macro](../how_to/unblock_files.qmd)
-- finding the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon)
+- [Unblocking the file and authorising VBA macro](../how_to/unblock_files.qmd)
+- Finding the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon)
 - Filling the remaining metadata on the "Info" sheet
-- [exporting files](../how_to/export_data_dashboard.qmd) to send to the dashboard 
+- [Exporting files](../how_to/export_data_dashboard.qmd) to send to the dashboard
+- Using the [GeoHelper](../how_to/use_geohelper.qmd)
 
 In most cases there should be one linelist per site.
 
@@ -264,27 +266,29 @@ In most cases there should be one linelist per site.
 
 ### 🧭 Context
 
-The linelist is used in Moissala and the neighbouring areas. You receive the file with data and you want to have a loo at it.
+The linelist is used in Moissala and the neighbouring areas. You receive the file with data and you want to have a look at it.
 
 You are now going to work on the file `measles_linelist_moissala.xlsb`, which contains simulated measles data.
 
 
 ### Sanity checks
 
-When I receive a linelist with data I always perform a couple of checks to get a feel of the state of the file and data. These are not the extensive checks I would perform if I was tasked with monitoring data entry and quality, or to perform analyses. But they might rapidly hint at the source of a reported problem (a functionality not working as expecting).
-
-I really encourage you to do the same, even if you are not the person tasked with cleaning or monitoring the data.
-
+When you receive an unknown linelist with data, always perform a couple of checks to get a feel of the state of the file and data. These are not the extensive checks you would perform if you were tasked to monitor data entry and quality, or to perform analyses. They might however rapidly hint at the source of a reported problem (a functionality not working as expecting).
 
 #### Structure checks
 
-- Does the OBT menu appear as expected (if not, it might be that the file is corrupted)?
+- Does the OBT menu appear as expected?
 - Test one button (for example, open the Show/Hide window)
 - Do you see the expected sheets?
 
 ::: {.callout-warning}
-If the ribbon buttons have weird labels or no label at all, it means that the VBA is not activated, or perhaps crashed (it may happen, albeit rarely). In this case, check your settings for VBA, close the file and re-open it.
-If the problem persist, attempt an "Export for migration" to move the data to a new empty template. If the export does not work because the VBA got corrupted, contact the EpiDS team to get help migrating the data.
+If the ribbon buttons have weird labels or no labels at all, it means that the VBA is not activated or crashed. Check your VBA settings, close the file and re-open it.
+
+
+If the problem persist, attempt an "Export for migration" to move the data to a new empty template. 
+
+
+If the export does not work because the VBA is corrupted, contact the EpiDS team to get help migrating the data.
 :::
 
 ::: {.instructions}
@@ -296,17 +300,18 @@ Do these checks on the file.
 
 - Are the metadata on the "Info" sheet still (correctly) filled?^[90% of export problems come from badly filled metadata]
 - Do patients have IDs?
-- Are there replicated IDs
-- Check the filters of a couple of date columns: do the date correspond to what you expect (min, max) and are there values not recognised as dates?
+- Are there replicated IDs?
+- Check the filters of a couple of date columns: do the dates correspond to what you expect (min, max) and are there values not recognised as dates?
 - Check a couple of categorical columns (`sex`, `outcome`...) to see if the categories entered correspond to the expected values.
+- Remove any filters applied on the data (there is a shortcut for that in the OBT menu).
 
 
 ### Analyses
 
-Now let's investigate the descriptive analyses provided with the linelist. While the interface of the linelist is the same, the provided analyses may differ from disease to disease, depending on what was requested, and what is encoded in the **setup file**^[Note that more analyses can be requested if needed]. Most linelist have at least the uni and bivariate tables and the temporal and spatial analyses.
+Now let's investigate the descriptive analyses provided with the linelist. While the interface of the linelist is the same, the provided analyses may differ a bit from disease to disease, depending on what was requested, and what is encoded in the **setup file**^[Note that more analyses can be requested if needed]. Most linelists have at least the uni and bivariate tables, the temporal and spatial analyses.
 
 
-There are a couple of things to keep in mind about the analyses:
+There are a couple of important things about the analyses:
 
 1. The most important thing to remember about analyses in the OBT linelist is that they need to be **refreshed** before being explored.
 
@@ -314,25 +319,25 @@ There are a couple of things to keep in mind about the analyses:
 
 2. The second most important thing to know is that if you filter data in the main patient sheet, it will be reflected in the analyses *after you refresh* (a red warning will appear to remind you).
 
-3. You can alter the appearance of the graphs (which are created automatically and admittedly a bit ugly), the same way you would do for your own figures, with any [Excel tools](https://www.howtogeek.com/how-to-format-your-chart-in-excel/).^[Note that graphs modifications will be lost during data migration to a new version of the linelist, so I advise you to restrict the modifications to graphs that you want to export to reports / slides, or which are _really_ making your eyes bleed.]
+3. You can alter the appearance of the graphs (which are created automatically and admittedly a bit ugly), the same way you would do for your own figures, with any [Excel tool](https://www.howtogeek.com/how-to-format-your-chart-in-excel/).^[Note that graphs modifications will be lost during data migration to a new version of the linelist, so I advise you to restrict the modifications to graphs that you want to export to reports / slides, or which are _really_ making your eyes bleed.]
 
 We are going to start by looking at the analyses without filters on the data.
 
 ::: {.instructions}
-1. Go to the patient data linelist, navigate to the OBT menu and click on the button to clear all filters.^[You could also remove the filters one by one, but it is often easier and quicker to just hit one button than go through all columns one by one to check if someone applied any filter.]
-
-2. Go to the OBT menu of the linelist and use the button to refresh analyses.
+Go to the patient data sheet, navigate to the OBT menu and click on the button to clear all filters. Then refresh analyses.
 :::
 
 Now that the data was refreshed, we can begin checking out the analyses sheets.
 
 ### Persons: uni and bivariate analyses
 
+This page contains univariate and bivariate tables and bar charts providing information about patients: demographic informations, but also symptoms, outcomes etc.
+
 ::: {.instructions}
 Explore the page, and answer the following questions:
 
 - What is the average length of stay of the patients?
-- How many patients are more than 15 years?
+- How many patients are more than 15 years old?
 - How many patients are female?
 - What is the percentage of complicated measles?
 - How many patients are SAM?
@@ -344,23 +349,23 @@ Explore the page, and answer the following questions:
 Now let us investigate the characteristics of deceased patients.
 
 ::: {.instructions}
-1. Go back to the linelist sheet. Use the filters to select only the deceased patients (in the facility and/or the community, it's up to you)
+1. Go back to the patient data sheet. Use the filters to select only the deceased patients (in the facility and/or the community, it's up to you)
 2. Hit the refresh button and go back to the analysis sheet.
 
 - How many female patients of age between one and four died?
-- How many of the patients were MAM?
+- How many of the deceased patients were MAM?
 :::
 
 
 
 ### Time: temporal analyses
 
-Now, let's look at the "Temporal analyses" sheet. On this sheet you can choose the temporal scale you want to monitor: days, weeks, months, quarter, years. The table has 53 rows, and can thus accommodate:
+Now, let's look at the "Temporal analyses" sheet. On this sheet you can choose the temporal scale you want to monitor: days, weeks, months, quarter, years. The table has 53 rows, and can thus accommodate up to:
 
 - a high resolution zoom of a given period of 53 days
 - one year worth of weeks
 - 53 months if you have several years worth of data
-- 53 quarters or years, but we do not expect you to often use these scales
+- 53 quarters or years (but we do not expect you to often use these scales)
 
 ![Options for the temporal analyses](../module_1/images/007-img-temporal-table.png){fig-align="center"}
 
@@ -371,7 +376,7 @@ In this linelist, there is only one very large table. Some other linelists can h
 :::
 
 ::: {.instructions}
-- Remove the filters on the data sheet and hit refresh.^[Remember there is a shortcut button for that in the OBT menu.]
+- Remove the filters on the data sheet and hit refresh.
 - Check the minimum and maximum date of notification: which units would you consider?
 - First select the "Week" unit. Which part of the data is not ploted?
 - How many patients were discharged during the 18th week of 2022?
@@ -384,7 +389,7 @@ Now, if you went to have a look at the graphs, you should see one like that in t
 
 ![Hospitalisations](../module_1/images/008-img-temporal-hospit_raw.png){fig-align="center"}
 
-It is fine to look at the shape of the epicurve (how do hospitalisations evolve?), but you would not want to use it in a report. Firstly you can use filters to remove the empty weeks at the right of the graph:
+It is fine to look at the shape of the epicurve, but you would not want to use it in a report as it is. Beside cosmetic improvement, you can use filters to remove the empty weeks at the right of the graph:
 
 - Select the graph -> some buttons appear at the top right corner.
 - Use the "filter" button (the bottom one) to filter out the categories you don't want to see.
@@ -392,36 +397,37 @@ It is fine to look at the shape of the epicurve (how do hospitalisations evolve?
 ![Minimally pimped graph](../module_1/images/009-img-temporal-hospit_pimped.png){fig-align="center"}
 
 ::: {.callout-warning}
-Don't forget to remove the filters when new data is entered in the linelist, else you won't see it on the graph. The corrolary is that if your colleague sends you a linelist complaining that the figures are correct in the table but do not appear in the graph, the filters are the prime suspect to fix the problem.
+Don't forget to remove the graph filters when new data is entered in the linelist, else you won't see it on the graph. The corrolary is that if your colleague sends you a linelist complaining that the figures are correct in the table but do not appear in the graph, the filters are the prime suspects.
 :::
 
-### Place: Spatial analyses
+### Place: spatial analyses
 
-Now we navigate to the third analyses sheet. It displays the **top 30 areas** with the most cases, and bellow the top 30 places of origin (in the case of refugees and displaced people).^[The number 30 is defined in the **setup file**: another disease might have 10 or 20.]
+Now we navigate to the third analyses sheet. It displays the **top 30 areas** with the most cases, and below the top 30 places of origin (in the case of refugees and displaced people).^[The number 30 is defined in the **setup file**: another disease might have 10 or 20.]
 
 You can select the level at which you want to see the data displayed (admin 1 to 4).
 
-::: {.instruction}
-Click on the blue button "Select your admin level" and go through the options. Which options have data in it?
+::: {.instructions}
+Click on the blue button "Select your admin level" and go through the options. Which options have data in it? How many patients are there in Moissala Est?
 :::
 
-For this linelist, data is meaningful at the "Zone of responsibility" level (admin 3), but with real data even higher levers may be worth checking if people are travelling a lot.
+For this linelist, data is meaningful at the "Zone of responsibility" level (admin 3), but with real data even higher levers may be worth checking if people are travelling a lot, or if you created a master linelist from different files.
 
 
 ### Place and person: spatio-temporal analyses
 
-The last analysis sheet that may be in an OBT linelist is a mix between the temporal analysis and the spatial analysis: it allow you to look at the number of cases (usually) for a couple of chosen locations across time.
-
-
+The last analysis sheet that may be in an OBT linelist is a crossover between the temporal analysis and the spatial analysis: it allow you to look at the number of cases (usually) for a couple of chosen administrative levels across time.
 
 
 ::: {.instructions}
 1. Go to the Spatio-temporal analysis sheet
 2. Place your cursor in one of the blue cells on the left (starting from `C14` and down).
-3. Click on the "GeoHelper" button in the OBT menu.
+3. Click on the ["GeoHelper"](../how_to/use_geohelper.qmd) button in the OBT menu and select Moissala Est (an admin 3)
+4. Go to the next blue cell and use the Geohelper to select another place of interest (for example, one of the top places from the Spatial analysis sheet, or a place that you noticed had recent cases).
 :::
 
+
 ![Spatio temporal analysis](../module_1/images/010-img-spatio-temporal.png){fig-align="center"}
+
 
 
 ## Part 3: Troubleshooting

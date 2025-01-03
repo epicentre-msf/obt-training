@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.6.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,10 +36,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-13edda16af4aae59d6b429432a85a103.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -144,6 +144,18 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../how_to/download_geobase.html">
  <span class="dropdown-text">Download geobase</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/get_template.html">
+ <span class="dropdown-text">Get a linelist template</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/export_data_dashboard.html">
+ <span class="dropdown-text">Export data to dashboard</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/use_geohelper.html">
+ <span class="dropdown-text">Use the GeoHelper</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -201,8 +213,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="page-columns page-full"><p>OubreakTools linelists rely on VBA macros for most of their functionalities. Windows often blocks files with macro when they come from the web (<em>i.e.</em> received through mail, or Teams, or from a <code>zip</code> archive as we just did)  so extra steps might are often necessary to access the file full functionalities.</p><div class="no-row-height column-margin column-container"><span class="margin-aside">You can read the <a href="https://learn.microsoft.com/en-us/microsoft-365-apps/security/internet-macros-blocked">full explanation</a> of why and when this happens to better predict when you can expect it.</span></div></div>
-<div class="callout callout-style-default callout-note callout-titled">
+<p>OubreakTools linelists rely on VBA macros for most of their functionalities. Microsoft Office often blocks files with macro when they come from the web (<em>i.e.</em> received through mail, or Teams, or from a <code>zip</code> archive as we just did)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> so extra steps are often necessary to access the file full functionalities.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;You can <a href="https://learn.microsoft.com/en-us/microsoft-365-apps/security/internet-macros-blocked">go read the full explanation</a> of why and when this happens to better predict when you can expect it.</p></div></div><div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -212,12 +224,12 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This protection is independant from the password protection that a user or a developper can add to an Excel file.</p>
+<p>This protection is independent from the password protection that a user or a developer may add to an Excel file.</p>
 </div>
 </div>
 <section id="sec-unblock-file" class="level2">
 <h2 class="anchored" data-anchor-id="sec-unblock-file">Unblock files</h2>
-<p>When you receive a file, before opening it, always check whether Windows blocked it or not, and unbloc it if needed:</p>
+<p>When you receive a file, before opening it, always check whether Windows blocked it or not, and unblock it if needed:</p>
 <ol type="1">
 <li>Right click on the file (the locally saved Excel file) and select “Properties” from the menu</li>
 </ol>
@@ -228,7 +240,7 @@ Note
 </figure>
 </div>
 <ol start="3" type="1">
-<li>Check the <em>Unblock</em> box on the bottom right. If you don’t see such a button on the bottom right it means that the file is already unlocked.</li>
+<li>Check the <em>Unblock</em> box on the bottom right. If you don’t see such a button on the bottom right it means that the file is already unblocked.</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -236,24 +248,42 @@ Note
 <figcaption>State of the property menu for a blocked file</figcaption>
 </figure>
 </div>
+<ol start="4" type="1">
+<li>Click OK and you can proceed to open the file.</li>
+</ol>
 <p>See the <a href="https://learn.microsoft.com/en-us/microsoft-365-apps/security/internet-macros-blocked#remove-mark-of-the-web-from-a-file">Microsoft Help page on how to unblock a file</a> for more explanations.</p>
 </section>
 <section id="sec-enable-macros" class="level2">
 <h2 class="anchored" data-anchor-id="sec-enable-macros">Enable macros</h2>
-<p>Even if you unblocked the file, you still need to enable and authorise macros in Excel to use the file.</p>
+<p>Once the file is open, you need to enable and authorise macros in Excel to use the file.</p>
 <ol type="1">
 <li><p>Make sure the file is not <em>protected</em> (see section above)</p></li>
 <li><p>Open the file (a password may be needed at this stage)</p></li>
-<li><p>If this is the first time you use an Excel file with VBA macros, you probably need to go and enable them in your Trust Center. To do that:</p>
+<li><p>If this is the first time you use an Excel file with VBA macros, you probably need to go and <strong>enable them in the Trust Center</strong>. To do that:</p>
 <ol type="a">
-<li>In the open Excel file, select the <em>File</em> tab at the tom, and open the <em>Options</em> popup windows</li>
-<li>Select the <em>Trust Center</em> tab, and open the Trust Center settings window</li>
-<li>In the Trust Center, select the <em>Macro Settings</em> tab. <img src="../how_to/images/003-img-trust-center.png" class="img-fluid quarto-figure quarto-figure-center" alt="A screeshot of the trust center popup windows, on the Macro settings tab"></li>
-<li>You can tick the “Disable all macros with notification”, or the “Enable all macros”. In both cases, Excel will regularly ask you to authorise macros for specific files.</li>
-<li>Restart Excel and reopen the file.</li>
+<li><p>In the Excel file, select the <em>File</em> tab at the top, and open the <em>Options</em> popup window</p></li>
+<li><p>Select the <em>Trust Center</em> tab, and open the Trust Center settings window</p></li>
+<li><p>In the Trust Center, select the <em>Macro Settings</em> tab.</p></li>
 </ol></li>
-<li><p>Now, you get a notification if the macro were disabled for this file when you open it. it will manifest with a yellow band at the top of the sheets informing you that the macros have been disabled. Click on the “Enable content” button to authorise them for this file. <img src="../how_to/images/004-macros-disabled.png" class="img-fluid quarto-figure quarto-figure-center" alt="A screeshot of the yellow band informing an Excel user that macros have been disabled in an Excel file."></p></li>
 </ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../how_to/images/003-img-trust-center.png" class="img-fluid figure-img" alt="A screeshot of the trust center popup windows, on the Macro settings tab"></p>
+<figcaption>Trust Center menu for macros</figcaption>
+</figure>
+</div>
+<pre><code>d) Tick the "Disable all macros with notification".
+
+e) Restart Excel and reopen the file.</code></pre>
+<ol start="4" type="1">
+<li>With this setting, you get a notification when you open the file if the macros had been disabled. The notification manifests with a yellow band at the top of the sheets informing you that the macros have been disabled. Click on the “Enable content” button to authorise them for this file.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../how_to/images/004-macros-disabled.png" class="img-fluid figure-img" alt="A screeshot of the yellow band informing an Excel user that macros have been disabled in an Excel file."></p>
+<figcaption>Trust Center menu for macros</figcaption>
+</figure>
+</div>
 <p>You can read more about <a href="https://support.microsoft.com/en-us/office/enable-or-disable-macros-in-microsoft-365-files-12b036fd-d140-4e74-b45e-16fed1a7e5c6">authorising VBA macros on the Microsoft help page</a>.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -265,14 +295,13 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you have a red band informing you that macros have been disabled, but no button to authorise them, it means that the Trust Center option is to block them. Go check the Trust Ceenter options, as in step 3.</p>
+<p>If you have a red band informing you that macros have been disabled, but no button to authorise them, it means that the Trust Center option is to block them. Go check the Trust Center options, as in step 3.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../how_to/images/005-macros-disabled-red.png" class="img-fluid figure-img" alt="A screeshot of the red band informing an Excel user that macros have been disabled in an Excel file."></p>
 <figcaption>Trust Center menu for macros</figcaption>
 </figure>
 </div>
-<p>Once, with an heavily constrained field computer, doing the steps above did not work, I had to copy the Excel file, and redo the steps on the new version (unblocking, changing the Trust Center macro options, saving, closing the file, reopening) before it worked.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -288,22 +317,10 @@ Note
 <p>These steps are common to all files with VBA macros in it, not just OBT files; you may have to do the same for a number of other linelist templates.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Once,</p>
-</div>
-</div>
 
 
 </section>
+
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -388,8 +405,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -500,7 +515,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

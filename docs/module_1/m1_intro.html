@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.6.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,10 +36,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-13edda16af4aae59d6b429432a85a103.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -144,6 +144,18 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../how_to/download_geobase.html">
  <span class="dropdown-text">Download geobase</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/get_template.html">
+ <span class="dropdown-text">Get a linelist template</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/export_data_dashboard.html">
+ <span class="dropdown-text">Export data to dashboard</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/use_geohelper.html">
+ <span class="dropdown-text">Use the GeoHelper</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -183,18 +195,18 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#an-ecosystem-of-files" id="toc-an-ecosystem-of-files" class="nav-link" data-scroll-target="#an-ecosystem-of-files">An ecosystem of files</a></li>
   </ul></li>
-  <li><a href="#outbreaktools" id="toc-outbreaktools" class="nav-link" data-scroll-target="#outbreaktools">OutbreakTools</a>
+  <li><a href="#presentation-of-outbreaktools" id="toc-presentation-of-outbreaktools" class="nav-link" data-scroll-target="#presentation-of-outbreaktools">Presentation of OutbreakTools</a>
   <ul>
   <li><a href="#concept" id="toc-concept" class="nav-link" data-scroll-target="#concept">Concept</a></li>
   <li><a href="#outbreaktools-workflow" id="toc-outbreaktools-workflow" class="nav-link" data-scroll-target="#outbreaktools-workflow">OutbreakTools Workflow</a></li>
   </ul></li>
-  <li><a href="#outbreaktools-linelists" id="toc-outbreaktools-linelists" class="nav-link" data-scroll-target="#outbreaktools-linelists">OutbreakTools linelists</a>
+  <li><a href="#xxxx-outbreaktools-linelists" id="toc-xxxx-outbreaktools-linelists" class="nav-link" data-scroll-target="#xxxx-outbreaktools-linelists">XXXX OutbreakTools linelists</a>
   <ul>
   <li><a href="#a-note-on-languages" id="toc-a-note-on-languages" class="nav-link" data-scroll-target="#a-note-on-languages">A note on languages</a></li>
   <li><a href="#a-note-on-geographic-data" id="toc-a-note-on-geographic-data" class="nav-link" data-scroll-target="#a-note-on-geographic-data">A note on geographic data</a></li>
   </ul></li>
-  <li><a href="#dashboards" id="toc-dashboards" class="nav-link" data-scroll-target="#dashboards">Dashboards</a></li>
-  <li><a href="#workflow-to-deploy-a-loinelist" id="toc-workflow-to-deploy-a-loinelist" class="nav-link" data-scroll-target="#workflow-to-deploy-a-loinelist">Workflow to deploy a loinelist???</a></li>
+  <li><a href="#xxxx-dashboard" id="toc-xxxx-dashboard" class="nav-link" data-scroll-target="#xxxx-dashboard">XXXX Dashboard</a></li>
+  <li><a href="#sec-deployment" id="toc-sec-deployment" class="nav-link" data-scroll-target="#sec-deployment">XXXX Prepare a linelist for deployment</a></li>
   </ul>
 </nav>
     </div>
@@ -240,7 +252,7 @@ Too Long; Did Not Read
 </div>
 </div>
 </div>
-<p>In order to run its projects, MSF and other organisation rely on patient level data during outbreak response. It is often recorded in several files (register, patient file, case investigation form, etc.) but some of it is usually gathered in so-called <strong>linelists</strong> files. These files are used by epidemiologists to describe outbreaks, but also by the medical team and HQ to monitor activities at a local or higher level. Good quality patient data can be further analysed to provide additional information such as risk factors, or pluged in models for forecasting.</p>
+<p>In order to run its projects, MSF and other organisations rely on patient level data during outbreak response. It is often recorded in several files (register, patient file, case investigation form, etc.) but some of it is usually gathered in so-called <strong>linelists</strong> files. These files are used by epidemiologists to describe outbreaks, but also by the medical team and HQ to monitor activities at a local or higher level. Good quality patient data can be further analysed to provide additional information such as risk factors, or pluged in models for forecasting.</p>
 <p>Linelists are, in essence, <em>flat tables</em> where one line represent one patient, and one column represents one variable for this patient. As such, linelists can be created in many software. Excel, while not the only available tool, has been massively used to collect linelist data across the world.</p>
 <section id="advantages-of-using-excel-to-build-linelists" class="level4">
 <h4 class="anchored" data-anchor-id="advantages-of-using-excel-to-build-linelists">Advantages of using Excel to build linelists</h4>
@@ -260,7 +272,7 @@ Too Long; Did Not Read
 <ul>
 <li>Developing a <em>good</em> linelist that fosters data quality takes much more time than just setting up a table, and not everybody knows the Excel functionalities to do so. The consequence of that is that there are <em>a lot</em> of terrible linelists around</li>
 <li>Files for different diseases usually differ a lot. They may have been developped by different people with different skills. Perhaps the developper used a common template at the start and re-used code, but usually the file diverge. Bringing the same functionalities to all of them takes time and effort</li>
-<li>Consequently, maintenance of the files is time consuming. Using VBA scripts to easily get data in and out of your linelist helps, but does not solve all the problem.</li>
+<li>Consequently, maintenance of the files is time consuming. Using VBA scripts to easily get data in and out of your linelist helps, but does not solve all the problems.</li>
 <li>The files can get heavy and finicky when they get too complicated</li>
 <li>Data protection is not as good as dedicated clinical software such as RedCap</li>
 <li>Excel files are not centralised by default: each site has its own data. Even if the linelist template is the same, it takes manual actions to gather the data and centralise it</li>
@@ -270,17 +282,17 @@ Too Long; Did Not Read
 <section id="an-ecosystem-of-files" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="an-ecosystem-of-files">An ecosystem of files</h3>
 <p>As a result, there is a <strong>whole ecosystem of files</strong> used in and outside MSF, with different interfaces, dictionaries, functionalities, languages. The data is fragmented, hard to reconcile and often of bad quality. This makes it is hard to have visibility on MSF activities and to exploit the data.</p>
-<p>To alleviate some of the above problems, MSF OCs try to provide linelists on which disease referent and epidemiologists agreed upon, to standardise data collection within OC. Some of these files are quite good, some of them not so much. The quality and functionalities included tend to depend on both OC and disease.</p>
-<div class="page-columns page-full"><p>Better, for some diseases, OCs reached an agreement on a dictionary and a common tool. Epicentre has provided a number of these “intersection” linelists in the recent years. This files however also suffered from some problems: they were hard to maintain and had different functionalities depending on diseases .</p><div class="no-row-height column-margin column-container"><span class="margin-aside">The number of functionalities, and the general data quality increased with time as skills grew, which resulted in very different linelist in terms of both interface and capacities</span></div></div>
-<p>Epicentre tried to go a step further, capitalising on what was learned developing and maintaining these tools, and developed <strong>OutbreakTools</strong> a set of tools to improve data collection, quality and visualisation. A good part of OutbreakTools it to help generating good quality, robust linelists.</p>
+<p>To alleviate some of the above problems, MSF OCs try to provide linelists on which disease referents and epidemiologists agreed upon, to standardise data collection within OC. The quality and functionalities included tend to depend on both OC and disease.</p>
+<p>Better, for some diseases, OCs reached an agreement on a minimal dictionary and sometimes a common tool. Epicentre has provided a number of these “intersection” linelists in the recent years. This files however also suffered from some problems: they were hard to maintain and had different functionalities depending on diseases<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;The number of functionalities, and the general data quality increased with time as skills grew, which resulted in very different linelist in terms of both interface and capacities</p></div></div><p>Epicentre tried to go a step further, capitalising on what was learned developing and maintaining these tools, and developed <strong>OutbreakTools</strong> a set of tools to improve data collection, quality and visualisation. A good part of OutbreakTools it to help generating good quality, robust linelists.</p>
 </section>
 </section>
-<section id="outbreaktools" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="outbreaktools">OutbreakTools</h2>
+<section id="presentation-of-outbreaktools" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="presentation-of-outbreaktools">Presentation of OutbreakTools</h2>
 <section id="concept" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="concept">Concept</h3>
-<p>The main idea of OutbreakTools linelist generation is to separate the content of the linelist (which <em>variables</em> and <em>analyses</em> are in the linelist) from the file interface and functionalities.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;An idea that is not novel, as separating content and presentation (or style) is a classic idea, that you find in HTML/CSS, Markdown, Latex or even using styles in Word</p></div></div><div class="page-columns page-full"><p>The content is described in a <strong>setup file</strong>, a special Excel file that allows describing all the variables and the analyses that should go in the linelist. Another Excel file, the <strong>designer</strong>, reads the <strong>setup file</strong> and runs scripts to generate a linelist. The designer creates the whole linelist structure, adds the buttons and many functionalities.</p><div class="no-row-height column-margin column-container"><span class="margin-aside">You can think of the <strong>setup file</strong> as a <em>recipe</em> for a given linelist.</span><span class="margin-aside">If you think of the <strong>setup file</strong> as a recipe, the designer is the food processor.</span></div></div>
+<p>The main idea of OutbreakTools linelist generation is to separate the content of the linelist (which <em>variables</em> and <em>analyses</em> are in the linelist) from the file interface and functionalities.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;An idea that is not novel, as separating content and presentation (or style) is a classic idea, that you find in HTML/CSS, Markdown, Latex or even using styles in Word</p></div><div id="fn3"><p><sup>3</sup>&nbsp;You can think of the <strong>setup file</strong> as a <em>recipe</em> for a given linelist.</p></div><div id="fn4"><p><sup>4</sup>&nbsp;If you think of the <strong>setup file</strong> as a recipe, the designer is the food processor.</p></div></div><p>The content is described in a <strong>setup file</strong>, a special Excel file that allows describing all the variables and the analyses that should go in the linelist.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Another Excel file, the <strong>designer</strong>, reads the <strong>setup file</strong> and runs scripts to generate a linelist. The designer creates the whole linelist structure, adds the buttons and many functionalities.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/002-img-obt-concept.png" class="img-fluid figure-img" alt="A diagram with three boxes illustrating the workflow to create a linelist, with a setup file and a designer file."></p>
@@ -297,30 +309,30 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>See the Module 2 to learn how to modify a setup file and compile a linelist</p>
+<p>The module 2 teaches you how to modify a setup file and compile a linelist</p>
 </div>
 </div>
 <p>The advantages of this approach are:</p>
 <ul>
-<li><p>Someone with no knowledge of VBA can use the OBT to build or modify a linelist, as long as they know how to fill a setup file.</p></li>
-<li><p>The maintenance of functionalities is done by a specialist in Epicentre, who generates new versions of the designer. Upon update of the designer, linelists can be regenerated in a couple of minutes to incorporate the updates.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p></li>
+<li><p>Someone with no knowledge of VBA can use the OBT tools to build or modify a linelist, as long as they know how to fill a setup file.</p></li>
+<li><p>The maintenance of functionalities is done by a specialist in Epicentre, who generates new versions of the designer. Upon update of the designer, linelists can be regenerated in a couple of minutes to incorporate the updates.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p></li>
 </ul>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Which is not an instantaneous process, but infinitely faster than manually porting code and fixes from one linelist to a different one with lots of code adaptation, and then migrating data more or less by hand depending on the linelist.</p></div></div></section>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;Which is not an instantaneous process, but infinitely faster than manually porting code and fixes from one linelist to a different one with lots of code adaptation, and then migrating data, with more or less hasle depending on the linelist.</p></div></div></section>
 <section id="outbreaktools-workflow" class="level3">
 <h3 class="anchored" data-anchor-id="outbreaktools-workflow">OutbreakTools Workflow</h3>
-<p>In addition linelists development, OutbreakTools contains tools that rely on the standardised nature of the created linelists to build data cleaning workflow and dashboard much faster than ever before. When a new linelist is created, a simple functional dashboard can be build in a couple of days, with automatic data gathering from a mail address.</p>
+<p>In addition to linelist development, OBT contains tools that rely on the standardised nature of the linelists to build data cleaning workflow and dashboard much faster than ever before. When a new linelist is created, a simple functional dashboard can be build in a couple of days, with automatic data gathering from a mail address.</p>
 <p>The full workflow allows epidemiologists or data teams to send their data to Epicentre for it to be displayed on a dashboard. The data will usually be displayed between one or two hours after being sent.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/001-img-obt-workflow.png" class="img-fluid figure-img" alt="A diagram showing excel files being sent to Epicentre or partners. When the data is sent to Epicentre, the data is then sent to a dashboard.."></p>
+<p><img src="images/001-img-obt-workflow.png" class="img-fluid figure-img" alt="A diagram showing excel files being sent to Epicentre or partners. When the data is sent to Epicentre, the data is then sent to a dashboard."></p>
 <figcaption>The linelist-to-dashboard workflow</figcaption>
 </figure>
 </div>
 </section>
 </section>
-<section id="outbreaktools-linelists" class="level2">
-<h2 class="anchored" data-anchor-id="outbreaktools-linelists">OutbreakTools linelists</h2>
-<p>This section will describe linelist functionalities.</p>
+<section id="xxxx-outbreaktools-linelists" class="level2">
+<h2 class="anchored" data-anchor-id="xxxx-outbreaktools-linelists">XXXX OutbreakTools linelists</h2>
+<p>This section will describe linelists functionalities.</p>
 <section id="a-note-on-languages" class="level4">
 <h4 class="anchored" data-anchor-id="a-note-on-languages">A note on languages</h4>
 <p>A given setup file can contain several languages, so as long as the translation for a language is provided, the designer can compile a linelist in this language. All the created linelists will thus have the same interface, variable names and functionalities.</p>
@@ -340,19 +352,60 @@ Note
 </section>
 <section id="a-note-on-geographic-data" class="level4">
 <h4 class="anchored" data-anchor-id="a-note-on-geographic-data">A note on geographic data</h4>
-<p>Describing geographic data is a huge challenge for patient data (independently of the software used). The problem is usually that it is hard to access geographic levels to describe places in al the countries that we work in, these data may change overtime, is often incomplete, and sometimes several source of data contradict themselves.</p>
-<p>In OBT linelists, as in many linelists developed before, we made the arbitrary choice to describe geographic locations with fours hierarchical administrative levels. So each location is associated with four columns with cascading dropdown menus (and several hidden calculated columns).</p>
+<p>Describing geographic data is a huge challenge for patient data (independently of the software used). The problem is usually that it is hard to access geographic levels to describe places in all the countries that we work in: the data may change over time, is often incomplete, and sometimes several source of data contradict each others</p>
+<p>In OBT linelists, as in many linelists developed before, we made the arbitrary choice to describe geographic locations with fours hierarchical administrative levels. So each location is associated with four columns with cascading dropdown menus and several hidden calculated columns.</p>
 <p>The categories with which to populate dropdown menus are country specific. A member of the EpiDS team is tasked to gather geographic data from different places (GIS unit, OCHA HDX, local GIS officers etc.) and create database of geographic locations associated with shapefiles (files to plot geographic data). As a part of OutbreakTools, we provide Excel tabulated versions of this data, the so-called <strong>geobases</strong>, which can be imported very easily in OBT linelists to fill the dropdown menus for locations. These geobases are accessible online in the <a href="https://reports.msf.net/secure/app/outbreak-tools-geoapp">Geoapp</a>.</p>
+<p>Geographical location are encoded using four columns that can accommodate up to four administrative levels, and these columns have a special status in OBT. You can recognize them by the orange background of their labels. When you import a geobase in a linelist:</p>
+<ul>
+<li>The labels of the columns are updated with the administrative levels present in the geobase (e.g.&nbsp;“adm1_name” will change to “Province” for DRC).</li>
+<li>The categories of the dropdown menus update. You can fill the variables either by using the cascading dropdown menus, or by using the GeoHelper button from the ribbon.</li>
+</ul>
 </section>
 </section>
-<section id="dashboards" class="level2">
-<h2 class="anchored" data-anchor-id="dashboards">Dashboards</h2>
+<section id="xxxx-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="xxxx-dashboard">XXXX Dashboard</h2>
+<ul>
+<li><a href="../how_to/export_data_dashboard.html">exporting files</a></li>
+</ul>
 </section>
-<section id="workflow-to-deploy-a-loinelist" class="level2">
-<h2 class="anchored" data-anchor-id="workflow-to-deploy-a-loinelist">Workflow to deploy a loinelist???</h2>
+<section id="sec-deployment" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sec-deployment">XXXX Prepare a linelist for deployment</h2>
+<ol type="1">
+<li>Download an empty linelist template, and the accompanying documentation</li>
+</ol>
+<p>Go to the Epinetwork SharePoint or ask a referent epi/disease focal point^<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. See <a href="../how_to/get_template.html">here</a> for more information.</p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;Unless you already have a <em>recent</em> version</p></div></div><div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There may be several languages available. In general you can expect English and French as default for well established linelists. Spanish, Portuguese or Arabic translations may be developed when needed, don’t hesitate to ask.</p>
+</div>
+</div>
+<ol start="2" type="1">
+<li><p><a href="../how_to/download_geobase.html">Get a geobase for your area</a> from the <a href="https://reports.msf.net/secure/app/outbreak-tools-geoapp">Geoapp</a></p></li>
+<li><p>Fill the linelist metadata: section, country etc.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p></li>
+<li><p>Customise the linelist:</p>
+<ol type="a">
+<li>Select the optional variables you want to show or hide</li>
+<li>Define the start of the week for your country</li>
+<li>Import the geobase in the linelist</li>
+<li>Customise some dropdown menus</li>
+<li>Tweak columns width</li>
+<li>Tweak graphs</li>
+</ol></li>
+<li><p>Optional: prepare and print a register and/or a Case Report Form to enter data on paper</p></li>
+<li><p>Send the linelist to the sites with the documentation. In many settings there should be one linelist per site.</p></li>
+<li><p>Ask the site to fill the remaining metadata from the Info sheet (site, sometimes site location etc.)</p></li>
+</ol>
 
 
-</section>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;It is very important to fill the country, name of the facility and section, as these are used to name exports.</p></div></div></section>
 
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -438,8 +491,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -550,7 +601,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

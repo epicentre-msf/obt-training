@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.6.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,10 +36,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-13edda16af4aae59d6b429432a85a103.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -144,6 +144,18 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../how_to/download_geobase.html">
  <span class="dropdown-text">Download geobase</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/get_template.html">
+ <span class="dropdown-text">Get a linelist template</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/export_data_dashboard.html">
+ <span class="dropdown-text">Export data to dashboard</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/use_geohelper.html">
+ <span class="dropdown-text">Use the GeoHelper</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -202,7 +214,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This training will teach you how to use OutbreakTools (OBT) tools to generate an OBT linelist from a dictionary. You will then learn how to modify a setup to perform common tasks, such as adding a specific export of data for a MoH, and adding some analyses that you need in the field. Tentative length: 3h</p>
+<p>This training will teach you how to use OutbreakTools (OBT) tools to generate an OBT linelist from a dictionary. You will then learn how to modify a setup to perform common tasks, such as adding a specific export of data for a MoH, and adding some analyses that you need in the field.</p>
+<p><strong>Tentative length: 3h</strong></p>
 <section id="objectives" class="level2">
 <h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
 <p>After this training, you should be able to:</p>
@@ -225,7 +238,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="content-of-the-training" class="level2">
 <h2 class="anchored" data-anchor-id="content-of-the-training">Content of the training</h2>
-<p>The training will be based on a mix of slides and exercises. The exercise will be based on a common situation: an (intersection) linelist already exists, but needs to be customised a bit: you want to add an export for your country, and some additional analyses.</p>
+<p>The training will be based on a mix of slides and exercises. The exercise will be based on a common situation: a linelist already exists, but needs to be customised a bit. You want to add an export for your country, and some additional analyses.</p>
 
 
 </section>
@@ -313,8 +326,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -425,7 +436,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

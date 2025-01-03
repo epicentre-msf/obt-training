@@ -9,7 +9,7 @@ format:
   html:
     theme: 
       - flatly
-      # - styles.css
+      - styles.scss
     
     toc: true
     toc-depth: 5
@@ -65,6 +65,12 @@ website:
             href: how_to/unblock_files.qmd
           - text: Download geobase
             href: how_to/download_geobase.qmd
+          - text: Get a linelist template
+            href: how_to/get_template.qmd
+          - text: Export data to dashboard
+            href: how_to/export_data_dashboard.qmd
+          - text: Use the GeoHelper
+            href: how_to/use_geohelper.qmd
             
       - text: Reference
         menu: 
@@ -77,6 +83,7 @@ website:
         text: Source Code
         href: https://github.com/epicentre-msf/obt-training
 
+  # Side navigation bar
   # sidebar:
   #   contents: auto
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.6.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,10 +36,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-13edda16af4aae59d6b429432a85a103.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -144,6 +144,18 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../how_to/download_geobase.html">
  <span class="dropdown-text">Download geobase</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/get_template.html">
+ <span class="dropdown-text">Get a linelist template</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/export_data_dashboard.html">
+ <span class="dropdown-text">Export data to dashboard</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/use_geohelper.html">
+ <span class="dropdown-text">Use the GeoHelper</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -173,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -194,14 +206,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Geobases contain description of geographic locations, encoded by four aministrative levels. You can download one for your linelist with the following steps:</p>
+<p>Geobases contain description of geographic locations, encoded by four administrative levels. You can download one for your linelist with the following steps:</p>
 <ol type="1">
-<li><p>In you internet browser, go to the <a href="https://reports.msf.net/secure/app/outbreak-tools-geoapp">Geoapp</a>.</p></li>
-<li><p>Use your account to connect. If you do not have one already, create one <a href="https://reports.msf.net/signup/">here</a> first then connect to the Geoapp.</p></li>
+<li><p>In you internet browser, go to the <a href="https://reports.msf.net/secure/app/outbreak-tools-geoapp">GeoApp</a>.</p></li>
+<li><p>Use your account to connect. If you do not have one already, create one <a href="https://reports.msf.net/signup/">here</a> first<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> then connect to the GeoApp.</p></li>
 <li><p>Select one <em>or more</em> countries from the dropdown menu in the top left of the screen. The Admin 1 regions of each country will be rendered on the map.</p></li>
 <li><p>Click on the regions you require geo data for. Selected regions turn red. If you want to select the whole country, click the “Select all regions” button under the country dropdown menu. Once one region has been selected, buttons to inspect and download the data will appear below the country dropdown menu.</p></li>
-<li><p>Click on the “Download Geobase” button to download the data for the selected regions in an excel format that can be directly imported into an OutbreakTools Linelist.</p></li>
+<li><p>Click on the “Download Geobase” button to download the data for the selected regions in an excel format that can be directly imported into an OutbreakTools linelist.</p></li>
 </ol>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;You will need an MSF mail adress</p></div></div><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../how_to/images/006-download-geobase.png" class="img-fluid figure-img" alt="A screenshot of the GeoApp site, with several regions at the frontier of Sudan and South Sudan selected and thus red. The dropdown menu is highlighted in yellow, the button to select all regions is highlighted in green, and the button to download the geobase as an Excel file is highlighted in blue."></p>
+<figcaption>Screenshot of the GeoApp site</figcaption>
+</figure>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -228,6 +246,7 @@ Note
 <p>The geospatial administrative boundary data used to build the geobase can also be downloaded in the format of your choice, compatible with GIS software (e.g.&nbsp;QGIS, ArcGIS) and the R statistical software by clicking on the “Download geo Data” button.</p>
 </div>
 </div>
+
 
 
 
@@ -314,8 +333,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -426,7 +443,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

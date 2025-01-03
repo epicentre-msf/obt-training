@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.6.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,10 +36,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-13edda16af4aae59d6b429432a85a103.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -144,6 +144,18 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../how_to/download_geobase.html">
  <span class="dropdown-text">Download geobase</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/get_template.html">
+ <span class="dropdown-text">Get a linelist template</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/export_data_dashboard.html">
+ <span class="dropdown-text">Export data to dashboard</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/use_geohelper.html">
+ <span class="dropdown-text">Use the GeoHelper</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -176,22 +188,69 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
-  <li><a href="#context-of-the-tutorial" id="toc-context-of-the-tutorial" class="nav-link" data-scroll-target="#context-of-the-tutorial">Context of the tutorial</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">🎯 Objectives</a></li>
+  <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context">🧭 Context</a></li>
+  <li><a href="#activities" id="toc-activities" class="nav-link" data-scroll-target="#activities">Activities</a></li>
   </ul></li>
-  <li><a href="#get-the-tutorial-materials" id="toc-get-the-tutorial-materials" class="nav-link" data-scroll-target="#get-the-tutorial-materials">Get the tutorial materials</a>
+  <li><a href="#get-ready" id="toc-get-ready" class="nav-link" data-scroll-target="#get-ready">Get ready</a>
   <ul>
-  <li><a href="#download-and-unzip-the-materials" id="toc-download-and-unzip-the-materials" class="nav-link" data-scroll-target="#download-and-unzip-the-materials">Download and unzip the materials 📦</a></li>
-  <li><a href="#description-of-the-folder-content" id="toc-description-of-the-folder-content" class="nav-link" data-scroll-target="#description-of-the-folder-content">Description of the folder content</a></li>
+  <li><a href="#download-and-unzip-the-tutorial-materials" id="toc-download-and-unzip-the-tutorial-materials" class="nav-link" data-scroll-target="#download-and-unzip-the-tutorial-materials">Download and unzip the tutorial materials 📦</a></li>
+  <li><a href="#description-of-the-folder-content" id="toc-description-of-the-folder-content" class="nav-link" data-scroll-target="#description-of-the-folder-content">Description of the folder content 📂</a></li>
   </ul></li>
-  <li><a href="#unblock-obt-linelists-and-authorise-macros" id="toc-unblock-obt-linelists-and-authorise-macros" class="nav-link" data-scroll-target="#unblock-obt-linelists-and-authorise-macros">Unblock OBT linelists and authorise macros</a></li>
-  <li><a href="#prepare-and-deploy-a-linelist" id="toc-prepare-and-deploy-a-linelist" class="nav-link" data-scroll-target="#prepare-and-deploy-a-linelist">Prepare and deploy a linelist</a>
+  <li><a href="#part-0-unlock-files-and-functionalities" id="toc-part-0-unlock-files-and-functionalities" class="nav-link" data-scroll-target="#part-0-unlock-files-and-functionalities">Part 0: Unlock files and functionalities 🔓</a></li>
+  <li><a href="#part-1-prepare-and-deploy-a-linelist" id="toc-part-1-prepare-and-deploy-a-linelist" class="nav-link" data-scroll-target="#part-1-prepare-and-deploy-a-linelist">Part 1: Prepare and deploy a linelist</a>
   <ul>
-  <li><a href="#get-an-empty-template" id="toc-get-an-empty-template" class="nav-link" data-scroll-target="#get-an-empty-template">Get an empty template</a></li>
-  <li><a href="#general-workflow-here-or-in-lesson" id="toc-general-workflow-here-or-in-lesson" class="nav-link" data-scroll-target="#general-workflow-here-or-in-lesson">General workflow (HERE OR IN LESSON?)</a></li>
-  <li><a href="#fill-the-metadata" id="toc-fill-the-metadata" class="nav-link" data-scroll-target="#fill-the-metadata">Fill the metadata</a></li>
-  <li><a href="#import-a-geobase" id="toc-import-a-geobase" class="nav-link" data-scroll-target="#import-a-geobase">Import a geobase</a></li>
+  <li><a href="#gather-the-files" id="toc-gather-the-files" class="nav-link" data-scroll-target="#gather-the-files">Gather the files</a>
+  <ul>
+  <li><a href="#get-a-linelist-template" id="toc-get-a-linelist-template" class="nav-link" data-scroll-target="#get-a-linelist-template">Get a linelist template</a></li>
+  <li><a href="#download-the-geobase" id="toc-download-the-geobase" class="nav-link" data-scroll-target="#download-the-geobase">Download the geobase</a></li>
   </ul></li>
+  <li><a href="#adapt-the-linelist" id="toc-adapt-the-linelist" class="nav-link" data-scroll-target="#adapt-the-linelist">Adapt the linelist</a>
+  <ul>
+  <li><a href="#fill-metadata" id="toc-fill-metadata" class="nav-link" data-scroll-target="#fill-metadata">Fill metadata</a></li>
+  <li><a href="#hide-unused-fields" id="toc-hide-unused-fields" class="nav-link" data-scroll-target="#hide-unused-fields">Hide unused fields</a></li>
+  <li><a href="#import-the-geobase" id="toc-import-the-geobase" class="nav-link" data-scroll-target="#import-the-geobase">Import the geobase</a></li>
+  <li><a href="#choose-the-start-of-the-week." id="toc-choose-the-start-of-the-week." class="nav-link" data-scroll-target="#choose-the-start-of-the-week.">Choose the start of the week.</a></li>
+  <li><a href="#modify-variable-visibility" id="toc-modify-variable-visibility" class="nav-link" data-scroll-target="#modify-variable-visibility">Modify variable visibility</a></li>
+  <li><a href="#print-a-register" id="toc-print-a-register" class="nav-link" data-scroll-target="#print-a-register">Print a register</a></li>
+  <li><a href="#prepare-a-case-report-form" id="toc-prepare-a-case-report-form" class="nav-link" data-scroll-target="#prepare-a-case-report-form">Prepare a Case Report Form</a></li>
+  </ul></li>
+  <li><a href="#send-the-linelist" id="toc-send-the-linelist" class="nav-link" data-scroll-target="#send-the-linelist">Send the linelist</a></li>
+  </ul></li>
+  <li><a href="#part-2-linelist-in-use" id="toc-part-2-linelist-in-use" class="nav-link" data-scroll-target="#part-2-linelist-in-use">Part 2: Linelist in use</a>
+  <ul>
+  <li><a href="#context-1" id="toc-context-1" class="nav-link" data-scroll-target="#context-1">🧭 Context</a></li>
+  <li><a href="#sanity-checks" id="toc-sanity-checks" class="nav-link" data-scroll-target="#sanity-checks">Sanity checks</a>
+  <ul>
+  <li><a href="#structure-checks" id="toc-structure-checks" class="nav-link" data-scroll-target="#structure-checks">Structure checks</a></li>
+  <li><a href="#data-checks" id="toc-data-checks" class="nav-link" data-scroll-target="#data-checks">Data checks</a></li>
+  </ul></li>
+  <li><a href="#analyses" id="toc-analyses" class="nav-link" data-scroll-target="#analyses">Analyses</a></li>
+  <li><a href="#persons-uni-and-bivariate-analyses" id="toc-persons-uni-and-bivariate-analyses" class="nav-link" data-scroll-target="#persons-uni-and-bivariate-analyses">Persons: uni and bivariate analyses</a></li>
+  <li><a href="#time-temporal-analyses" id="toc-time-temporal-analyses" class="nav-link" data-scroll-target="#time-temporal-analyses">Time: temporal analyses</a></li>
+  <li><a href="#place-spatial-analyses" id="toc-place-spatial-analyses" class="nav-link" data-scroll-target="#place-spatial-analyses">Place: spatial analyses</a></li>
+  <li><a href="#place-and-person-spatio-temporal-analyses" id="toc-place-and-person-spatio-temporal-analyses" class="nav-link" data-scroll-target="#place-and-person-spatio-temporal-analyses">Place and person: spatio-temporal analyses</a></li>
+  </ul></li>
+  <li><a href="#part-3-troubleshooting" id="toc-part-3-troubleshooting" class="nav-link" data-scroll-target="#part-3-troubleshooting">Part 3: Troubleshooting</a>
+  <ul>
+  <li><a href="#context-2" id="toc-context-2" class="nav-link" data-scroll-target="#context-2">🧭 Context</a></li>
+  <li><a href="#opening-the-file-and-getting-it-to-work" id="toc-opening-the-file-and-getting-it-to-work" class="nav-link" data-scroll-target="#opening-the-file-and-getting-it-to-work">Opening the file and getting it to work</a></li>
+  <li><a href="#did-not-look-at-the-ribbon" id="toc-did-not-look-at-the-ribbon" class="nav-link" data-scroll-target="#did-not-look-at-the-ribbon">Did not look at the ribbon</a>
+  <ul>
+  <li><a href="#missing-lines" id="toc-missing-lines" class="nav-link" data-scroll-target="#missing-lines">Missing lines</a></li>
+  <li><a href="#remove-empty-lines" id="toc-remove-empty-lines" class="nav-link" data-scroll-target="#remove-empty-lines">Remove empty lines</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#part-4-dashboard" id="toc-part-4-dashboard" class="nav-link" data-scroll-target="#part-4-dashboard">Part 4: Dashboard</a>
+  <ul>
+  <li><a href="#context-3" id="toc-context-3" class="nav-link" data-scroll-target="#context-3">🧭 Context</a></li>
+  <li><a href="#access-the-dashboard" id="toc-access-the-dashboard" class="nav-link" data-scroll-target="#access-the-dashboard">Access the dashboard</a></li>
+  <li><a href="#sidebar-filters" id="toc-sidebar-filters" class="nav-link" data-scroll-target="#sidebar-filters">Sidebar filters</a></li>
+  <li><a href="#map" id="toc-map" class="nav-link" data-scroll-target="#map">Map</a></li>
+  <li><a href="#epicurve" id="toc-epicurve" class="nav-link" data-scroll-target="#epicurve">Epicurve</a></li>
+  <li><a href="#now-explore" id="toc-now-explore" class="nav-link" data-scroll-target="#now-explore">Now explore</a></li>
+  </ul></li>
+  <li><a href="#notes-questions" id="toc-notes-questions" class="nav-link" data-scroll-target="#notes-questions">Notes / questions</a></li>
   </ul>
 </nav>
     </div>
@@ -219,40 +278,82 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<div class="page-columns page-full"><p>In this tutorial you will get to familiarise yourself with OBT the OBT linelist interface  and the corresponding dashboard.</p><div class="no-row-height column-margin column-container"><span class="margin-aside">Remember all OBT linelist have the same type of interface</span></div></div>
-<section id="objectives" class="level3">
-<h3 class="anchored" data-anchor-id="objectives">Objectives</h3>
+<p>In this tutorial you will get to familiarise yourself with the OBT linelist interface<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and the corresponding dashboard.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Remember all OBT linelist have the same type of interface</p></div></div><section id="objectives" class="level3">
+<h3 class="anchored" data-anchor-id="objectives">🎯 Objectives</h3>
 <ul>
-<li>Explore analyses functionalities of the OBT linelist</li>
-<li>Explore the intersection dashboard</li>
+<li>Explore functionalities of the OBT linelist, with a focus on troubleshooting the file and exploring analyses.</li>
+<li>Get access and understand how to use the intersection dashboard</li>
 </ul>
 </section>
-<section id="context-of-the-tutorial" class="level3">
-<h3 class="anchored" data-anchor-id="context-of-the-tutorial">Context of the tutorial</h3>
-<p>A measles outbreak started in Chad, MSF decides to get involved in the response. A linelist is needed to collect patient data in structures. You are the epidemiologist responsible for Chad, or a referent epidemiologist for a zone.</p>
-<p>XXX</p>
-<p>OBT or not OBT</p>
+<section id="context" class="level3">
+<h3 class="anchored" data-anchor-id="context">🧭 Context</h3>
+<p>A measles outbreak started in Chad, MSF decides to get involved in the response. A linelist is needed to collect patient data in structures.</p>
+<p>You discussed with the MedRef and the MedCo, and you came to the decision to deploy the OBT linelist.</p>
+</section>
+<section id="activities" class="level3">
+<h3 class="anchored" data-anchor-id="activities">Activities</h3>
+<p>In this tutorial, you will get access to an empty linelist, to learn how to prepare a file before deployment, and to a linelist with false data to replicate a linelist in use.</p>
+<p>You then will visit the Intersection dashboard to explore MSF measles data.</p>
+<p>Explanations about the files will be given in simple text, or in “Tips” or “Note” boxes. Instructions for you to follow will be given in instructions boxes:</p>
+<div class="instructions">
+<p>This is an instruction: you will be asked to <strong>do something</strong></p>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a warning, it contains important information</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This box contains tips: they are handy bits of informations that may be omitted in a first reading if you are in a hurry, but totally deserve some attention at some point.</p>
+</div>
+</div>
 </section>
 </section>
-<section id="get-the-tutorial-materials" class="level2">
-<h2 class="anchored" data-anchor-id="get-the-tutorial-materials">Get the tutorial materials</h2>
-<section id="download-and-unzip-the-materials" class="level3">
-<h3 class="anchored" data-anchor-id="download-and-unzip-the-materials">Download and unzip the materials 📦</h3>
+<section id="get-ready" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="get-ready">Get ready</h2>
+<section id="download-and-unzip-the-tutorial-materials" class="level3">
+<h3 class="anchored" data-anchor-id="download-and-unzip-the-tutorial-materials">Download and unzip the tutorial materials 📦</h3>
 <p>The files that you are going to use are stored on Github, bundled in a <code>zip</code> archive.</p>
+<div class="instructions">
 <ol type="1">
-<li><p>Go to the <a href="XXXXX">Github page</a> to download the archive. Save it on your computer (in your Downloads folder for example).</p></li>
+<li><p>Go to the <a href="XXXXX">Github page</a> to download the archive. Save it on your computer (in your <em>Downloads</em> folder for example).</p></li>
 <li><p>Unzip the whole archive and save the files locally. It is better to save the unzipped folder in a location that is not actively synchronised with Onedrive at the moment.</p></li>
 </ol>
+</div>
 </section>
-<section id="description-of-the-folder-content" class="level3">
-<h3 class="anchored" data-anchor-id="description-of-the-folder-content">Description of the folder content</h3>
-<p>XXX</p>
-<p>FALSE DATA…</p>
+<section id="description-of-the-folder-content" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="description-of-the-folder-content">Description of the folder content 📂</h3>
+<ul>
+<li>The current last version of the OBT measles linelist (standard version), empty</li>
+<li>A linelist with simulated data<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
+<li>A text file with the password</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;To ensure full anonymisation, the data used in this exercise was simulated, using parameters from MSF measles data for some parameters</p></div></div></section>
 </section>
-</section>
-<section id="unblock-obt-linelists-and-authorise-macros" class="level2">
-<h2 class="anchored" data-anchor-id="unblock-obt-linelists-and-authorise-macros">Unblock OBT linelists and authorise macros</h2>
-<p>OBT linelist use VBA macros to add functionalities. As a consequence, linelists that comes from the internet often need to be unblocked, and macro enabled in them. Follow the steps from <a href="../how_to/unblock_files.html">this page</a></p>
+<section id="part-0-unlock-files-and-functionalities" class="level2">
+<h2 class="anchored" data-anchor-id="part-0-unlock-files-and-functionalities">Part 0: Unlock files and functionalities 🔓</h2>
+<p>OBT linelists use VBA macros to add functionalities. As a consequence, linelists that comes from the internet often need to be unblocked, and macro enabled in them.</p>
+<div class="instructions">
+<p>Unblock your linelist, or make sure it is already unlocked. If you have never done that before, <a href="../how_to/unblock_files.html">follow the steps from this page</a></p>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -267,49 +368,522 @@ Note
 </div>
 </div>
 </section>
-<section id="prepare-and-deploy-a-linelist" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="prepare-and-deploy-a-linelist">Prepare and deploy a linelist</h2>
-<section id="get-an-empty-template" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="get-an-empty-template">Get an empty template</h3>
-<div class="page-columns page-full"><p>As of now, there is no open SharePoint with all the OBT linelist accessible, but there are several ways to obtain a template:</p><div class="no-row-height column-margin column-container"><span class="margin-aside">There are discussions in the Epinetwork to setup an open SharePoint with all the latest versions of tools from the Epinetwork, so this part should be much straighforward soon</span></div></div>
+<section id="part-1-prepare-and-deploy-a-linelist" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="part-1-prepare-and-deploy-a-linelist">Part 1: Prepare and deploy a linelist</h2>
+<section id="gather-the-files" class="level3">
+<h3 class="anchored" data-anchor-id="gather-the-files">Gather the files</h3>
+<section id="get-a-linelist-template" class="level4">
+<h4 class="anchored" data-anchor-id="get-a-linelist-template">Get a linelist template</h4>
+<p>In real life you should <a href="../how_to/get_template.html">get an empty template</a> but for this exercise you will use the template provided in the archive you downloaded.</p>
+<div class="instructions">
+<p>Identify the file and make a copy on which you can work.</p>
+</div>
+</section>
+<section id="download-the-geobase" class="level4">
+<h4 class="anchored" data-anchor-id="download-the-geobase">Download the geobase</h4>
+<div class="instructions">
+<p>Go to the <a href="https://reports.msf.net/secure/app/outbreak-tools-geoapp">Geoapp</a> and download a geobase for Tchad. A summary of the steps can be found <a href="../how_to/download_geobase.html">here</a>, or in the popup at site opening.</p>
+</div>
+<p>The file is unprotected, you can open it to investigate its structure if you want to.</p>
+</section>
+</section>
+<section id="adapt-the-linelist" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="adapt-the-linelist">Adapt the linelist</h3>
+<div class="instructions">
+<p>Open the linelist (password: <code>measles2024</code>) and inspect sheet names.</p>
+</div>
+<p><strong>Notably</strong>:</p>
 <ul>
-<li>You have access to the current Epinetwork SharePoint, where all the last versions of the existing OBT tools are stored, go and get the most recent one for measles</li>
-<li>This is a big project, maybe with several OCs and a SharePoint was setup with the linelist template (as was the case for Haiti, EastAfrica measles and cholera, mpox etc.)</li>
-<li>You ask your epi-advisor (or equivalent position from your OC) who can access the Epinetwork Sharepoint</li>
-<li>You can contact the EpiDS team who can send you the last version.</li>
+<li>The first sheet contains some instructions, but there is nothing special to do with it</li>
+<li>The second sheet (“Info”) contains project and site information</li>
+<li>The third sheet (“Linelist Patients”) is to enter patient data</li>
+<li>Most of the following sheets are analyses.</li>
 </ul>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<div class="instructions">
+<p>Find the <a href="../reference/ribbons.html#sec-linelist-ribbon">OutbreakTools Menu</a>, we are going to use it a lot in the rest of this tutorial.</p>
 </div>
-<div class="callout-body-container">
-<p>Always check the date in the template files name! As OBT tools are still in development, there are often new versions of the designer corresponding to new interface functionalities or bug fixes. Dictionaries might also be updated if there was a request for it. So if the date is more than 4 or five months old, you can bet there are newer versions, and if not, the EpiDS team can quickly re-generate the linelist for this disease to make sure the linelist has all the recent improvements.</p>
-<p>If someone handled you a file that is more than one year old, definitely ask around for newer versions!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../reference/images/ribbons-001-ll-ribbon.png" class="img-fluid figure-img"></p>
+<figcaption>OutbreakTools menu</figcaption>
+</figure>
 </div>
+<section id="fill-metadata" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="fill-metadata">Fill metadata</h4>
+<p><strong>Mandatory metadata</strong></p>
+<div class="instructions">
+<p>Fill the Information sheet (metadata):</p>
+<ul>
+<li><code>Organisation</code>: enter your own section</li>
+<li><code>Country</code>: Chad</li>
+<li><code>Name of facility</code>: Moïssala Hospital</li>
+</ul>
 </div>
+<p>Once these fields are correctly filled, they should not be modified: the information will be used to name the exports.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;You may enter the name of the site yourself (if you are sending one or two linelists) or let the data encoders of each site enter fill it (if you are sending a linelist to many sites).</p></div></div><p><strong>Optional metadata</strong></p>
+<div class="instructions">
+<p>Fill the following fields: <code>Admin 1</code> (Mandoul) and <code>Admin 2</code> (Moissala)</p>
 </div>
 </section>
-<section id="general-workflow-here-or-in-lesson" class="level3">
-<h3 class="anchored" data-anchor-id="general-workflow-here-or-in-lesson">General workflow (HERE OR IN LESSON?)</h3>
+<section id="hide-unused-fields" class="level4">
+<h4 class="anchored" data-anchor-id="hide-unused-fields">Hide unused fields</h4>
+<p>You think that you do not need the rest of the fields. Let’s hide them!</p>
+<div class="instructions">
+<p>Keep the “Info” sheet in focus and go to the <a href="../reference/ribbons.html#sec-linelist-ribbon">OBT menu</a>. Click on the “Show / Hide variables” button.</p>
+</div>
+<p>It opens a popup window:</p>
+<p><img src="../module_1/images/003-img-obt-show_hide.png" class="img-fluid quarto-figure quarto-figure-center" alt="Opening the Show/hide window"> You can see that some of the variables have the <code>Mandatory</code> status, but that some other have the <code>Shown</code> status. The former one cannot be hidden through this menu but the later can.</p>
+<div class="instructions">
+<p>Hide the variables that we do not plan to fill. You can either hide them one by one, or use the “Show all variables” button <em>twice</em> and unhide the variables you want to keep.</p>
+</div>
 </section>
-<section id="fill-the-metadata" class="level3">
-<h3 class="anchored" data-anchor-id="fill-the-metadata">Fill the metadata</h3>
+<section id="import-the-geobase" class="level4">
+<h4 class="anchored" data-anchor-id="import-the-geobase">Import the geobase</h4>
+<div class="instructions">
+<p>Use the “Import geobase” button from the <a href="../reference/ribbons.html#sec-linelist-ribbon">OBT menu</a> to import the geobase that you downloaded previously.</p>
+</div>
 </section>
-<section id="import-a-geobase" class="level3">
-<h3 class="anchored" data-anchor-id="import-a-geobase">Import a geobase</h3>
-<p>Download an import a country specific geobase in the linelist to populate dropdown menus of columns describing locations.</p>
+<section id="choose-the-start-of-the-week." class="level4">
+<h4 class="anchored" data-anchor-id="choose-the-start-of-the-week.">Choose the start of the week.</h4>
+<div class="instructions">
+<p>Click on the “Week start” button to set up “Monday” as the first day of the week.</p>
+</div>
+</section>
+<section id="modify-variable-visibility" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="modify-variable-visibility">Modify variable visibility</h4>
+<p>As for the “Info” sheet, you can hide or show optional variables in the patient data sheet. When you prepare a linelist, you will need to decide which variables to keep based on the needed information for this outbreak.^<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;You can hide or unhide variables at a later stage. Of course, you will need to keep in mind that the data will be only partial for these variables (you have it only up to a date, or conversely from a date onwards).</p></div></div><p>For the sake of brevity of the exercise, here you will only perform a couple of actions.</p>
+<div class="instructions">
+<p>Go to the “Linelist patients” sheet. Then click on the “Show/Hide variables” button. Hide all the optional variables, then unhide:</p>
+<ul>
+<li>Reporting health facility name</li>
+<li>Fever</li>
+<li>Maculopapular rash</li>
+<li>Cough</li>
+<li>Red eyes - Conjonctivitis</li>
+<li>MUAC</li>
+<li>Pregnant</li>
+<li>The custom variables at the end</li>
+<li>Any calculated variables that you wished to see displayed for information of quick filtering (epi week? ager group? etc.)</li>
+</ul>
+</div>
+</section>
+<section id="print-a-register" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="print-a-register">Print a register</h4>
+<div class="instructions">
+<p>Click on the “Show register” button in the <a href="../reference/ribbons.html#sec-linelist-ribbon">OBT menu</a>.</p>
+</div>
+<p>This opens a usually hidden sheet (that can be hidden again when you are done) to prepare a paper register if you don’t already have one in the site.</p>
+<p>Typically, there will be less columns in the register than the full linelist, as some information may come from patient files or other sources.</p>
+<div class="instructions">
 <ol type="1">
-<li>Download the geobase following <a href="../how_to/download_geobase.html">these steps</a> and save it locally</li>
-<li>Open the linelist</li>
-<li>Go to the <a href="../reference/ribbons.html#sec-linelist-ribbon">OutbreakTools Menu</a></li>
-<li>Click on the <a href="../reference/ribbons.html#sec-import-geobase">“Import geobase” button</a></li>
+<li><p>Click on the “Show/Hide variables” button to open the popup window for the register.</p></li>
+<li><p>Click on the “Match the show/hide from linelist” to align the register visibility on the linelist configuration as a start.</p></li>
+<li><p>Hide variables that are not needed in the register</p></li>
 </ol>
-<p>Geographical location are encoded using four columns that can accommodate up to four administrative levels, and these columns have a special status in OBT. You can recognize them by the orange background of their labels. When you import a geobase in a linelist: • The labels of the columns are updated with the administrative levels present in the geobase (e.g.&nbsp;“adm1_name” will change to “Province” for DRC). • The categories of the dropdown menus update. You can fill the variables either by using the cascading dropdown menus, or by using the GeoHelper button from the ribbon.</p>
+</div>
+<p>Now that you have selected the variables to print, you will likely have to adjust the register to make it more user-friendly:</p>
+<ul>
+<li>Tweak column width so that the data encoder have the space to write</li>
+<li>Change labels orientation, to save some space (for columns with short content)</li>
+<li>Add rows to the table until it fits one page<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;Hint: there is a button in the OBT menu for that!</p></div></div><div class="instructions">
+<p>Adjust the width of the following columns:</p>
+<ul>
+<li><code>Patient name</code>: wider</li>
+<li><code>Sex</code>: narrower</li>
+</ul>
+<p>Click on the “Print” button in the <a href="../reference/ribbons.html#sec-linelist-ribbon">OBT menu</a> to open the Print Preview. Note the “Settings” button to control some of the printing options.</p>
+<p>When you are finished, you can exit the Print Preview, and hit the “Close Register / CRF” button to hide the register sheet (your modifications are still here).</p>
+</div>
+</section>
+<section id="prepare-a-case-report-form" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="prepare-a-case-report-form">Prepare a Case Report Form</h4>
+<p>Similarly to what you did for the register, it is possible to print a CRF from the linelist if you don’t have one available. A button unhides a sheet displaying an automatically prepared draft for a CRF. There is still work to do on it to make it user-friendly but it’s a start.</p>
+<p>Things that you might do:</p>
+<ul>
+<li>Hide variables that are collected elsewhere or calculated</li>
+<li>Hide/condense the lines</li>
+<li>Shorten some labels<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;There now is an option in the setup file to provide shorter labels for the CRF from the start to reduce the time fixing label overlap, but they have not been filled for all linelists yet.</p></div></div><p>Preparing a clean CRF is out of the scope of this tutorial, but do not hesitate to open the view (“Show CRF” button) to have a peak at it before hiding it again.</p>
+</section>
+</section>
+<section id="send-the-linelist" class="level3">
+<h3 class="anchored" data-anchor-id="send-the-linelist">Send the linelist</h3>
+<p>You have done the main customisation of the linelist. Do not forget to save the customised template.</p>
+<p>You can now send you to your colleagues. If they have worked with OBT linelist before (even for other diseases) this should be easy: all the OBT linelists have the same functionalities. If they have not worked with OBT linelist before, you should brief them on:</p>
+<ul>
+<li><a href="../how_to/unblock_files.html">Unblocking the file and authorising VBA macro</a></li>
+<li>Finding the <a href="../reference/ribbons.html#sec-linelist-ribbon">OBT menu</a></li>
+<li>Filling the remaining metadata on the “Info” sheet</li>
+<li><a href="../how_to/export_data_dashboard.html">Exporting files</a> to send to the dashboard</li>
+<li>Using the <a href="../how_to/use_geohelper.html">GeoHelper</a></li>
+</ul>
+<p>In most cases there should be one linelist per site.</p>
+</section>
+</section>
+<section id="part-2-linelist-in-use" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="part-2-linelist-in-use">Part 2: Linelist in use</h2>
+<section id="context-1" class="level3">
+<h3 class="anchored" data-anchor-id="context-1">🧭 Context</h3>
+<p>The linelist is used in Moissala and the neighbouring areas. You receive the file with data and you want to have a look at it.</p>
+<p>You are now going to work on the file <code>measles_linelist_moissala.xlsb</code>, which contains simulated measles data.</p>
+</section>
+<section id="sanity-checks" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sanity-checks">Sanity checks</h3>
+<p>When you receive an unknown linelist with data, always perform a couple of checks to get a feel of the state of the file and data. These are not the extensive checks you would perform if you were tasked to monitor data entry and quality, or to perform analyses. They might however rapidly hint at the source of a reported problem (a functionality not working as expecting).</p>
+<section id="structure-checks" class="level4">
+<h4 class="anchored" data-anchor-id="structure-checks">Structure checks</h4>
+<ul>
+<li>Does the OBT menu appear as expected?</li>
+<li>Test one button (for example, open the Show/Hide window)</li>
+<li>Do you see the expected sheets?</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the ribbon buttons have weird labels or no labels at all, it means that the VBA is not activated or crashed. Check your VBA settings, close the file and re-open it.</p>
+<p>If the problem persist, attempt an “Export for migration” to move the data to a new empty template.</p>
+<p>If the export does not work because the VBA is corrupted, contact the EpiDS team to get help migrating the data.</p>
+</div>
+</div>
+<div class="instructions">
+<p>Do these checks on the file.</p>
+</div>
+</section>
+<section id="data-checks" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="data-checks">Data checks</h4>
+<ul>
+<li>Are the metadata on the “Info” sheet still (correctly) filled?<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></li>
+<li>Do patients have IDs?</li>
+<li>Are there replicated IDs?</li>
+<li>Check the filters of a couple of date columns: do the dates correspond to what you expect (min, max) and are there values not recognised as dates?</li>
+<li>Check a couple of categorical columns (<code>sex</code>, <code>outcome</code>…) to see if the categories entered correspond to the expected values.</li>
+<li>Remove any filters applied on the data (there is a shortcut for that in the OBT menu).</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;90% of export problems come from badly filled metadata</p></div></div></section>
+</section>
+<section id="analyses" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="analyses">Analyses</h3>
+<p>Now let’s investigate the descriptive analyses provided with the linelist. While the interface of the linelist is the same, the provided analyses may differ a bit from disease to disease, depending on what was requested, and what is encoded in the <strong>setup file</strong><a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>. Most linelists have at least the uni and bivariate tables, the temporal and spatial analyses.</p>
+<div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;Note that more analyses can be requested if needed</p></div></div><p>There are a couple of important things about the analyses:</p>
+<ol type="1">
+<li>The most important thing to remember about analyses in the OBT linelist is that they need to be <strong>refreshed</strong> before being explored.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/004-refresh.png" class="img-fluid figure-img"></p>
+<figcaption>Refresh button in the OBT menu</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li><p>The second most important thing to know is that if you filter data in the main patient sheet, it will be reflected in the analyses <em>after you refresh</em> (a red warning will appear to remind you).</p></li>
+<li><p>You can alter the appearance of the graphs (which are created automatically and admittedly a bit ugly), the same way you would do for your own figures, with any <a href="https://www.howtogeek.com/how-to-format-your-chart-in-excel/">Excel tool</a>.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p></li>
+</ol>
+<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;Note that graphs modifications will be lost during data migration to a new version of the linelist, so I advise you to restrict the modifications to graphs that you want to export to reports / slides, or which are <em>really</em> making your eyes bleed.</p></div></div><p>We are going to start by looking at the analyses without filters on the data.</p>
+<div class="instructions">
+<p>Go to the patient data sheet, navigate to the OBT menu and click on the button to clear all filters. Then refresh analyses.</p>
+</div>
+<p>Now that the data was refreshed, we can begin checking out the analyses sheets.</p>
+</section>
+<section id="persons-uni-and-bivariate-analyses" class="level3">
+<h3 class="anchored" data-anchor-id="persons-uni-and-bivariate-analyses">Persons: uni and bivariate analyses</h3>
+<p>This page contains univariate and bivariate tables and bar charts providing information about patients: demographic informations, but also symptoms, outcomes etc.</p>
+<div class="instructions">
+<p>Explore the page, and answer the following questions:</p>
+<ul>
+<li>What is the average length of stay of the patients?</li>
+<li>How many patients are more than 15 years old?</li>
+<li>How many patients are female?</li>
+<li>What is the percentage of complicated measles?</li>
+<li>How many patients are SAM?</li>
+<li>How many patients died in the facility?</li>
+<li>How many patients are male and less than 5 months old?</li>
+<li>How many of the SAM patients are positive for the malaria RDT test?</li>
+</ul>
+</div>
+<p>Now let us investigate the characteristics of deceased patients.</p>
+<div class="instructions">
+<ol type="1">
+<li>Go back to the patient data sheet. Use the filters to select only the deceased patients (in the facility and/or the community, it’s up to you)</li>
+<li>Hit the refresh button and go back to the analysis sheet.</li>
+</ol>
+<ul>
+<li>How many female patients of age between one and four died?</li>
+<li>How many of the deceased patients were MAM?</li>
+</ul>
+</div>
+</section>
+<section id="time-temporal-analyses" class="level3">
+<h3 class="anchored" data-anchor-id="time-temporal-analyses">Time: temporal analyses</h3>
+<p>Now, let’s look at the “Temporal analyses” sheet. On this sheet you can choose the temporal scale you want to monitor: days, weeks, months, quarter, years. The table has 53 rows, and can thus accommodate up to:</p>
+<ul>
+<li>a high resolution zoom of a given period of 53 days</li>
+<li>one year worth of weeks</li>
+<li>53 months if you have several years worth of data</li>
+<li>53 quarters or years (but we do not expect you to often use these scales)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/007-img-temporal-table.png" class="img-fluid figure-img"></p>
+<figcaption>Options for the temporal analyses</figcaption>
+</figure>
+</div>
+<p>Below the tables are several epicurves corresponding to the content of the table.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In this linelist, there is only one very large table. Some other linelists can have several tables, organised by sections, on top of each others. The graphs will always be a the bottom.</p>
+</div>
+</div>
+<div class="instructions">
+<ul>
+<li>Remove the filters on the data sheet and hit refresh.</li>
+<li>Check the minimum and maximum date of notification: which units would you consider?</li>
+<li>First select the “Week” unit. Which part of the data is not ploted?</li>
+<li>How many patients were discharged during the 18th week of 2022?</li>
+<li>Now change the date of start of period to only plot the weeks of 2023.</li>
+<li>How many patients were hospitalised in the second week of January 2023?</li>
+<li>Change the units to “Month”. How many patients were admitted in January 2023?</li>
+</ul>
+</div>
+<p>Now, if you went to have a look at the graphs, you should see one like that in the list of graphs:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/008-img-temporal-hospit_raw.png" class="img-fluid figure-img"></p>
+<figcaption>Hospitalisations</figcaption>
+</figure>
+</div>
+<p>It is fine to look at the shape of the epicurve, but you would not want to use it in a report as it is. Beside cosmetic improvement, you can use filters to remove the empty weeks at the right of the graph:</p>
+<ul>
+<li>Select the graph -&gt; some buttons appear at the top right corner.</li>
+<li>Use the “filter” button (the bottom one) to filter out the categories you don’t want to see.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/009-img-temporal-hospit_pimped.png" class="img-fluid figure-img"></p>
+<figcaption>Minimally pimped graph</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Don’t forget to remove the graph filters when new data is entered in the linelist, else you won’t see it on the graph. The corrolary is that if your colleague sends you a linelist complaining that the figures are correct in the table but do not appear in the graph, the filters are the prime suspects.</p>
+</div>
+</div>
+</section>
+<section id="place-spatial-analyses" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="place-spatial-analyses">Place: spatial analyses</h3>
+<p>Now we navigate to the third analyses sheet. It displays the <strong>top 30 areas</strong> with the most cases, and below the top 30 places of origin (in the case of refugees and displaced people).<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;The number 30 is defined in the <strong>setup file</strong>: another disease might have 10 or 20.</p></div></div><p>You can select the level at which you want to see the data displayed (admin 1 to 4).</p>
+<div class="instructions">
+<p>Click on the blue button “Select your admin level” and go through the options. Which options have data in it? How many patients are there in Moissala Est?</p>
+</div>
+<p>For this linelist, data is meaningful at the “Zone of responsibility” level (admin 3), but with real data even higher levers may be worth checking if people are travelling a lot, or if you created a master linelist from different files.</p>
+</section>
+<section id="place-and-person-spatio-temporal-analyses" class="level3">
+<h3 class="anchored" data-anchor-id="place-and-person-spatio-temporal-analyses">Place and person: spatio-temporal analyses</h3>
+<p>The last analysis sheet that may be in an OBT linelist is a crossover between the temporal analysis and the spatial analysis: it allow you to look at the number of cases (usually) for a couple of chosen administrative levels across time.</p>
+<div class="instructions">
+<ol type="1">
+<li>Go to the Spatio-temporal analysis sheet</li>
+<li>Place your cursor in one of the blue cells on the left (starting from <code>C14</code> and down).</li>
+<li>Click on the <a href="../how_to/use_geohelper.html">“GeoHelper”</a> button in the OBT menu and select Moissala Est (an admin 3)</li>
+<li>Go to the next blue cell and use the Geohelper to select another place of interest (for example, one of the top places from the Spatial analysis sheet, or a place that you noticed had recent cases).</li>
+</ol>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/010-img-spatio-temporal.png" class="img-fluid figure-img"></p>
+<figcaption>Spatio temporal analysis</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="part-3-troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-troubleshooting">Part 3: Troubleshooting</h2>
+<section id="context-2" class="level3">
+<h3 class="anchored" data-anchor-id="context-2">🧭 Context</h3>
+<p>You have sent a linelist for deployment to the field. The data encoder may have some questions or problems.</p>
+<p>For the following problem, identify the source of the problem and the solution.</p>
+</section>
+<section id="opening-the-file-and-getting-it-to-work" class="level3">
+<h3 class="anchored" data-anchor-id="opening-the-file-and-getting-it-to-work">Opening the file and getting it to work</h3>
+<p><strong>Problem</strong>: your colleague opens the file</p>
+<p>The user tells you that the file is broken and that they cannot open it</p>
+</section>
+<section id="did-not-look-at-the-ribbon" class="level3">
+<h3 class="anchored" data-anchor-id="did-not-look-at-the-ribbon">Did not look at the ribbon</h3>
+<section id="missing-lines" class="level4">
+<h4 class="anchored" data-anchor-id="missing-lines">Missing lines</h4>
+<p>You receive the following mail:</p>
+<blockquote class="blockquote">
+<p>Hello, attached is a linelist that is giving us trouble. Some cells are locked, so we cannot add new cases. We can’t work, pelase help.</p>
+</blockquote>
+<p>What do you answer?</p>
+<p>::: {.callout-tip, title=“Answer”, collapse=true} Use the “Add rows” button from the OBT menu If you did not brief the person explicitly, now might be a good time to give them documentation or show them the <a href="../reference/ribbons.html#sec-linelist-ribbon">OBT menu</a>.</p>
+<p><strong>Note</strong>: recent versions of the linelist automaticcaly add five lines at the bottom of the file when someone enters data in the last line, so this should be less and less a problem, but also a sign to check whether there is a more recent version of the linelist to use! :::</p>
+</section>
+<section id="remove-empty-lines" class="level4">
+<h4 class="anchored" data-anchor-id="remove-empty-lines">Remove empty lines</h4>
+<p>You receive the following email:</p>
+<blockquote class="blockquote">
+<p>Hi, I need support on the linelist. There are empty lines (colored in red) and I can’t remove them because the file is protected, help please.</p>
+</blockquote>
+<p>What do you answer?</p>
+<p>::: {.callout-tip, title=“Answer”, collapse=true} Use the “Resize table” button from the OBT linelist. If you did not brief the person explicitly, now might be a good time to give them documentation or show them the <a href="../reference/ribbons.html#sec-linelist-ribbon">OBT menu</a>. :::</p>
+</section>
+</section>
+</section>
+<section id="part-4-dashboard" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="part-4-dashboard">Part 4: Dashboard</h2>
+<section id="context-3" class="level3">
+<h3 class="anchored" data-anchor-id="context-3">🧭 Context</h3>
+<p>The linelist is in use, and it was decided that the data would be sent for compilation and visualisation to Epicentre. You want to go and monitor the number of cases in Moissala.</p>
+</section>
+<section id="access-the-dashboard" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="access-the-dashboard">Access the dashboard</h3>
+<p>You need an account to connect to Epicentre dashboard. The creation of this account is semi-automatic for MSF addresses: go to <a href="https://reports.msf.net/signup/">this page</a>.<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn11"><p><sup>11</sup>&nbsp;If you do not have an MSF address but think you should have access to a dashboard, contact the EpiDS team.</p></div></div><p>Once you have an account, you can go to the intersection dashboard <a href="https://apps.epicentre-msf.org/secure/app/intersectional-surveillance">site</a> and connect with the account you created.</p>
+</section>
+<section id="sidebar-filters" class="level3">
+<h3 class="anchored" data-anchor-id="sidebar-filters">Sidebar filters</h3>
+<p>On the left (number 1 on <a href="#fig-dashboard" class="quarto-xref">Figure&nbsp;2</a>) you have the option sidebar, where you can filter data (diseases, OC, country, site, outcome etc.) and customise a couple of options.</p>
+<div class="instructions">
+<ul>
+<li>Pick “Measles” from the filter</li>
+<li>Find the country filter and select “Chad”</li>
+<li>Click on the “Update” button at the bottom to take into account your filters!</li>
+</ul>
+</div>
+<p>The dashboard now only displays measles data in Chad.</p>
+<div id="fig-dashboard" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dashboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../module_1/images/012-img-dashboard.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dashboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Dashboard
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="map" class="level3">
+<h3 class="anchored" data-anchor-id="map">Map</h3>
+<p>First let’s look at the map.</p>
+<div class="instructions">
+<ul>
+<li>Zoom on the map to better see what’s happening in Chad.</li>
+<li>Select the ADM1 level to get a better resolution. Which health region has the most cases?</li>
+<li>Select the ADM2 level to see even more precisely. Which health district has the most cases? How many patients do not have (matched) geo data at this level (hint: there is a message at the bottom of the map)?</li>
+<li>Select the ADM3 level to see if we have enough data at that level? What do you think?</li>
+</ul>
+</div>
+<p>The top of the map displays an “options” button that allow you to tweak circle size to reduce overlap and group data by a couple of variables.</p>
+<div class="instructions">
+<p>Group data by whether patients are hospitalised or not. Do you see a difference between Moissala and Djodo Gassa?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>There is a button on the left of the map (number 3 on <a href="#fig-dashboard" class="quarto-xref">Figure&nbsp;2</a>) that allows you to change the background of the map and hide / show the bubbles or attack rates to increase readability.</p></li>
+<li><p>Click on a region to update the epicurve and age pyramid data for only the patients from this region. The selected region is highlighted in red. Click a second time on it to unselect it.</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="epicurve" class="level3">
+<h3 class="anchored" data-anchor-id="epicurve">Epicurve</h3>
+<p>The top-right figure displays an epicurve. By default it looks like this for Chad:</p>
+<div id="fig-dashboard" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dashboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../module_1/images/013-img-epicurve.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dashboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Default epicurve
+</figcaption>
+</figure>
+</div>
+<div class="instructions">
+<p>Use the options of the graph (number 4 on <a href="#fig-dashboard" class="quarto-xref">Figure&nbsp;2</a>) to modify it to look like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/014-img-epicurve-2.png" class="img-fluid figure-img"></p>
+<figcaption>Admissions in hospital across time</figcaption>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>The map and the epicurve have a hidden zoom button that you can see by hovering your mouse at the bottom right, which is handy on small screens (see number 5 on <a href="#fig-dashboard" class="quarto-xref">Figure&nbsp;2</a>) .</p></li>
+<li><p>On the epicurve you can drag your mouse left and right to zoom in on some date period. A “Reset zoom” button will appear to undo the view.</p></li>
+<li><p>Click on a bar to update the map and the age pyramid to show only the data related to that time period. A blue band indicated the selected bar. Click on the bar a second time to unselect it.</p></li>
+<li><p>Click on legend item to unselect them and only show some categories. For example, in the above graph you could show only the hospitalised patients in two clicks, which is slightly faster than using the sidebar filters in this case.</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="now-explore" class="level3">
+<h3 class="anchored" data-anchor-id="now-explore">Now explore</h3>
+<div class="instructions">
+<p>Explore the dashboard to answer the following questions:</p>
+<ul>
+<li><p>When was the dashboard last updated for measles? (hint: no need to go into sub-menus, it is written on the main page)</p></li>
+<li><p>In 2024, which country had the most measles cases? How many children of less than 6 months were notified? And girls specifically?</p></li>
+<li><p>When was the dashboard last updated for Hepatitis E?</p></li>
+<li><p>How many cholera consultations did MSF OCG performed in the last 90 days?</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="notes-questions" class="level2">
+<h2 class="anchored" data-anchor-id="notes-questions">Notes / questions</h2>
+<p>dropdown menus? Custom columns -&gt; questions from the field</p>
 
 
 </section>
-</section>
+
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -394,8 +968,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -506,7 +1078,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

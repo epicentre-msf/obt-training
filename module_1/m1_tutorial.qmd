@@ -426,9 +426,93 @@ The last analysis sheet that may be in an OBT linelist is a mix between the temp
 
 ## Part 3: Troubleshooting
 
+## Part 4: Dashboard
+
+### 🧭 Context
+
+The linelist is in use, and it was decided that the data would be sent for compilation and visualisation to Epicentre. You want to go and monitor the number of cases in Moissala.
+
+### Access the dashboard
+
+You need an account to connect to Epicentre dashboard. The creation of this account is semi-automatic for MSF addresses: go to [this page](https://reports.msf.net/signup/).^[If you do not have an MSF address but think you should have access to a dashboard, contact the EpiDS team.]
+
+Once you have an account, you can go to the intersection dashboard [site](https://apps.epicentre-msf.org/secure/app/intersectional-surveillance) and connect with the account you created.
+
+### Sidebar filters
+
+On the left (number 1 on @fig-dashboard) you have the option sidebar, where you can filter data  (diseases, OC, country, site, outcome etc.) and customise a couple of options.
+
+::: {.instructions}
+- Pick "Measles" from the filter
+- Find the country filter and select "Chad"
+- Click on the "Update" button at the bottom to take into account your filters!
+:::
+
+The dashboard now only displays measles data in Chad.
+
+![Dashboard](../module_1/images/012-img-dashboard.png){fig-align="center" #fig-dashboard}
+
+### Map
+
+First let's look at the map.
+
+::: {.instructions}
+- Zoom on the map to better see what's happening in Chad.
+- Select the ADM1 level to get a better resolution. Which health region has the most cases?
+- Select the ADM2 level to see even more precisely. Which health district has the most cases? How many patients do not have (matched) geo data at this level (hint: there is a message at the bottom of the map)?
+- Select the ADM3 level to see if we have enough data at that level? What do you think?
+:::
+
+The top of the map displays an "options" button that allow you to tweak circle size to reduce overlap and group data by a couple of variables.
+
+::: {.instructions}
+Group data by whether patients are hospitalised or not. Do you see a difference between Moissala and Djodo Gassa?
+:::
+
+::: {.callout-tip}
+1. There is a button on the left of the map (number 3 on @fig-dashboard) that allows you to change the background of the map and hide / show the bubbles or attack rates to increase readability.
+
+2. Click on a region to update the epicurve and age pyramid data for only the patients from this region. The selected region is highlighted in red. Click a second time on it to unselect it.
+:::
 
 
+### Epicurve
 
+The top-right figure displays an epicurve. By default it looks like this for Chad:
+
+![Default epicurve](../module_1/images/013-img-epicurve.png){fig-align="center" #fig-dashboard}
+
+::: {.instructions}
+Use the options of the graph (number 4 on @fig-dashboard) to modify it to look like this:  
+
+![Admissions in hospital across time](../module_1/images/014-img-epicurve-2.png){fig-align="center"}
+
+:::
+
+::: {.callout-tip}
+1. The map and the epicurve have a hidden zoom button that you can see by hovering your mouse at the bottom right, which is handy on small screens (see number 5 on @fig-dashboard) .
+
+2. On the epicurve you can drag your mouse left and right to zoom in on some date period. A "Reset zoom" button will appear to undo the view.
+
+3. Click on a bar to update the map and the age pyramid to show only the data related to that time period. A blue band indicated the selected bar. Click on the bar a second time to unselect it.
+
+4. Click on legend item to unselect them and only show some categories. For example, in the above graph you could show only the hospitalised patients in two clicks, which is slightly faster than using the sidebar filters in this case.
+:::
+
+
+### Now explore
+
+::: {.instructions}
+Explore the dashboard to answer the following questions:
+
+- When was the dashboard last updated for measles? (hint: no need to go into sub-menus, it is written on the main page)
+
+- In 2024, which country had the most measles cases? How many children of less than 6 months were notified? And girls specifically?
+
+- When was the dashboard last updated for Hepatitis E?
+
+- How many cholera consultations did MSF OCG performed in the last 90 days?
+:::
 
 
 ## Notes / questions

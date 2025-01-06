@@ -100,7 +100,7 @@ Go to the [Geoapp](https://reports.msf.net/secure/app/outbreak-tools-geoapp) and
 The file is unprotected, you can open it to investigate its structure if you want to.
 
 
-### Adapt the linelist
+### Adapt the linelist {#sec-customise}
 
 ::: {.instructions}
 Open the linelist (password: `measles2024`) and  inspect sheet names.
@@ -549,12 +549,57 @@ In the following steps
 
 ### Advanced
 
-Sometimes the content of the file is to blame.
+Sometimes the problem is less obvious or could have multiple causes, and you will need to investigate a bit more.
+
+::: {.instructions}
+Open the Excel file `troubleshooting.xlsb` from the tutorial material archive.
+:::
+
+You colleague contacts you. They have data for the start of January 2023, and they looked at the analyses sheets. But the analyses seem broken, even though they refreshed the data.
+
+**Problem 1.** They _know_ they have positive measles cases, but these cases do not show up in the univariate table / graph about Measle test results.
+
+**Problem 2.** The register says there should be 25 notifications in the first week, and 40 in the second week, but the numbers in the epicurve do not match. The univariate general summary is correct, though (65 patients seen).
+
+***Problem 3.** They know there should be 5 deceased patients in facilities, 3 who had been notified in week 1, and 2 notified in week 2. But the numbers in the temporal analysis do not correspond.
+
+
+::: {.instructions}
+Figure out what the problems are. If the problems are quick to fix, do it. Think about the guidance you should provide your colleagues with to avoid these problems or troubleshoot them themselves.
+:::
+
+
+::: {.callout-note title="Hints collapse=true}
+**Problem 1.** Check out the authorised and entered values for the incriminated column. Looking at the values in the filter is the fastest way to do so.
+
+**Problem 2.** The temporal analyses rely on dates, by definition.
+
+**Problem 3.** There are several sources to this problem. Maybe one less depending on what you did for in past steps.
+:::
+
+
+::: {.callout-note title="More hints collapse=true}
+**Problem 3.** Are the dates correct? Are the values of the column correct? 
 
 
 
+If yes, what else could affect a graph based on epiweeks?
+:::
 
 
+::: {.callout-note title="Wink Wink Nudge Nudge collapse=true}
+**Problem 3.** Maybe go check @sec-customise to see if there is an option you should check.
+:::
+
+::: {.callout-tip title="Answers" collapse=true}
+**Problem 1.** They did not use the dropdown menu in the lab result column and somehow forced a value not from the list ("Pos" instead of "Positive")
+
+**Problem 2.** The notification date has some very dirty values that were not recognised as dates. As such, these notifications cannot be counted in the _temporal_ analyses, because the conditions on the date cannot be met. Since the univariate summary has no conditions on dates, it is not affected.
+
+**Problem 3.** One of the notification date was dirty and not recognised as a date. But maybe that was solved during the second problem if you felt confident about the dates. One of the values of the outcome column had a typo. Finally, the start of the week somehow got changed to Sunday, while it should be Monday in Chad, and one of the row was affected by that. have a look at the epiweek column, change the start of the week and check the column again (recalculate if needed).
+:::
+
+The last problem is tricky, but it could happen easilly in a country where the start of the week is not the same as the default (Monday) and someone forgot to change it before using the file.
 
 
 ## Part 4: Dashboard

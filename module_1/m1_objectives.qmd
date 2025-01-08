@@ -38,6 +38,34 @@ The training is based on a mix of slides/text and tutorial. The tutorial will be
 -	The file is in use, you monitor data and perform data management tasks
 
 
-1. Read the [introduction material](../module_1/m1_intro.qmd)
+::: {.homepage-card-grid}
 
-2. Follow the [tutorial](../module_1/m1_tutorial.qmd)
+::: {.card .homepage-card}
+<!-- <img class='card-img' src='img/learn.svg' alt='learn'> -->
+
+::: {.card-body}
+[Lesson]{.card-title}<br>
+Read about OutbreakTools, and OutbreakTools linelists functionalities<br>
+<br>
+<a href='../module_1/m1_intro.html' class='btn'>Start</a>
+:::
+
+:::
+
+
+::: {.card .homepage-card}
+<!-- <img class='card-img' src='img/explore.svg' alt='explore'> -->
+
+::: {.card-body}
+[Tutorial]{.card-title}<br>
+Follow the steps to prepare and deploy an OBT linelist. Explore the dashboard.<br>
+<br>
+<a href='../module_1/m1_tutorial.html' class='btn'>Start</a>
+:::
+
+:::
+
+
+
+
+:::

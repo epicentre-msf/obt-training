@@ -4,7 +4,7 @@ title: "Tutorial"
 
 ## Introduction
 
-In this tutorial you will get to familiarise yourself with the OBT linelist interface^[Remember all OBT linelist have the same type of interface] and the corresponding dashboard.
+In this tutorial you will familiarise yourself with the OBT linelist interface^[Remember all OBT linelist have the same type of interface] and the corresponding dashboard.
 
 
 ### 🎯 Objectives 
@@ -15,32 +15,38 @@ In this tutorial you will get to familiarise yourself with the OBT linelist inte
 
 ### 🧭 Context
 
-A measles outbreak started in Chad, MSF decides to get involved in the response. A linelist is needed to collect patient data in structures. 
+MSF has been working in Chad since 2006 where our teams provide medical care and assistance to displaced people and local communities, who are often struggling with a lack of food, in the east and the south of the country.
+
+In December 2021, following several reports of measles cases in the Southern region of Mandoul, MSF and Epicentre decided to provide support and respond to the outbreak. A linelist is needed to collect patient data in structures. 
 
 You discussed with the MedRef and the MedCo, and you came to the decision to deploy the OBT linelist.
 
 
 ### Activities
 
-In this tutorial, you will get access to an empty linelist, to learn how to prepare a file before deployment, and to a linelist with false data to replicate a linelist in use.
+In this tutorial, you will get access to several files:
 
-You then will visit the Intersection dashboard to explore MSF measles data.
+- an empty linelist to learn how to prepare a file before deployment
+- a linelist with false data to replicate a linelist in use
+- a linelist with false data and some problems to troubleshoot
+
+You then will visit the Intersection dashboard to explore _real_ MSF measles data in Chad.
 
 
-Explanations about the files will be given in simple text, or in "Tips" or "Note" boxes. Instructions for you to follow will be given in instructions boxes:
+Explanations will be given in simple text, or boxes (tips, notes etc.) and instructions will be given in instructions boxes.
 
-::: {.instructions}
-This is an instruction: you will be asked to **do something**
-:::
 
 ::: {.callout-warning}
-This is a warning, it contains important information
+I contain important information!
 :::
 
 ::: {.callout-tip}
-This box contains tips: they are handy bits of informations that may be omitted in a first reading if you are in a hurry, but totally deserve some attention at some point.
+I am a handy bit of informations that may be omitted in a first reading if you are in a hurry, but totally deserve some attention at some point.
 :::
 
+::: {.instructions}
+Now do **do something**!
+:::
 
 
 ## Get ready
@@ -63,7 +69,7 @@ The files that you are going to use are stored on Github, bundled in a `zip` arc
 - A text file with the password
 
 
-## Part 0: Unlock files and functionalities 🔓
+## Part 0: unlock files and functionalities 🔓
 
 OBT linelists use VBA macros to add functionalities. As a consequence, linelists that comes from the internet often need to be unblocked, and macro enabled in them. 
 
@@ -76,7 +82,7 @@ You may need to perform some or all these steps on your computer, but you will c
 :::
 
 
-## Part 1: Prepare and deploy a linelist
+## Part 1: prepare and deploy a linelist
 
 ### Gather the files
 
@@ -262,11 +268,11 @@ In most cases there should be one linelist per site.
 
 
 
-## Part 2: Linelist in use
+## Part 2: linelist in use
 
 ### 🧭 Context
 
-The linelist is used in Moissala and the neighbouring areas. You receive the file with data and you want to have a look at it.
+The linelist was deployed in January 2022; almost a year later, in April 2023, the measles outbreak is still ongoing. The linelist is used in Moissala and the neighbouring areas. You receive the file with data and you want to have a look at it.
 
 You are now going to work on the file `measles_linelist_moissala.xlsb`, which contains simulated measles data.
 
@@ -277,8 +283,8 @@ When you receive an unknown linelist with data, always perform a couple of check
 
 #### Structure checks
 
-- Does the OBT menu appear as expected?
-- Test one button (for example, open the Show/Hide window)
+- Does the OBT menu appears as expected (buttons have legible labels)?
+- Test one button (for example, open the Show/Hide window): does it work as expected?
 - Do you see the expected sheets?
 
 ::: {.callout-warning}
@@ -292,13 +298,13 @@ If the export does not work because the VBA is corrupted, contact the EpiDS team
 :::
 
 ::: {.instructions}
-Do these checks on the file.
+Do these checks on the file `measles_linelist_moissala.xlsb`.
 :::
 
 
 #### Data checks
 
-- Are the metadata on the "Info" sheet still (correctly) filled?^[90% of export problems come from badly filled metadata]
+- Are the metadata on the "Info" sheet (still) correctly filled?^[90% of export problems come from badly filled metadata]
 - Do patients have IDs?
 - Are there replicated IDs?
 - Check the filters of a couple of date columns: do the dates correspond to what you expect (min, max) and are there values not recognised as dates?
@@ -308,16 +314,16 @@ Do these checks on the file.
 
 ### Analyses
 
-Now let's investigate the descriptive analyses provided with the linelist. While the interface of the linelist is the same, the provided analyses may differ a bit from disease to disease, depending on what was requested, and what is encoded in the **setup file**^[Note that more analyses can be requested if needed]. Most linelists have at least the uni and bivariate tables, the temporal and spatial analyses.
+Now let's investigate the descriptive analyses provided with the linelist. While the general interface of the linelist is the same, the provided analyses may differ from disease to disease, depending on what was requested.^[Note that more analyses can be requested if needed.] Most linelists have at least the uni and bivariate tables, the temporal and spatial analyses.
 
 
-There are a couple of important things about the analyses:
+There are a couple of important things to remember about the analyses in OBT linelists:
 
-1. The most important thing to remember about analyses in the OBT linelist is that they need to be **refreshed** before being explored.
+1. Anaslyses need to be **refreshed** before being explored.
 
 ![Refresh button in the OBT menu](../module_1/images/004-refresh.png){fig-align="center"}
 
-2. The second most important thing to know is that if you filter data in the main patient sheet, it will be reflected in the analyses *after you refresh* (a red warning will appear to remind you).
+2. If you filter data in the main patient sheet, it will be reflected in the analyses *after you refresh* (a red warning will appear to remind you).
 
 3. You can alter the appearance of the graphs (which are created automatically and admittedly a bit ugly), the same way you would do for your own figures, with any [Excel tool](https://www.howtogeek.com/how-to-format-your-chart-in-excel/).^[Note that graphs modifications will be lost during data migration to a new version of the linelist, so I advise you to restrict the modifications to graphs that you want to export to reports / slides, or which are _really_ making your eyes bleed.]
 
@@ -329,14 +335,14 @@ Go to the patient data sheet, navigate to the OBT menu and click on the button t
 
 Now that the data was refreshed, we can begin checking out the analyses sheets.
 
-### Persons: uni and bivariate analyses
+#### Persons: uni and bivariate analyses
 
-This page contains univariate and bivariate tables and bar charts providing information about patients: demographic informations, but also symptoms, outcomes etc.
+This page contains univariate and bivariate tables and bar charts providing information about patients: demographics, symptoms, outcomes etc.
 
 ::: {.instructions}
 Explore the page, and answer the following questions:
 
-- What is the average length of stay of the patients?
+- What is the average length of stay of patients?
 - How many patients are more than 15 years old?
 - How many patients are female?
 - What is the percentage of complicated measles?
@@ -358,14 +364,14 @@ Now let us investigate the characteristics of deceased patients.
 
 
 
-### Time: temporal analyses
+#### Time: temporal analyses
 
 Now, let's look at the "Temporal analyses" sheet. On this sheet you can choose the temporal scale you want to monitor: days, weeks, months, quarter, years. The table has 53 rows, and can thus accommodate up to:
 
 - a high resolution zoom of a given period of 53 days
 - one year worth of weeks
 - 53 months if you have several years worth of data
-- 53 quarters or years (but we do not expect you to often use these scales)
+- 53 quarters or years, which is a bit silly for most uses
 
 ![Options for the temporal analyses](../module_1/images/007-img-temporal-table.png){fig-align="center"}
 
@@ -389,18 +395,18 @@ Now, if you went to have a look at the graphs, you should see one like that in t
 
 ![Hospitalisations](../module_1/images/008-img-temporal-hospit_raw.png){fig-align="center"}
 
-It is fine to look at the shape of the epicurve, but you would not want to use it in a report as it is. Beside cosmetic improvement, you can use filters to remove the empty weeks at the right of the graph:
+It is fine to look at the shape of the epicurve, but you would not want to use it in a report as it is. Besides cosmetics improvements, you could use filters to remove the empty weeks at the right of the graph:
 
-- Select the graph -> some buttons appear at the top right corner.
+- Select the graph: some buttons appear at the top right corner.
 - Use the "filter" button (the bottom one) to filter out the categories you don't want to see.
 
 ![Minimally pimped graph](../module_1/images/009-img-temporal-hospit_pimped.png){fig-align="center"}
 
 ::: {.callout-warning}
-Don't forget to remove the graph filters when new data is entered in the linelist, else you won't see it on the graph. The corrolary is that if your colleague sends you a linelist complaining that the figures are correct in the table but do not appear in the graph, the filters are the prime suspects.
+Don't forget to remove the graph filters when new data is entered in the linelist, or else you won't see it on the graph. The corrolary is that if your colleague sends you a linelist complaining that the figures are correct in the table but do not appear in the graph, the filters are the prime suspects.
 :::
 
-### Place: spatial analyses
+#### Place: spatial analyses
 
 Now we navigate to the third analyses sheet. It displays the **top 30 areas** with the most cases, and below the top 30 places of origin (in the case of refugees and displaced people).^[The number 30 is defined in the **setup file**: another disease might have 10 or 20.]
 
@@ -413,13 +419,13 @@ Click on the blue button "Select your admin level" and go through the options. W
 For this linelist, data is meaningful at the "Zone of responsibility" level (admin 3), but with real data even higher levers may be worth checking if people are travelling a lot, or if you created a master linelist from different files.
 
 
-### Place and person: spatio-temporal analyses
+#### Place and person: spatio-temporal analyses
 
-The last analysis sheet that may be in an OBT linelist is a crossover between the temporal analysis and the spatial analysis: it allow you to look at the number of cases (usually) for a couple of chosen administrative levels across time.
+The last analysis sheet that you may encounter in an OBT linelist is a crossover between the temporal analysis and the spatial analysis: it allows you to look at the number of cases (usually) for a couple of chosen administrative levels across time.
 
 
 ::: {.instructions}
-1. Go to the Spatio-temporal analysis sheet
+1. Go to the spatio-temporal analysis sheet
 2. Place your cursor in one of the blue cells on the left (starting from `C14` and down).
 3. Click on the ["GeoHelper"](../how_to/use_geohelper.qmd) button in the OBT menu and select Moissala Est (an admin 3)
 4. Go to the next blue cell and use the Geohelper to select another place of interest (for example, one of the top places from the Spatial analysis sheet, or a place that you noticed had recent cases).
@@ -430,7 +436,7 @@ The last analysis sheet that may be in an OBT linelist is a crossover between th
 
 
 
-## Part 3: Troubleshooting
+## Part 3: troubleshooting
 
 ### 🧭 Context
 
@@ -579,10 +585,7 @@ Figure out what the problems are. If the problems are quick to fix, do it. Think
 
 
 ::: {.callout-note title="More hints collapse=true}
-**Problem 3.** Are the dates correct? Are the values of the column correct? 
-
-
-
+**Problem 3.** Are the dates correct? Are the values of the column correct?
 If yes, what else could affect a graph based on epiweeks?
 :::
 
@@ -602,7 +605,7 @@ If yes, what else could affect a graph based on epiweeks?
 The last problem is tricky, but it could happen easilly in a country where the start of the week is not the same as the default (Monday) and someone forgot to change it before using the file.
 
 
-## Part 4: Dashboard
+## Part 4: dashboard
 
 ### 🧭 Context
 

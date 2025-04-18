@@ -16,12 +16,12 @@ The training aims at giving you autonomy with the preparation, use and troublesh
 
 After this training, you should be able to:
 
--	Explain what is the OutbreakTools (OBT) toolkit and make decisions about when it is appropriate to use it
--	Retrieve a linelist, prepare it for deployment
--	Explain the functionalities of the file to others
--	Use the main functionalities (import data, export data, migrate data etc.) as well as well less known tricks
--	Troubleshoot the most commons problems
--	Navigate to the intersection dashboard to monitor data
+-	**Explain** what is the OutbreakTools (OBT) tool kit and make decisions about when it is appropriate to use it
+-	**Prepare** a linelist for deployment
+-	**Explain** the functionalities of the file to others
+-	**Use** the main functionalities (import data, export data, migrate data etc.) as well as well less known tricks
+-	**Troubleshoot** the most commons problems
+-	**Monitor** data on the intersection dashboard
 
 
 ## Prerequiste
@@ -31,11 +31,11 @@ A good experience of Excel files. There is no need for VBA esoteric skills nor e
 
 ## Syllabus
 
-The training is based on a mix of slides/text and tutorial. The tutorial will be based on three situations that you are likely to encounter:
+The training is based on an explicative document (on the site, or slides), and a self-paced tutorial. The tutorial is based on three situations that you are likely to encounter:
 
 -	You want to deploy a linelist in a country: getting the file, preparing it for deployment
-- You sent the file to the field but a data encoder has issues with it: you need to know how to troubleshoot the most common ones.
--	The file is in use, you monitor data and perform data management tasks
+- You sent the file to the field but a data encoder has issues with it: you need to know how to troubleshoot the most common problems
+-	The file is in use, you neet to monitor data, both in the linelist and in the dashboard
 
 
 ::: {.homepage-card-grid}

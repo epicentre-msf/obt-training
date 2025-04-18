@@ -51,7 +51,7 @@ Now do **do something**!
 
 ## Get ready
 
-### Download and unzip the tutorial materials 📦
+### Download and unzip the tutorial materials
 
 The files that you are going to use are stored on Github, bundled in a `zip` archive. 
 
@@ -62,16 +62,16 @@ The files that you are going to use are stored on Github, bundled in a `zip` arc
 :::
 
 
-### Description of the folder content 📂
+### Description of the folder content
 
 - The current last version of the OBT measles linelist (standard version), empty
 - A linelist with simulated data^[To ensure full anonymisation, the data used in this exercise was simulated, using parameters from MSF measles data for some parameters]
 - A text file with the password
 
 
-## Part 0: unlock files and functionalities 🔓
+## Part 0: unlock files and functionalities {#sec-unblock-file}
 
-OBT linelists use VBA macros to add functionalities. As a consequence, linelists that comes from the internet often need to be unblocked, and macro enabled in them. 
+OBT linelists use VBA macros to add functionalities. As a consequence, linelists that come from the internet often need to be unblocked, and macro enabled in them. 
 
 ::: {.instructions}
 Unblock your linelist, or make sure it is already unlocked. If you have never done that before, [follow the steps from this page](../how_to/unblock_files.qmd)
@@ -170,6 +170,15 @@ Hide the variables that we do not plan to fill. You can either hide them one by 
 ::: {.instructions} 
 Use the "Import geobase" button from the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon) to import the geobase that you downloaded previously.
 :::
+
+After closing the confirmation message you can go to the data entry shee and look for columns with an orange heading background: 
+
+- The labels of the column should have been updated with the administrative levels present in the geobase (e.g. “adm1_name” will change to “Province” for DRC).
+- Loof at the cells of the first column, there should now be a dropdown menu containing the admin 1 of the geobase.
+
+You can fill the variables either by using the cascading dropdown menus, or by using the GeoHelper button from the ribbon.
+
+
 
 #### Choose the start of the week.
   
@@ -440,22 +449,29 @@ The last analysis sheet that you may encounter in an OBT linelist is a crossover
 
 ### 🧭 Context
 
-You have sent a linelist for deployment to the field. The data encoder may have some questions or problems.
+You have sent the linelist for deployment to the field. The data encoder may have some questions or problems in the beginning, or after a handout.
 
-For the following problem, identify the source of the problem and the solution.
 
+::: {.callout-note}
+This would happen before you receive a linelist with lots of data in it and explore it, but it was better to familiarise you with the file before attempting to troubleshoot it.
+:::
+
+::: {.instructions}
+For the following problems, identify the source of the problem and the solution.
+:::
 
 ### Opening the file and getting it to work
 
-**Problem**: your colleague opens the file
+**Problem**: your colleague opens the file and goes to the OBT menu. But the buttons do not respond and they have no labels.
 
-
-The user tells you that the file is broken and that they cannot open it
+::: {.callout-tip title="Answer" collapse=true}
+The macros are not executing properly. It could be a problem of authorisation, or maybe the VBA project did not load properly or crashed. Ask them to close the file and reopen it to see if it solves the problem. If not, get them to verify if the file is unlocked and their authorisations for VBA macros (see @sec-unblock-file).
+:::
 
 
 ### General file management
 
-Often people do not read the documentation, do not know the existence of the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon), or know it be never checked it out. A lot of the requests you might get derive from this and the good news is that they are pretty straightforward to solve.
+Often people do not read the documentation, do not know the existence of the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon) (or never checked it out). A lot of the requests you might get derive from this and the good news is that they are pretty straightforward to solve.
 
 
 #### No more rows!
@@ -466,10 +482,10 @@ You receive the following mail:
 
 What do you answer?
 
-::: {.callout-tip title="Answer" collapse=true style="width:300px"}
+::: {.callout-tip title="Answer" collapse=true}
 Use the "Add rows" button from the OBT menu to add lines at the bottom of the file.
 
-**Note**: recent versions of the linelist automaticcaly add five lines at the bottom of the file when someone enters data in the last line, so this should be less common that what it used to be. If this happens to you check whether there is a more recent version of the linelist to use!
+**Note**: recent versions of the linelist automatically add five lines at the bottom of the file when someone enters data in the last line, so this become less common. If the problem happens, check whether there is a more recent version of the linelist to use!
 :::
 
 
@@ -491,9 +507,18 @@ You get this mail:
 
 > Good evening, we entered data but some rows seem to be missing now but we did not delete them.
 
-This one is trickier, because this could be caused by several problems, including unsaved documents (data from "yesterday" or "this morning") and synchronisation errors (the last file got replaced by an older version from the server). Since the sheet is protected, it is hard to delete data in bulk though.
+This one is trickier, because this could be caused by several problems such as:
 
-Your best hope is that there is a filter applied somewhere on the data and the rows are merely hidden. You can solve this problem in one click though. Which button would you use?
+- unsaved document was closed (data from "yesterday" or "this morning" were lost)
+- OneDrive synchronisation errors (the last file got replaced by an older version from the server).
+- The user deleted data by mistake (since the sheet is protected, it is hard to delete data in bulk though, so this is less likely)
+- there is a filter applied somewhere on the data and the rows are merely hidden. 
+
+You can solve the last problem in one click though. Which button would you use?
+
+::: {.callout-tip title="Answer"  collapse=true}
+Use the "Clear all filters" button from the OBT menu.
+:::
 
 #### Analyses not up-to-date
 
@@ -507,23 +532,22 @@ What do you answer?
 Use the "Refresh analyses" button from the OBT menu
 :::
 
-Addendum from January 2025:
-
 The day after they contact you again:
 
 > Good morning, I used the refresh button yesterday to update the analyses and it woked. But today I entered new data, refreshed but all the data on the analyses sheets are striken. I cannot remove the strikethrough and I did not do anything, just enter data.
 
-A recent update in Excel 365 uses [strikethrough](https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) to label what Excel considers "stale values" (values that depend on other cells, which were modified). For some obscure reason, the "Refresh analyses" does not trigger the removal of the strikethrough (despite recalculating the ranges). A fix in the OBT is coming from 2025, but meanwhile, if it happens:
+A recent update^[We saw the problem hit computers between November and December 2024] in Excel 365 uses [strikethrough](https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) to label what Excel considers "stale values" (values that depend on other cells, which were modified). For some obscure reason, the "Refresh analyses" does not trigger the removal of the strikethrough. A fix in the OBT is coming from 2025 onwards, but if this happens with another linelist:
 
 - Hit the F9 shortcut to force recalculation (or use the "Calculate now" button from the "Formula" Exce native menu)
 - Then hit the "Refresh analyses" button
+- (Advised): ask if there is a more recent version of the linelist with the problem solved
 
-Alternately, you can [turn off](https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) this option if it bothers you in your files in general.^[Maybe you use VBA in your own files and are bothered that Range.Calculate does _not_ remove the strikethrough, just Sheet.Caluclate or Application.Caclulate.]
+Alternately, you can [turn off](https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) this option if it bothers you in general.^[Maybe you use VBA in your own files and are bothered that Range.Calculate does _not_ remove the strikethrough, just Sheet.Caluclate or Application.Caclulate.]
 
 
-#### Sending the data to the dashboard
+### Sending the data to the dashboard
 
-Another source of friction is the sharing step of the linelist. In all cases, it is good to brief them again on the [steps](../how_to/export_data_dashboard.qmd) to send data to the dashboard, but see if you can find the exact problems with the files sent below.
+Another source of friction is the sharing step of the linelist. In all cases, it is good to brief them on the [steps](../how_to/export_data_dashboard.qmd) to send data to the dashboard, but see if you can find the exact problems with the files sent below.
 
 - They send the file `measles_linelist_moissala.xlsb` to <EPI-DATA@epicentre.msf.org> and received an error
 
@@ -540,34 +564,26 @@ The file to send should be named `MSL_linelist__MSL24__TCD__MSF-OCP__Mandoul Hos
 
 
 ::: {.callout-tip collapse=true title="Answers"}
-Either they sent the linelist itself, the wrong export, or the good xport but they did not fill the "Info" sheet so the metadata could not be used in the name
+Either they sent the linelist itself, the wrong export, or the good export but they did not fill the "Info" sheet so the metadata could not be used in the name
 :::
 
 
-In the following steps
-
-
-
-#### Other TODO
-
-- Calculated columns not calculating: use the F9 button to force recalculation
-- A place is not appeasing on the dashboard on the map -> not matched
 
 ### Advanced
 
 Sometimes the problem is less obvious or could have multiple causes, and you will need to investigate a bit more.
 
 ::: {.instructions}
-Open the Excel file `troubleshooting.xlsb` from the tutorial material archive.
+Open the Excel file `troubleshooting.xlsb` from the tutorial archive.
 :::
 
-You colleague contacts you. They have data for the start of January 2023, and they looked at the analyses sheets. But the analyses seem broken, even though they refreshed the data.
+Your colleague contacts you. They have data for the start of January 2023, and they looked at the analyses sheets. But the analyses seem broken, *even though they refreshed the data*.
 
-**Problem 1.** They _know_ they have positive measles cases, but these cases do not show up in the univariate table / graph about Measle test results.
+**Problem 1.** They _know_ they have positive measles cases, but these cases do not show up in the univariate table / graph about Measles test results.
 
 **Problem 2.** The register says there should be 25 notifications in the first week, and 40 in the second week, but the numbers in the epicurve do not match. The univariate general summary is correct, though (65 patients seen).
 
-***Problem 3.** They know there should be 5 deceased patients in facilities, 3 who had been notified in week 1, and 2 notified in week 2. But the numbers in the temporal analysis do not correspond.
+**Problem 3.** They know there should be 5 deceased patients in facilities, 3 who had been notified in week 1, and 2 notified in week 2. But the numbers in the temporal analysis sheet do not correspond.
 
 
 ::: {.instructions}
@@ -575,31 +591,31 @@ Figure out what the problems are. If the problems are quick to fix, do it. Think
 :::
 
 
-::: {.callout-note title="Hints collapse=true}
-**Problem 1.** Check out the authorised and entered values for the incriminated column. Looking at the values in the filter is the fastest way to do so.
+::: {.callout-note title="Hints" collapse=true}
+**Problem 1.** Check out the authorised and entered values for the incriminated column (use filters!).
 
 **Problem 2.** The temporal analyses rely on dates, by definition.
 
-**Problem 3.** There are several sources to this problem. Maybe one less depending on what you did for in past steps.
+**Problem 3.** There are several sources to this problem. Maybe one less depending on what you did in past steps.
 :::
 
 
-::: {.callout-note title="More hints collapse=true}
-**Problem 3.** Are the dates correct? Are the values of the column correct?
-If yes, what else could affect a graph based on epiweeks?
+::: {.callout-note title="More hints" collapse=true}
+**Problem 3.** Are the dates correct? Are the values of the outcome column correct? If yes, what else could affect a graph based on epiweeks?
 :::
 
 
-::: {.callout-note title="Wink Wink Nudge Nudge collapse=true}
+::: {.callout-note title="Wink Wink Nudge Nudge" collapse=true}
 **Problem 3.** Maybe go check @sec-customise to see if there is an option you should check.
 :::
+
 
 ::: {.callout-tip title="Answers" collapse=true}
 **Problem 1.** They did not use the dropdown menu in the lab result column and somehow forced a value not from the list ("Pos" instead of "Positive")
 
 **Problem 2.** The notification date has some very dirty values that were not recognised as dates. As such, these notifications cannot be counted in the _temporal_ analyses, because the conditions on the date cannot be met. Since the univariate summary has no conditions on dates, it is not affected.
 
-**Problem 3.** One of the notification date was dirty and not recognised as a date. But maybe that was solved during the second problem if you felt confident about the dates. One of the values of the outcome column had a typo. Finally, the start of the week somehow got changed to Sunday, while it should be Monday in Chad, and one of the row was affected by that. have a look at the epiweek column, change the start of the week and check the column again (recalculate if needed).
+**Problem 3.** One of the notification date was dirty and not recognised as a date. But maybe that was solved during the second problem if you felt confident about the dates. One of the values of the outcome column had a typo. Finally, the start of the week somehow got changed to Sunday, while it should be Monday in Chad, and one of the rows was affected by that. Have a look at the epiweek column, change the start of the week and check the column again (recalculate if needed).
 :::
 
 The last problem is tricky, but it could happen easilly in a country where the start of the week is not the same as the default (Monday) and someone forgot to change it before using the file.
@@ -609,7 +625,7 @@ The last problem is tricky, but it could happen easilly in a country where the s
 
 ### 🧭 Context
 
-The linelist is in use, and it was decided that the data would be sent for compilation and visualisation to Epicentre. You want to go and monitor the number of cases in Moissala.
+The linelist is in use, and it was decided that the data would be sent for compilation and visualisation to Epicentre. You want to go and monitor the number of cases in Chad.
 
 ### Access the dashboard
 
@@ -619,12 +635,12 @@ Once you have an account, you can go to the intersection dashboard [site](https:
 
 ### Sidebar filters
 
-On the left (number 1 on @fig-dashboard) you have the option sidebar, where you can filter data  (diseases, OC, country, site, outcome etc.) and customise a couple of options.
+On the left (number 1 on @fig-dashboard) you have the options sidebar, where you can filter data  (diseases, OC, country, site, outcome etc.) and customise a couple of options.
 
 ::: {.instructions}
 - Pick "Measles" from the filter
 - Find the country filter and select "Chad"
-- Click on the "Update" button at the bottom to take into account your filters!
+- Click on the "Update" button at the bottom to apply the selected filters on the data.
 :::
 
 The dashboard now only displays measles data in Chad.
@@ -669,7 +685,7 @@ Use the options of the graph (number 4 on @fig-dashboard) to modify it to look l
 :::
 
 ::: {.callout-tip}
-1. The map and the epicurve have a hidden zoom button that you can see by hovering your mouse at the bottom right, which is handy on small screens (see number 5 on @fig-dashboard) .
+1. The map and the epicurve have a hidden zoom button that you can see by hovering your mouse at the bottom right corner, which is handy on small screens (see number 5 on @fig-dashboard) .
 
 2. On the epicurve you can drag your mouse left and right to zoom in on some date period. A "Reset zoom" button will appear to undo the view.
 

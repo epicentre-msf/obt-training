@@ -8,7 +8,7 @@ This training will teach you how to use OutbreakTools (OBT) tools to generate an
 
 ## Objectives
 
-After this training, you should be able to:
+After this training, you will be able to:
 
 -	Grasp the use of the different OutbreakTools files
 -	Find the most recent version of the tools, as well as the documentation

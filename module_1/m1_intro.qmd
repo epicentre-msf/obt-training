@@ -43,7 +43,7 @@ As a result, there is a **whole ecosystem of files** used in and outside MSF, wi
 
 To alleviate some of the above problems, MSF OCs try to provide linelists on which disease referents and epidemiologists agreed upon, to standardise data collection within OC. The quality and functionalities included tend to depend on both OC and disease.
 
-Better, for some diseases, OCs reached an agreement on a minimal dictionary and sometimes a common tool. Epicentre has provided a number of these "intersection" linelists in the recent years. This files however also suffered from some problems: they were hard to maintain and had different functionalities depending on diseases^[The number of functionalities, and the general data quality increased with time as skills grew, which resulted in very different linelist in terms of both interface and capacities]. 
+Better, for some diseases, OCs reached an agreement on a minimal dictionary and sometimes a common tool. Epicentre has provided a number of these "intersection" linelists in the recent years. These files however also suffered from some problems: they were hard to maintain and had different functionalities and interfaces depending on diseases.
 
 Epicentre tried to go a step further, capitalising on what was learned developing and maintaining these tools, and developed **OutbreakTools** a set of tools to improve data collection, quality and visualisation. A good part of OutbreakTools it to help generating good quality, robust linelists.
 
@@ -77,53 +77,80 @@ In addition to linelist development, OBT contains tools that rely on the standar
 The full workflow allows epidemiologists or data teams to send their data to Epicentre for it to be displayed on a dashboard. The data will usually be displayed between one or two hours after being sent.
  
 
-![The linelist-to-dashboard workflow](images/001-img-obt-workflow.png){fig-align="center" fig-alt="A diagram showing excel files being sent to Epicentre or partners. When the data is sent to Epicentre, the data is then sent to a dashboard."}
+![The linelist-to-dashboard workflow](images/001-img-obt-workflow.png){fig-align="center" fig-alt="A diagram showing excel files being sent to Epicentre or partners. When the data is sent to Epicentre, the data is then sent to a dashboard." #fig-workflow}
 
 
 ## XXXX OutbreakTools linelists
 
-This section will describe linelists functionalities.
+
+OBT linelist contain what you may have come to expect from mature linelists: places to enter data and metadata, a couple of analyses, and ways to deal with languages and places.
+
+### Interface
+
+They always have the same functionalities, which include:
+
+-	Possibility to upload pre-formatted geobases to standardise geographical information
+-	Basic analyses (uni and bivariate tables, epicurves, top x locations with the most cases etc.)
+-	Data and analyses export (anonymous or not)
+-	Possibility to show or hide optional variables
+-	Possibility to migrate data to a newer version of the linelist
+-	…
 
 
+Most of the important features of the linelist can be accessed through the [OutbreakTools Menu](https://epicentre-msf.github.io/outbreak-tools/reference/home_reference.html) at the top of Excel interface. 
+ 
+**Structure of the file**
+
+At minima, an OutbreakTools linelist will contain these sheets:
+
+1.	An *Info* sheet which contains metadata about the project  
+2.	At least one *data entry sheet* to enter patient data  
+3.	Some or all of the following analyses sheets containing basic exploration of data:  
+
+    - Uni and bivariate analyses
+    - Temporal analyses (epicurves and their associated tables)
+    - Spatial analyses (top X locations of cases)
+    - Spatio-temporal analyses (epicurves for chosen locations)
+    
+4.	A Custom dropdown sheet where the user can define categories for some specific variables
+5.	A Custom tables sheet where the user can create a pivot table of the data
+6.	A Geo sheet showing the loaded geobase. 
 
 
-#### A note on languages
+### Languages
 
-A given setup file can contain several languages, so as long as the translation for a language is provided, the designer can compile a linelist in this language. All the created linelists will thus have the same interface, variable names and functionalities.
+OBT linelists usually exist in several languages. In that case there is one file per language (by opposition to a button to switch language withn one linelist).
 
-::: {.callout-note}
-Because the translations of all labels and categories are available in the setup file, the compilation scripts can automatically translate the data received in different language to English, which allow to gather all the data in the dashboard.
+
+::: {.callout-note title="How it works" collapse=true}
+
+You can enter several languages in a given setup file, and chose in the designer which of these languages to generate a linelist in. The generated files have the same interface and dictionary, and differ only in the interface and label languages (variable names are the same).
+
+Because the translations of all labels and categories are available in the setup file, the compilation scripts can automatically translate the data received in different languages to English, to gather all the data in the dashboard.
 :::
 
 
-#### A note on geographic data
+#### Geographic data
 
-Describing geographic data is a huge challenge for patient data (independently of the software used). The problem is usually that it is hard to access geographic levels to describe places in all the countries that we work in: the data may change over time, is often incomplete, and sometimes several source of data contradict each others
+Describing geographic data is a huge challenge for patient data (independently of the software used). It is generally hard to access geographic levels to describe places in all the countries that we work in: the data may change over time, is often incomplete, and sometimes several sources of data contradict each others.
 
-In OBT linelists, as in many linelists developed before, we made the arbitrary choice to describe geographic locations with fours hierarchical administrative levels. So each location is associated with four columns with cascading dropdown menus and several hidden calculated columns. 
+In OBT linelists, as in many linelists developed before, we made the arbitrary choice to describe geographic locations with four hierarchical administrative levels. Each location is thus associated with four columns containing cascading dropdown menus  (as well as several hidden derived columns). 
 
 The categories with which to populate dropdown menus are country specific. A member of the EpiDS team is tasked to gather geographic data from different places (GIS unit, OCHA HDX, local GIS officers etc.) and create database of geographic locations associated with shapefiles (files to plot geographic data). As a part of OutbreakTools, we provide Excel tabulated versions of this data, the so-called **geobases**, which can be imported very easily in OBT linelists to fill the dropdown menus for locations. These geobases are accessible online in the [Geoapp](https://reports.msf.net/secure/app/outbreak-tools-geoapp).
 
 
+## Outbreaktool Dashboards
+
+Epicentre maintains a couple of OBT dashboards associated with the OBT linelist^[most of these dashboards will be merged into one at some point].
+
+All the OBT linelist produced by the EpiDS team have a button to [export data to the dashboard]. This creates a protected file with the data and metadata, that you can send to a dedicated mail address (see (@fig-workflow)).
+
+More explanations can be found [here](../how_to/export_data_dashboard.qmd)
 
 
+## Preparing a linelist for deployment {#sec-deployment}
 
-Geographical location are encoded using four columns that can accommodate up to four administrative levels, and these columns have a special status in OBT. You can recognize them by the orange background of their labels. 
-When you import a geobase in a linelist:
-
-- The labels of the columns are updated with the administrative levels present in the geobase (e.g. “adm1_name” will change to “Province” for DRC).
-- The categories of the dropdown menus update. 
-You can fill the variables either by using the cascading dropdown menus, or by using the GeoHelper button from the ribbon.
-
-
-## XXXX Dashboard
-
-
-- [exporting files](../how_to/export_data_dashboard.qmd)
-
-
-## XXXX Prepare a linelist for deployment {#sec-deployment}
-
+Deploying usually involves the following steps:
 
 1. Download an empty linelist template, and the accompanying documentation
 

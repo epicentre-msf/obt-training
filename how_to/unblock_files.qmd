@@ -44,6 +44,7 @@ Once the file is open, you need to enable and authorise macros in Excel to use t
     
 ![Trust Center menu for macros](../how_to/images/003-img-trust-center.png){fig-align="center" fig-alt="A screeshot of the trust center popup windows, on the Macro settings tab"}
    
+    
     d) Tick the "Disable all macros with notification".
    
     e) Restart Excel and reopen the file.

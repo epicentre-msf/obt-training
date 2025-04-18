@@ -109,7 +109,7 @@ code {
 }
 
 
-//Cards
+/* ----- Cards  ----- */
 
 .homepage-card-grid {
   display: flex;
@@ -170,4 +170,14 @@ code {
   color: white;
 }
 
+
+/* ---- footnotes and hover ---*/
+
+.tippy-box {
+  //color: red !important;
+  background-color: $light-grey;
+  box-shadow: 5px 5px 10px $blue-green;
+  //font-weight: bold;
+
+}
 

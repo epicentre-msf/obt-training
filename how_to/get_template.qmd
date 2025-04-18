@@ -2,11 +2,13 @@
 title: "Get a linelist template"
 ---
 
-As of now, there is no open SharePoint with all the OBT linelist accessible, but there are several ways to obtain a template:^[There are discussions in the Epinetwork to setup an open SharePoint with all the latest versions of tools so this part should be much straightforward soon]
+There are several ways to obtain a template:
 
-- You have access to the current Epinetwork SharePoint, where all the last versions of the existing OBT tools are stored: go and get the most recent file for the disease
+- Go to the public page of the [Epinetwork sharepoint](https://msfintl.sharepoint.com/sites/OCG/Projects/GRP-MSF-EpiNetwork/Library/Forms/AllItems.aspx?id=%2Fsites%2FOCG%2FProjects%2FGRP-MSF-EpiNetwork%2FLibrary%2F01%20Outbreaks&viewid=36a61edd-2f15-4105-835a-d580bada0924&FolderCTID=0x012001) where all the last versions of the existing OBT tools are stored by disease.
 
-- This is a big project, maybe with several OCs and a SharePoint was setup with the linelist template (as was the case for Haiti, EastAfrica measles and cholera, mpox, Diphtheria etc.)
+- If you have access to it, the private Epinetwork site should have the same versions of the files.
+
+- If you are working in a big project, with several OCs and a dedicated SharePoint, the linelist template was probably droped in it (as was the case for Haiti, EastAfrica measles and cholera, mpox, Diphtheria etc.).
 
 - You ask your epi-advisor (or equivalent position from your OC) who can access the Epinetwork Sharepoint
 

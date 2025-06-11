@@ -121,7 +121,7 @@ The file is unprotected, you can open it to investigate its structure if you wan
 ### Adapt the linelist {#sec-customise}
 
 ::: {.instructions}
-Open the linelist (password: `measles2024`) and  inspect sheet names.
+Open the linelist (we removed the password for simplicity reasons) and  inspect sheet names.
 :::
 
 **Notably**: 

@@ -15,6 +15,7 @@ format:
     toc-depth: 5
     toc-expand: 1
     toc-title: Table of content
+    toc-location: left
     
     citations-hover: true
     footnotes-hover: true

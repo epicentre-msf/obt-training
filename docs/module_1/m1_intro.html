@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.37">
+<meta name="generator" content="quarto-1.7.30">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -31,15 +31,16 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../images/icon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-13edda16af4aae59d6b429432a85a103.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a22e8ae99d882f57c282fcf09f305c0a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -73,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed">
+<body class="floating nav-fixed slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -141,15 +142,15 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Unblock files</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../how_to/download_geobase.html">
+    <a class="dropdown-item" href="../how_to/download_geobase.qmd">
  <span class="dropdown-text">Download geobase</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../how_to/get_template.html">
+    <a class="dropdown-item" href="../how_to/get_template.qmd">
  <span class="dropdown-text">Get a linelist template</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../how_to/export_data_dashboard.html">
+    <a class="dropdown-item" href="../how_to/export_data_dashboard.qmd">
  <span class="dropdown-text">Export data to dashboard</span></a>
   </li>  
         <li>
@@ -164,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-reference">    
         <li>
-    <a class="dropdown-item" href="../reference/ribbons.html">
+    <a class="dropdown-item" href="../reference/ribbons.qmd">
  <span class="dropdown-text">Ribbons</span></a>
   </li>  
     </ul>
@@ -180,9 +181,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
     <h2 id="toc-title">Table of content</h2>
    
   <ul>
@@ -200,15 +200,22 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#concept" id="toc-concept" class="nav-link" data-scroll-target="#concept">Concept</a></li>
   <li><a href="#outbreaktools-workflow" id="toc-outbreaktools-workflow" class="nav-link" data-scroll-target="#outbreaktools-workflow">OutbreakTools Workflow</a></li>
   </ul></li>
-  <li><a href="#xxxx-outbreaktools-linelists" id="toc-xxxx-outbreaktools-linelists" class="nav-link" data-scroll-target="#xxxx-outbreaktools-linelists">XXXX OutbreakTools linelists</a>
+  <li><a href="#outbreaktools-linelists" id="toc-outbreaktools-linelists" class="nav-link" data-scroll-target="#outbreaktools-linelists">OutbreakTools linelists</a>
   <ul>
-  <li><a href="#a-note-on-languages" id="toc-a-note-on-languages" class="nav-link" data-scroll-target="#a-note-on-languages">A note on languages</a></li>
-  <li><a href="#a-note-on-geographic-data" id="toc-a-note-on-geographic-data" class="nav-link" data-scroll-target="#a-note-on-geographic-data">A note on geographic data</a></li>
+  <li><a href="#interface" id="toc-interface" class="nav-link" data-scroll-target="#interface">Interface</a></li>
+  <li><a href="#languages" id="toc-languages" class="nav-link" data-scroll-target="#languages">Languages</a>
+  <ul>
+  <li><a href="#geographic-data" id="toc-geographic-data" class="nav-link" data-scroll-target="#geographic-data">Geographic data</a></li>
   </ul></li>
-  <li><a href="#xxxx-dashboard" id="toc-xxxx-dashboard" class="nav-link" data-scroll-target="#xxxx-dashboard">XXXX Dashboard</a></li>
-  <li><a href="#sec-deployment" id="toc-sec-deployment" class="nav-link" data-scroll-target="#sec-deployment">XXXX Prepare a linelist for deployment</a></li>
+  </ul></li>
+  <li><a href="#outbreaktool-dashboards" id="toc-outbreaktool-dashboards" class="nav-link" data-scroll-target="#outbreaktool-dashboards">Outbreaktool Dashboards</a></li>
+  <li><a href="#sec-deployment" id="toc-sec-deployment" class="nav-link" data-scroll-target="#sec-deployment">Preparing a linelist for deployment</a></li>
   </ul>
 </nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
@@ -232,7 +239,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level2 page-columns page-full">
+<section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <section id="linelists" class="level3">
 <h3 class="anchored" data-anchor-id="linelists">Linelists</h3>
@@ -270,7 +277,7 @@ Too Long; Did Not Read
 <h4 class="anchored" data-anchor-id="drawbacks-of-using-excel-to-build-linelists">Drawbacks of using Excel to build linelists</h4>
 <p>Of course, Excel linelists have their drawbacks too:</p>
 <ul>
-<li>Developing a <em>good</em> linelist that fosters data quality takes much more time than just setting up a table, and not everybody knows the Excel functionalities to do so. The consequence of that is that there are <em>a lot</em> of terrible linelists around</li>
+<li>Developing a <em>good</em> linelist that fosters data quality takes much more time than just setting up a table, and not everybody knows the Excel functionalities to do so. The consequence of that is that there are a lot of <em>terrible</em> linelists around</li>
 <li>Files for different diseases usually differ a lot. They may have been developped by different people with different skills. Perhaps the developper used a common template at the start and re-used code, but usually the file diverge. Bringing the same functionalities to all of them takes time and effort</li>
 <li>Consequently, maintenance of the files is time consuming. Using VBA scripts to easily get data in and out of your linelist helps, but does not solve all the problems.</li>
 <li>The files can get heavy and finicky when they get too complicated</li>
@@ -279,20 +286,20 @@ Too Long; Did Not Read
 </ul>
 </section>
 </section>
-<section id="an-ecosystem-of-files" class="level3 page-columns page-full">
+<section id="an-ecosystem-of-files" class="level3">
 <h3 class="anchored" data-anchor-id="an-ecosystem-of-files">An ecosystem of files</h3>
 <p>As a result, there is a <strong>whole ecosystem of files</strong> used in and outside MSF, with different interfaces, dictionaries, functionalities, languages. The data is fragmented, hard to reconcile and often of bad quality. This makes it is hard to have visibility on MSF activities and to exploit the data.</p>
 <p>To alleviate some of the above problems, MSF OCs try to provide linelists on which disease referents and epidemiologists agreed upon, to standardise data collection within OC. The quality and functionalities included tend to depend on both OC and disease.</p>
-<p>Better, for some diseases, OCs reached an agreement on a minimal dictionary and sometimes a common tool. Epicentre has provided a number of these “intersection” linelists in the recent years. This files however also suffered from some problems: they were hard to maintain and had different functionalities depending on diseases<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;The number of functionalities, and the general data quality increased with time as skills grew, which resulted in very different linelist in terms of both interface and capacities</p></div></div><p>Epicentre tried to go a step further, capitalising on what was learned developing and maintaining these tools, and developed <strong>OutbreakTools</strong> a set of tools to improve data collection, quality and visualisation. A good part of OutbreakTools it to help generating good quality, robust linelists.</p>
+<p>Better, for some diseases, OCs reached an agreement on a minimal dictionary and sometimes a common tool. Epicentre has provided a number of these “intersection” linelists in the recent years. These files however also suffered from some problems: they were hard to maintain and had different functionalities and interfaces depending on diseases.</p>
+<p>Epicentre tried to go a step further, capitalising on what was learned developing and maintaining these tools, and developed <strong>OutbreakTools</strong> a set of tools to improve data collection, quality and visualisation. A good part of OutbreakTools is to help generating good quality, robust linelists.</p>
 </section>
 </section>
 <section id="presentation-of-outbreaktools" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="presentation-of-outbreaktools">Presentation of OutbreakTools</h2>
 <section id="concept" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="concept">Concept</h3>
-<p>The main idea of OutbreakTools linelist generation is to separate the content of the linelist (which <em>variables</em> and <em>analyses</em> are in the linelist) from the file interface and functionalities.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;An idea that is not novel, as separating content and presentation (or style) is a classic idea, that you find in HTML/CSS, Markdown, Latex or even using styles in Word</p></div><div id="fn3"><p><sup>3</sup>&nbsp;You can think of the <strong>setup file</strong> as a <em>recipe</em> for a given linelist.</p></div><div id="fn4"><p><sup>4</sup>&nbsp;If you think of the <strong>setup file</strong> as a recipe, the designer is the food processor.</p></div></div><p>The content is described in a <strong>setup file</strong>, a special Excel file that allows describing all the variables and the analyses that should go in the linelist.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Another Excel file, the <strong>designer</strong>, reads the <strong>setup file</strong> and runs scripts to generate a linelist. The designer creates the whole linelist structure, adds the buttons and many functionalities.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>The main idea of OutbreakTools linelist generation is to separate the <strong>content</strong> of the linelist (which <em>variables</em> and <em>analyses</em> are in the linelist) from the file <strong>interface</strong> and functionalities.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;An idea that is not novel, as separating content and presentation (or style) is a classic idea, that you find in HTML/CSS, Markdown, Latex or even Word styles.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;You can think of the <strong>setup file</strong> as a <em>recipe</em> for a given linelist.</p></div><div id="fn3"><p><sup>3</sup>&nbsp;If you think of the <strong>setup file</strong> as a recipe, the designer is the food processor.</p></div></div><p>The content is described in a <strong>setup file</strong>, a special Excel file that allows describing all the variables and the analyses that should go in the linelist.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Another Excel file, the <strong>designer</strong>, reads the <strong>setup file</strong> and runs scripts to generate a linelist. The designer creates the whole linelist structure, adds the buttons and many functionalities.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/002-img-obt-concept.png" class="img-fluid figure-img" alt="A diagram with three boxes illustrating the workflow to create a linelist, with a setup file and a designer file."></p>
@@ -315,65 +322,100 @@ Note
 <p>The advantages of this approach are:</p>
 <ul>
 <li><p>Someone with no knowledge of VBA can use the OBT tools to build or modify a linelist, as long as they know how to fill a setup file.</p></li>
-<li><p>The maintenance of functionalities is done by a specialist in Epicentre, who generates new versions of the designer. Upon update of the designer, linelists can be regenerated in a couple of minutes to incorporate the updates.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p></li>
+<li><p>The maintenance of functionalities is done by a specialist in Epicentre, who generates new versions of the designer. Upon update of the designer, linelists can be regenerated in a couple of minutes to incorporate the updates.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p></li>
 </ul>
-<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;Which is not an instantaneous process, but infinitely faster than manually porting code and fixes from one linelist to a different one with lots of code adaptation, and then migrating data, with more or less hasle depending on the linelist.</p></div></div></section>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;Which is not an instantaneous process, but infinitely faster than manually porting code and fixes from one linelist to a different one with lots of code adaptation, and then migrating data, with more or less hasle depending on the linelist.</p></div></div></section>
 <section id="outbreaktools-workflow" class="level3">
 <h3 class="anchored" data-anchor-id="outbreaktools-workflow">OutbreakTools Workflow</h3>
-<p>In addition to linelist development, OBT contains tools that rely on the standardised nature of the linelists to build data cleaning workflow and dashboard much faster than ever before. When a new linelist is created, a simple functional dashboard can be build in a couple of days, with automatic data gathering from a mail address.</p>
+<p>In addition to linelist development, OBT contains tools that rely on the standardised nature of the linelists to build data cleaning workflows and dashboards much faster than ever before. When a new linelist is created, a simple functional dashboard can be build in less than a couple of days, including automatic data gathering from a mail address and compilation.</p>
 <p>The full workflow allows epidemiologists or data teams to send their data to Epicentre for it to be displayed on a dashboard. The data will usually be displayed between one or two hours after being sent.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/001-img-obt-workflow.png" class="img-fluid figure-img" alt="A diagram showing excel files being sent to Epicentre or partners. When the data is sent to Epicentre, the data is then sent to a dashboard."></p>
-<figcaption>The linelist-to-dashboard workflow</figcaption>
+<div id="fig-workflow" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A diagram showing excel files being sent to Epicentre or partners. When the data is sent to Epicentre, the data is then sent to a dashboard." data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/001-img-obt-workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A diagram showing excel files being sent to Epicentre or partners. When the data is sent to Epicentre, the data is then sent to a dashboard.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The linelist-to-dashboard workflow
+</figcaption>
 </figure>
 </div>
 </section>
 </section>
-<section id="xxxx-outbreaktools-linelists" class="level2">
-<h2 class="anchored" data-anchor-id="xxxx-outbreaktools-linelists">XXXX OutbreakTools linelists</h2>
-<p>This section will describe linelists functionalities.</p>
-<section id="a-note-on-languages" class="level4">
-<h4 class="anchored" data-anchor-id="a-note-on-languages">A note on languages</h4>
-<p>A given setup file can contain several languages, so as long as the translation for a language is provided, the designer can compile a linelist in this language. All the created linelists will thus have the same interface, variable names and functionalities.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<section id="outbreaktools-linelists" class="level2">
+<h2 class="anchored" data-anchor-id="outbreaktools-linelists">OutbreakTools linelists</h2>
+<p>OBT linelist contain what you may have come to expect from mature linelists: places to enter data and metadata, a couple of analyses, and ways to deal with languages and places.</p>
+<section id="interface" class="level3">
+<h3 class="anchored" data-anchor-id="interface">Interface</h3>
+<p>They always have the same functionalities, which include:</p>
+<ul>
+<li>Possibility to upload pre-formatted geobases to standardise geographical information</li>
+<li>Basic analyses (uni and bivariate tables, epicurves, top x locations with the most cases etc.)</li>
+<li>Data and analyses export (anonymous or not)</li>
+<li>Possibility to show or hide optional variables</li>
+<li>Possibility to migrate data to a newer version of the linelist</li>
+<li>…</li>
+</ul>
+<p>Most of the important features of the linelist can be accessed through the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">OutbreakTools Menu</a> at the top of Excel interface.</p>
+<p><strong>Structure of the file</strong></p>
+<p>At minima, an OutbreakTools linelist contains these sheets:</p>
+<ol type="1">
+<li><p>An <em>Info</em> sheet which contains metadata about the project<br>
+</p></li>
+<li><p>At least one <em>data entry sheet</em> to enter patient data<br>
+</p></li>
+<li><p>Some or all of the following analyses sheets containing basic exploration of data:</p>
+<ul>
+<li>Uni and bivariate analyses</li>
+<li>Temporal analyses (epicurves and their associated tables)</li>
+<li>Spatial analyses (top X locations of cases)</li>
+<li>Spatio-temporal analyses (epicurves for chosen locations)</li>
+</ul></li>
+<li><p>A Custom dropdown sheet where the user can define categories for some specific variables</p></li>
+<li><p>A Custom tables sheet where the user can create a pivot table of the data</p></li>
+<li><p>A Geo sheet showing the loaded geobase.</p></li>
+</ol>
+</section>
+<section id="languages" class="level3">
+<h3 class="anchored" data-anchor-id="languages">Languages</h3>
+<p>OBT linelists usually exist in several languages. In that case there is one file per language (by opposition to a button to switch language within one linelist).</p>
+<div class="callout callout-style-default callout-note callout-titled" title="How it works">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+How it works
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Because the translations of all labels and categories are available in the setup file, the compilation scripts can automatically translate the data received in different language to English, which allow to gather all the data in the dashboard.</p>
+<p>You can enter several languages in a given <strong>setup file</strong>, and chose in the <strong>designer</strong> which of these languages to generate a linelist in. The generated files have the same interface and dictionary, and differ only in the interface and label languages (variable names are the same).</p>
+<p>Because the translations of all labels and categories are available in the <strong>setup file</strong>, the compilation scripts can automatically translate the data received in different languages to English, to gather all the data in the dashboard.</p>
 </div>
 </div>
-</section>
-<section id="a-note-on-geographic-data" class="level4">
-<h4 class="anchored" data-anchor-id="a-note-on-geographic-data">A note on geographic data</h4>
-<p>Describing geographic data is a huge challenge for patient data (independently of the software used). The problem is usually that it is hard to access geographic levels to describe places in all the countries that we work in: the data may change over time, is often incomplete, and sometimes several source of data contradict each others</p>
-<p>In OBT linelists, as in many linelists developed before, we made the arbitrary choice to describe geographic locations with fours hierarchical administrative levels. So each location is associated with four columns with cascading dropdown menus and several hidden calculated columns.</p>
+</div>
+<section id="geographic-data" class="level4">
+<h4 class="anchored" data-anchor-id="geographic-data">Geographic data</h4>
+<p>Describing geographic data is a huge challenge for patient data (independently of the software used). It is generally hard to access geographic levels to describe places in all the countries that we work in: the data may change over time, is often incomplete, and sometimes several sources of data contradict each others.</p>
+<p>In OBT linelists, as in many linelists developed before, we made the arbitrary choice to describe geographic locations with four hierarchical administrative levels. Each location is thus associated with four columns containing cascading dropdown menus (as well as several hidden derived columns).</p>
 <p>The categories with which to populate dropdown menus are country specific. A member of the EpiDS team is tasked to gather geographic data from different places (GIS unit, OCHA HDX, local GIS officers etc.) and create database of geographic locations associated with shapefiles (files to plot geographic data). As a part of OutbreakTools, we provide Excel tabulated versions of this data, the so-called <strong>geobases</strong>, which can be imported very easily in OBT linelists to fill the dropdown menus for locations. These geobases are accessible online in the <a href="https://reports.msf.net/secure/app/outbreak-tools-geoapp">Geoapp</a>.</p>
-<p>Geographical location are encoded using four columns that can accommodate up to four administrative levels, and these columns have a special status in OBT. You can recognize them by the orange background of their labels. When you import a geobase in a linelist:</p>
-<ul>
-<li>The labels of the columns are updated with the administrative levels present in the geobase (e.g.&nbsp;“adm1_name” will change to “Province” for DRC).</li>
-<li>The categories of the dropdown menus update. You can fill the variables either by using the cascading dropdown menus, or by using the GeoHelper button from the ribbon.</li>
-</ul>
 </section>
 </section>
-<section id="xxxx-dashboard" class="level2">
-<h2 class="anchored" data-anchor-id="xxxx-dashboard">XXXX Dashboard</h2>
-<ul>
-<li><a href="../how_to/export_data_dashboard.html">exporting files</a></li>
-</ul>
+</section>
+<section id="outbreaktool-dashboards" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="outbreaktool-dashboards">Outbreaktool Dashboards</h2>
+<p>Epicentre maintains a couple of OBT dashboards associated with the OBT linelist<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;Most of these dashboards will be merged into one at some point.</p></div></div><p>All the OBT linelist produced by the EpiDS team have a button to export data to the <a href="https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html">dashboard</a>. This creates a protected file with the data and metadata that you can send to a dedicated mail address (<a href="#fig-workflow" class="quarto-xref">Figure&nbsp;1</a>).</p>
+<p>More explanations can be found <a href="https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html">here</a></p>
 </section>
 <section id="sec-deployment" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="sec-deployment">XXXX Prepare a linelist for deployment</h2>
+<h2 class="anchored" data-anchor-id="sec-deployment">Preparing a linelist for deployment</h2>
+<p>Deploying usually involves the following steps:</p>
 <ol type="1">
 <li>Download an empty linelist template, and the accompanying documentation</li>
 </ol>
-<p>Go to the Epinetwork SharePoint or ask a referent epi/disease focal point^<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. See <a href="../how_to/get_template.html">here</a> for more information.</p>
+<p>Go to the <a href="https://epicentre-msf.github.io/outbreak-tools/getting_started/get_linelist.html">Epinetwork Sharepoint</a> or ask a referent epi/disease focal point^<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;Unless you already have a <em>recent</em> version</p></div></div><div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -384,11 +426,11 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>There may be several languages available. In general you can expect English and French as default for well established linelists. Spanish, Portuguese or Arabic translations may be developed when needed, don’t hesitate to ask.</p>
+<p>There may be several languages available. In general you can expect English and French as default for well established linelists. Spanish, Portuguese or Arabic translations may be developed when needed for some diseases, don’t hesitate to ask.</p>
 </div>
 </div>
 <ol start="2" type="1">
-<li><p><a href="../how_to/download_geobase.html">Get a geobase for your area</a> from the <a href="https://reports.msf.net/secure/app/outbreak-tools-geoapp">Geoapp</a></p></li>
+<li><p><a href="../how_to/download_geobase.qmd">Get a geobase for your area</a> from the <a href="https://reports.msf.net/secure/app/outbreak-tools-geoapp">Geoapp</a></p></li>
 <li><p>Fill the linelist metadata: section, country etc.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p></li>
 <li><p>Customise the linelist:</p>
 <ol type="a">
@@ -401,7 +443,7 @@ Note
 </ol></li>
 <li><p>Optional: prepare and print a register and/or a Case Report Form to enter data on paper</p></li>
 <li><p>Send the linelist to the sites with the documentation. In many settings there should be one linelist per site.</p></li>
-<li><p>Ask the site to fill the remaining metadata from the Info sheet (site, sometimes site location etc.)</p></li>
+<li><p>Ask the site to fill the remaining metadata from the <em>Info</em> sheet (site, sometimes site location etc.)</p></li>
 </ol>
 
 
@@ -410,236 +452,242 @@ Note
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
       }
+      return false;
     }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
         }
-        return container.innerHTML
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -647,185 +695,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

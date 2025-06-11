@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.30">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tutorial – OutbreakTools training</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/icon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a22e8ae99d882f57c282fcf09f305c0a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="floating nav-fixed slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/icon.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">OutbreakTools training</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-module-1" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Module 1</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-module-1">    
+        <li>
+    <a class="dropdown-item" href="../module_1/m1_objectives.html">
+ <span class="dropdown-text">Module presentation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../module_1/m1_intro.html">
+ <span class="dropdown-text">Introduction to OutbreakTools</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../module_1/m1_tutorial.html">
+ <span class="dropdown-text">Tutorial</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-module-2" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Module 2</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-module-2">    
+        <li>
+    <a class="dropdown-item" href="../module_2/m2_objectives.html">
+ <span class="dropdown-text">Module presentation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../module_2/m2_intro.html">
+ <span class="dropdown-text">Introduction to the setup file</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../module_2/m2_tutorial.html">
+ <span class="dropdown-text">Tutorial</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-how-to" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">How to</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-how-to">    
+        <li>
+    <a class="dropdown-item" href="../how_to/unblock_files.html">
+ <span class="dropdown-text">Unblock files</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/download_geobase.qmd">
+ <span class="dropdown-text">Download geobase</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/get_template.qmd">
+ <span class="dropdown-text">Get a linelist template</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/export_data_dashboard.qmd">
+ <span class="dropdown-text">Export data to dashboard</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/use_geohelper.html">
+ <span class="dropdown-text">Use the GeoHelper</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reference" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Reference</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-reference">    
+        <li>
+    <a class="dropdown-item" href="../reference/ribbons.qmd">
+ <span class="dropdown-text">Ribbons</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/epicentre-msf/obt-training" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">Table of content</h2>
+   
+  <ul>
+  <li><a href="#about-this-tutorial" id="toc-about-this-tutorial" class="nav-link active" data-scroll-target="#about-this-tutorial">About this tutorial</a>
+  <ul>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">🎯 Objectives</a></li>
+  <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context">🧭 Context</a></li>
+  <li><a href="#activities" id="toc-activities" class="nav-link" data-scroll-target="#activities">Activities</a></li>
+  </ul></li>
+  <li><a href="#get-ready" id="toc-get-ready" class="nav-link" data-scroll-target="#get-ready">Get ready</a>
+  <ul>
+  <li><a href="#download-and-unzip-the-tutorial-materials" id="toc-download-and-unzip-the-tutorial-materials" class="nav-link" data-scroll-target="#download-and-unzip-the-tutorial-materials">Download and unzip the tutorial materials</a></li>
+  <li><a href="#description-of-the-folder-content" id="toc-description-of-the-folder-content" class="nav-link" data-scroll-target="#description-of-the-folder-content">Description of the folder content</a></li>
+  </ul></li>
+  <li><a href="#sec-unblock-file" id="toc-sec-unblock-file" class="nav-link" data-scroll-target="#sec-unblock-file">Part 0: unlock files and functionalities</a></li>
+  <li><a href="#part-1-prepare-and-deploy-a-linelist" id="toc-part-1-prepare-and-deploy-a-linelist" class="nav-link" data-scroll-target="#part-1-prepare-and-deploy-a-linelist">Part 1: prepare and deploy a linelist</a>
+  <ul>
+  <li><a href="#gather-the-files" id="toc-gather-the-files" class="nav-link" data-scroll-target="#gather-the-files">Gather the files</a>
+  <ul>
+  <li><a href="#get-a-linelist-template" id="toc-get-a-linelist-template" class="nav-link" data-scroll-target="#get-a-linelist-template">Get a linelist template</a></li>
+  <li><a href="#download-the-geobase" id="toc-download-the-geobase" class="nav-link" data-scroll-target="#download-the-geobase">Download the geobase</a></li>
+  </ul></li>
+  <li><a href="#sec-customise" id="toc-sec-customise" class="nav-link" data-scroll-target="#sec-customise">Adapt the linelist</a>
+  <ul>
+  <li><a href="#fill-metadata" id="toc-fill-metadata" class="nav-link" data-scroll-target="#fill-metadata">Fill metadata</a></li>
+  <li><a href="#hide-unused-fields" id="toc-hide-unused-fields" class="nav-link" data-scroll-target="#hide-unused-fields">Hide unused fields</a></li>
+  <li><a href="#import-the-geobase" id="toc-import-the-geobase" class="nav-link" data-scroll-target="#import-the-geobase">Import the geobase</a></li>
+  <li><a href="#choose-the-start-of-the-week." id="toc-choose-the-start-of-the-week." class="nav-link" data-scroll-target="#choose-the-start-of-the-week.">Choose the start of the week.</a></li>
+  <li><a href="#modify-variable-visibility" id="toc-modify-variable-visibility" class="nav-link" data-scroll-target="#modify-variable-visibility">Modify variable visibility</a></li>
+  <li><a href="#print-a-register" id="toc-print-a-register" class="nav-link" data-scroll-target="#print-a-register">Print a register</a></li>
+  <li><a href="#prepare-a-case-report-form" id="toc-prepare-a-case-report-form" class="nav-link" data-scroll-target="#prepare-a-case-report-form">Prepare a Case Report Form</a></li>
+  </ul></li>
+  <li><a href="#send-the-linelist" id="toc-send-the-linelist" class="nav-link" data-scroll-target="#send-the-linelist">Send the linelist</a></li>
+  </ul></li>
+  <li><a href="#part-2-linelist-in-use" id="toc-part-2-linelist-in-use" class="nav-link" data-scroll-target="#part-2-linelist-in-use">Part 2: linelist in use</a>
+  <ul>
+  <li><a href="#context-1" id="toc-context-1" class="nav-link" data-scroll-target="#context-1">🧭 Context</a></li>
+  <li><a href="#sanity-checks" id="toc-sanity-checks" class="nav-link" data-scroll-target="#sanity-checks">Sanity checks</a>
+  <ul>
+  <li><a href="#file-structure-checks" id="toc-file-structure-checks" class="nav-link" data-scroll-target="#file-structure-checks">File structure checks</a></li>
+  <li><a href="#very-basic-data-checks" id="toc-very-basic-data-checks" class="nav-link" data-scroll-target="#very-basic-data-checks">(Very basic) Data checks</a></li>
+  </ul></li>
+  <li><a href="#analyses" id="toc-analyses" class="nav-link" data-scroll-target="#analyses">Analyses</a>
+  <ul>
+  <li><a href="#persons-uni-and-bivariate-analyses" id="toc-persons-uni-and-bivariate-analyses" class="nav-link" data-scroll-target="#persons-uni-and-bivariate-analyses">Persons: uni and bivariate analyses</a></li>
+  <li><a href="#time-temporal-analyses" id="toc-time-temporal-analyses" class="nav-link" data-scroll-target="#time-temporal-analyses">Time: temporal analyses</a></li>
+  <li><a href="#place-spatial-analyses" id="toc-place-spatial-analyses" class="nav-link" data-scroll-target="#place-spatial-analyses">Place: spatial analyses</a></li>
+  <li><a href="#place-and-person-spatio-temporal-analyses" id="toc-place-and-person-spatio-temporal-analyses" class="nav-link" data-scroll-target="#place-and-person-spatio-temporal-analyses">Place and person: spatio-temporal analyses</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#part-3-troubleshooting" id="toc-part-3-troubleshooting" class="nav-link" data-scroll-target="#part-3-troubleshooting">Part 3: troubleshooting</a>
+  <ul>
+  <li><a href="#context-2" id="toc-context-2" class="nav-link" data-scroll-target="#context-2">🧭 Context</a></li>
+  <li><a href="#opening-the-file-and-getting-it-to-work" id="toc-opening-the-file-and-getting-it-to-work" class="nav-link" data-scroll-target="#opening-the-file-and-getting-it-to-work">Opening the file and getting it to work</a></li>
+  <li><a href="#general-file-management" id="toc-general-file-management" class="nav-link" data-scroll-target="#general-file-management">General file management</a>
+  <ul>
+  <li><a href="#no-more-rows" id="toc-no-more-rows" class="nav-link" data-scroll-target="#no-more-rows">No more rows!</a></li>
+  <li><a href="#remove-empty-rows" id="toc-remove-empty-rows" class="nav-link" data-scroll-target="#remove-empty-rows">Remove empty rows</a></li>
+  <li><a href="#missing-rows" id="toc-missing-rows" class="nav-link" data-scroll-target="#missing-rows">Missing rows</a></li>
+  <li><a href="#analyses-not-up-to-date" id="toc-analyses-not-up-to-date" class="nav-link" data-scroll-target="#analyses-not-up-to-date">Analyses not up-to-date</a></li>
+  </ul></li>
+  <li><a href="#sending-the-data-to-the-dashboard" id="toc-sending-the-data-to-the-dashboard" class="nav-link" data-scroll-target="#sending-the-data-to-the-dashboard">Sending the data to the dashboard</a></li>
+  <li><a href="#advanced" id="toc-advanced" class="nav-link" data-scroll-target="#advanced">Advanced</a></li>
+  </ul></li>
+  <li><a href="#part-4-dashboard" id="toc-part-4-dashboard" class="nav-link" data-scroll-target="#part-4-dashboard">Part 4: dashboard</a>
+  <ul>
+  <li><a href="#context-3" id="toc-context-3" class="nav-link" data-scroll-target="#context-3">🧭 Context</a></li>
+  <li><a href="#access-the-dashboard" id="toc-access-the-dashboard" class="nav-link" data-scroll-target="#access-the-dashboard">Access the dashboard</a></li>
+  <li><a href="#sidebar-filters" id="toc-sidebar-filters" class="nav-link" data-scroll-target="#sidebar-filters">Sidebar filters</a></li>
+  <li><a href="#map" id="toc-map" class="nav-link" data-scroll-target="#map">Map</a></li>
+  <li><a href="#epicurve" id="toc-epicurve" class="nav-link" data-scroll-target="#epicurve">Epicurve</a></li>
+  <li><a href="#now-explore" id="toc-now-explore" class="nav-link" data-scroll-target="#now-explore">Now explore</a></li>
+  </ul></li>
+  <li><a href="#going-further" id="toc-going-further" class="nav-link" data-scroll-target="#going-further">Going further</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Tutorial</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="about-this-tutorial" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="about-this-tutorial">About this tutorial</h2>
+<p>In this tutorial you will familiarise yourself with the OBT linelist interface<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and the corresponding dashboard.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Remember all OBT linelist have the same type of interface</p></div></div><section id="objectives" class="level3">
+<h3 class="anchored" data-anchor-id="objectives">🎯 Objectives</h3>
+<ul>
+<li>Explore functionalities of the OBT linelist, with a focus on troubleshooting the file and exploring analyses.</li>
+<li>Get access and understand how to use the intersection dashboard</li>
+</ul>
+</section>
+<section id="context" class="level3">
+<h3 class="anchored" data-anchor-id="context">🧭 Context</h3>
+<p>MSF has been working in eastern and southern Chad since 2006 where our teams provide medical care and assistance to displaced people and local communities who often struggle with a lack of food.</p>
+<p>In December 2021, following several reports of measles cases in the Southern region of Mandoul, MSF decided to respond to the outbreak, with Epicentre support. A linelist is needed to collect patient data in structures.</p>
+<p>You discussed with the MedRef and the MedCo, and you came to the decision to deploy the OBT linelist.</p>
+</section>
+<section id="activities" class="level3">
+<h3 class="anchored" data-anchor-id="activities">Activities</h3>
+<p>In this tutorial, you will get access to several files:</p>
+<ul>
+<li>an empty linelist to learn how to prepare a file before deployment</li>
+<li>a linelist with false data to replicate a linelist in use</li>
+<li>a linelist with false data and some problems to troubleshoot</li>
+</ul>
+<p>You then will visit the Intersection dashboard to explore <em>real</em> MSF measles data in Chad.</p>
+<p>Explanations will be given in simple text, or boxes (tips, notes etc.) and instructions will be given in instructions boxes.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I contain important information!</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I am a handy bit of information that may be omitted if you are in a hurry, but totally deserve some attention at some point.</p>
+</div>
+</div>
+<div class="instructions">
+<p>Now do <strong>do something</strong>!</p>
+</div>
+</section>
+</section>
+<section id="get-ready" class="level2">
+<h2 class="anchored" data-anchor-id="get-ready">Get ready</h2>
+<section id="download-and-unzip-the-tutorial-materials" class="level3">
+<h3 class="anchored" data-anchor-id="download-and-unzip-the-tutorial-materials">Download and unzip the tutorial materials</h3>
+<p>The files that you are going to use are stored on Github, bundled in a <code>zip</code> archive.</p>
+<div class="instructions">
+<ol type="1">
+<li><p>Go to the <a href="XXXXX">Github page</a> to download the archive. Save it on your computer (in your <em>Downloads</em> folder for example).</p></li>
+<li><p>Unzip the whole archive and save the files locally. It is better to save the unzipped folder in a location that is not actively synchronised with Onedrive at the moment.</p></li>
+</ol>
+</div>
+</section>
+<section id="description-of-the-folder-content" class="level3">
+<h3 class="anchored" data-anchor-id="description-of-the-folder-content">Description of the folder content</h3>
+<ul>
+<li>The current last version of the OBT measles linelist (standard version), empty</li>
+<li>A linelist with simulated data</li>
+<li>A text file with the password</li>
+</ul>
+</section>
+</section>
+<section id="sec-unblock-file" class="level2">
+<h2 class="anchored" data-anchor-id="sec-unblock-file">Part 0: unlock files and functionalities</h2>
+<p>OBT linelists use VBA macros to add functionalities. As a consequence, linelists that come from the internet often need to be unblocked, and macro enabled in them.</p>
+<div class="instructions">
+<p>Unblock your linelist, or make sure it is already unlocked. If you have never done that before, <a href="../how_to/unblock_files.html">follow the steps from this page</a></p>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You <em>may</em> have to perform some or all these steps on your computer, but you will <em>certainly</em> have to explain them to your collaborators using the linelist, as field computers are often more protected.</p>
+</div>
+</div>
+</section>
+<section id="part-1-prepare-and-deploy-a-linelist" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="part-1-prepare-and-deploy-a-linelist">Part 1: prepare and deploy a linelist</h2>
+<section id="gather-the-files" class="level3">
+<h3 class="anchored" data-anchor-id="gather-the-files">Gather the files</h3>
+<section id="get-a-linelist-template" class="level4">
+<h4 class="anchored" data-anchor-id="get-a-linelist-template">Get a linelist template</h4>
+<p>In real life you should [get an empty template]((https://epicentre-msf.github.io/outbreak-tools/getting_started/get_linelist.html) but for this exercise you will use the template provided in the archive you downloaded.</p>
+<div class="instructions">
+<p>Identify the correct empty file and make a copy on which you can work.</p>
+</div>
+</section>
+<section id="download-the-geobase" class="level4">
+<h4 class="anchored" data-anchor-id="download-the-geobase">Download the geobase</h4>
+<div class="instructions">
+<p>Go to the <a href="https://reports.msf.net/secure/app/outbreak-tools-geoapp">Geoapp</a> and download a geobase for Tchad. A summary of the steps can be found <a href="https://epicentre-msf.github.io/outbreak-tools/how_to/import_geobase.html#sec-geobase-download">here</a>, or in the popup at site opening.</p>
+</div>
+<p>The file is unprotected, you can open it to investigate its structure if you want to.</p>
+</section>
+</section>
+<section id="sec-customise" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sec-customise">Adapt the linelist</h3>
+<div class="instructions">
+<p>Open the linelist (password: <code>measles2024</code>) and inspect sheet names.</p>
+</div>
+<p><strong>Notably</strong>:</p>
+<ul>
+<li>The first sheet contains some instructions, but there is nothing special to do with it</li>
+<li>The second sheet (<em>Info</em>) contains project and site information</li>
+<li>The third sheet (<em>Linelist Patients</em>) is for patient data</li>
+<li>Most of the following sheets are analyses.</li>
+</ul>
+<div class="instructions">
+<p>Find the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">OutbreakTools Menu</a>, we are going to use it a lot in the rest of this tutorial.</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../reference/images/ribbons-001-ll-ribbon.png" class="img-fluid figure-img"></p>
+<figcaption>OutbreakTools menu</figcaption>
+</figure>
+</div>
+<section id="fill-metadata" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="fill-metadata">Fill metadata</h4>
+<p><strong>Mandatory metadata</strong></p>
+<div class="instructions">
+<p>Fill the Information sheet (metadata):</p>
+<ul>
+<li><code>Organisation</code>: enter your own section</li>
+<li><code>Country</code>: Chad</li>
+<li><code>Name of facility</code>: Moïssala Hospital</li>
+</ul>
+</div>
+<p>Once these fields are correctly filled, they should not be modified: the information will be used to name the exports.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;You may enter the name of the site yourself (if you are sending one or two linelists) or let the data encoders of each site enter fill it (if you are sending a linelist to many sites).</p></div></div><p><strong>Optional metadata</strong></p>
+<div class="instructions">
+<p>Fill the following fields: <code>Admin 1</code> (Mandoul) and <code>Admin 2</code> (Moissala)</p>
+</div>
+</section>
+<section id="hide-unused-fields" class="level4">
+<h4 class="anchored" data-anchor-id="hide-unused-fields">Hide unused fields</h4>
+<p>You think that you do not need the rest of the fields. Let’s hide them!</p>
+<div class="instructions">
+<p>Keep the “Info” sheet in focus and go to the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">OBT menu</a>. Click on the “Show / Hide variables” button.</p>
+</div>
+<p>It opens a popup window:</p>
+<p><img src="../module_1/images/003-img-obt-show_hide.png" class="img-fluid quarto-figure quarto-figure-center" alt="Opening the Show/hide window"> You can see that some of the variables have the <code>Mandatory</code> status, but that some other have the <code>Shown</code> status. The former one cannot be hidden through this menu but the later can.</p>
+<div class="instructions">
+<p>Hide the variables that we do not plan to fill. You can either hide them one by one, or use the “Show all variables” button <em>twice</em> and unhide the variables you want to keep.</p>
+</div>
+</section>
+<section id="import-the-geobase" class="level4">
+<h4 class="anchored" data-anchor-id="import-the-geobase">Import the geobase</h4>
+<div class="instructions">
+<p>Use the “Import geobase” button from the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">OBT menu</a> to import the geobase that you downloaded previously.</p>
+</div>
+<p>After closing the confirmation message you can go to the data entry shee and look for columns with an orange heading background:</p>
+<ul>
+<li>The labels of the column should have been updated with the administrative levels present in the geobase (e.g.&nbsp;“adm1_name” will change to “Province” for DRC).</li>
+<li>Loof at the cells of the first column, there should now be a dropdown menu containing the admin 1 of the geobase.</li>
+</ul>
+<p>You can fill the variables either by using the cascading dropdown menus, or by using the GeoHelper button from the ribbon.</p>
+<div class="{callout-important}">
+<p>There is a hierarchy between these columns: if you attempt to fill the admin 3 <em>without filling admin 1 and 2</em> the dropdown list will appear empty.</p>
+</div>
+</section>
+<section id="choose-the-start-of-the-week." class="level4">
+<h4 class="anchored" data-anchor-id="choose-the-start-of-the-week.">Choose the start of the week.</h4>
+<div class="instructions">
+<p>Click on the “Week start” button to set up “Monday” as the first day of the week.</p>
+</div>
+</section>
+<section id="modify-variable-visibility" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="modify-variable-visibility">Modify variable visibility</h4>
+<p>As for the “Info” sheet, you can hide or show optional variables in the patient data sheet. When you prepare a linelist, you will need to decide which variables to keep based on the needed information for this outbreak.^<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;You can hide or unhide variables at a later stage. Of course, you will need to keep in mind that the data will be only partial for these variables (you have it only up to a date, or conversely from a date onwards).</p></div></div><p>For the sake of brevity of the exercise, here you will only perform a couple of actions.</p>
+<div class="instructions">
+<p>Go to the “Linelist patients” sheet. Then click on the “Show/Hide variables” button. Hide all the optional variables, then unhide:</p>
+<ul>
+<li>Reporting health facility name</li>
+<li>Fever</li>
+<li>Maculopapular rash</li>
+<li>Cough</li>
+<li>Red eyes - Conjonctivitis</li>
+<li>MUAC</li>
+<li>Pregnant</li>
+<li>The custom variables at the end</li>
+<li>Any calculated variables that <em>you</em> wish to see displayed for information of quick filtering (epi week, age group etc.)</li>
+</ul>
+</div>
+</section>
+<section id="print-a-register" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="print-a-register">Print a register</h4>
+<div class="instructions">
+<p>Click on the “Show register” button in the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">OBT menu</a>.</p>
+</div>
+<p>This opens a usually hidden sheet (that can be hidden again when you are done) to prepare a paper register if you don’t already have one in the site.</p>
+<p>Typically, there will be less columns in the register than the full linelist, as some information may come from patient files or other sources.</p>
+<div class="instructions">
+<ol type="1">
+<li><p>Click on the “Show/Hide variables” button to open the popup window for the register.</p></li>
+<li><p>Click on the “Match the show/hide from linelist” to align the register visibility on the linelist configuration as a start.</p></li>
+<li><p>Hide variables that are not needed in the register</p></li>
+</ol>
+</div>
+<p>Now that you have selected the variables to print, you usually would want to adjust the register to make it more user-friendly:</p>
+<ul>
+<li>Tweak column width so that the data encoder have the space to write</li>
+<li>Change labels orientation, to save some space (for columns with short content)</li>
+<li>Add rows to the table until it fits one page<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;Hint: there is a button in the OBT menu for that!</p></div></div><div class="instructions">
+<p>Adjust the width of the following columns:</p>
+<ul>
+<li><code>Patient name</code>: wider</li>
+<li><code>Sex</code>: narrower</li>
+</ul>
+<p>Click on the “Print” button in the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">OBT menu</a> to open the Print Preview. Note the “Settings” button to control some of the printing options.</p>
+<p>When you are finished, you can exit the Print Preview, and hit the “Close Register / CRF” button to <em>hide</em> the register sheet (the sheet and your modifications are still here).</p>
+</div>
+</section>
+<section id="prepare-a-case-report-form" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="prepare-a-case-report-form">Prepare a Case Report Form</h4>
+<p>Similarly to what you did for the register, it is possible to print a CRF from the linelist if you don’t have one available. A button unhides a sheet displaying an automatically prepared draft for a CRF. There is still work to do on it to make it user-friendly but it’s a start.</p>
+<p>Things that you might do:</p>
+<ul>
+<li>Hide variables that are collected elsewhere or calculated</li>
+<li>Hide/condense the lines</li>
+<li>Shorten some labels<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;There now is an option in the setup file to provide shorter labels for the CRF from the start to reduce the time fixing label overlap, but they have not been filled for all linelists yet.</p></div></div><p>Preparing a clean CRF is out of the scope of this tutorial, but do not hesitate to open the view (“Show CRF” button) to have a peak at it before hiding it again.</p>
+</section>
+</section>
+<section id="send-the-linelist" class="level3">
+<h3 class="anchored" data-anchor-id="send-the-linelist">Send the linelist</h3>
+<p>You have seen the main customisations of the linelist. Do not forget to save your customised template.</p>
+<p>You can now send you to your colleagues. If they have worked with OBT linelists before (even for other diseases) this should be easy: all the OBT linelists have the same functionalities. If they have not worked with OBT linelist before, you should brief them on:</p>
+<ul>
+<li><a href="../how_to/unblock_files.html">Unblocking the file and authorising VBA macro</a></li>
+<li>Finding the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">OBT menu</a></li>
+<li>Filling the remaining metadata on the “Info” sheet</li>
+<li><a href="https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html">Exporting files</a> to send to the dashboard</li>
+<li>Using the <a href="../how_to/use_geohelper.html">GeoHelper</a></li>
+</ul>
+<p>In most cases there should be one linelist per site.</p>
+</section>
+</section>
+<section id="part-2-linelist-in-use" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="part-2-linelist-in-use">Part 2: linelist in use</h2>
+<section id="context-1" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="context-1">🧭 Context</h3>
+<p>The linelist was deployed in January 2022 in Moissala and the neighbouring areas. Almost a year later, in April 2023, the measles outbreak is still ongoing and the linelist still in use. You receive the file with data and you want to have a look at it.</p>
+<p>You are now going to work on the file <code>measles_linelist_moissala.xlsb</code>, which contains simulated measles data<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;The data used in this exercise was simulated using parameters from MSF measles data, at least for some major variables, which avoids the problem of working with personnam data</p></div></div></section>
+<section id="sanity-checks" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sanity-checks">Sanity checks</h3>
+<p>When you receive an unknown linelist with data, always perform a couple of checks to get a feel of the state of the file and data. These are not the extensive checks you would perform if you were tasked to monitor data entry and quality, or to perform analyses. They might however rapidly hint at the source of a reported problem (a functionality not working as expected).</p>
+<section id="file-structure-checks" class="level4">
+<h4 class="anchored" data-anchor-id="file-structure-checks">File structure checks</h4>
+<p><strong>Is the file obviously damaged?</strong></p>
+<ul>
+<li>Does the OBT menu appears as expected (buttons have legible labels)?</li>
+<li>Test one button (for example, open the Show/Hide window): does it work as expected?</li>
+<li>Do you see the expected sheets?</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the ribbon buttons have weird labels or no labels at all, it means that the VBA is not activated or crashed. Check your VBA settings, close the file and re-open it.</p>
+<p>If the problem persist, attempt an “Export for migration” to move the data to a new empty template.</p>
+<p>If the export does not work because the VBA is corrupted, contact the EpiDS team to get help migrating the data.</p>
+</div>
+</div>
+<div class="instructions">
+<p>Do these checks on the file <code>measles_linelist_moissala.xlsb</code>.</p>
+</div>
+</section>
+<section id="very-basic-data-checks" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="very-basic-data-checks">(Very basic) Data checks</h4>
+<ul>
+<li>Are the metadata on the “Info” sheet (still) correctly filled?<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></li>
+<li>Do patients have IDs?</li>
+<li>Are there replicated IDs?</li>
+<li>Check the filters of a couple of date columns: do the dates correspond to what you expect (min, max) and are there values not recognised as dates?</li>
+<li>Check a couple of categorical columns (<code>sex</code>, <code>outcome</code>…) to see if the categories entered correspond to the expected values.</li>
+<li>Remove any filters applied on the data (there is a shortcut for that in the OBT menu).</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;90% of export-dashboard problems come from badly filled metadata</p></div></div><div class="instructions">
+<p>Do these checks on the file <code>measles_linelist_moissala.xlsb</code>.</p>
+</div>
+</section>
+</section>
+<section id="analyses" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="analyses">Analyses</h3>
+<p>Now let’s investigate the descriptive analyses provided with the linelist. While the general interface of the linelist is the same, the provided analyses may differ from disease to disease, depending on what was requested.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> Most linelists have at least the uni and bivariate tables, the temporal and spatial analyses.</p>
+<div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;Note that more analyses can be requested if needed.</p></div></div><p>There are a couple of important things to remember about the analyses in OBT linelists:</p>
+<ol type="1">
+<li>Anaslyses need to be <strong>refreshed</strong> before being explored.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/004-refresh.png" class="img-fluid figure-img"></p>
+<figcaption>Refresh button in the OBT menu</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li><p>If you filter data in the main patient sheet, it will be reflected in the analyses <em>after you refresh</em> (a red warning will appear to remind you).</p></li>
+<li><p>You can alter the appearance of the graphs (which are created automatically and admittedly a bit ugly), the same way you would do for your own figures, with any <a href="https://www.howtogeek.com/how-to-format-your-chart-in-excel/">Excel tool</a>.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p></li>
+</ol>
+<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;Note that graphs modifications will be lost during data migration to a new version of the linelist, so I advise you to restrict the modifications to graphs that you want to export to reports / slides, or which are <em>really</em> making your eyes bleed.</p></div></div><p>We are going to start by looking at the analyses without filters on the data.</p>
+<div class="instructions">
+<p>Go to the patient data sheet, navigate to the OBT menu and click on the button to clear all filters. Then refresh analyses.</p>
+</div>
+<p>Now that the data was refreshed, we can begin checking out the analyses sheets.</p>
+<section id="persons-uni-and-bivariate-analyses" class="level4">
+<h4 class="anchored" data-anchor-id="persons-uni-and-bivariate-analyses">Persons: uni and bivariate analyses</h4>
+<p>This page contains univariate and bivariate tables and bar charts providing information about patients: demographics, symptoms, outcomes etc.</p>
+<div class="instructions">
+<p>Explore the page, and answer the following questions:</p>
+<ul>
+<li>What is the average length of stay of patients?</li>
+<li>How many patients are more than 15 years old?</li>
+<li>How many patients are female?</li>
+<li>What is the percentage of complicated measles?</li>
+<li>How many patients are SAM?</li>
+<li>How many patients died in the facility?</li>
+<li>How many patients are male and less than 5 months old?</li>
+<li>How many of the SAM patients are positive for the malaria RDT test?</li>
+</ul>
+</div>
+<p>Now let us investigate the characteristics of deceased patients.</p>
+<div class="instructions">
+<ol type="1">
+<li>Go back to the patient data sheet. Use the filters to select only the deceased patients (in the facility and/or the community, it’s up to you)</li>
+<li>Hit the refresh button and go back to the analysis sheet.</li>
+</ol>
+<ul>
+<li>How many female patients of age between one and four died?</li>
+<li>How many of the deceased patients were MAM?</li>
+</ul>
+</div>
+</section>
+<section id="time-temporal-analyses" class="level4">
+<h4 class="anchored" data-anchor-id="time-temporal-analyses">Time: temporal analyses</h4>
+<p>Now, let’s look at the “Temporal analyses” sheet. On this sheet you can choose the temporal scale you want to monitor: days, weeks, months, quarter, years. The table has 53 rows, and can thus accommodate up to:</p>
+<ul>
+<li>a high resolution zoom of a given period of 53 days</li>
+<li>one year worth of weeks</li>
+<li>53 months if you have several years worth of data</li>
+<li>53 quarters or years, which is a bit silly for most uses</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/007-img-temporal-table.png" class="img-fluid figure-img"></p>
+<figcaption>Options for the temporal analyses</figcaption>
+</figure>
+</div>
+<p>Below the tables are several epicurves corresponding to the content of the table.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In this linelist, there is only one very large table. Some other linelists can have several tables, organised by sections, on top of each others. The graphs will always be a the bottom.</p>
+</div>
+</div>
+<div class="instructions">
+<ul>
+<li>Remove the filters on the data sheet and hit refresh.</li>
+<li>Check the minimum and maximum date of notification: which units would you consider?</li>
+<li>First select the “Week” unit. Which part of the data is not ploted?</li>
+<li>How many patients were discharged during the 18th week of 2022?</li>
+<li>Now change the date of start of period to only plot the weeks of 2023.</li>
+<li>How many patients were hospitalised in the second week of January 2023?</li>
+<li>Change the units to “Month”. How many patients were admitted in January 2023?</li>
+</ul>
+</div>
+<p>Now, if you went to have a look at the graphs, you should see one like that in the list of graphs:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/008-img-temporal-hospit_raw.png" class="img-fluid figure-img"></p>
+<figcaption>Hospitalisations</figcaption>
+</figure>
+</div>
+<p>It is fine to look at the shape of the epicurve, but you would not want to use it in a report as it is. Besides cosmetics improvements, you could use filters to remove the empty weeks at the right of the graph:</p>
+<ul>
+<li>Select the graph: some buttons appear at the top right corner.</li>
+<li>Use the “filter” button (the bottom one) to filter out the categories you don’t want to see.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/009-img-temporal-hospit_pimped.png" class="img-fluid figure-img"></p>
+<figcaption>Minimally pimped graph</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Don’t forget to remove the graph filters when new data is entered in the linelist, or else you won’t see it on the graph. The corrolary is that if your colleague sends you a linelist complaining that the figures are correct in the table but do not appear in the graph, the filters are the prime suspects.</p>
+</div>
+</div>
+</section>
+<section id="place-spatial-analyses" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="place-spatial-analyses">Place: spatial analyses</h4>
+<p>Now we navigate to the third analyses sheet. It displays the <strong>top 30 areas</strong> with the most cases, and below the top 30 places of origin (in the case of refugees and displaced people).<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;The number 30 is defined in the <strong>setup file</strong>: another disease might have 10 or 20.</p></div></div><p>You can select the level at which you want to see the data displayed (admin 1 to 4).</p>
+<div class="instructions">
+<p>Click on the blue button “Select your admin level” and go through the options. Which options have data in it? How many patients are there in Moissala Est?</p>
+</div>
+<p>For this linelist, data is meaningful at the “Zone of responsibility” level (admin 3), but with real data even higher levers may be worth checking if people are travelling a lot, or if you created a master linelist from different files.</p>
+</section>
+<section id="place-and-person-spatio-temporal-analyses" class="level4">
+<h4 class="anchored" data-anchor-id="place-and-person-spatio-temporal-analyses">Place and person: spatio-temporal analyses</h4>
+<p>The last analysis sheet that you may encounter in an OBT linelist is a crossover between the temporal analysis and the spatial analysis: it allows you to look at the number of cases (usually) for a couple of chosen administrative levels across time.</p>
+<div class="instructions">
+<ol type="1">
+<li>Go to the spatio-temporal analysis sheet</li>
+<li>Place your cursor in one of the blue cells on the left (starting from <code>C14</code> and down).</li>
+<li>Click on the <a href="../how_to/use_geohelper.html">“GeoHelper”</a> button in the OBT menu and select Moissala Est (an admin 3)</li>
+<li>Go to the next blue cell and use the Geohelper to select another place of interest (for example, one of the top places from the Spatial analysis sheet, or a place that you noticed had recent cases).</li>
+</ol>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/010-img-spatio-temporal.png" class="img-fluid figure-img"></p>
+<figcaption>Spatio temporal analysis</figcaption>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="part-3-troubleshooting" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="part-3-troubleshooting">Part 3: troubleshooting</h2>
+<section id="context-2" class="level3">
+<h3 class="anchored" data-anchor-id="context-2">🧭 Context</h3>
+<p>You have sent the linelist for deployment to the field. The data encoder may have some questions or problems in the beginning, or after a handout.</p>
+<div class="instructions">
+<p>For the following problems, identify the source of the problem and the solution.</p>
+</div>
+</section>
+<section id="opening-the-file-and-getting-it-to-work" class="level3">
+<h3 class="anchored" data-anchor-id="opening-the-file-and-getting-it-to-work">Opening the file and getting it to work</h3>
+<p><strong>Problem</strong>: your colleague opens the file and goes to the OBT menu. But the buttons do not respond and they have no labels.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The macros are not executing properly. It could be a problem of authorisation, or maybe the VBA project did not load properly or crashed. Ask them to close the file and reopen it to see if it solves the problem. If not, get them to verify if the file is unlocked and their authorisations for VBA macros (see <a href="#sec-unblock-file" class="quarto-xref">Section&nbsp;3</a>).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="general-file-management" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="general-file-management">General file management</h3>
+<p>A lot of the requests you might receive derive from the fact that people ususally do not read the documentation (even if it was sent to them) and do not know the existence of the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">OBT menu</a>. The good news is that they are pretty straightforward to solve.</p>
+<section id="no-more-rows" class="level4">
+<h4 class="anchored" data-anchor-id="no-more-rows">No more rows!</h4>
+<p>You receive the following mail:</p>
+<blockquote class="blockquote">
+<p>Hello, attached is a linelist that is giving us trouble. Some cells are locked, so we cannot add new cases. We can’t work, please help.</p>
+</blockquote>
+<p>What do you answer?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use the “Add rows” button from the OBT menu to add lines at the bottom of the file.</p>
+<p><strong>Note</strong>: recent versions of the linelist automatically add five lines at the bottom of the file when someone enters data in the last line, so this should become less and less common, and a strong red flag that the data should be migrated towards a more recent version!</p>
+</div>
+</div>
+</div>
+</section>
+<section id="remove-empty-rows" class="level4">
+<h4 class="anchored" data-anchor-id="remove-empty-rows">Remove empty rows</h4>
+<p>You receive the following email:</p>
+<blockquote class="blockquote">
+<p>Hi, I need support on the linelist. There are empty lines (colored in red) and I can’t remove them because the file is protected, help please.</p>
+</blockquote>
+<p>What do you answer?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use the “Resize table” button from the OBT menu.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="missing-rows" class="level4">
+<h4 class="anchored" data-anchor-id="missing-rows">Missing rows</h4>
+<p>You get this mail:</p>
+<blockquote class="blockquote">
+<p>Good evening, we entered data but some rows seem to be missing now but we did not delete them.</p>
+</blockquote>
+<p>This one is trickier, because this could be caused by several problems such as:</p>
+<ul>
+<li>The document was closed without saving (data from “yesterday” or “this morning” were lost)</li>
+<li>OneDrive synchronisation errors (the last file got replaced by an older version from the server).</li>
+<li>There is a filter applied somewhere on the data and the rows are merely hidden.</li>
+<li>The user deleted data by mistake (since the sheet is protected, it is hard to delete data in bulk though, so this is less likely)</li>
+</ul>
+<p>You will have to discuss with them, their setup, who worked on the file to figure out what may have happen, unless it’s the third case, which can be solved in one click. Which button would you use?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use the “Clear all filters” button from the OBT menu.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="analyses-not-up-to-date" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="analyses-not-up-to-date">Analyses not up-to-date</h4>
+<p>You receive the following email:</p>
+<blockquote class="blockquote">
+<p>Good morning, I added data to the file but the analyses are empty / not to date.</p>
+</blockquote>
+<p>What do you answer?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use the “Refresh analyses” button from the OBT menu</p>
+</div>
+</div>
+</div>
+<p>The day after they contact you again:</p>
+<blockquote class="blockquote">
+<p>Good morning, I used the refresh button yesterday to update the analyses and it woked. But today I entered new data, refreshed but all the data on the analyses sheets are striken. I cannot remove the strikethrough and I did not do anything, just enter data.</p>
+</blockquote>
+<p>A recent update<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a> in Excel 365 uses <a href="https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd">strikethrough</a> to label what Excel considers “stale values” (values that depend on other cells, which were modified). For esoteric reasons, the “Refresh analyses” does not (yet) trigger the removal of the strikethrough. A fix in the OBT is coming from 2025 onwards, but if this happens with an older linelist:</p>
+<div class="no-row-height column-margin column-container"><div id="fn11"><p><sup>11</sup>&nbsp;We saw the problem hit computers between November and December 2024</p></div></div><ul>
+<li>Hit the F9 key to force recalculation (or use the “Calculate now” button from the “Formula” Excel menu)</li>
+<li><em>Then</em> hit the “Refresh analyses” button from the OBT menu</li>
+<li>(Advised): ask if there is a more recent version of the linelist with the problem solved</li>
+</ul>
+<p>Alternately, you can <a href="https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd">turn off</a> this option if it bothers you in general.</p>
+</section>
+</section>
+<section id="sending-the-data-to-the-dashboard" class="level3">
+<h3 class="anchored" data-anchor-id="sending-the-data-to-the-dashboard">Sending the data to the dashboard</h3>
+<p>Another source of friction is the sharing step of the linelist. In all cases, it is good to brief them on the <a href="https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html">steps</a> to send data to the dashboard, but see if you can find the exact problems with these files:</p>
+<ul>
+<li><p>They used OneDrive to share the linelist with <a href="mailto:EPI-DATA@epicentre.msf.org" class="email">EPI-DATA@epicentre.msf.org</a> and received an error</p></li>
+<li><p>They send the file <code>measles_linelist_moissala.xlsb</code> to <a href="mailto:EPI-DATA@epicentre.msf.org" class="email">EPI-DATA@epicentre.msf.org</a> and received an error</p></li>
+<li><p>They sent <code>measles_linelist_moissala_export_data_20250203-1136.xlsx</code> to <a href="mailto:EPI-DATA@epicentre.msf.org" class="email">EPI-DATA@epicentre.msf.org</a> and received an error</p></li>
+<li><p>They sent <code>MSL_linelist__MSL24__info_country_code__info_organisation__info_facility_name__anonymous__vb-1003__20250103-1541</code> to <a href="mailto:EPI-DATA@epicentre.msf.org" class="email">EPI-DATA@epicentre.msf.org</a> and probably did not receive an error, but the data does not appear in Chad in the dashboard</p></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled" title="Tip">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The file to send should be named <code>MSL_linelist__MSL24__TCD__MSF-OCP__Mandoul Hospital__anonymous__vb-1003__20250103-1541</code></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Answers">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Either they sent the linelist itself, the wrong export, or the good export but they did not fill the “Info” sheet so the metadata could not be used in the name</p>
+</div>
+</div>
+</div>
+</section>
+<section id="advanced" class="level3">
+<h3 class="anchored" data-anchor-id="advanced">Advanced</h3>
+<p>Sometimes the problem is less obvious or could have multiple causes, and you will need to investigate a bit more.</p>
+<div class="instructions">
+<p>Open the Excel file <code>troubleshooting.xlsb</code> from the tutorial archive.</p>
+</div>
+<p>Your colleague contacts you. They have data for the start of January 2023, and they looked at the analyses sheets. But the analyses seem broken, <em>even though they refreshed the data</em>.</p>
+<p><strong>Problem 1.</strong> They <em>know</em> they have positive measles cases, but these cases do not show up in the univariate table / graph about measles test results.</p>
+<p><strong>Problem 2.</strong> The register says there should be 25 notifications in the first week, and 40 in the second week, but the numbers in the epicurve do not match. The univariate general summary is correct, though (65 patients seen).</p>
+<p><strong>Problem 3.</strong> They know there should be 5 deceased patients in the facility, 3 who had been notified in week 1, and 2 notified in week 2. But the numbers in the temporal analysis sheet do not correspond.</p>
+<div class="instructions">
+<p>Figure out what the problems are. If the problems are quick to fix, do it. Think about the guidance you should provide your colleagues with to avoid these problems or troubleshoot them themselves.</p>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Hints">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hints
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Problem 1.</strong> Check out the authorised and entered values for the incriminated column (use filters!).</p>
+<p><strong>Problem 2.</strong> The temporal analyses rely on dates, by definition.</p>
+<p><strong>Problem 3.</strong> There are several sources to this problem. Maybe one less depending on what you did in past steps.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="More hints">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+More hints
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Problem 3.</strong> Are the dates correct? Are the values of the outcome column correct? If yes, what else could affect a graph based on epiweeks?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Wink Wink Nudge Nudge">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Wink Wink Nudge Nudge
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Problem 3.</strong> Maybe go check <a href="#sec-customise" class="quarto-xref">Section&nbsp;4.2</a> to see if there is an option you could check.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Answers">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Problem 1.</strong> They did not use the dropdown menu in the lab result column and somehow forced a value not from the list (“Pos” instead of “Positive”)</p>
+<p><strong>Problem 2.</strong> The notification date has some very dirty values that were not recognised as dates. As such, these notifications cannot be counted in the <em>temporal</em> analyses, because the conditions on the date cannot be met. Since the univariate summary has no conditions on dates, it is not affected.</p>
+<p><strong>Problem 3.</strong> One of the notification date was dirty and not recognised as a date. But maybe that was solved during the second problem if you felt confident about the dates. One of the values of the outcome column had a typo. Finally, the start of the week somehow got changed to Sunday, while it should be Monday in Chad, and one of the rows was affected by that. Have a look at the epiweek column, change the start of the week and check the column again (recalculate if needed).</p>
+</div>
+</div>
+</div>
+<p>The last problem is tricky, but it could happen easilly in a country where the start of the week is not the same as the default (Monday) and someone forgot to change it before using the file.</p>
+</section>
+</section>
+<section id="part-4-dashboard" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="part-4-dashboard">Part 4: dashboard</h2>
+<section id="context-3" class="level3">
+<h3 class="anchored" data-anchor-id="context-3">🧭 Context</h3>
+<p>The linelist is in use, and it was decided that the data would be sent for compilation and visualisation to Epicentre. You want to go and monitor the number of cases in Chad.</p>
+</section>
+<section id="access-the-dashboard" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="access-the-dashboard">Access the dashboard</h3>
+<p>You need an account to connect to Epicentre dashboard. The creation of this account is semi-automatic for MSF addresses: go to <a href="https://reports.msf.net/signup/">this page</a>.<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn12"><p><sup>12</sup>&nbsp;If you do not have an MSF address but think you should have access to a dashboard, contact the EpiDS team.</p></div></div><p>Once you have an account, you can go to the intersection dashboard <a href="https://apps.epicentre-msf.org/secure/app/intersectional-surveillance">site</a> and connect with the account you created.</p>
+</section>
+<section id="sidebar-filters" class="level3">
+<h3 class="anchored" data-anchor-id="sidebar-filters">Sidebar filters</h3>
+<p>On the left (number 1 on <a href="#fig-dashboard" class="quarto-xref">Figure&nbsp;2</a>) you have the options sidebar, where you can filter data (diseases, OC, country, site, outcome etc.) and customise a couple of options.</p>
+<div id="fig-dashboard" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dashboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../module_1/images/012-img-dashboard.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dashboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Dashboard
+</figcaption>
+</figure>
+</div>
+<div class="instructions">
+<ul>
+<li>Pick “Measles” from the filter</li>
+<li>Find the country filter and select “Chad”</li>
+<li>Click on the “Update” button at the bottom to apply the selected filters on the data.</li>
+</ul>
+</div>
+<p>The dashboard now only displays measles data in Chad.</p>
+</section>
+<section id="map" class="level3">
+<h3 class="anchored" data-anchor-id="map">Map</h3>
+<p>First let’s look at the map.</p>
+<div class="instructions">
+<ul>
+<li>Zoom on the map to better see what’s happening in Chad.</li>
+<li>Select the ADM1 level to get a better resolution. Which health region has the most cases?</li>
+<li>Select the ADM2 level to see even more precisely. Which health district has the most cases? How many patients do not have (matched) geo data at this level?</li>
+<li>Select the ADM3 level to see if we have enough data at that level? What do you think?</li>
+</ul>
+</div>
+<p>The top of the map displays an “options” button that allow you to tweak circle size to reduce overlap and group data by a couple of variables.</p>
+<div class="instructions">
+<p>Group data by whether patients are hospitalised or not. Do you see a difference between Moissala and Djodo Gassa?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>There is a button on the left of the map (number 3 on <a href="#fig-dashboard" class="quarto-xref">Figure&nbsp;2</a>) that allows you to change the background of the map and hide / show the bubbles or attack rates to increase readability.</p></li>
+<li><p>Click on a region to update the epicurve and age pyramid data for only the patients from this region. The selected region is highlighted in red. Click a second time on it to unselect it.</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="epicurve" class="level3">
+<h3 class="anchored" data-anchor-id="epicurve">Epicurve</h3>
+<p>The top-right figure displays an epicurve. By default it looks like this for Chad:</p>
+<div id="fig-dashboard" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dashboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../module_1/images/013-img-epicurve.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dashboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Default epicurve
+</figcaption>
+</figure>
+</div>
+<div class="instructions">
+<p>Use the options of the graph (number 4 on <a href="#fig-dashboard" class="quarto-xref">Figure&nbsp;2</a>) to modify it to look like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/014-img-epicurve-2.png" class="img-fluid figure-img"></p>
+<figcaption>Admissions in hospital across time</figcaption>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>The map and the epicurve have a hidden zoom button that you can see by hovering your mouse at the bottom right corner, which is handy on small screens (see number 5 on <a href="#fig-dashboard" class="quarto-xref">Figure&nbsp;2</a>) .</p></li>
+<li><p>On the epicurve you can drag your mouse left and right to zoom in on some date period. A “Reset zoom” button will appear to undo the view.</p></li>
+<li><p>Click on a bar to update the map and the age pyramid to show only the data related to that time period. A blue band indicated the selected bar. Click on the bar a second time to unselect it.</p></li>
+<li><p>Click on legend item to unselect them and only show some categories. For example, in the above graph you could show only the hospitalised patients in two clicks, which is slightly faster than using the sidebar filters in this case.</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="now-explore" class="level3">
+<h3 class="anchored" data-anchor-id="now-explore">Now explore</h3>
+<div class="instructions">
+<p>Explore the dashboard to answer the following questions:</p>
+<ul>
+<li><p>When was the dashboard last updated for measles? (hint: no need to go into sub-menus, it is written on the main page)</p></li>
+<li><p>In 2024, which country had the most measles cases? How many children of less than 6 months were notified? And girls specifically?</p></li>
+<li><p>When was the dashboard last updated for Hepatitis E?</p></li>
+<li><p>How many cholera consultations did MSF OCG performed in the last 90 days?</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="going-further" class="level2">
+<h2 class="anchored" data-anchor-id="going-further">Going further</h2>
+<ul>
+<li>Go to the <a href="">Documentation site</a> and read about <a href="https://epicentre-msf.github.io/outbreak-tools/how_to/migrate_linelist.html">migrating data and creating master linelists</a></li>
+</ul>
+
+
+</section>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Developed by <a href="https://epicentre.msf.org/"><img src="images/epicentre.png" class="img-fluid" alt="Epicentre logo" width="65"></a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This website is built with <i class="fa-solid fa-heart" title="a heart" aria-label="heart"></i>, <a href="https://github.com" target="_blank"><i class="fa-brands fa-github" title="GitHub octocat logo" aria-label="github"></i></a>, <a href="https://www.r-project.org/about.html" target="_blank"><i class="fa-brands fa-r-project" title="R Project" aria-label="r-project"></i></a> and <a href="https://quarto.org/" target="_blank">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

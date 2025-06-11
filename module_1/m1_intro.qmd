@@ -3,7 +3,6 @@ title: "What you need to know"
 ---
 
 ## Introduction
-
 ### Linelists
 
 ::: {.callout-tip title="Too Long; Did Not Read" collapse="true"}
@@ -30,7 +29,7 @@ In short, pretty much everybody can make a linelist if they need to, and many pe
 
 Of course, Excel linelists have their drawbacks too:
 
-- Developing a *good* linelist that fosters data quality takes much more time than just setting up a table, and not everybody knows the Excel functionalities to do so. The consequence of that is that there are *a lot* of terrible linelists around
+- Developing a *good* linelist that fosters data quality takes much more time than just setting up a table, and not everybody knows the Excel functionalities to do so. The consequence of that is that there are a lot of *terrible* linelists around
 - Files for different diseases usually differ a lot. They may have been developped by different people with different skills. Perhaps the developper used a common template at the start and re-used code, but usually the file diverge. Bringing the same functionalities to all of them takes time and effort
 - Consequently, maintenance of the files is time consuming. Using VBA scripts to easily get data in and out of your linelist helps, but does not solve all the problems.
 - The files can get heavy and finicky when they get too complicated
@@ -45,14 +44,14 @@ To alleviate some of the above problems, MSF OCs try to provide linelists on whi
 
 Better, for some diseases, OCs reached an agreement on a minimal dictionary and sometimes a common tool. Epicentre has provided a number of these "intersection" linelists in the recent years. These files however also suffered from some problems: they were hard to maintain and had different functionalities and interfaces depending on diseases.
 
-Epicentre tried to go a step further, capitalising on what was learned developing and maintaining these tools, and developed **OutbreakTools** a set of tools to improve data collection, quality and visualisation. A good part of OutbreakTools it to help generating good quality, robust linelists.
+Epicentre tried to go a step further, capitalising on what was learned developing and maintaining these tools, and developed **OutbreakTools** a set of tools to improve data collection, quality and visualisation. A good part of OutbreakTools is to help generating good quality, robust linelists.
 
 
 ## Presentation of OutbreakTools
 
 ### Concept
 
-The main idea of OutbreakTools linelist generation is to separate the content of the linelist (which *variables* and *analyses* are in the linelist) from the file interface and functionalities.^[An idea that is not novel, as separating content and presentation (or style) is a classic idea, that you find in HTML/CSS, Markdown, Latex or even using styles in Word]
+The main idea of OutbreakTools linelist generation is to separate the **content** of the linelist (which *variables* and *analyses* are in the linelist) from the file **interface** and functionalities.^[An idea that is not novel, as separating content and presentation (or style) is a classic idea, that you find in HTML/CSS, Markdown, Latex or even Word styles.]
 
 The content is described in a **setup file**, a special Excel file that allows describing all the variables and the analyses that should go in the linelist.^[You can think of the **setup file** as a _recipe_ for a given linelist.] Another Excel file, the **designer**, reads the **setup file** and runs scripts to generate a linelist. The designer creates the whole linelist structure, adds the buttons and many functionalities.^[If you think of the **setup file** as a recipe, the designer is the food processor.]
 
@@ -71,7 +70,7 @@ The advantages of this approach are:
 
 ### OutbreakTools Workflow
 
-In addition to linelist development, OBT contains tools that rely on the standardised nature of the linelists to build data cleaning workflow and dashboard much faster than ever before. When a new linelist is created, a simple functional dashboard can be build in a couple of days, with automatic data gathering from a mail address.
+In addition to linelist development, OBT contains tools that rely on the standardised nature of the linelists to build data cleaning workflows and dashboards much faster than ever before. When a new linelist is created, a simple functional dashboard can be build in less than a couple of days, including automatic data gathering from a mail address and compilation.
 
 
 The full workflow allows epidemiologists or data teams to send their data to Epicentre for it to be displayed on a dashboard. The data will usually be displayed between one or two hours after being sent.
@@ -80,8 +79,7 @@ The full workflow allows epidemiologists or data teams to send their data to Epi
 ![The linelist-to-dashboard workflow](images/001-img-obt-workflow.png){fig-align="center" fig-alt="A diagram showing excel files being sent to Epicentre or partners. When the data is sent to Epicentre, the data is then sent to a dashboard." #fig-workflow}
 
 
-## XXXX OutbreakTools linelists
-
+## OutbreakTools linelists
 
 OBT linelist contain what you may have come to expect from mature linelists: places to enter data and metadata, a couple of analyses, and ways to deal with languages and places.
 
@@ -97,11 +95,11 @@ They always have the same functionalities, which include:
 -	…
 
 
-Most of the important features of the linelist can be accessed through the [OutbreakTools Menu](https://epicentre-msf.github.io/outbreak-tools/reference/home_reference.html) at the top of Excel interface. 
+Most of the important features of the linelist can be accessed through the [OutbreakTools Menu](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html) at the top of Excel interface. 
  
 **Structure of the file**
 
-At minima, an OutbreakTools linelist will contain these sheets:
+At minima, an OutbreakTools linelist contains these sheets:
 
 1.	An *Info* sheet which contains metadata about the project  
 2.	At least one *data entry sheet* to enter patient data  
@@ -119,14 +117,13 @@ At minima, an OutbreakTools linelist will contain these sheets:
 
 ### Languages
 
-OBT linelists usually exist in several languages. In that case there is one file per language (by opposition to a button to switch language withn one linelist).
+OBT linelists usually exist in several languages. In that case there is one file per language (by opposition to a button to switch language within one linelist).
 
 
 ::: {.callout-note title="How it works" collapse=true}
+You can enter several languages in a given **setup file**, and chose in the **designer** which of these languages to generate a linelist in. The generated files have the same interface and dictionary, and differ only in the interface and label languages (variable names are the same).
 
-You can enter several languages in a given setup file, and chose in the designer which of these languages to generate a linelist in. The generated files have the same interface and dictionary, and differ only in the interface and label languages (variable names are the same).
-
-Because the translations of all labels and categories are available in the setup file, the compilation scripts can automatically translate the data received in different languages to English, to gather all the data in the dashboard.
+Because the translations of all labels and categories are available in the **setup file**, the compilation scripts can automatically translate the data received in different languages to English, to gather all the data in the dashboard.
 :::
 
 
@@ -141,11 +138,11 @@ The categories with which to populate dropdown menus are country specific. A mem
 
 ## Outbreaktool Dashboards
 
-Epicentre maintains a couple of OBT dashboards associated with the OBT linelist^[most of these dashboards will be merged into one at some point].
+Epicentre maintains a couple of OBT dashboards associated with the OBT linelist^[Most of these dashboards will be merged into one at some point.].
 
-All the OBT linelist produced by the EpiDS team have a button to [export data to the dashboard]. This creates a protected file with the data and metadata, that you can send to a dedicated mail address (see (@fig-workflow)).
+All the OBT linelist produced by the EpiDS team have a button to export data to the [dashboard](https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html). This creates a protected file with the data and metadata that you can send to a dedicated mail address (@fig-workflow).
 
-More explanations can be found [here](../how_to/export_data_dashboard.qmd)
+More explanations can be found [here](https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html)
 
 
 ## Preparing a linelist for deployment {#sec-deployment}
@@ -154,10 +151,10 @@ Deploying usually involves the following steps:
 
 1. Download an empty linelist template, and the accompanying documentation
 
-Go to the Epinetwork SharePoint or ask a referent epi/disease focal point^^[Unless you already have a *recent* version]. See [here](../how_to/get_template.qmd) for more information.
+Go to the [Epinetwork Sharepoint](https://epicentre-msf.github.io/outbreak-tools/getting_started/get_linelist.html) or ask a referent epi/disease focal point^^[Unless you already have a *recent* version].
 
 ::: {.callout-note}
-There may be several languages available. In general you can expect English and French as default for well established linelists. Spanish, Portuguese or Arabic translations may be developed when needed, don't hesitate to ask.
+There may be several languages available. In general you can expect English and French as default for well established linelists. Spanish, Portuguese or Arabic translations may be developed when needed for some diseases, don't hesitate to ask.
 :::
 
 2. [Get a geobase for your area](../how_to/download_geobase.qmd) from the [Geoapp](https://reports.msf.net/secure/app/outbreak-tools-geoapp)
@@ -176,4 +173,4 @@ There may be several languages available. In general you can expect English and 
     
 5. Send the linelist to the sites with the documentation. In many settings there should be one linelist per site.
 
-6. Ask the site to fill the remaining metadata from the Info sheet (site, sometimes site location etc.)
+6. Ask the site to fill the remaining metadata from the *Info* sheet (site, sometimes site location etc.)

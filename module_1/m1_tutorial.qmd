@@ -2,7 +2,7 @@
 title: "Tutorial"
 ---
 
-## Introduction
+## About this tutorial
 
 In this tutorial you will familiarise yourself with the OBT linelist interface^[Remember all OBT linelist have the same type of interface] and the corresponding dashboard.
 
@@ -15,9 +15,9 @@ In this tutorial you will familiarise yourself with the OBT linelist interface^[
 
 ### 🧭 Context
 
-MSF has been working in Chad since 2006 where our teams provide medical care and assistance to displaced people and local communities, who are often struggling with a lack of food, in the east and the south of the country.
+MSF has been working in eastern and southern Chad since 2006 where our teams provide medical care and assistance to displaced people and local communities who often struggle with a lack of food.
 
-In December 2021, following several reports of measles cases in the Southern region of Mandoul, MSF and Epicentre decided to provide support and respond to the outbreak. A linelist is needed to collect patient data in structures. 
+In December 2021, following several reports of measles cases in the Southern region of Mandoul, MSF decided to respond to the outbreak, with Epicentre support. A linelist is needed to collect patient data in structures. 
 
 You discussed with the MedRef and the MedCo, and you came to the decision to deploy the OBT linelist.
 
@@ -32,7 +32,6 @@ In this tutorial, you will get access to several files:
 
 You then will visit the Intersection dashboard to explore _real_ MSF measles data in Chad.
 
-
 Explanations will be given in simple text, or boxes (tips, notes etc.) and instructions will be given in instructions boxes.
 
 
@@ -41,7 +40,7 @@ I contain important information!
 :::
 
 ::: {.callout-tip}
-I am a handy bit of informations that may be omitted in a first reading if you are in a hurry, but totally deserve some attention at some point.
+I am a handy bit of information that may be omitted if you are in a hurry, but totally deserve some attention at some point.
 :::
 
 ::: {.instructions}
@@ -65,7 +64,7 @@ The files that you are going to use are stored on Github, bundled in a `zip` arc
 ### Description of the folder content
 
 - The current last version of the OBT measles linelist (standard version), empty
-- A linelist with simulated data^[To ensure full anonymisation, the data used in this exercise was simulated, using parameters from MSF measles data for some parameters]
+- A linelist with simulated data
 - A text file with the password
 
 
@@ -78,7 +77,7 @@ Unblock your linelist, or make sure it is already unlocked. If you have never do
 :::
 
 ::: {.callout-note}
-You may need to perform some or all these steps on your computer, but you will certainly have to explain them to your collaborators using the linelist.
+You *may* have to perform some or all these steps on your computer, but you will *certainly* have to explain them to your collaborators using the linelist, as field computers are often more protected.
 :::
 
 
@@ -88,10 +87,10 @@ You may need to perform some or all these steps on your computer, but you will c
 
 #### Get a linelist template
 
-In real life you should [get an empty template](../how_to/get_template.qmd) but for this exercise you will use the template provided in the archive you downloaded.
+In real life you should [get an empty template]((https://epicentre-msf.github.io/outbreak-tools/getting_started/get_linelist.html) but for this exercise you will use the template provided in the archive you downloaded.
 
 ::: {.instructions}
-Identify the file and make a copy on which you can work.
+Identify the correct empty file and make a copy on which you can work.
 :::
 
 
@@ -99,7 +98,7 @@ Identify the file and make a copy on which you can work.
 #### Download the geobase
 
 ::: {.instructions}
-Go to the [Geoapp](https://reports.msf.net/secure/app/outbreak-tools-geoapp) and download a geobase for Tchad. A summary of the steps can be found [here](../how_to/download_geobase.qmd), or in the popup at site opening.
+Go to the [Geoapp](https://reports.msf.net/secure/app/outbreak-tools-geoapp) and download a geobase for Tchad. A summary of the steps can be found [here](https://epicentre-msf.github.io/outbreak-tools/how_to/import_geobase.html#sec-geobase-download), or in the popup at site opening.
 :::
 
 
@@ -115,12 +114,12 @@ Open the linelist (password: `measles2024`) and  inspect sheet names.
 **Notably**: 
 
 - The first sheet contains some instructions, but there is nothing special to do with it
-- The second sheet ("Info") contains project and site information
-- The third sheet ("Linelist Patients") is to enter patient data
+- The second sheet (*Info*) contains project and site information
+- The third sheet (*Linelist Patients*) is for patient data
 - Most of the following sheets are analyses.
 
 ::: {.instructions}
-Find the [OutbreakTools Menu](../reference/ribbons.qmd#sec-linelist-ribbon), we are going to use it a lot in the rest of this tutorial.
+Find the [OutbreakTools Menu](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html), we are going to use it a lot in the rest of this tutorial.
 :::
 
 
@@ -151,7 +150,7 @@ Fill the following fields: `Admin 1` (Mandoul) and `Admin 2` (Moissala)
 You think that you do not need the rest of the fields. Let's hide them!
 
 ::: {.instructions}
-Keep the "Info" sheet in focus and go to the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon). Click on the "Show / Hide variables" button.
+Keep the "Info" sheet in focus and go to the [OBT menu](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html). Click on the "Show / Hide variables" button.
 :::
 
 It opens a popup window:
@@ -168,7 +167,7 @@ Hide the variables that we do not plan to fill. You can either hide them one by 
 #### Import the geobase
 
 ::: {.instructions} 
-Use the "Import geobase" button from the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon) to import the geobase that you downloaded previously.
+Use the "Import geobase" button from the [OBT menu](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html) to import the geobase that you downloaded previously.
 :::
 
 After closing the confirmation message you can go to the data entry shee and look for columns with an orange heading background: 
@@ -178,6 +177,9 @@ After closing the confirmation message you can go to the data entry shee and loo
 
 You can fill the variables either by using the cascading dropdown menus, or by using the GeoHelper button from the ribbon.
 
+::: {callout-important}
+There is a hierarchy between these columns: if you attempt to fill the admin 3 *without filling admin 1 and 2* the dropdown list will appear empty.
+:::
 
 
 #### Choose the start of the week.
@@ -203,7 +205,7 @@ Go to the "Linelist patients" sheet. Then click on the "Show/Hide variables" but
 - MUAC
 - Pregnant
 - The custom variables at the end
-- Any calculated variables that you wished to see displayed for information of quick filtering (epi week? ager group? etc.)
+- Any calculated variables that *you* wish to see displayed for information of quick filtering (epi week, age group etc.)
 :::
 
 
@@ -211,7 +213,7 @@ Go to the "Linelist patients" sheet. Then click on the "Show/Hide variables" but
 #### Print a register
 
 ::: {.instructions}
-Click on the "Show register" button in the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon).
+Click on the "Show register" button in the [OBT menu](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html).
 :::
 
 This opens a usually hidden sheet (that can be hidden again when you are done) to prepare a paper register if you don't already have one in the site.
@@ -228,7 +230,7 @@ Typically, there will be less columns in the register than the full linelist, as
 :::
 
 
-Now that you have selected the variables to print, you will likely have to adjust the register to make it more user-friendly:
+Now that you have selected the variables to print, you usually would want to adjust the register to make it more user-friendly:
 
 - Tweak column width so that the data encoder have the space to write
 - Change labels orientation, to save some space (for columns with short content)
@@ -240,11 +242,9 @@ Adjust the width of the following columns:
 - `Patient name`: wider
 - `Sex`: narrower
 
-Click on the "Print" button in the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon) to open the Print Preview. Note the "Settings" button to control some of the printing options.
+Click on the "Print" button in the [OBT menu](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html) to open the Print Preview. Note the "Settings" button to control some of the printing options.
 
-
-
-When you are finished, you can exit the Print Preview, and hit the "Close Register / CRF" button to hide the register sheet (your modifications are still here).
+When you are finished, you can exit the Print Preview, and hit the "Close Register / CRF" button to *hide* the register sheet (the sheet and your modifications are still here).
 :::
 
 #### Prepare a Case Report Form
@@ -262,18 +262,17 @@ Preparing a clean CRF is out of the scope of this tutorial, but do not hesitate 
 
 ### Send the linelist
 
-You have done the main customisation of the linelist. Do not forget to save the customised template.
+You have seen the main customisations of the linelist. Do not forget to save your customised template.
 
-You can now send you to your colleagues. If they have worked with OBT linelist before (even for other diseases) this should be easy: all the OBT linelists have the same functionalities. If they have not worked with OBT linelist before, you should brief them on:
+You can now send you to your colleagues. If they have worked with OBT linelists before (even for other diseases) this should be easy: all the OBT linelists have the same functionalities. If they have not worked with OBT linelist before, you should brief them on:
 
 - [Unblocking the file and authorising VBA macro](../how_to/unblock_files.qmd)
-- Finding the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon)
+- Finding the [OBT menu](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html)
 - Filling the remaining metadata on the "Info" sheet
-- [Exporting files](../how_to/export_data_dashboard.qmd) to send to the dashboard
+- [Exporting files](https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html) to send to the dashboard
 - Using the [GeoHelper](../how_to/use_geohelper.qmd)
 
 In most cases there should be one linelist per site.
-
 
 
 
@@ -281,16 +280,18 @@ In most cases there should be one linelist per site.
 
 ### 🧭 Context
 
-The linelist was deployed in January 2022; almost a year later, in April 2023, the measles outbreak is still ongoing. The linelist is used in Moissala and the neighbouring areas. You receive the file with data and you want to have a look at it.
+The linelist was deployed in January 2022 in Moissala and the neighbouring areas. Almost a year later, in April 2023, the measles outbreak is still ongoing and the linelist still in use. You receive the file with data and you want to have a look at it.
 
-You are now going to work on the file `measles_linelist_moissala.xlsb`, which contains simulated measles data.
+You are now going to work on the file `measles_linelist_moissala.xlsb`, which contains simulated measles data^[The data used in this exercise was simulated using parameters from MSF measles data, at least for some major variables, which avoids the problem of working with personnam data].
 
 
 ### Sanity checks
 
-When you receive an unknown linelist with data, always perform a couple of checks to get a feel of the state of the file and data. These are not the extensive checks you would perform if you were tasked to monitor data entry and quality, or to perform analyses. They might however rapidly hint at the source of a reported problem (a functionality not working as expecting).
+When you receive an unknown linelist with data, always perform a couple of checks to get a feel of the state of the file and data. These are not the extensive checks you would perform if you were tasked to monitor data entry and quality, or to perform analyses. They might however rapidly hint at the source of a reported problem (a functionality not working as expected).
 
-#### Structure checks
+#### File structure checks
+
+**Is the file obviously damaged?**
 
 - Does the OBT menu appears as expected (buttons have legible labels)?
 - Test one button (for example, open the Show/Hide window): does it work as expected?
@@ -311,14 +312,18 @@ Do these checks on the file `measles_linelist_moissala.xlsb`.
 :::
 
 
-#### Data checks
+#### (Very basic) Data checks
 
-- Are the metadata on the "Info" sheet (still) correctly filled?^[90% of export problems come from badly filled metadata]
+- Are the metadata on the "Info" sheet (still) correctly filled?^[90% of export-dashboard problems come from badly filled metadata]
 - Do patients have IDs?
 - Are there replicated IDs?
 - Check the filters of a couple of date columns: do the dates correspond to what you expect (min, max) and are there values not recognised as dates?
 - Check a couple of categorical columns (`sex`, `outcome`...) to see if the categories entered correspond to the expected values.
 - Remove any filters applied on the data (there is a shortcut for that in the OBT menu).
+
+::: {.instructions}
+Do these checks on the file `measles_linelist_moissala.xlsb`.
+:::
 
 
 ### Analyses
@@ -452,10 +457,6 @@ The last analysis sheet that you may encounter in an OBT linelist is a crossover
 You have sent the linelist for deployment to the field. The data encoder may have some questions or problems in the beginning, or after a handout.
 
 
-::: {.callout-note}
-This would happen before you receive a linelist with lots of data in it and explore it, but it was better to familiarise you with the file before attempting to troubleshoot it.
-:::
-
 ::: {.instructions}
 For the following problems, identify the source of the problem and the solution.
 :::
@@ -471,7 +472,7 @@ The macros are not executing properly. It could be a problem of authorisation, o
 
 ### General file management
 
-Often people do not read the documentation, do not know the existence of the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon) (or never checked it out). A lot of the requests you might get derive from this and the good news is that they are pretty straightforward to solve.
+A lot of the requests you might receive derive from the fact that people ususally do not read the documentation (even if it was sent to them) and do not know the existence of the [OBT menu](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html). The good news is that they are pretty straightforward to solve.
 
 
 #### No more rows!
@@ -485,7 +486,7 @@ What do you answer?
 ::: {.callout-tip title="Answer" collapse=true}
 Use the "Add rows" button from the OBT menu to add lines at the bottom of the file.
 
-**Note**: recent versions of the linelist automatically add five lines at the bottom of the file when someone enters data in the last line, so this become less common. If the problem happens, check whether there is a more recent version of the linelist to use!
+**Note**: recent versions of the linelist automatically add five lines at the bottom of the file when someone enters data in the last line, so this should become less and less common, and a strong red flag that the data should be migrated towards a more recent version!
 :::
 
 
@@ -509,12 +510,12 @@ You get this mail:
 
 This one is trickier, because this could be caused by several problems such as:
 
-- unsaved document was closed (data from "yesterday" or "this morning" were lost)
+- The document was closed without saving (data from "yesterday" or "this morning" were lost)
 - OneDrive synchronisation errors (the last file got replaced by an older version from the server).
+- There is a filter applied somewhere on the data and the rows are merely hidden. 
 - The user deleted data by mistake (since the sheet is protected, it is hard to delete data in bulk though, so this is less likely)
-- there is a filter applied somewhere on the data and the rows are merely hidden. 
 
-You can solve the last problem in one click though. Which button would you use?
+You will have to discuss with them, their setup, who worked on the file to figure out what may have happen, unless it's the third case, which can be solved in one click. Which button would you use?
 
 ::: {.callout-tip title="Answer"  collapse=true}
 Use the "Clear all filters" button from the OBT menu.
@@ -536,22 +537,23 @@ The day after they contact you again:
 
 > Good morning, I used the refresh button yesterday to update the analyses and it woked. But today I entered new data, refreshed but all the data on the analyses sheets are striken. I cannot remove the strikethrough and I did not do anything, just enter data.
 
-A recent update^[We saw the problem hit computers between November and December 2024] in Excel 365 uses [strikethrough](https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) to label what Excel considers "stale values" (values that depend on other cells, which were modified). For some obscure reason, the "Refresh analyses" does not trigger the removal of the strikethrough. A fix in the OBT is coming from 2025 onwards, but if this happens with another linelist:
+A recent update^[We saw the problem hit computers between November and December 2024] in Excel 365 uses [strikethrough](https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) to label what Excel considers "stale values" (values that depend on other cells, which were modified). For esoteric reasons, the "Refresh analyses" does not (yet) trigger the removal of the strikethrough. A fix in the OBT is coming from 2025 onwards, but if this happens with an older linelist:
 
-- Hit the F9 shortcut to force recalculation (or use the "Calculate now" button from the "Formula" Exce native menu)
-- Then hit the "Refresh analyses" button
+- Hit the F9 key to force recalculation (or use the "Calculate now" button from the "Formula" Excel menu)
+- *Then* hit the "Refresh analyses" button from the OBT menu
 - (Advised): ask if there is a more recent version of the linelist with the problem solved
 
-Alternately, you can [turn off](https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) this option if it bothers you in general.^[Maybe you use VBA in your own files and are bothered that Range.Calculate does _not_ remove the strikethrough, just Sheet.Caluclate or Application.Caclulate.]
+Alternately, you can [turn off](https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) this option if it bothers you in general.
+
 
 
 ### Sending the data to the dashboard
 
-Another source of friction is the sharing step of the linelist. In all cases, it is good to brief them on the [steps](../how_to/export_data_dashboard.qmd) to send data to the dashboard, but see if you can find the exact problems with the files sent below.
-
-- They send the file `measles_linelist_moissala.xlsb` to <EPI-DATA@epicentre.msf.org> and received an error
+Another source of friction is the sharing step of the linelist. In all cases, it is good to brief them on the [steps](https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html) to send data to the dashboard, but see if you can find the exact problems with these files:
 
 - They used OneDrive to share the linelist with <EPI-DATA@epicentre.msf.org> and received an error
+
+- They send the file `measles_linelist_moissala.xlsb` to <EPI-DATA@epicentre.msf.org> and received an error
 
 - They sent `measles_linelist_moissala_export_data_20250203-1136.xlsx` to <EPI-DATA@epicentre.msf.org> and received an error
 
@@ -579,11 +581,11 @@ Open the Excel file `troubleshooting.xlsb` from the tutorial archive.
 
 Your colleague contacts you. They have data for the start of January 2023, and they looked at the analyses sheets. But the analyses seem broken, *even though they refreshed the data*.
 
-**Problem 1.** They _know_ they have positive measles cases, but these cases do not show up in the univariate table / graph about Measles test results.
+**Problem 1.** They _know_ they have positive measles cases, but these cases do not show up in the univariate table / graph about measles test results.
 
 **Problem 2.** The register says there should be 25 notifications in the first week, and 40 in the second week, but the numbers in the epicurve do not match. The univariate general summary is correct, though (65 patients seen).
 
-**Problem 3.** They know there should be 5 deceased patients in facilities, 3 who had been notified in week 1, and 2 notified in week 2. But the numbers in the temporal analysis sheet do not correspond.
+**Problem 3.** They know there should be 5 deceased patients in the facility, 3 who had been notified in week 1, and 2 notified in week 2. But the numbers in the temporal analysis sheet do not correspond.
 
 
 ::: {.instructions}
@@ -606,7 +608,7 @@ Figure out what the problems are. If the problems are quick to fix, do it. Think
 
 
 ::: {.callout-note title="Wink Wink Nudge Nudge" collapse=true}
-**Problem 3.** Maybe go check @sec-customise to see if there is an option you should check.
+**Problem 3.** Maybe go check @sec-customise to see if there is an option you could check.
 :::
 
 
@@ -637,6 +639,8 @@ Once you have an account, you can go to the intersection dashboard [site](https:
 
 On the left (number 1 on @fig-dashboard) you have the options sidebar, where you can filter data  (diseases, OC, country, site, outcome etc.) and customise a couple of options.
 
+![Dashboard](../module_1/images/012-img-dashboard.png){fig-align="center" #fig-dashboard}
+
 ::: {.instructions}
 - Pick "Measles" from the filter
 - Find the country filter and select "Chad"
@@ -645,7 +649,6 @@ On the left (number 1 on @fig-dashboard) you have the options sidebar, where you
 
 The dashboard now only displays measles data in Chad.
 
-![Dashboard](../module_1/images/012-img-dashboard.png){fig-align="center" #fig-dashboard}
 
 ### Map
 
@@ -654,7 +657,7 @@ First let's look at the map.
 ::: {.instructions}
 - Zoom on the map to better see what's happening in Chad.
 - Select the ADM1 level to get a better resolution. Which health region has the most cases?
-- Select the ADM2 level to see even more precisely. Which health district has the most cases? How many patients do not have (matched) geo data at this level (hint: there is a message at the bottom of the map)?
+- Select the ADM2 level to see even more precisely. Which health district has the most cases? How many patients do not have (matched) geo data at this level?
 - Select the ADM3 level to see if we have enough data at that level? What do you think?
 :::
 
@@ -709,8 +712,6 @@ Explore the dashboard to answer the following questions:
 - How many cholera consultations did MSF OCG performed in the last 90 days?
 :::
 
+## Going further
 
-## Notes / questions
-
-dropdown menus?
-Custom columns -> questions from the field
+- Go to the [Documentation site]() and read about [migrating data and creating master linelists](https://epicentre-msf.github.io/outbreak-tools/how_to/migrate_linelist.html)

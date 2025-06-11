@@ -26,16 +26,16 @@ After this training, you should be able to:
 
 ## Prerequiste
 
-A good experience of Excel files. There is no need for VBA esoteric skills nor even advanced formula wizardry. Instead, we expect you to know your way around a multi-sheets Excel file, to know of filters, how to force calculation, use dropdown menus, modify graph appearance, use basic pivot tables etc.
+A good experience of Excel files. There is no need for VBA esoteric skills nor advanced formula wizardry. Instead, we expect you to know your way around a multi-sheets Excel file, to know of filters, how to force calculation, use dropdown menus, modify graph appearance, use basic pivot tables etc.
 
 
 ## Syllabus
 
 The training is based on an explicative document (on the site, or slides), and a self-paced tutorial. The tutorial is based on three situations that you are likely to encounter:
 
--	You want to deploy a linelist in a country: getting the file, preparing it for deployment
-- You sent the file to the field but a data encoder has issues with it: you need to know how to troubleshoot the most common problems
--	The file is in use, you neet to monitor data, both in the linelist and in the dashboard
+-	You want to **deploy a linelist** in a country: getting the file, preparing it for deployment
+- You sent the file to the field but a data encoder has issues with it: you need to know how to **troubleshoot the most common problems**
+-	The file is in use, you need to **monitor data**, both in the linelist and in the dashboard
 
 
 ::: {.homepage-card-grid}

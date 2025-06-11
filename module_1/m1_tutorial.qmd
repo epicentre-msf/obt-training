@@ -55,7 +55,20 @@ Now do **do something**!
 The files that you are going to use are stored on Github, bundled in a `zip` archive. 
 
 ::: {.instructions}
-1. Go to the [Github page](XXXXX) to download the archive. Save it on your computer (in your *Downloads* folder for example). 
+1. Click on the button to download the archive. Save it on your computer (in your *Downloads* folder for example). 
+
+```{r}
+#| echo: false
+#| eval: true
+
+downloadthis::download_link(
+  link = "https://github.com/epicentre-msf/obt-training/raw/master/tutorials_materials/module_1.zip",
+  button_label = "Dowload materials",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
 
 2. Unzip the whole archive and save the files locally. It is better to save the unzipped folder in a location that is not actively synchronised with Onedrive at the moment.
 :::

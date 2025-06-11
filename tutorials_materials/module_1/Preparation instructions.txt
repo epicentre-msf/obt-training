@@ -1,0 +1,4 @@
+- Oter les mots de passe de toutes les linelists.
+- Remettre le filtre qui vire les positifs dans le fichier "troubleshooting".
+- Mettre à jour les trois linelists si besoin (migrer).
+- Recréer le fichier zip (sans ces instructions)

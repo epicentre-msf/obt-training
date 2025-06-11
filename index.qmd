@@ -2,9 +2,6 @@
 home:
   id: home
   toc: false
-# format:
-#   html: 
-#     page-layout: full
 ---
 
 ![](../images/outbreaktools.png){fig-align="center" width=200}
@@ -17,7 +14,7 @@ home:
 
 [Training]{.h1}
 
-This site contains two modules to familiarise yourself with OBT linelists. Each module contains an introduction to the concepts, and a self-paced tutorial to learn by doing.
+This site contains two modules to familiarise yourself with OBT linelists. Each module contains an introduction to the concepts and a self-paced tutorial to learn by doing.
 
 :::
 

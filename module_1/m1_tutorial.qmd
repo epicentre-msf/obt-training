@@ -62,7 +62,7 @@ The files that you are going to use are stored on Github, bundled in a `zip` arc
 #| eval: true
 
 downloadthis::download_link(
-  link = "https://github.com/epicentre-msf/obt-training/raw/master/tutorials_materials/module_1.zip",
+  link = "https://github.com/epicentre-msf/obt-training/blob/master/tutorials_materials/module_1.zip",
   button_label = "Download materials",
   has_icon = TRUE,
   icon = "fa fa-save",

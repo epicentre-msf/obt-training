@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a22e8ae99d882f57c282fcf09f305c0a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b5ca24d81ad21f3d8a6757d9c3948d19.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -70,6 +70,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/font-awesome-6.5.2/js/script.js"></script>
 
 
 </head>
@@ -350,8 +351,17 @@ Tip
 <p>The files that you are going to use are stored on Github, bundled in a <code>zip</code> archive.</p>
 <div class="instructions">
 <ol type="1">
-<li><p>Go to the <a href="XXXXX">Github page</a> to download the archive. Save it on your computer (in your <em>Downloads</em> folder for example).</p></li>
-<li><p>Unzip the whole archive and save the files locally. It is better to save the unzipped folder in a location that is not actively synchronised with Onedrive at the moment.</p></li>
+<li>Click on the button to download the archive. Save it on your computer (in your <em>Downloads</em> folder for example).</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<a href="https://github.com/epicentre-msf/obt-training/raw/master/tutorials_materials/module_1.zip">
+<button class="btn btn-default"><i class="fa fa-save"></i> Download materials</button>
+</a>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Unzip the whole archive and save the files locally. It is better to save the unzipped folder in a location that is not actively synchronised with Onedrive at the moment.</li>
 </ol>
 </div>
 </section>
@@ -406,7 +416,7 @@ Note
 <section id="sec-customise" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="sec-customise">Adapt the linelist</h3>
 <div class="instructions">
-<p>Open the linelist (password: <code>measles2024</code>) and inspect sheet names.</p>
+<p>Open the linelist (we removed the password for simplicity reasons) and inspect sheet names.</p>
 </div>
 <p><strong>Notably</strong>:</p>
 <ul>
@@ -1228,7 +1238,7 @@ Tip
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/epicentre-msf\.github\.io\/obt-training\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

@@ -2,42 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://epicentre-msf.github.io/obt-training/index.html</loc>
-    <lastmod>2025-06-13T16:44:28.848Z</lastmod>
-  </url>
-  <url>
-    <loc>https://epicentre-msf.github.io/obt-training/module_1/m1_objectives.html</loc>
-    <lastmod>2025-06-13T16:44:28.880Z</lastmod>
-  </url>
-  <url>
-    <loc>https://epicentre-msf.github.io/obt-training/module_1/m1_tutorial.html</loc>
-    <lastmod>2025-06-13T16:44:28.880Z</lastmod>
-  </url>
-  <url>
-    <loc>https://epicentre-msf.github.io/obt-training/module_2/m2_tutorial.html</loc>
-    <lastmod>2025-06-13T16:44:28.880Z</lastmod>
-  </url>
-  <url>
-    <loc>https://epicentre-msf.github.io/obt-training/how_to/unblock_files.html</loc>
-    <lastmod>2025-06-13T16:44:28.847Z</lastmod>
-  </url>
-  <url>
-    <loc>https://epicentre-msf.github.io/obt-training/how_to/use_geohelper.html</loc>
-    <lastmod>2025-06-13T16:44:28.847Z</lastmod>
-  </url>
-  <url>
-    <loc>https://epicentre-msf.github.io/obt-training/module_2/m2_objectives.html</loc>
-    <lastmod>2025-06-13T16:44:28.880Z</lastmod>
-  </url>
-  <url>
-    <loc>https://epicentre-msf.github.io/obt-training/module_2/m2_intro.html</loc>
-    <lastmod>2025-06-13T16:44:28.880Z</lastmod>
+    <lastmod>2025-06-19T13:26:11.705Z</lastmod>
   </url>
   <url>
     <loc>https://epicentre-msf.github.io/obt-training/module_1/m1_intro.html</loc>
-    <lastmod>2025-06-13T16:44:28.880Z</lastmod>
+    <lastmod>2025-06-19T13:26:11.739Z</lastmod>
   </url>
   <url>
-    <loc>https://epicentre-msf.github.io/obt-training/module_1/draft.html</loc>
-    <lastmod>2025-06-13T16:44:28.848Z</lastmod>
+    <loc>https://epicentre-msf.github.io/obt-training/module_2/m2_intro.html</loc>
+    <lastmod>2025-06-19T13:26:11.743Z</lastmod>
+  </url>
+  <url>
+    <loc>https://epicentre-msf.github.io/obt-training/module_2/m2_objectives.html</loc>
+    <lastmod>2025-06-19T13:26:11.743Z</lastmod>
+  </url>
+  <url>
+    <loc>https://epicentre-msf.github.io/obt-training/how_to/use_geohelper.html</loc>
+    <lastmod>2025-06-19T13:26:11.704Z</lastmod>
+  </url>
+  <url>
+    <loc>https://epicentre-msf.github.io/obt-training/how_to/unblock_files.html</loc>
+    <lastmod>2025-06-19T13:26:11.704Z</lastmod>
+  </url>
+  <url>
+    <loc>https://epicentre-msf.github.io/obt-training/module_2/m2_tutorial.html</loc>
+    <lastmod>2025-06-19T13:26:11.743Z</lastmod>
+  </url>
+  <url>
+    <loc>https://epicentre-msf.github.io/obt-training/module_1/m1_tutorial.html</loc>
+    <lastmod>2025-06-19T13:26:11.739Z</lastmod>
+  </url>
+  <url>
+    <loc>https://epicentre-msf.github.io/obt-training/module_1/m1_objectives.html</loc>
+    <lastmod>2025-06-19T13:26:11.739Z</lastmod>
   </url>
 </urlset>

@@ -9,7 +9,7 @@ It is dedicated to people who prepare and deploy linelists on the field, as well
 
 The training aims at giving you autonomy with the preparation, use and troubleshooting of the file.
 
-**Tentative length:** 3h
+**Tentative length:** ???
 
 
 ## Objectives 🎯

@@ -6,8 +6,7 @@ The **GeoHelper** is a popup window that helps you entering geographic data such
 
 It is mostly used to enter data on patient data sheets, but it is also useful on the "Spatio-Temporal analysis" sheet.
 
-To use it, place your cursor in a `geo` or `hf` column (you can recognise them to to their orange headers), in the *admin 1 level*. Click on the "GeoHelper" button in the [OBT menu](../reference/ribbons.qmd#sec-linelist-ribbon), or hit the shortcut `Ctrl + Shift + G`. It opens a window with several tabs, depending on whether you are in a `geo` (described by four visible columns) or in `hf` (described by one visible column).
-
+To use it, place your cursor in a `geo` or `hf` column (you can recognise them to to their orange headers), in the *admin 1 level*. Click on the "GeoHelper" button in the [OBT menu](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html#sec-geo-helper), or hit the shortcut `Ctrl + Shift + G`. It opens a window with several tabs, depending on whether you are in a `geo` (described by four visible columns) or in `hf` (described by one visible column).
 
 
 ![GeoHelper popup window](../module_1/images/011-img-geohelper.png){fig-align="center"}

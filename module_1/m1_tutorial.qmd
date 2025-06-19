@@ -100,7 +100,7 @@ You *may* have to perform some or all these steps on your computer, but you will
 
 #### Get a linelist template
 
-In real life you should [get an empty template]((https://epicentre-msf.github.io/outbreak-tools/getting_started/get_linelist.html) but for this exercise you will use the template provided in the archive you downloaded.
+In real life you should [get an empty template](https://epicentre-msf.github.io/outbreak-tools/getting_started/get_linelist.html) but for this exercise you will use the template provided in the archive you downloaded.
 
 ::: {.instructions}
 Identify the correct empty file and make a copy on which you can work.
@@ -111,7 +111,7 @@ Identify the correct empty file and make a copy on which you can work.
 #### Download the geobase
 
 ::: {.instructions}
-Go to the [Geoapp](https://reports.msf.net/secure/app/outbreak-tools-geoapp) and download a geobase for Tchad. A summary of the steps can be found [here](https://epicentre-msf.github.io/outbreak-tools/how_to/import_geobase.html#sec-geobase-download), or in the popup at site opening.
+Go to the [Geoapp](https://reports.msf.net/secure/app/outbreak-tools-geoapp) and download a geobase for Chad. A summary of the steps can be found [here](https://epicentre-msf.github.io/outbreak-tools/how_to/import_geobase.html#sec-geobase-download), or in the popup at site opening.
 :::
 
 
@@ -136,7 +136,7 @@ Find the [OutbreakTools Menu](https://epicentre-msf.github.io/outbreak-tools/ref
 :::
 
 
-![OutbreakTools menu](../reference/images/ribbons-001-ll-ribbon.png){fig-align="center"}
+![OutbreakTools menu](../module_1/images/015-img-ribbon-linelist.png){fig-align="center"}
 
 #### Fill metadata
 
@@ -170,10 +170,10 @@ It opens a popup window:
 
 
 ![Opening the Show/hide window](../module_1/images/003-img-obt-show_hide.png){fig-align="center"}
-You can see that some of the variables have the `Mandatory` status, but that some other have the `Shown` status. The former one cannot be hidden through this menu but the later can. 
+You can see that some of the variables have the `Mandatory` status, but that some other have the `Show` status. The former one cannot be hidden through this menu but the later can. 
 
 ::: {.instructions} 
-Hide the variables that we do not plan to fill. You can either hide them one by one, or use the "Show all variables" button *twice* and unhide the variables you want to keep.
+Hide the variables that we do not plan to fill. You can either hide them one by one, or use the "Show all optional variables" button *twice* and unhide the variables you want to keep.
 :::
 
 
@@ -188,10 +188,10 @@ After closing the confirmation message you can go to the data entry shee and loo
 - The labels of the column should have been updated with the administrative levels present in the geobase (e.g. “adm1_name” will change to “Province” for DRC).
 - Loof at the cells of the first column, there should now be a dropdown menu containing the admin 1 of the geobase.
 
-You can fill the variables either by using the cascading dropdown menus, or by using the GeoHelper button from the ribbon.
+You can fill the variables either by using the cascading dropdown menus, or by using the [GeoHelper button](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html#sec-geo-helper) from the ribbon.
 
-::: {callout-important}
-There is a hierarchy between these columns: if you attempt to fill the admin 3 *without filling admin 1 and 2* the dropdown list will appear empty.
+::: {.callout-important}
+There is a hierarchy between these columns: if you attempt to fill the admin 3 *without filling admin 1 and 2*, the dropdown list will appear empty.
 :::
 
 
@@ -295,7 +295,7 @@ In most cases there should be one linelist per site.
 
 The linelist was deployed in January 2022 in Moissala and the neighbouring areas. Almost a year later, in April 2023, the measles outbreak is still ongoing and the linelist still in use. You receive the file with data and you want to have a look at it.
 
-You are now going to work on the file `measles_linelist_moissala.xlsb`, which contains simulated measles data^[The data used in this exercise was simulated using parameters from MSF measles data, at least for some major variables, which avoids the problem of working with personnam data].
+You are now going to work on the file `measles_linelist_moissala.xlsb`, which contains simulated measles data^[The data used in this exercise was simulated using parameters from MSF measles data, at least for some major variables, which avoids the problem of working with personnal data].
 
 
 ### Sanity checks
@@ -346,7 +346,7 @@ Now let's investigate the descriptive analyses provided with the linelist. While
 
 There are a couple of important things to remember about the analyses in OBT linelists:
 
-1. Anaslyses need to be **refreshed** before being explored.
+1. Analyses need to be **refreshed** before being explored.
 
 ![Refresh button in the OBT menu](../module_1/images/004-refresh.png){fig-align="center"}
 
@@ -420,18 +420,22 @@ In this linelist, there is only one very large table. Some other linelists can h
 
 Now, if you went to have a look at the graphs, you should see one like that in the list of graphs:
 
-![Hospitalisations](../module_1/images/008-img-temporal-hospit_raw.png){fig-align="center"}
+
 
 It is fine to look at the shape of the epicurve, but you would not want to use it in a report as it is. Besides cosmetics improvements, you could use filters to remove the empty weeks at the right of the graph:
 
 - Select the graph: some buttons appear at the top right corner.
 - Use the "filter" button (the bottom one) to filter out the categories you don't want to see.
 
-![Minimally pimped graph](../module_1/images/009-img-temporal-hospit_pimped.png){fig-align="center"}
+![Hospitalisations](../module_1/images/008-img-temporal-hospit_raw.png){fig-align="center"}
+
+
 
 ::: {.callout-warning}
 Don't forget to remove the graph filters when new data is entered in the linelist, or else you won't see it on the graph. The corrolary is that if your colleague sends you a linelist complaining that the figures are correct in the table but do not appear in the graph, the filters are the prime suspects.
 :::
+
+![Minimally pimped graph](../module_1/images/009-img-temporal-hospit_pimped.png){fig-align="center"}
 
 #### Place: spatial analyses
 
@@ -550,9 +554,9 @@ The day after they contact you again:
 
 > Good morning, I used the refresh button yesterday to update the analyses and it woked. But today I entered new data, refreshed but all the data on the analyses sheets are striken. I cannot remove the strikethrough and I did not do anything, just enter data.
 
-A recent update^[We saw the problem hit computers between November and December 2024] in Excel 365 uses [strikethrough](https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) to label what Excel considers "stale values" (values that depend on other cells, which were modified). For esoteric reasons, the "Refresh analyses" does not (yet) trigger the removal of the strikethrough. A fix in the OBT is coming from 2025 onwards, but if this happens with an older linelist:
+A recent update^[We saw the problem hit computers between November and December 2024] in Excel 365 uses [strikethrough](https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) to label what Excel considers "stale values" (values that depend on other cells, which were modified). For esoteric reasons, the "Refresh analyses" does not (yet) trigger the removal of the strikethrough. A fix in the OBT is coming, but if this happens now:
 
-- Hit the F9 key to force recalculation (or use the "Calculate now" button from the "Formula" Excel menu)
+- Hit the **F9** key to force recalculation (or use the "Calculate now" button from the "Formula" Excel menu)
 - *Then* hit the "Refresh analyses" button from the OBT menu
 - (Advised): ask if there is a more recent version of the linelist with the problem solved
 
@@ -562,15 +566,15 @@ Alternately, you can [turn off](https://support.microsoft.com/en-us/office/stale
 
 ### Sending the data to the dashboard
 
-Another source of friction is the sharing step of the linelist. In all cases, it is good to brief them on the [steps](https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html) to send data to the dashboard, but see if you can find the exact problems with these files:
+Another source of friction is the sharing step of the linelist. In all cases, it is good to brief colleagues using the linelist on the [steps](https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html) to send data to the dashboard. For training, can you identify the source of these problems:
 
-- They used OneDrive to share the linelist with <EPI-DATA@epicentre.msf.org> and received an error
+- Someone used used OneDrive to share the linelist with <EPI-DATA@epicentre.msf.org> and received an error
 
 - They send the file `measles_linelist_moissala.xlsb` to <EPI-DATA@epicentre.msf.org> and received an error
 
-- They sent `measles_linelist_moissala_export_data_20250203-1136.xlsx` to <EPI-DATA@epicentre.msf.org> and received an error
+- A colleague sent `measles_linelist_moissala_export_data_20250203-1136.xlsx` to <EPI-DATA@epicentre.msf.org> and received an error
 
-- They sent `MSL_linelist__MSL24__info_country_code__info_organisation__info_facility_name__anonymous__vb-1003__20250103-1541` to <EPI-DATA@epicentre.msf.org> and probably did not receive an error, but the data does not appear in Chad in the dashboard
+- `MSL_linelist__MSL24__info_country_code__info_organisation__info_facility_name__anonymous__vb-1003__20250103-1541` was sent to <EPI-DATA@epicentre.msf.org> and probably return not receive an error, but the data does not appear in Chad in the dashboard
 
 
 ::: {.callout-tip collapse=true title="Tip"}
@@ -594,7 +598,7 @@ Open the Excel file `troubleshooting.xlsb` from the tutorial archive.
 
 Your colleague contacts you. They have data for the start of January 2023, and they looked at the analyses sheets. But the analyses seem broken, *even though they refreshed the data*.
 
-**Problem 1.** They _know_ they have positive measles cases, but these cases do not show up in the univariate table / graph about measles test results.
+**Problem 1.** There are positive measles cases in the patient data sheet, but these cases do not show up in the univariate table / graph about measles test results.
 
 **Problem 2.** The register says there should be 25 notifications in the first week, and 40 in the second week, but the numbers in the epicurve do not match. The univariate general summary is correct, though (65 patients seen).
 

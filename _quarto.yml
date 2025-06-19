@@ -51,34 +51,22 @@ website:
             href: module_1/m1_tutorial.qmd
           
       
-      - text: Module 2
-        menu:
-          - text: Module presentation
-            href: module_2/m2_objectives.qmd
-          - text: Introduction to the setup file
-            href: module_2/m2_intro.qmd
-          - text: Tutorial
-            href: module_2/m2_tutorial.qmd
-          
+      # - text: Module 2
+      #   menu:
+      #     - text: Module presentation
+      #       href: module_2/m2_objectives.qmd
+      #     - text: Introduction to the setup file
+      #       href: module_2/m2_intro.qmd
+      #     - text: Tutorial
+      #       href: module_2/m2_tutorial.qmd
+      #     
       - text: How to
         menu:
           - text: Unblock files
             href: how_to/unblock_files.qmd
-          - text: Download geobase
-            href: how_to/download_geobase.qmd
-          - text: Get a linelist template
-            href: how_to/get_template.qmd
-          - text: Export data to dashboard
-            href: how_to/export_data_dashboard.qmd
           - text: Use the GeoHelper
             href: how_to/use_geohelper.qmd
-            
-      - text: Reference
-        menu: 
-          - text: Ribbons
-            href: reference/ribbons.qmd
-        
-        
+
     tools:
       - icon: github
         text: Source Code

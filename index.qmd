@@ -4,7 +4,7 @@ home:
   toc: false
 ---
 
-![](../images/outbreaktools.png){fig-align="center" width=200}
+![](images/outbreaktools.png){fig-align="center" width=200}
 
 
 ::: {.div #homepage-text}

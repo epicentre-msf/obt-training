@@ -76,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="floating nav-fixed quarto-light">
+<body class="floating nav-fixed slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -116,25 +116,6 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-module-2" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Module 2</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-module-2">    
-        <li>
-    <a class="dropdown-item" href="../module_2/m2_objectives.html">
- <span class="dropdown-text">Module presentation</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../module_2/m2_intro.html">
- <span class="dropdown-text">Introduction to the setup file</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../module_2/m2_tutorial.html">
- <span class="dropdown-text">Tutorial</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-how-to" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">How to</span>
     </a>
@@ -144,31 +125,8 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Unblock files</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../how_to/download_geobase.qmd">
- <span class="dropdown-text">Download geobase</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../how_to/get_template.qmd">
- <span class="dropdown-text">Get a linelist template</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../how_to/export_data_dashboard.qmd">
- <span class="dropdown-text">Export data to dashboard</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="../how_to/use_geohelper.html">
  <span class="dropdown-text">Use the GeoHelper</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reference" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Reference</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-reference">    
-        <li>
-    <a class="dropdown-item" href="../reference/ribbons.qmd">
- <span class="dropdown-text">Ribbons</span></a>
   </li>  
     </ul>
   </li>
@@ -200,13 +158,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#description-of-the-folder-content" id="toc-description-of-the-folder-content" class="nav-link" data-scroll-target="#description-of-the-folder-content">Description of the folder content</a></li>
   </ul></li>
   <li><a href="#sec-unblock-file" id="toc-sec-unblock-file" class="nav-link" data-scroll-target="#sec-unblock-file">Part 0: unlock files and functionalities</a></li>
-  <li><a href="#part-1-generate-a-linelist-from-an-existing-setup" id="toc-part-1-generate-a-linelist-from-an-existing-setup" class="nav-link" data-scroll-target="#part-1-generate-a-linelist-from-an-existing-setup">Part 1: Generate a linelist from an existing setup</a></li>
-  <li><a href="#part-2-add-columns-to-a-linelist" id="toc-part-2-add-columns-to-a-linelist" class="nav-link" data-scroll-target="#part-2-add-columns-to-a-linelist">Part 2: Add columns to a linelist</a>
+  <li><a href="#part-1-first-contact-with-the-setup-file" id="toc-part-1-first-contact-with-the-setup-file" class="nav-link" data-scroll-target="#part-1-first-contact-with-the-setup-file">Part 1: First contact with the <strong>setup</strong> file</a></li>
+  <li><a href="#part-2-generate-a-linelist-from-an-existing-setup" id="toc-part-2-generate-a-linelist-from-an-existing-setup" class="nav-link" data-scroll-target="#part-2-generate-a-linelist-from-an-existing-setup">Part 2: Generate a linelist from an existing setup</a>
   <ul>
   <li><a href="#continuous" id="toc-continuous" class="nav-link" data-scroll-target="#continuous">Continuous</a></li>
   <li><a href="#categorical" id="toc-categorical" class="nav-link" data-scroll-target="#categorical">Categorical</a></li>
   </ul></li>
-  <li><a href="#part-3-add-analyses" id="toc-part-3-add-analyses" class="nav-link" data-scroll-target="#part-3-add-analyses">Part 3: Add analyses</a></li>
+  <li><a href="#part-3-add-columns-to-a-linelist" id="toc-part-3-add-columns-to-a-linelist" class="nav-link" data-scroll-target="#part-3-add-columns-to-a-linelist">Part 3: Add columns to a linelist</a></li>
+  <li><a href="#add-analyses" id="toc-add-analyses" class="nav-link" data-scroll-target="#add-analyses">Add analyses</a></li>
   <li><a href="#part-4-add-an-moh-export" id="toc-part-4-add-an-moh-export" class="nav-link" data-scroll-target="#part-4-add-an-moh-export">Part 4: Add an MoH export</a></li>
   </ul>
 </nav>
@@ -216,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -319,7 +278,7 @@ Tip
 <section id="description-of-the-folder-content" class="level3">
 <h3 class="anchored" data-anchor-id="description-of-the-folder-content">Description of the folder content</h3>
 <ul>
-<li>a (simplified) <strong>setup file</strong> for a measles OBT linelist</li>
+<li>a <strong>setup file</strong> for a measles OBT linelist</li>
 <li>an empty linelist generated by that dictionary to better help you see how the specs translate into the final product)</li>
 <li>the most recent <strong>designer file</strong></li>
 </ul>
@@ -332,11 +291,96 @@ Tip
 <p>Unblock your files, or make sure they are already unlocked. If you have never done that before, <a href="../how_to/unblock_files.html">follow the steps from this page</a></p>
 </div>
 </section>
-<section id="part-1-generate-a-linelist-from-an-existing-setup" class="level2">
-<h2 class="anchored" data-anchor-id="part-1-generate-a-linelist-from-an-existing-setup">Part 1: Generate a linelist from an existing setup</h2>
+<section id="part-1-first-contact-with-the-setup-file" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="part-1-first-contact-with-the-setup-file">Part 1: First contact with the <strong>setup</strong> file</h2>
+<p>In this part, we are going to inspect the <strong>setup</strong> file and generate the linelist.</p>
+<div class="instructions">
+<p>Open the <strong>setup file</strong> that you downloaded and inspect it. You should see the following sheets/tables:</p>
+<ul>
+<li>Dictionary</li>
+<li>Choices</li>
+<li>Exports</li>
+<li>Analyses</li>
+<li>Translation</li>
+<li>_checkRep</li>
+</ul>
+<p>Open the associated <strong>linelist file</strong>, as it will help you make the link between the specs and the final product.</p>
+</div>
+<p>The “Dictionary” sheet contains a big table, that we are going to explore little by little. One line of this table contains one <em>variable</em>. The columns contain many properties to describe this variable:</p>
+<ul>
+<li>its name (aka the unique identifier of the variable, that the user will not see by default)</li>
+<li>its label (a longer description that the user will see)</li>
+<li>in which sheet it belongs</li>
+<li>in which section it belong</li>
+<li>should it be mandatory, or can it be hidden?</li>
+<li>what is the type and format of the variable</li>
+<li>etc.</li>
+</ul>
+<p>To start getting a sense of how this work, let’s look at the rows 6 to 12:</p>
+<p><img src="../module_2/images/img-003-dictionary.png" class="img-fluid quarto-figure quarto-figure-center" alt="The start of the dictionary sheet"> We can see seven variables, which names all start with “info_”.</p>
+<div class="instructions page-columns page-full">
+<p>In parallel, go to the “Info” sheet of the linelist. Try to understand how the columns of the <strong>setup</strong> that have content translate in the <strong>linelist</strong>. Some of them should be easy, some of them we will explain:</p>
+<ul>
+<li>labels, sub-labels</li>
+<li>have you found where the “Note” goes?</li>
+<li>Sheet name is obvious. Sheet type… not so much. We will explain.</li>
+<li>Do you understand why you don’t see the “Outbreak code” column in the linelist? Do you know of the steps to make it appear?<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li>Enter some data in the “Info” sheet of the linelist. Does it help you figure out what the “Control” and the “Control Details” column do in general (even if the dropdown might be obscure so far)?</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Hint: There is a button to show and hide variables in the linelist OBT menu.</p></div></div></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_2/images/img-004-info_sheet.png" class="img-fluid figure-img"></p>
+<figcaption>The corresponding Info sheet in the linelist</figcaption>
+</figure>
+</div>
+<p>A couple of things that you need to know:</p>
+<p><strong>Variable name</strong>: the variable name is not obvious in the linelist. In the “Info” sheet, you can see it at the left of the formula bar if you select a cell that contain data (e.g.&nbsp;E5).</p>
+<p><strong>Colours</strong>: some variable names and labels are in colour. This is a choice of the the person who developed this setup, at it helps them differentiate specific variables. You can ignore them, unless it makes sense to you.</p>
+<p><strong>Dev comments</strong>: this free text column is for the sole benefit of the setup file developer, to add technical or practical information. It is not used by the designer and does not affect the generated file. You can ignore it, unless it makes sense to you.</p>
+<p><strong>Sheet type</strong> controls whether the table created is made of variables that contains one value (perfect for metadata, like the “Info” sheet), or several values (a table made of columns, like the “Patient linelist” sheet). More information in the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/dictionary_sheet.html#sec-sheet-types">documentation</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_2/images/img-005-sheet-type.png" class="img-fluid figure-img"></p>
+<figcaption>Sheet type</figcaption>
+</figure>
+</div>
+<p><strong>Status</strong> controls the visibility of variables. <em>Mandatory</em> variables are always shown, <em>Hidden</em> are always hidden (good for obscure calculated columns) and *Optional, visible” and “Optional, hidden” can be changed, but have different default values. In our exemple, the Outbreak code is optional but hidden by default, so you don’t see it in the linelist by default. On the other hand “MSF involvment in the facility” is shown by default, but you could hide it using the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html#show-hide-variables">Show/Hide</a>.</p>
+<p><strong>Control</strong>: the “Control” and “Control Details” define the <em>content</em> of the variable.</p>
+<p>Hopefully, you have figured that if the column is empty for a variable, the variable is free (e.g.&nbsp;the “Facility name” variable). You probably also figured out that <em>choice_manual</em> create cells with dropdown menus, like “Organisation” or “Country”. We use these variables as often as possible in our linelist, to improve data quality. For these variables, we need to provide a list of options, categories, to fill the dropdown menu. The “Control Details” contain names, such as “list_organisation”. These lists are defined “Choices” sheet.</p>
+<div class="instructions">
+<p>Go to the “Choices” sheet. Can you find the lists used in the “Info” sheet?</p>
+</div>
+<p>To summarise, the “Choices” sheet in the setup contains all the values for all the dropdown menus. The name of the list (that by convention we often name “list_xxx”) makes the link between the values of the list and the variable in the “Dictionary” sheet.</p>
+<p>Finally, you also figured out that the control <em>formula</em> defines a calculated variable (cell or column), and that in this case the “Control Details” column contains the Excel formula (in English).</p>
+<div class="instructions">
+<p>Let’s look atthe rest of the variables. All of them are for the data entry sheet, the sheet “Patient Linelist” in the <strong>linelist file</strong>. For such a big table the <em>section</em> and <em>supsection</em> columns start to be very useful.</p>
+<ul>
+<li>Going back and forth between the <strong>setup</strong> and the <strong>linelist</strong>, do you understand what the control *choice_custom_ does?</li>
+<li>Which columns are defined as containing personnal informations?</li>
+<li>Do all of the <strong>Variable type</strong> options make sense to you?</li>
+<li>What about the <strong>Variable format</strong>?</li>
+</ul>
+</div>
+<p>If you scroll down rapidly, you will see that there are a lot of variables, in the order that you see them in the linelist. There is a mix of data entry columns and calculated columns. Most of the calculated columns are <em>hidden</em>, or <em>hidden by default</em>, and derive useful quantities, such as age group, or week associated with data columns. Some of the formulas are simple, some of them more complicated and of them are not native to Excel (CASE_WHEN()<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> or CHOICE_FORMULA() for example) and were coded explicitly to simplify Excel syntax.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;R users should be happy about this one!</p></div></div><div class="instructions">
+<p>Have a <em>quick</em> look at the other sheets of the setup.</p>
+<ul>
+<li>How many exports do you think the linelist will do?</li>
+<li>Do you think there will be a sheet with univariate and bivariate analyses encoded? What about Spatio-temporal analyses?</li>
+<li>Which languages are available for the cholera linelist?</li>
+</ul>
+</div>
 </section>
-<section id="part-2-add-columns-to-a-linelist" class="level2">
-<h2 class="anchored" data-anchor-id="part-2-add-columns-to-a-linelist">Part 2: Add columns to a linelist</h2>
+<section id="part-2-generate-a-linelist-from-an-existing-setup" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-generate-a-linelist-from-an-existing-setup">Part 2: Generate a linelist from an existing setup</h2>
+<p>Ok, now that you understand that the <strong>setup</strong> file contains all the specifications of the linelist, including analyses, exports and even translations, let’s turn this glorified dictionary into a linelist.</p>
+<div class="instructions">
+<ol type="1">
+<li>Save and close the setup file</li>
+<li>Open the designer file</li>
+</ol>
+</div>
 <section id="continuous" class="level3">
 <h3 class="anchored" data-anchor-id="continuous">Continuous</h3>
 </section>
@@ -344,14 +388,18 @@ Tip
 <h3 class="anchored" data-anchor-id="categorical">Categorical</h3>
 </section>
 </section>
-<section id="part-3-add-analyses" class="level2">
-<h2 class="anchored" data-anchor-id="part-3-add-analyses">Part 3: Add analyses</h2>
+<section id="part-3-add-columns-to-a-linelist" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-add-columns-to-a-linelist">Part 3: Add columns to a linelist</h2>
+</section>
+<section id="add-analyses" class="level2">
+<h2 class="anchored" data-anchor-id="add-analyses">Add analyses</h2>
 </section>
 <section id="part-4-add-an-moh-export" class="level2">
 <h2 class="anchored" data-anchor-id="part-4-add-an-moh-export">Part 4: Add an MoH export</h2>
 
 
 </section>
+
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

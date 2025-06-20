@@ -1,0 +1,218 @@
+---
+title: "Tutoriel"
+---
+
+## A propos de ce tutoriel
+
+Dans ce tutoriel vous apprendrez à connaître l'interface des listes linéaires OutbreakTools^[Pour rappel, toutes les listes linéaires OBT ont la même interface] et le tableau de bord correspondant.
+
+### 🎯 Objectifs
+
+- Explorer les fonctionnalités de la liste linéaire OBT, en insistant sur la résolution de problèmes et l'exploration des analyses
+- Accéder et savoir utiliser le tableau de bord intersection
+
+#### 🧭 Contexte
+
+MSF travaille dans l'est et le sud du Tchad depuis 2006 et fournit des soins médicaux et une assistance aux personnes déplacées et aux communautés locales dans un contexte d'accès difficile à la nourriture.
+
+En décembre 2021, suite à plusieurs signalements de cas de rougeole dans la région méridionale de Mandoul, MSF a décidé de répondre à l'épidémie avec Epicentre en soutien. 
+
+Une liste linéaire est nécessaire pour collecter les données des patients dans les structures. Vous discutez avec le MedRef et le MedCo, et prenez la décision de déployer la liste linéaire rougeole OBT.
+
+
+### Activités
+
+Vous utiliserez plusieurs fichier lors de ce tutoriel :
+
+- une liste linéaire vide à préparer avant un déploiement
+- une liste linéaire avec de fausses données pour répliquer une liste linéaire en cours d'utilisation
+- une liste linéaire avec de fausses données et quelques problèmes à résoudre.
+
+Vous visiterez ensuite le tableau de bord Intersection pour explorer les données _réelles_ de MSF sur la rougeole au Tchad.
+
+Les explications seront données dans le texte ou dans des encadrés (conseils, notes, etc.) et les instructions seront données dans des encadrés.
+
+::: {.callout-warning}
+Je suis une information importante
+:::
+
+::: {.callout-tip}
+Je suis une information utile mais qui peut être omise si vous êtes pressé par le temps, mais je mérite qu'on me lise à un moment.
+:::
+
+::: {.instructions}
+A votre tour de faire !
+:::
+
+## Préparation
+
+### Téléchargez et dézippez les documents
+
+Les fichiers que vous devrez utiliser sont stockés sur GitHub dans une archive `zip`. 
+
+::: {.instructions}
+1. Cliquez sur le bouton ci-dessous pour télécharger l'archive. Enregistrez-la sur votre ordinateur (dans vos *Téléchargements* par exemple)
+
+```{r}
+#| echo: false
+#| eval: true
+
+downloadthis::download_link(
+  link = "https://github.com/epicentre-msf/obt-training/raw/master/tutorials_materials/module_1.zip",
+  button_label = "Télécharder l'archive",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
+
+2. Dézippez l'archive pour sauver les fichiers localement. Il est conseillé de dézipper vers un emplacement qui n'est pas activement synchronisé avec OneDrive en ce moment.
+:::
+
+
+### Contenu de larchive
+
+- Une liste linéaire OBT rougeole à jour (version standard), vide
+- La même version de fichier, mais avec des données rougeole (simulées)
+
+
+## Partie 0 : débloquer les fichiers et les macros {#sec-unblock-file}
+
+Les listes linéaires OBT utilisent des macros VBA pour ajouter des fonctionnalités. Cela fait qu'elles doivent souvent être déloquées sur votre ordi lorsque qu'elles viennent d'internet, et vous devrez autoriser l'exécution des macros.
+
+
+::: {.instructions}
+Débloquez les fichiers ou assurez-vous qu'ils le sont déjà. Si vous ne l'avez jamais fait auparavant, [suivez ces étapes](../how_to/unblock_files.qmd)
+:: :
+
+:: : {.callout-note}
+En fonction du niveau de protection de votre ordinateur et de la source des fichiers, vous arez peut être à le faire ou non. Par contre, les ordinateurs terrain sont souvent plus protégés et et est très probable que certain de vos collègues aient à le faire, donc soyez prêt à expliquer.
+:::
+
+## Partie 1: préparer et déployer une liste linéaire
+
+### Obtenir fichiers nécéssaires
+
+#### Un modèle de liste linéaire
+
+Dans la vraie vie il vous faudra un [modèle vide](https://epicentre-msf.github.io/outbreak-tools/getting_started/get_linelist.html) pour vous lancer, mais dans le cadre ce cet exercice vous utiliserez le fichier vide inclus dans l'archive que vous avez téléchargée.
+
+::: {.instructions}
+Identifiez le fichier correct et faites une copie pour pouvoir travailler dessus.
+:::
+
+
+#### Une géobase adaptée
+
+::: {.instructions}
+Rendez-vous sur le site [GeoApp](https://reports.msf.net/secure/app/outbreak-tools-geoapp) et téléchargez une base géo pour le Tchad. Vous pouvez lire un résumé des étapes [ici](https://epicentre-msf.github.io/outbreak-tools/how_to/import_geobase.html#sec-geobase-download), ou directement sur le site, à l'ouverture.
+:::
+
+Le fichier n'est pas protégé, vous pouvez l'ouvrir si vous êtes curieux.
+
+
+### Adapter une liste linéaire {#sec-customise}
+
+::: {.instructions}
+Ouvrez la liste linéaire et inspectez les (noms des) onglets
+:::
+
+**Notablement**: 
+
+- La première feuille contient des instructions, il n'y a rien à faire dessus à part les lire
+- La deuxième feuille ("Info") contient des informations sur le projet et le site (métadonnées)
+- La troisième feuille ("Linelist patients") contient les données des patients
+- La plupart des feuilles suivantes contiennent des analyses.
+
+::: {.instructions}
+Localisez le [menu OutbreakTools](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html), nous allons l'utiliser intensivement pendant les exercices.
+:::
+
+
+![Rubban, ou menu OutbreakTools](../module_1/images/015-img-ribbon-linelist.png){fig-align="center"}
+
+
+#### Remplir les métadonnées
+
+**Métadonnées obligatoires**
+
+::: {.instructions}
+Remplissez la feuille "Info" (métadonnées) :
+
+- `Organisation`: entrez votre nom de section
+- `Nom du pays`: Tchad
+- `Nom de la structure`: Moïssala Hospital
+:::
+
+Une fois que ces champs sont remplis, ils ne devraient plus être modifiés. Ces informations seront utilisées au moment de la création d'exports.
+
+**Métadonnées optionnelles**
+
+::: {.instructions}
+Rentrez les infos des champs `Admin 1` (Mandoul) et `Admin 2` (Moissala)
+:::
+
+
+#### Cacher les champs non utilisés
+
+Vu que l'on n'a pas utilisé les autres champs, cachons-les !
+
+::: {.instructions}
+En gardant le focus sur la feuille "Info", rendez-vous dans le [menu OBT](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html). Cliquez sur le bouton "Afficher / Masquer les variables".
+:::
+
+Une fenêtre pop-up s'ouvre :
+
+
+![Fenêtre pop-up](../module_1/images/003-img-obt-show_hide.png){fig-align="center"}
+
+Vous pouvez voir que certaines variables ont un statut `Obligatoire`; ces variables ne peuvent être cachées avec cet outil. D'autres variables ont le statut "Affiché" et elles peuvent être cachées. 
+
+::: {.instructions} 
+Cachez les variables que l'on n'a pas remplies. Vous pouvez soit les cacher unes par unes, soit utiliser le bouton "Cachez toutes les variables optionnelles" deux fois et dé-cacher les variables que l'on veut voir.
+:::
+
+
+#### Importer la géobase
+
+::: {.instructions} 
+Cliquez sur le menu "Importer une géobase" dans le [menu OBT](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html) pour importer la base géo que vous avez téléchargé précédemment.
+:::
+
+Après avoir reçus le message de confirmation, vous pouvez vérifier l'import en allant sur la feuille des données patients, et en regardant les colonnes "géo", celles avec un fond couleur saumon. Si tout s'est bien passé :
+
+- Les labels devraient avoir été mis à jour avec les noms des niveaux administratifs présents dans la géobase (e.g. adm1_name” va devenir “Province” pour la RDC).
+- Les cellules de la première colonne (admin 1) devraient contenir un menu déroulant avec les valeurs importées depuis la géobase.
+
+Vous pouvez remplir les colonnes géographiques soit à partir des menus déroulants en cascade (en commençant pas le niveau 1 !), soit en utilisant le bouton [GeoHelper](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html#sec-geo-helper) du menu OBT.
+
+::: {.callout-important}
+Il y a une hiérarchie entre les niveaux administratifs: si vous essayez de remplir la colonne 3 *sans avoir rempli les colonnes 1 et 2* le menu déroulant apparaitra comme vide.
+:::
+
+
+#### Paramétrer le jour de la semaine
+  
+::: {.instructions} 
+Cliquez sur le bouton "Début de semaine" du menu OBT et choisissez le "Lundi" comme premier jour de la semaine.
+:::
+
+#### Cachez / montrer des variables
+
+On peut aussi cacher ou montrer les variables optionnelles sur cette feuille (comme pour la feuille "Info"). Lorsque vous préparerez une liste linéaire, il vous faudra décider quelles variables collecter en fonction informations dont vous avez besoin^[Vous pouvez cacher ou montrer des variables plus tard, pendant la collecte des données si besoin, mais dans ce cas gardez en tête que les données pour ces colonnes ne seront que partielles.].
+
+
+::: {.instructions} 
+Placez(vous sur la feuille "Linelist Patients" et cliquez sur le bouton "Afficher/Masquer des variables". Cachez toutes les variables optionnelles à l'aide du bouton, et dé-cachez manuellement :
+
+- Structure déclarante
+- Fièvre
+- Eruption maculopapulaire
+- Toux
+- Yeux rouges - conjonctivite
+- MUAC
+- Enceinte
+- Les variables "extra" à la fin
+- N'importe quelle variable calculée que *vous* souhaitez voir (numéro de semaine, groupe d'âge  etc.)
+:::
+

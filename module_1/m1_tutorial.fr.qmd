@@ -216,3 +216,70 @@ Placez(vous sur la feuille "Linelist Patients" et cliquez sur le bouton "Affiche
 - N'importe quelle variable calculée que *vous* souhaitez voir (numéro de semaine, groupe d'âge  etc.)
 :::
 
+
+#### Imprimer un registre
+
+::: {.instructions}
+Cliquez sur le bouton "Afficher le registre" du [menu OBT](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html).
+:::
+
+Cela ouvre une feuille qui est cachée par défaut pour préparer un registre à imprimer, au cas où il n'y en aurait pas déjà un dans le centre.
+
+En règle générale, il devrait y avoir moins de colonnes dans le registre que dans la linelist, vu que certaines des informations viennent du dossier patient ou d'autres sources.
+
+::: {.instructions}
+
+1. Une fois sur la nouvelle feuille créez, cliquez sur le bon vieux bouton "Afficher/masquer les variables" pour ouvrir la fenêtre pop-up pour le registre.
+
+2. Cliquez que le bouton "Correspondre au Show/Hide de la linelist" pour aligner la visibilité des variables du registre sur celles de la feuille patients.
+
+3. Cachez les variables qui n'ont pas besoin d'être dans le registre.
+:::
+
+
+Maintenant que vous avez sélectionné les variables à imprimer, il faut améliorer un peu l'aspect pour qu'il soit plus pratique à utiliser :
+
+- Ajuster la largeur des colonnes pour que les encodeurs de données puisse écrire
+- Changer l'orientation des labels pour gagner de l'espace s'il n'y a pas grand chose à écrire
+- Ajouter des lignes à la table pour qu'elle fasse une page^[Astuce: il y a un bouton pour ça dans le menu OBT !].
+
+::: {.instructions}
+Ajustez la largeur des colonnes : 
+
+- `Nom / Prénom`: plus large
+- `Sexe`: moins large
+
+Pour voir, cliquez sur le bouton "Imprimer" (toujours dans le [menu OBT menu](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html)). Remarquez le bouton "Mise en page" en haut à gauche, qui contrôle les paramètres d'impression.
+
+Une fois que vous avez pris connaissance de ces boutons, vous pouvez sortir de l'aperçu avant impression puis cliquer sur le bouton "Fermer le registre / CRF" pour **cacher** la feuille registre (vos modifications sur cette feuille demeurent).
+:::
+
+#### Préparer un formulaire des cas
+
+Avec la même idée que pour le registre il est possible d'imprimer un formulaire de cas à partir de la liste linéaire s'il n'y en a pas déjà un dans la structure. Un bouton affiche une feuille préparée automatiquement. Créer un CRF propre est au delà de nos capacités pour le moment, mais ce brouillon devrait être une base et vous faire gagner du temps.
+
+Chose que vous pourriez faire :
+
+- Cacher les variables collectées à un autre endroit ou calculées
+- Cacher / condenser des lignes vide
+- Raccourcir des labels^[Désormais, une option a été rajoutée au ficher **setup** pour donner des labels courts ou des acronymes, mais ils n'ont pas été remplis pour toutes les liste linéaires OBT en circulation pour le moment.].
+
+Préparer un CRF propre nous prendrait trop de temps, nous ne le ferons pas lors de ce tutoriel, mais n'hésitez pas à ouvrir la feuille un instant avec le bouton "Afficher le CRF" pour voir à quoi elle ressemble.
+
+
+### Déployer la linelist
+
+Nous avons fait le tour des préparations principales à effectuer sur la liste linéaire. N'oubliez pas d'enregistrer vvotre fichier.
+
+Vous pouvez à présent l'envoyer à vos collègues. S'ils ont déjà travaillé avec des linelists OBT (y compris sur d'autres maladies), c'est facile : toutes les listes linéaires OBT ont la même interface, ils devraient se sentir à l'aise.
+
+Si vos collègues n'ont pas travaillé avec une liste linéaire OBT, il faut leur montrer en particulier : 
+
+- Comment [débloquer le fichier et autoriser les macros](../how_to/unblock_files.qmd)
+- le [menu OBT](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html)
+- Comment remplir les métadonnées sur la feuille "Info" (s'il en reste à remplir)
+- Comment [exporter les données vers le tableau de bord](https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html)
+- Comment utiliser le bouton [GeoHelper](../how_to/use_geohelper.qmd)
+
+Le plus souvent il devrait y avoir une liste linéaire par site.
+

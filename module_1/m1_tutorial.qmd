@@ -202,7 +202,7 @@ Click on the "Week start" button to set up "Monday" as the first day of the week
 
 #### Modify variable visibility
 
-As for the "Info" sheet, you can hide or show optional variables in the patient data sheet. When you prepare a linelist, you will need to decide which variables to keep based on the needed information for this outbreak.^[You can hide or unhide variables at a later stage. Of course, you will need to keep in mind that the data will be only partial for these variables (you have it only up to a date, or conversely from a date onwards).]
+As for the "Info" sheet, you can hide or show optional variables in the patient data sheet. When you prepare a linelist, you will need to decide which variables to keep based on the needed information for this outbreak.^[You can hide or unhide variables at a later stage. Of course, you will need to keep in mind that the data will be only partial for these variables.]
 
 For the sake of brevity of the exercise, here you will only perform a couple of actions.
 
@@ -217,7 +217,7 @@ Go to the "Linelist patients" sheet. Then click on the "Show/Hide variables" but
 - MUAC
 - Pregnant
 - The custom variables at the end
-- Any calculated variables that *you* wish to see displayed for information of quick filtering (epi week, age group etc.)
+- Any calculated variables that *you* wish to see displayed (epi week, age group etc.)
 :::
 
 
@@ -228,7 +228,7 @@ Go to the "Linelist patients" sheet. Then click on the "Show/Hide variables" but
 Click on the "Show register" button in the [OBT menu](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html).
 :::
 
-This opens a usually hidden sheet (that can be hidden again when you are done) to prepare a paper register if you don't already have one in the site.
+This opens a usually hidden sheet to prepare a paper register if you don't already have one in the site.
 
 Typically, there will be less columns in the register than the full linelist, as some information may come from patient files or other sources.
 
@@ -238,7 +238,7 @@ Typically, there will be less columns in the register than the full linelist, as
 
 2. Click on the "Match the show/hide from linelist" to align the register visibility on the linelist configuration as a start.
 
-3. Hide variables that are not needed in the register
+3. Hide variables that are not needed in the register.
 :::
 
 

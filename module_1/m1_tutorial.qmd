@@ -78,7 +78,6 @@ downloadthis::download_link(
 
 - The current last version of the OBT measles linelist (standard version), empty
 - A linelist with simulated data
-- A text file with the password
 
 
 ## Part 0: unlock files and functionalities {#sec-unblock-file}
@@ -150,7 +149,7 @@ Fill the Information sheet (metadata):
 - `Name of facility`: Moïssala Hospital
 :::
 
-Once these fields are correctly filled, they should not be modified: the information will be used to name the exports.^[You may enter the name of the site yourself (if you are sending one or two linelists) or let the data encoders of each site enter fill it (if you are sending a linelist to many sites).]
+Once these fields are correctly filled, they should not be modified: the information will be used to name the exports.
 
 **Optional metadata**
 
@@ -183,12 +182,12 @@ Hide the variables that we do not plan to fill. You can either hide them one by 
 Use the "Import geobase" button from the [OBT menu](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html) to import the geobase that you downloaded previously.
 :::
 
-After closing the confirmation message you can go to the data entry shee and look for columns with an orange heading background: 
+After closing the confirmation message you can go to the data entry sheet and look for columns with an orange heading background: 
 
 - The labels of the column should have been updated with the administrative levels present in the geobase (e.g. “adm1_name” will change to “Province” for DRC).
 - Loof at the cells of the first column, there should now be a dropdown menu containing the admin 1 of the geobase.
 
-You can fill the variables either by using the cascading dropdown menus, or by using the [GeoHelper button](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html#sec-geo-helper) from the ribbon.
+You can fill the variables either by using the cascading dropdown menus (starting with admin 1!), or by using the [GeoHelper button](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html#sec-geo-helper) from the ribbon.
 
 ::: {.callout-important}
 There is a hierarchy between these columns: if you attempt to fill the admin 3 *without filling admin 1 and 2*, the dropdown list will appear empty.
@@ -203,7 +202,7 @@ Click on the "Week start" button to set up "Monday" as the first day of the week
 
 #### Modify variable visibility
 
-As for the "Info" sheet, you can hide or show optional variables in the patient data sheet. When you prepare a linelist, you will need to decide which variables to keep based on the needed information for this outbreak.^^[You can hide or unhide variables at a later stage. Of course, you will need to keep in mind that the data will be only partial for these variables (you have it only up to a date, or conversely from a date onwards).]
+As for the "Info" sheet, you can hide or show optional variables in the patient data sheet. When you prepare a linelist, you will need to decide which variables to keep based on the needed information for this outbreak.^[You can hide or unhide variables at a later stage. Of course, you will need to keep in mind that the data will be only partial for these variables (you have it only up to a date, or conversely from a date onwards).]
 
 For the sake of brevity of the exercise, here you will only perform a couple of actions.
 

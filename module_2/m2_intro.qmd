@@ -2,3 +2,84 @@
 title: "Module presentation and objectives"
 ---
 
+## Introduction
+
+The main idea of OutbreakTools linelist generation is to separate the **content** of the linelist (which *variables* and *analyses* are in the linelist) from the file **interface** and functionalities.^[An idea that is not novel, as separating content and presentation (or style) is a classic idea, that you find in HTML/CSS, Markdown, Latex or even Word styles.]
+
+The content (variables and analyses) is described in a special Excel file, the so-called **setup file**, which is essentially a glorified dictionary^[You can think of the **setup file** as a _recipe_ for a given linelist.]. You may have encountered similar files when creating a Kobo or Redcap database.
+
+Another Excel file, the **designer** reads the **setup file** and generates the whole linelist: sheets, variables, analyses, interface...^[If you think of the **setup file** as a recipe, the designer is the food processor.]
+
+![Creating a linelist with Outbreaktools](../module_1/images/002-img-obt-concept.png){fig-align="center}
+
+The workflow is as follow:
+
+1.  Fill or modify a **setup file** to define linelist specifications
+2.  Compile the **setup file** using the **designer file**
+3.  Test the created linelist
+4.  Correct bugs in the **setup file**
+5.  Rinse and repeat until the linelist is functional
+
+The maintenance of functionalities of the linelist (interface, buttons etc.) is done by a specialist in Epicentre, who generates new versions of the tools. But filling a **setup** and using the **designer** does not require any VBA skills, just a good understanding of data structure, variable type and Excel formulas.
+
+
+## Setup file
+
+The **setup file** is an Excel file that describes the various sheets of the linelist to be created, in a *predefined* and *standardised* format. It allows you to specify:
+
+-   the structure of the data entry sheet(s) of the linelist
+-   the variables for the data entry sheet(s)
+-   the basic analyses to be included in the linelist (uni and bivarites, epicurves, geo data etc.)
+-   data exports
+-   translations to create linelists in several languages
+
+Most of the work developing a linelist is spent filling *and testing* a **setup file** template to define all the aspects of the linelist you want to create.
+
+Creating a mature linelist takes time and many rounds. The good thing with OBT is that it is easy to migrate data from one linelist version to another **as long as the variable names and categories remain the same**. This means that if you are in a hurry, you should focus first on the dictionary part of the setup: the most important variables, their name and their content (in the case of categorical variables). These are the parts that are going to be horribly painful and time consuming to change later, when data is already collected.
+
+By opposition, adding *new* variables, clarifying a *label*, adding a French or an Arabic translation, a MoH export or new analyses are all actions that can be done at later stages, when data collection has already started.
+
+
+### Structure of the **setup** file
+
+We will not dive through the sheets and tables of the setup file one by one in this module, as it would be long and tedious. Instead, we will give an overview of their use, and learn how to modify core components in the tutorial. We will refer you to the [documentation](https://epicentre-msf.github.io/outbreak-tools/reference/home_reference.html#category=Setup) for precise details.
+
+The **setup file** is divided in several sheets, corresponding to one aspect of the linelist to be created.
+
+**Dictionary sheet**
+This sheet has one big table that describes all the variables to be collected, their format etc. From it you can create several* *linelist* sheets (typically, we usually create at least a metadata sheet (the *Info sheet*), and a sheet to enter patient data). Filling this sheet is the longest task when creating a dictionary, and most of the other tables revolve around the variables defined in it.
+
+**Choices sheet**
+This sheet complements the Dictionary sheet, as it allows to define the categories/levels accepted for categorical variables, in the form of lists. In the linelist, these values will appear as dropdown menus in categorical variables.
+
+**Exports**
+This sheet has one short table that describes the characteristics of exports, such as protection, choice of variables or sheets to export and export names. This creates the content of the "Export menu" in the linelist, with one or more specific export buttons.
+
+**Analyses**
+This sheet contains several tables that describe the analyses to be included in the linelist (variables to cross, graphs, etc.).
+
+It usually takes some time to fill it, but analyses can be added at a later stage.
+
+**Translation**
+This sheet allow you to provide translations, so that you can decide in which language to generate a linelist. The table on that sheet displays the list of all strings of text/fields found in the setup (in pertinent places) to be translated. The user provides the desired translation in columns  (one column = one language), and the designer reads the table to generate linelist in one of the present languages.
+
+
+### OBT menu
+
+As for in the linelist (and the **designer**), the **setup** file has a dedicated OutbreakTool menu in the top option ribbon from Excel:
+
+![OutbreakTools tab in the **setup file**](../module_2/images/img-001-ribbon-setup.png){fig-align="center" #fig-setup-ribbon}
+Most of these buttons should be self-explanatory (and we will use a couple of them in the module), but you can find the complete reference [here](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_setup.html).
+
+
+## Designer file
+
+The **designer** is another excel file, that contains the code to build a linelist from a **setup file**.
+
+When the **setup file** is ready (or at least a first draft is), you load it into a **designer**, fill a couple of fields[^1] and let the designer build the linelist.
+
+[^1]: What is the name of the created linelist, where to save it, should it be password protected and if yes, which password etc.
+
+The **designer file** also has a dedicated OutbreakTools section in the top option ribbon from Excel:
+
+![OutbreakTools tab in the **setup file**](../images/img-003-ribbon-designer.png){fig-align="center" #fig-setup-ribbon}

@@ -332,6 +332,7 @@ Tip
 <ul>
 <li>The current last version of the OBT measles linelist (standard version), empty</li>
 <li>A linelist with simulated data</li>
+<li>Another linelist with a subset of that data, with problems to solve</li>
 </ul>
 </section>
 </section>
@@ -377,7 +378,7 @@ Note
 <section id="sec-customise" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="sec-customise">Adapt the linelist</h3>
 <div class="instructions">
-<p>Open the linelist (we removed the password for simplicity reasons) and inspect sheet names.</p>
+<p>Open the empty linelist (we removed the password for simplicity reasons) and inspect sheet names.</p>
 </div>
 <p><strong>Notably</strong>:</p>
 <ul>
@@ -535,8 +536,8 @@ Important
 <section id="context-1" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="context-1">🧭 Context</h3>
 <p>The linelist was deployed in January 2022 in Moissala and the neighbouring areas. Almost a year later, in April 2023, the measles outbreak is still ongoing and the linelist still in use. You receive the file with data and you want to have a look at it.</p>
-<p>You are now going to work on the file <code>measles_linelist_moissala.xlsb</code>, which contains simulated measles data<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;The data used in this exercise was simulated using parameters from MSF measles data, at least for some major variables, which avoids the problem of working with personnal data</p></div></div></section>
+<p>You are now going to work on the file <code>linelist_measles_mandoul.xlsb</code>, which contains simulated measles data<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;The data used in this exercise was simulated using parameters from MSF measles data, at least for some major variables, which avoids the problem of working with personal data</p></div></div></section>
 <section id="sanity-checks" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="sanity-checks">Sanity checks</h3>
 <p>When you receive an unknown linelist with data, always perform a couple of checks to get a feel of the state of the file and data. These are not the extensive checks you would perform if you were tasked to monitor data entry and quality, or to perform analyses. They might however rapidly hint at the source of a reported problem (a functionality not working as expected).</p>
@@ -564,7 +565,7 @@ Warning
 </div>
 </div>
 <div class="instructions">
-<p>Do these checks on the file <code>measles_linelist_moissala.xlsb</code>.</p>
+<p>Do these checks on the file <code>linelist_measles_mandoul.xlsb</code>.</p>
 </div>
 </section>
 <section id="very-basic-data-checks" class="level4 page-columns page-full">
@@ -578,7 +579,7 @@ Warning
 <li>Remove any filters applied on the data (there is a shortcut for that in the OBT menu).</li>
 </ul>
 <div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;90% of export-dashboard problems come from badly filled metadata</p></div></div><div class="instructions">
-<p>Do these checks on the file <code>measles_linelist_moissala.xlsb</code>.</p>
+<p>Do these checks on the file <code>linelist_measles_mandoul.xlsb</code>.</p>
 </div>
 </section>
 </section>
@@ -770,7 +771,7 @@ Answer
 </section>
 <section id="general-file-management" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="general-file-management">General file management</h3>
-<p>A lot of the requests you might receive derive from the fact that people ususally do not read the documentation (even if it was sent to them) and do not know the existence of the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">OBT menu</a>. The good news is that they are pretty straightforward to solve.</p>
+<p>A lot of the requests you might receive derive from the fact that people usually do not read the documentation and do not know the existence of the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">OBT menu</a> (which is easy to miss if it was not shown to you). The good news is that they are pretty straightforward to solve.</p>
 <section id="no-more-rows" class="level4">
 <h4 class="anchored" data-anchor-id="no-more-rows">No more rows!</h4>
 <p>You receive the following mail:</p>
@@ -833,7 +834,7 @@ Answer
 <li>OneDrive synchronisation errors (the last file got replaced by an older version from the server).</li>
 <li>The user deleted data by mistake (since the sheet is protected, it is hard to delete data in bulk though, so this is less likely)</li>
 </ul>
-<p>You will have to discuss with them, their setup, who worked on the file to figure out what may have happen, unless it’s the filters case, which can be solved in one click. Which button would you use?</p>
+<p>You will have to discuss with your colleague, their setup, who worked on the file to figure out what may have happen, unless it’s the filters case, which can be solved in one click. Which button would you use?</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Answer">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -888,11 +889,11 @@ Answer
 </section>
 <section id="sending-the-data-to-the-dashboard" class="level3">
 <h3 class="anchored" data-anchor-id="sending-the-data-to-the-dashboard">Sending the data to the dashboard</h3>
-<p>Another source of friction is the sharing step of the linelist. In all cases, it is good to brief colleagues using the linelist on the <a href="https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html">steps</a> to send data to the dashboard. For training, can you identify the source of these problems:</p>
+<p>Another source of trouble is the sharing step of the linelist. In all cases, it is good to brief colleagues using the linelist on the <a href="https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html">steps</a> to send data to the dashboard. For training, can you identify the source of these problems:</p>
 <ul>
 <li><p>Someone used used OneDrive to share the linelist with <a href="mailto:EPI-DATA@epicentre.msf.org" class="email">EPI-DATA@epicentre.msf.org</a> and received an error</p></li>
-<li><p>They send the file <code>measles_linelist_moissala.xlsb</code> to <a href="mailto:EPI-DATA@epicentre.msf.org" class="email">EPI-DATA@epicentre.msf.org</a> and received an error</p></li>
-<li><p>A colleague sent <code>measles_linelist_moissala_export_data_20250203-1136.xlsx</code> to <a href="mailto:EPI-DATA@epicentre.msf.org" class="email">EPI-DATA@epicentre.msf.org</a> and received an error</p></li>
+<li><p>The file <code>measles_linelist_moissala.xlsb</code> was sent to <a href="mailto:EPI-DATA@epicentre.msf.org" class="email">EPI-DATA@epicentre.msf.org</a> and received an error</p></li>
+<li><p>The file <code>measles_linelist_moissala_export_data_20250203-1136.xlsx</code> was sent to <a href="mailto:EPI-DATA@epicentre.msf.org" class="email">EPI-DATA@epicentre.msf.org</a> and received an error</p></li>
 <li><p><code>MSL_linelist__MSL24__info_country_code__info_organisation__info_facility_name__anonymous__vb-1003__20250103-1541</code> was sent to <a href="mailto:EPI-DATA@epicentre.msf.org" class="email">EPI-DATA@epicentre.msf.org</a> and probably return not receive an error, but the data does not appear in Chad in the dashboard</p></li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled" title="Tip">

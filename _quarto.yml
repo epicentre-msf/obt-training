@@ -47,8 +47,10 @@ website:
             href: module_1/m1_objectives.qmd
           - text: Introduction to OutbreakTools
             href: module_1/m1_intro.qmd
-          - text: Tutorial
+          - text: Tutorial EN
             href: module_1/m1_tutorial.qmd
+          - text: Tutoriel FR
+            href: module_1/m1_tutorial.fr.qmd
           
       
       # - text: Module 2

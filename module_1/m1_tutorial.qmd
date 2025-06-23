@@ -78,6 +78,7 @@ downloadthis::download_link(
 
 - The current last version of the OBT measles linelist (standard version), empty
 - A linelist with simulated data
+- Another linelist with a subset of that data, with problems to solve
 
 
 ## Part 0: unlock files and functionalities {#sec-unblock-file}
@@ -120,7 +121,7 @@ The file is unprotected, you can open it to investigate its structure if you wan
 ### Adapt the linelist {#sec-customise}
 
 ::: {.instructions}
-Open the linelist (we removed the password for simplicity reasons) and  inspect sheet names.
+Open the empty linelist (we removed the password for simplicity reasons) and  inspect sheet names.
 :::
 
 **Notably**: 
@@ -294,7 +295,7 @@ In most cases there should be one linelist per site.
 
 The linelist was deployed in January 2022 in Moissala and the neighbouring areas. Almost a year later, in April 2023, the measles outbreak is still ongoing and the linelist still in use. You receive the file with data and you want to have a look at it.
 
-You are now going to work on the file `measles_linelist_moissala.xlsb`, which contains simulated measles data^[The data used in this exercise was simulated using parameters from MSF measles data, at least for some major variables, which avoids the problem of working with personnal data].
+You are now going to work on the file `linelist_measles_mandoul.xlsb`, which contains simulated measles data^[The data used in this exercise was simulated using parameters from MSF measles data, at least for some major variables, which avoids the problem of working with personal data].
 
 
 ### Sanity checks
@@ -320,7 +321,7 @@ If the export does not work because the VBA is corrupted, contact the EpiDS team
 :::
 
 ::: {.instructions}
-Do these checks on the file `measles_linelist_moissala.xlsb`.
+Do these checks on the file `linelist_measles_mandoul.xlsb`.
 :::
 
 
@@ -334,7 +335,7 @@ Do these checks on the file `measles_linelist_moissala.xlsb`.
 - Remove any filters applied on the data (there is a shortcut for that in the OBT menu).
 
 ::: {.instructions}
-Do these checks on the file `measles_linelist_moissala.xlsb`.
+Do these checks on the file `linelist_measles_mandoul.xlsb`.
 :::
 
 
@@ -491,7 +492,7 @@ The macros are not executing properly. It could be a problem of authorisation, o
 
 ### General file management
 
-A lot of the requests you might receive derive from the fact that people ususally do not read the documentation (even if it was sent to them) and do not know the existence of the [OBT menu](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html). The good news is that they are pretty straightforward to solve.
+A lot of the requests you might receive derive from the fact that people usually do not read the documentation and do not know the existence of the [OBT menu](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html) (which is easy to miss if it was not shown to you). The good news is that they are pretty straightforward to solve.
 
 
 #### No more rows!
@@ -534,7 +535,7 @@ This one is trickier, because this could be caused by several problems such as:
 - OneDrive synchronisation errors (the last file got replaced by an older version from the server).
 - The user deleted data by mistake (since the sheet is protected, it is hard to delete data in bulk though, so this is less likely)
 
-You will have to discuss with them, their setup, who worked on the file to figure out what may have happen, unless it's the filters case, which can be solved in one click. Which button would you use?
+You will have to discuss with your colleague, their setup, who worked on the file to figure out what may have happen, unless it's the filters case, which can be solved in one click. Which button would you use?
 
 ::: {.callout-tip title="Answer"  collapse=true}
 Use the "Clear all filters" button from the OBT menu.
@@ -564,16 +565,15 @@ A recent update from Office 365^[We saw the problem hit computers between Novemb
 Alternately, you can [turn off](https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) this option if it bothers you in general.
 
 
-
 ### Sending the data to the dashboard
 
-Another source of friction is the sharing step of the linelist. In all cases, it is good to brief colleagues using the linelist on the [steps](https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html) to send data to the dashboard. For training, can you identify the source of these problems:
+Another source of trouble is the sharing step of the linelist. In all cases, it is good to brief colleagues using the linelist on the [steps](https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html) to send data to the dashboard. For training, can you identify the source of these problems:
 
 - Someone used used OneDrive to share the linelist with <EPI-DATA@epicentre.msf.org> and received an error
 
-- They send the file `measles_linelist_moissala.xlsb` to <EPI-DATA@epicentre.msf.org> and received an error
+- The file `measles_linelist_moissala.xlsb` was sent to <EPI-DATA@epicentre.msf.org> and received an error
 
-- A colleague sent `measles_linelist_moissala_export_data_20250203-1136.xlsx` to <EPI-DATA@epicentre.msf.org> and received an error
+- The file `measles_linelist_moissala_export_data_20250203-1136.xlsx` was sent to <EPI-DATA@epicentre.msf.org> and received an error
 
 - `MSL_linelist__MSL24__info_country_code__info_organisation__info_facility_name__anonymous__vb-1003__20250103-1541` was sent to <EPI-DATA@epicentre.msf.org> and probably return not receive an error, but the data does not appear in Chad in the dashboard
 

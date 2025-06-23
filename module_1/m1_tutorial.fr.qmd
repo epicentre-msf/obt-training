@@ -290,9 +290,7 @@ Le plus souvent il devrait y avoir une liste linéaire par site.
 
 La linelist a été déployée en Janvier 2022 à Moissala et les zones alentour. Un peu plus d'un an plus tard, en avril 2023, l'épidémie fait toujours rage, et la linelist est toujours utilisée. Vous recevez le fichier avec les données régulièrement pour le suivi de l'épidémie...
 
-Nous allons dans cette partie travailler sur le fichier `measles_linelist_moissala.xlsb` qui contient des données rougeole simulées^[En essayant au maximum d'utiliser les paramètres des linelists rougeoles de MSF, au moins pour les variables principales, ce qui nous évite des problèmes de confidentialité.].
-
-
+Nous allons dans cette partie travailler sur le fichier `linelist_rougeole_mandoul.xlsb` qui contient des données rougeole simulées^[En essayant au maximum d'utiliser les paramètres des linelists rougeoles de MSF, au moins pour les variables principales, ce qui nous évite des problèmes de confidentialité.].
 
 
 ### Contrôles de routine
@@ -316,7 +314,7 @@ Si le problème persiste, tentez un "Exporter pour migration" pour transférer l
 :::
 
 ::: {.instructions}
-Effectuez ces vérifications sur le fichier `measles_linelist_moissala.xlsb`.
+Effectuez ces vérifications sur le fichier `linelist_rougeole_mandoul.xlsb`.
 :::
 
 
@@ -330,7 +328,7 @@ Effectuez ces vérifications sur le fichier `measles_linelist_moissala.xlsb`.
 - Enlevez tous les filtres présents sur les données (il y a un bouton dans le menu OBT pour gagner du temps)
 
 ::: {.instructions}
-Effectuez ces vérifications sur le fichier `measles_linelist_moissala.xlsb`.
+Effectuez ces vérifications sur le fichier `linelist_rougeole_mandoul.xlsb`.
 :::
 
 ### Analyses
@@ -482,7 +480,7 @@ Nous arrivons à la fin de notre *grand tour* des feuilles d'analyses.
 
 ### 🧭 Contexte
 
-Vous avez déployé la liste linéaire sur le terrain. Une personne chargé de l'entrée des données débute sur le fichier OBT et a des questions... 
+Vous avez déployé la liste linéaire sur le terrain. Une personne chargé de l'entrée des données débute sur le fichier OBT et vous demande de l'aide. 
 
 ::: {.instructions}
 Identifiez la source des problèmes suivants et proposez une solution.
@@ -500,7 +498,7 @@ Demandez leur de fermer et réouvrir le fichier pour voir si ça résout le prob
 
 ### Méconnaissance générale du fichier
 
-De nombreuses questions que vous pourrez avoir vient du fait que les gens ne lisent pas la documentation, y compris quand elle a été explicitement envoyée pour résoudre un problème. En particulier, les gens ignorent souvent l'existence du [menu OBT](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html). La bonne nouvelle est que un grand nombre de requêtes sont faciles à régler. 
+De nombreuses questions que vous pourrez avoir viennent du fait peu de gens lisent la documentation. En particulier, il est facile de manquer le [menu OBT](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html) si one ne nous l'a pas montré. La bonne nouvelle est que un grand nombre de requêtes sont faciles à régler. 
 
 
 #### Plus de place !
@@ -516,7 +514,6 @@ Il faut utiliser le bouton "Ajouter des lignes" du menu OBT pour ajouter des lig
 
 **Note**: les versions récentes de la liste linéaire ajoutent automatiquement cinq nouvelles lignes lorsque l'on rentre des données dans la dernière ligne, donc ce problème devrait devenir moins courant. Par contre, ça veut dire qu'ils utilisent une *vieille* version et qu'il faudrait migrer les données vers une version plus récente de la linelist !
 :::
-
 
 
 #### Lignes vides au milieu
@@ -607,7 +604,7 @@ Soit le fichier de la liste linéaire entier ou le mauvais export (export pour l
 Parfois le problème est moins évident, ou peut avoir plusieurs causes entremêlées, et il faut enquêter un peu plus.
 
 ::: {.instructions}
-Ouvrez le fichier Excel `troubleshooting.xlsb` de l'archive que vous avez téléchargé en début de l'exercice.
+Ouvrez le fichier Excel `resolution_problemes.xlsb` de l'archive que vous avez téléchargée en début de l'exercice.
 :::
 
 Votre collègue vous a contacté. Ille a des données pour le début de Janvier 2023. Les analyses ne sont pas correctes alors qu'elle *ont été mises à jour*.

@@ -157,7 +157,7 @@ Go to the [Epinetwork Sharepoint](https://epicentre-msf.github.io/outbreak-tools
 There may be several languages available. In general you can expect English and French as default for well established linelists. Spanish, Portuguese or Arabic translations may be developed when needed for some diseases, don't hesitate to ask.
 :::
 
-2. [Get a geobase for your area](../how_to/download_geobase.qmd) from the [Geoapp](https://reports.msf.net/secure/app/outbreak-tools-geoapp)
+2. [Get a geobase for your area](https://epicentre-msf.github.io/outbreak-tools/how_to/import_geobase.html) from the [Geoapp](https://reports.msf.net/secure/app/outbreak-tools-geoapp)
 
 3. Fill the linelist metadata: section, country etc.^[It is very important to fill the country, name of the facility and section, as these are used to name exports.]
 

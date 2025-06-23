@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tutoriel – OutbreakTools training</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/icon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b5ca24d81ad21f3d8a6757d9c3948d19.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/font-awesome-6.5.2/js/script.js"></script>
+
+
+</head>
+
+<body class="floating nav-fixed slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/icon.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">OutbreakTools training</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-module-1" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Module 1</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-module-1">    
+        <li>
+    <a class="dropdown-item" href="../module_1/m1_objectives.html">
+ <span class="dropdown-text">Module presentation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../module_1/m1_intro.html">
+ <span class="dropdown-text">Introduction to OutbreakTools</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../module_1/m1_tutorial.html">
+ <span class="dropdown-text">Tutorial EN</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../module_1/m1_tutorial.fr.html">
+ <span class="dropdown-text">Tutoriel FR</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-how-to" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">How to</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-how-to">    
+        <li>
+    <a class="dropdown-item" href="../how_to/unblock_files.html">
+ <span class="dropdown-text">Unblock files</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how_to/use_geohelper.html">
+ <span class="dropdown-text">Use the GeoHelper</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/epicentre-msf/obt-training" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">Table of content</h2>
+   
+  <ul>
+  <li><a href="#a-propos-de-ce-tutoriel" id="toc-a-propos-de-ce-tutoriel" class="nav-link active" data-scroll-target="#a-propos-de-ce-tutoriel">A propos de ce tutoriel</a>
+  <ul>
+  <li><a href="#objectifs" id="toc-objectifs" class="nav-link" data-scroll-target="#objectifs">🎯 Objectifs</a>
+  <ul>
+  <li><a href="#contexte" id="toc-contexte" class="nav-link" data-scroll-target="#contexte">🧭 Contexte</a></li>
+  </ul></li>
+  <li><a href="#activités" id="toc-activités" class="nav-link" data-scroll-target="#activités">Activités</a></li>
+  </ul></li>
+  <li><a href="#préparation" id="toc-préparation" class="nav-link" data-scroll-target="#préparation">Préparation</a>
+  <ul>
+  <li><a href="#téléchargez-et-dézippez-les-documents" id="toc-téléchargez-et-dézippez-les-documents" class="nav-link" data-scroll-target="#téléchargez-et-dézippez-les-documents">Téléchargez et dézippez les documents</a></li>
+  <li><a href="#contenu-de-larchive" id="toc-contenu-de-larchive" class="nav-link" data-scroll-target="#contenu-de-larchive">Contenu de larchive</a></li>
+  </ul></li>
+  <li><a href="#sec-unblock-file" id="toc-sec-unblock-file" class="nav-link" data-scroll-target="#sec-unblock-file">Partie 0 : débloquer les fichiers et les macros</a></li>
+  <li><a href="#partie-1-préparer-et-déployer-une-liste-linéaire" id="toc-partie-1-préparer-et-déployer-une-liste-linéaire" class="nav-link" data-scroll-target="#partie-1-préparer-et-déployer-une-liste-linéaire">Partie 1: préparer et déployer une liste linéaire</a>
+  <ul>
+  <li><a href="#obtenir-fichiers-nécéssaires" id="toc-obtenir-fichiers-nécéssaires" class="nav-link" data-scroll-target="#obtenir-fichiers-nécéssaires">Obtenir fichiers nécéssaires</a>
+  <ul>
+  <li><a href="#un-modèle-de-liste-linéaire" id="toc-un-modèle-de-liste-linéaire" class="nav-link" data-scroll-target="#un-modèle-de-liste-linéaire">Un modèle de liste linéaire</a></li>
+  <li><a href="#une-géobase-adaptée" id="toc-une-géobase-adaptée" class="nav-link" data-scroll-target="#une-géobase-adaptée">Une géobase adaptée</a></li>
+  </ul></li>
+  <li><a href="#sec-customise" id="toc-sec-customise" class="nav-link" data-scroll-target="#sec-customise">Adapter une liste linéaire</a>
+  <ul>
+  <li><a href="#remplir-les-métadonnées" id="toc-remplir-les-métadonnées" class="nav-link" data-scroll-target="#remplir-les-métadonnées">Remplir les métadonnées</a></li>
+  <li><a href="#cacher-les-champs-non-utilisés" id="toc-cacher-les-champs-non-utilisés" class="nav-link" data-scroll-target="#cacher-les-champs-non-utilisés">Cacher les champs non utilisés</a></li>
+  <li><a href="#importer-la-géobase" id="toc-importer-la-géobase" class="nav-link" data-scroll-target="#importer-la-géobase">Importer la géobase</a></li>
+  <li><a href="#paramétrer-le-jour-de-la-semaine" id="toc-paramétrer-le-jour-de-la-semaine" class="nav-link" data-scroll-target="#paramétrer-le-jour-de-la-semaine">Paramétrer le jour de la semaine</a></li>
+  <li><a href="#cachez-montrer-des-variables" id="toc-cachez-montrer-des-variables" class="nav-link" data-scroll-target="#cachez-montrer-des-variables">Cachez / montrer des variables</a></li>
+  <li><a href="#imprimer-un-registre" id="toc-imprimer-un-registre" class="nav-link" data-scroll-target="#imprimer-un-registre">Imprimer un registre</a></li>
+  <li><a href="#préparer-un-formulaire-des-cas" id="toc-préparer-un-formulaire-des-cas" class="nav-link" data-scroll-target="#préparer-un-formulaire-des-cas">Préparer un formulaire des cas</a></li>
+  </ul></li>
+  <li><a href="#déployer-la-linelist" id="toc-déployer-la-linelist" class="nav-link" data-scroll-target="#déployer-la-linelist">Déployer la linelist</a></li>
+  </ul></li>
+  <li><a href="#partie-2-utiliser-une-liste-linéaire-au-jour-le-jour" id="toc-partie-2-utiliser-une-liste-linéaire-au-jour-le-jour" class="nav-link" data-scroll-target="#partie-2-utiliser-une-liste-linéaire-au-jour-le-jour">Partie 2 : utiliser une liste linéaire au jour le jour</a>
+  <ul>
+  <li><a href="#contexte-1" id="toc-contexte-1" class="nav-link" data-scroll-target="#contexte-1">🧭 Contexte</a></li>
+  <li><a href="#contrôles-de-routine" id="toc-contrôles-de-routine" class="nav-link" data-scroll-target="#contrôles-de-routine">Contrôles de routine</a>
+  <ul>
+  <li><a href="#contrôle-du-fichier" id="toc-contrôle-du-fichier" class="nav-link" data-scroll-target="#contrôle-du-fichier">Contrôle du fichier</a></li>
+  <li><a href="#contrôle-très-basique-des-données" id="toc-contrôle-très-basique-des-données" class="nav-link" data-scroll-target="#contrôle-très-basique-des-données">Contrôle (très basique) des données</a></li>
+  </ul></li>
+  <li><a href="#analyses" id="toc-analyses" class="nav-link" data-scroll-target="#analyses">Analyses</a>
+  <ul>
+  <li><a href="#personnes-analyses-uni-et-bivariées" id="toc-personnes-analyses-uni-et-bivariées" class="nav-link" data-scroll-target="#personnes-analyses-uni-et-bivariées">Personnes : analyses uni et bivariées</a></li>
+  <li><a href="#temps-analyses-temporelles" id="toc-temps-analyses-temporelles" class="nav-link" data-scroll-target="#temps-analyses-temporelles">Temps : analyses temporelles</a></li>
+  <li><a href="#lieu-analyses-spatiales" id="toc-lieu-analyses-spatiales" class="nav-link" data-scroll-target="#lieu-analyses-spatiales">Lieu : analyses spatiales</a></li>
+  <li><a href="#lieu-et-temps-analyses-spatio-temporelles" id="toc-lieu-et-temps-analyses-spatio-temporelles" class="nav-link" data-scroll-target="#lieu-et-temps-analyses-spatio-temporelles">Lieu et temps :analyses spatio-temporelles</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#partie-3-résolution-des-problèmes-de-la-liste-linéaire" id="toc-partie-3-résolution-des-problèmes-de-la-liste-linéaire" class="nav-link" data-scroll-target="#partie-3-résolution-des-problèmes-de-la-liste-linéaire">Partie 3 : résolution des problèmes de la liste linéaire</a>
+  <ul>
+  <li><a href="#contexte-2" id="toc-contexte-2" class="nav-link" data-scroll-target="#contexte-2">🧭 Contexte</a></li>
+  <li><a href="#ouverture-du-fichier-et-autorisations" id="toc-ouverture-du-fichier-et-autorisations" class="nav-link" data-scroll-target="#ouverture-du-fichier-et-autorisations">Ouverture du fichier et autorisations</a></li>
+  <li><a href="#méconnaissance-générale-du-fichier" id="toc-méconnaissance-générale-du-fichier" class="nav-link" data-scroll-target="#méconnaissance-générale-du-fichier">Méconnaissance générale du fichier</a>
+  <ul>
+  <li><a href="#plus-de-place" id="toc-plus-de-place" class="nav-link" data-scroll-target="#plus-de-place">Plus de place !</a></li>
+  <li><a href="#lignes-vides-au-milieu" id="toc-lignes-vides-au-milieu" class="nav-link" data-scroll-target="#lignes-vides-au-milieu">Lignes vides au milieu</a></li>
+  <li><a href="#données-manquantes" id="toc-données-manquantes" class="nav-link" data-scroll-target="#données-manquantes">Données manquantes</a></li>
+  <li><a href="#analyses-non-actualisées" id="toc-analyses-non-actualisées" class="nav-link" data-scroll-target="#analyses-non-actualisées">Analyses non actualisées</a></li>
+  </ul></li>
+  <li><a href="#envoi-des-données-vers-le-tableau-de-bord" id="toc-envoi-des-données-vers-le-tableau-de-bord" class="nav-link" data-scroll-target="#envoi-des-données-vers-le-tableau-de-bord">Envoi des données vers le tableau de bord</a></li>
+  <li><a href="#problèmes-avancés" id="toc-problèmes-avancés" class="nav-link" data-scroll-target="#problèmes-avancés">Problèmes avancés</a></li>
+  </ul></li>
+  <li><a href="#partie-4-le-tableau-de-bord" id="toc-partie-4-le-tableau-de-bord" class="nav-link" data-scroll-target="#partie-4-le-tableau-de-bord">Partie 4 : Le tableau de bord</a>
+  <ul>
+  <li><a href="#contexte-3" id="toc-contexte-3" class="nav-link" data-scroll-target="#contexte-3">🧭 Contexte</a></li>
+  <li><a href="#accéder-au-tableau-de-bord" id="toc-accéder-au-tableau-de-bord" class="nav-link" data-scroll-target="#accéder-au-tableau-de-bord">Accéder au tableau de bord</a></li>
+  <li><a href="#menu-des-filtres" id="toc-menu-des-filtres" class="nav-link" data-scroll-target="#menu-des-filtres">Menu des filtres</a></li>
+  <li><a href="#la-carte" id="toc-la-carte" class="nav-link" data-scroll-target="#la-carte">La carte</a></li>
+  <li><a href="#la-courbe-épidémique" id="toc-la-courbe-épidémique" class="nav-link" data-scroll-target="#la-courbe-épidémique">La courbe épidémique</a></li>
+  <li><a href="#a-votre-tour" id="toc-a-votre-tour" class="nav-link" data-scroll-target="#a-votre-tour">A votre tour</a></li>
+  </ul></li>
+  <li><a href="#aller-plus-loin" id="toc-aller-plus-loin" class="nav-link" data-scroll-target="#aller-plus-loin">Aller plus loin</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Tutoriel</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="a-propos-de-ce-tutoriel" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="a-propos-de-ce-tutoriel">A propos de ce tutoriel</h2>
+<p>Dans ce tutoriel vous apprendrez à connaître l’interface des listes linéaires OutbreakTools<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> et le tableau de bord correspondant.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Pour rappel, toutes les listes linéaires OBT ont la même interface</p></div></div><section id="objectifs" class="level3">
+<h3 class="anchored" data-anchor-id="objectifs">🎯 Objectifs</h3>
+<ul>
+<li>Explorer les fonctionnalités de la liste linéaire OBT, en insistant sur la résolution de problèmes et l’exploration des analyses</li>
+<li>Accéder et savoir utiliser le tableau de bord intersection</li>
+</ul>
+<section id="contexte" class="level4">
+<h4 class="anchored" data-anchor-id="contexte">🧭 Contexte</h4>
+<p>MSF travaille dans l’est et le sud du Tchad depuis 2006 et fournit des soins médicaux et une assistance aux personnes déplacées et aux communautés locales dans un contexte d’accès difficile à la nourriture.</p>
+<p>En décembre 2021, suite à plusieurs signalements de cas de rougeole dans la région méridionale de Mandoul, MSF a décidé de répondre à l’épidémie avec Epicentre en soutien.</p>
+<p>Une liste linéaire est nécessaire pour collecter les données des patients dans les structures. Vous discutez avec le MedRef et le MedCo, et prenez la décision de déployer la liste linéaire rougeole OBT.</p>
+</section>
+</section>
+<section id="activités" class="level3">
+<h3 class="anchored" data-anchor-id="activités">Activités</h3>
+<p>Vous utiliserez plusieurs fichier lors de ce tutoriel :</p>
+<ul>
+<li>une liste linéaire vide à préparer avant un déploiement</li>
+<li>une liste linéaire avec de fausses données pour répliquer une liste linéaire en cours d’utilisation</li>
+<li>une liste linéaire avec de fausses données et quelques problèmes à résoudre.</li>
+</ul>
+<p>Vous visiterez ensuite le tableau de bord Intersection pour explorer les données <em>réelles</em> de MSF sur la rougeole au Tchad.</p>
+<p>Les explications seront données dans le texte ou dans des encadrés (conseils, notes, etc.) et les instructions seront données dans des encadrés.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Je suis une information importante</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Je suis une information utile mais qui peut être omise si vous êtes pressé par le temps, mais je mérite qu’on me lise à un moment.</p>
+</div>
+</div>
+<div class="instructions">
+<p>A votre tour de faire !</p>
+</div>
+</section>
+</section>
+<section id="préparation" class="level2">
+<h2 class="anchored" data-anchor-id="préparation">Préparation</h2>
+<section id="téléchargez-et-dézippez-les-documents" class="level3">
+<h3 class="anchored" data-anchor-id="téléchargez-et-dézippez-les-documents">Téléchargez et dézippez les documents</h3>
+<p>Les fichiers que vous devrez utiliser sont stockés sur GitHub dans une archive <code>zip</code>.</p>
+<div class="instructions">
+<ol type="1">
+<li>Cliquez sur le bouton ci-dessous pour télécharger l’archive. Enregistrez-la sur votre ordinateur (dans vos <em>Téléchargements</em> par exemple)</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<a href="https://github.com/epicentre-msf/obt-training/raw/master/tutorials_materials/module_1.zip">
+<button class="btn btn-default"><i class="fa fa-save"></i> Télécharder l'archive</button>
+</a>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Dézippez l’archive pour sauver les fichiers localement. Il est conseillé de dézipper vers un emplacement qui n’est pas activement synchronisé avec OneDrive en ce moment.</li>
+</ol>
+</div>
+</section>
+<section id="contenu-de-larchive" class="level3">
+<h3 class="anchored" data-anchor-id="contenu-de-larchive">Contenu de larchive</h3>
+<ul>
+<li>Une liste linéaire OBT rougeole à jour (version standard), vide</li>
+<li>La même version de fichier, mais avec des données rougeole (simulées)</li>
+</ul>
+</section>
+</section>
+<section id="sec-unblock-file" class="level2">
+<h2 class="anchored" data-anchor-id="sec-unblock-file">Partie 0 : débloquer les fichiers et les macros</h2>
+<p>Les listes linéaires OBT utilisent des macros VBA pour ajouter des fonctionnalités. Cela fait qu’elles doivent souvent être déloquées sur votre ordi lorsque qu’elles viennent d’internet, et vous devrez autoriser l’exécution des macros.</p>
+<div class="instructions">
+<p>Débloquez les fichiers ou assurez-vous qu’ils le sont déjà. Si vous ne l’avez jamais fait auparavant, <a href="../how_to/unblock_files.html">suivez ces étapes</a> :: :</p>
+<p>:: : {.callout-note} En fonction du niveau de protection de votre ordinateur et de la source des fichiers, vous arez peut être à le faire ou non. Par contre, les ordinateurs terrain sont souvent plus protégés et et est très probable que certain de vos collègues aient à le faire, donc soyez prêt à expliquer.</p>
+</div>
+</section>
+<section id="partie-1-préparer-et-déployer-une-liste-linéaire" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="partie-1-préparer-et-déployer-une-liste-linéaire">Partie 1: préparer et déployer une liste linéaire</h2>
+<section id="obtenir-fichiers-nécéssaires" class="level3">
+<h3 class="anchored" data-anchor-id="obtenir-fichiers-nécéssaires">Obtenir fichiers nécéssaires</h3>
+<section id="un-modèle-de-liste-linéaire" class="level4">
+<h4 class="anchored" data-anchor-id="un-modèle-de-liste-linéaire">Un modèle de liste linéaire</h4>
+<p>Dans la vraie vie il vous faudra un <a href="https://epicentre-msf.github.io/outbreak-tools/getting_started/get_linelist.html">modèle vide</a> pour vous lancer, mais dans le cadre ce cet exercice vous utiliserez le fichier vide inclus dans l’archive que vous avez téléchargée.</p>
+<div class="instructions">
+<p>Identifiez le fichier correct et faites une copie pour pouvoir travailler dessus.</p>
+</div>
+</section>
+<section id="une-géobase-adaptée" class="level4">
+<h4 class="anchored" data-anchor-id="une-géobase-adaptée">Une géobase adaptée</h4>
+<div class="instructions">
+<p>Rendez-vous sur le site <a href="https://reports.msf.net/secure/app/outbreak-tools-geoapp">GeoApp</a> et téléchargez une base géo pour le Tchad. Vous pouvez lire un résumé des étapes <a href="https://epicentre-msf.github.io/outbreak-tools/how_to/import_geobase.html#sec-geobase-download">ici</a>, ou directement sur le site, à l’ouverture.</p>
+</div>
+<p>Le fichier n’est pas protégé, vous pouvez l’ouvrir si vous êtes curieux.</p>
+</section>
+</section>
+<section id="sec-customise" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sec-customise">Adapter une liste linéaire</h3>
+<div class="instructions">
+<p>Ouvrez la liste linéaire et inspectez les (noms des) onglets</p>
+</div>
+<p><strong>Notablement</strong>:</p>
+<ul>
+<li>La première feuille contient des instructions, il n’y a rien à faire dessus à part les lire</li>
+<li>La deuxième feuille (“Info”) contient des informations sur le projet et le site (métadonnées)</li>
+<li>La troisième feuille (“Linelist patients”) contient les données des patients</li>
+<li>La plupart des feuilles suivantes contiennent des analyses.</li>
+</ul>
+<div class="instructions">
+<p>Localisez le <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">menu OutbreakTools</a>, nous allons l’utiliser intensivement pendant les exercices.</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/015-img-ribbon-linelist.png" class="img-fluid figure-img"></p>
+<figcaption>Rubban, ou menu OutbreakTools</figcaption>
+</figure>
+</div>
+<section id="remplir-les-métadonnées" class="level4">
+<h4 class="anchored" data-anchor-id="remplir-les-métadonnées">Remplir les métadonnées</h4>
+<p><strong>Métadonnées obligatoires</strong></p>
+<div class="instructions">
+<p>Remplissez la feuille “Info” (métadonnées) :</p>
+<ul>
+<li><code>Organisation</code>: entrez votre nom de section</li>
+<li><code>Nom du pays</code>: Tchad</li>
+<li><code>Nom de la structure</code>: Moïssala Hospital</li>
+</ul>
+</div>
+<p>Une fois que ces champs sont remplis, ils ne devraient plus être modifiés. Ces informations seront utilisées au moment de la création d’exports.</p>
+<p><strong>Métadonnées optionnelles</strong></p>
+<div class="instructions">
+<p>Rentrez les infos des champs <code>Admin 1</code> (Mandoul) et <code>Admin 2</code> (Moissala)</p>
+</div>
+</section>
+<section id="cacher-les-champs-non-utilisés" class="level4">
+<h4 class="anchored" data-anchor-id="cacher-les-champs-non-utilisés">Cacher les champs non utilisés</h4>
+<p>Vu que l’on n’a pas utilisé les autres champs, cachons-les !</p>
+<div class="instructions">
+<p>En gardant le focus sur la feuille “Info”, rendez-vous dans le <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">menu OBT</a>. Cliquez sur le bouton “Afficher / Masquer les variables”.</p>
+</div>
+<p>Une fenêtre pop-up s’ouvre :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/003-img-obt-show_hide.png" class="img-fluid figure-img"></p>
+<figcaption>Fenêtre pop-up</figcaption>
+</figure>
+</div>
+<p>Vous pouvez voir que certaines variables ont un statut <code>Obligatoire</code>; ces variables ne peuvent être cachées avec cet outil. D’autres variables ont le statut “Affiché” et elles peuvent être cachées.</p>
+<div class="instructions">
+<p>Cachez les variables que l’on n’a pas remplies. Vous pouvez soit les cacher unes par unes, soit utiliser le bouton “Cachez toutes les variables optionnelles” deux fois et dé-cacher les variables que l’on veut voir.</p>
+</div>
+</section>
+<section id="importer-la-géobase" class="level4">
+<h4 class="anchored" data-anchor-id="importer-la-géobase">Importer la géobase</h4>
+<div class="instructions">
+<p>Cliquez sur le menu “Importer une géobase” dans le <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">menu OBT</a> pour importer la base géo que vous avez téléchargé précédemment.</p>
+</div>
+<p>Après avoir reçus le message de confirmation, vous pouvez vérifier l’import en allant sur la feuille des données patients, et en regardant les colonnes “géo”, celles avec un fond couleur saumon. Si tout s’est bien passé :</p>
+<ul>
+<li>Les labels devraient avoir été mis à jour avec les noms des niveaux administratifs présents dans la géobase (e.g.&nbsp;adm1_name” va devenir “Province” pour la RDC).</li>
+<li>Les cellules de la première colonne (admin 1) devraient contenir un menu déroulant avec les valeurs importées depuis la géobase.</li>
+</ul>
+<p>Vous pouvez remplir les colonnes géographiques soit à partir des menus déroulants en cascade (en commençant pas le niveau 1 !), soit en utilisant le bouton <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html#sec-geo-helper">GeoHelper</a> du menu OBT.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Il y a une hiérarchie entre les niveaux administratifs: si vous essayez de remplir la colonne 3 <em>sans avoir rempli les colonnes 1 et 2</em> le menu déroulant apparaitra comme vide.</p>
+</div>
+</div>
+</section>
+<section id="paramétrer-le-jour-de-la-semaine" class="level4">
+<h4 class="anchored" data-anchor-id="paramétrer-le-jour-de-la-semaine">Paramétrer le jour de la semaine</h4>
+<div class="instructions">
+<p>Cliquez sur le bouton “Début de semaine” du menu OBT et choisissez le “Lundi” comme premier jour de la semaine.</p>
+</div>
+</section>
+<section id="cachez-montrer-des-variables" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="cachez-montrer-des-variables">Cachez / montrer des variables</h4>
+<p>On peut aussi cacher ou montrer les variables optionnelles sur cette feuille (comme pour la feuille “Info”). Lorsque vous préparerez une liste linéaire, il vous faudra décider quelles variables collecter en fonction informations dont vous avez besoin<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Vous pouvez cacher ou montrer des variables plus tard, pendant la collecte des données si besoin, mais dans ce cas gardez en tête que les données pour ces colonnes ne seront que partielles.</p></div></div><div class="instructions">
+<p>Placez(vous sur la feuille “Linelist Patients” et cliquez sur le bouton “Afficher/Masquer des variables”. Cachez toutes les variables optionnelles à l’aide du bouton, et dé-cachez manuellement :</p>
+<ul>
+<li>Structure déclarante</li>
+<li>Fièvre</li>
+<li>Eruption maculopapulaire</li>
+<li>Toux</li>
+<li>Yeux rouges - conjonctivite</li>
+<li>MUAC</li>
+<li>Enceinte</li>
+<li>Les variables “extra” à la fin</li>
+<li>N’importe quelle variable calculée que <em>vous</em> souhaitez voir (numéro de semaine, groupe d’âge etc.)</li>
+</ul>
+</div>
+</section>
+<section id="imprimer-un-registre" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="imprimer-un-registre">Imprimer un registre</h4>
+<div class="instructions">
+<p>Cliquez sur le bouton “Afficher le registre” du <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">menu OBT</a>.</p>
+</div>
+<p>Cela ouvre une feuille qui est cachée par défaut pour préparer un registre à imprimer, au cas où il n’y en aurait pas déjà un dans le centre.</p>
+<p>En règle générale, il devrait y avoir moins de colonnes dans le registre que dans la linelist, vu que certaines des informations viennent du dossier patient ou d’autres sources.</p>
+<div class="instructions">
+<ol type="1">
+<li><p>Une fois sur la nouvelle feuille créez, cliquez sur le bon vieux bouton “Afficher/masquer les variables” pour ouvrir la fenêtre pop-up pour le registre.</p></li>
+<li><p>Cliquez que le bouton “Correspondre au Show/Hide de la linelist” pour aligner la visibilité des variables du registre sur celles de la feuille patients.</p></li>
+<li><p>Cachez les variables qui n’ont pas besoin d’être dans le registre.</p></li>
+</ol>
+</div>
+<p>Maintenant que vous avez sélectionné les variables à imprimer, il faut améliorer un peu l’aspect pour qu’il soit plus pratique à utiliser :</p>
+<ul>
+<li>Ajuster la largeur des colonnes pour que les encodeurs de données puisse écrire</li>
+<li>Changer l’orientation des labels pour gagner de l’espace s’il n’y a pas grand chose à écrire</li>
+<li>Ajouter des lignes à la table pour qu’elle fasse une page<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Astuce: il y a un bouton pour ça dans le menu OBT !</p></div></div><div class="instructions">
+<p>Ajustez la largeur des colonnes :</p>
+<ul>
+<li><code>Nom / Prénom</code>: plus large</li>
+<li><code>Sexe</code>: moins large</li>
+</ul>
+<p>Pour voir, cliquez sur le bouton “Imprimer” (toujours dans le <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">menu OBT menu</a>). Remarquez le bouton “Mise en page” en haut à gauche, qui contrôle les paramètres d’impression.</p>
+<p>Une fois que vous avez pris connaissance de ces boutons, vous pouvez sortir de l’aperçu avant impression puis cliquer sur le bouton “Fermer le registre / CRF” pour <strong>cacher</strong> la feuille registre (vos modifications sur cette feuille demeurent).</p>
+</div>
+</section>
+<section id="préparer-un-formulaire-des-cas" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="préparer-un-formulaire-des-cas">Préparer un formulaire des cas</h4>
+<p>Avec la même idée que pour le registre il est possible d’imprimer un formulaire de cas à partir de la liste linéaire s’il n’y en a pas déjà un dans la structure. Un bouton affiche une feuille préparée automatiquement. Créer un CRF propre est au delà de nos capacités pour le moment, mais ce brouillon devrait être une base et vous faire gagner du temps.</p>
+<p>Chose que vous pourriez faire :</p>
+<ul>
+<li>Cacher les variables collectées à un autre endroit ou calculées</li>
+<li>Cacher / condenser des lignes vide</li>
+<li>Raccourcir des labels<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;Désormais, une option a été rajoutée au ficher <strong>setup</strong> pour donner des labels courts ou des acronymes, mais ils n’ont pas été remplis pour toutes les liste linéaires OBT en circulation pour le moment.</p></div></div><p>Préparer un CRF propre nous prendrait trop de temps, nous ne le ferons pas lors de ce tutoriel, mais n’hésitez pas à ouvrir la feuille un instant avec le bouton “Afficher le CRF” pour voir à quoi elle ressemble.</p>
+</section>
+</section>
+<section id="déployer-la-linelist" class="level3">
+<h3 class="anchored" data-anchor-id="déployer-la-linelist">Déployer la linelist</h3>
+<p>Nous avons fait le tour des préparations principales à effectuer sur la liste linéaire. N’oubliez pas d’enregistrer votre fichier.</p>
+<p>Vous pouvez à présent l’envoyer à vos collègues. S’ils ont déjà travaillé avec des linelists OBT (y compris sur d’autres maladies), c’est facile : toutes les listes linéaires OBT ont la même interface, ils devraient se sentir à l’aise.</p>
+<p>Si vos collègues n’ont pas travaillé avec une liste linéaire OBT, il faut leur montrer en particulier :</p>
+<ul>
+<li>Comment <a href="../how_to/unblock_files.html">débloquer le fichier et autoriser les macros</a></li>
+<li>le <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">menu OBT</a></li>
+<li>Comment remplir les métadonnées sur la feuille “Info” (s’il en reste à remplir)</li>
+<li>Comment <a href="https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html">exporter les données vers le tableau de bord</a></li>
+<li>Comment utiliser le bouton <a href="../how_to/use_geohelper.html">GeoHelper</a></li>
+</ul>
+<p>Le plus souvent il devrait y avoir une liste linéaire par site.</p>
+</section>
+</section>
+<section id="partie-2-utiliser-une-liste-linéaire-au-jour-le-jour" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="partie-2-utiliser-une-liste-linéaire-au-jour-le-jour">Partie 2 : utiliser une liste linéaire au jour le jour</h2>
+<section id="contexte-1" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="contexte-1">🧭 Contexte</h3>
+<p>La linelist a été déployée en Janvier 2022 à Moissala et les zones alentour. Un peu plus d’un an plus tard, en avril 2023 l’épidémie est malheureusement toujours en cours, et la linelist toujours utilisée. Vous recevez le fichier avec les données régulièrement pour le suivi de l’épidémie…</p>
+<p>Nous allons dans cette partie travailler sur le fichier <code>measles_linelist_moissala.xlsb</code> qui contient des données rougeole simulées<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;En essayant au maximum d’utiliser les paramètres des linelists rougeoles de MSF, au moins pour les variables principales, ce qui nous évite des problèmes de confidentialité.</p></div></div></section>
+<section id="contrôles-de-routine" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="contrôles-de-routine">Contrôles de routine</h3>
+<p>Lorsque vous recevez une liste linéaire avec des données, nous vous conseillons d’effectuer quelques vérifications basiques en routine pour avoir une idée de l’état du fichier et des données. Ce ne sont pas les vérifications longues, complexes ou complètes que vous effectueriez si vous étiez responsables du suivi qualité des données, ou si vous vouliez effectuer des analyses. Mais ces vérifications vont vous aider à détecter les sources de quelques problèmes plus rapidement.</p>
+<section id="contrôle-du-fichier" class="level4">
+<h4 class="anchored" data-anchor-id="contrôle-du-fichier">Contrôle du fichier</h4>
+<p><strong>Est-ce que le fichier est endomagé / corrompu ?</strong></p>
+<ul>
+<li>Est ce que les boutons du menu OBT semblent normaux / leurs étiquettes lisibles ?</li>
+<li>Testez un bouton (comme le “Montrer / Cacher les variables”): est ce qu’il fonctionne normalement ,</li>
+<li>Est ce que les feuilles attendues sont présentes ?</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si les boutons du menu OBT ont des noms bizarres, ou pas de noms du tout, c’est probablement que le VBA a été bloqué, ou, plus rarement, a planté. Vérifiez les autorisations des macros, ajustez-les si besoin, fermez Excel puis réouvrez le fichier.</p>
+<p>Si le problème persiste, tentez un “Exporter pour migration” pour transférer les données vers une linelist vide. Si l’export ne fonctionne pas parce que le VBA s’est corrompu, contactez l’équipe EpiDS qui vous aidera à transférer les données.</p>
+</div>
+</div>
+<div class="instructions">
+<p>Effectuez ces vérifications sur le fichier <code>measles_linelist_moissala.xlsb</code>.</p>
+</div>
+</section>
+<section id="contrôle-très-basique-des-données" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="contrôle-très-basique-des-données">Contrôle (très basique) des données</h4>
+<ul>
+<li>Est-ce que les métadonnées sur la feuille “Info” sont correctement remplies<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>?</li>
+<li>Est-ce que tous les patients ont un numéro ?</li>
+<li>Est-ce qu’il y a des numéros de patient dupliqués ?</li>
+<li>Vérifiez quelques colonnes contenant des dates à l’aide des filtres : est ce que les dates sont dans le bon format et sont raisonnables (min, max) ?</li>
+<li>Vérifiez quelques colonnes contenant des catégories (<code>sexe</code>, <code>sortie</code>…) pour voir si les catégories sont rentrée correctement</li>
+<li>Enlevez tous les filtres présents sur les données (il y a un bouton raccourcis pour ça dans le menu OBT)</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;90% des problèmes liés à l’export vers le tableau de bord sont liés à ça.</p></div></div><div class="instructions">
+<p>Effectuez ces vérifications sur le fichier <code>measles_linelist_moissala.xlsb</code>.</p>
+</div>
+</section>
+</section>
+<section id="analyses" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="analyses">Analyses</h3>
+<p>Maintenant que nous nous sommes convaincu que le fichier n’est pas cassé, et que les données ne sont pas horribles, penchons nous sur les analyses descriptives embarquées dans la liste linéaire.</p>
+<p>Bien que l’interface générale soit la même pour toutes les listes linéaires OBT, les analyses sont encodées dans le fichier <strong>setup</strong> et varient donc d’une maladie à une autre, en fonction de ce qui a été demandé. Ceci étant dit, la majorité des listes linéaires OBT contiennent des analyses uni et bivariées, les analyses temporelles et spatiales.</p>
+<p>Il y a quelques point à retenir sur les analyses dans les listes linéaires OBT :</p>
+<p>There are a couple of important things to remember about the analyses in OBT linelists:</p>
+<ol type="1">
+<li>Les analyses doivent être <strong>mises à jour</strong> manuellement avant utilisation.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/004-refresh.png" class="img-fluid figure-img"></p>
+<figcaption>Bouton de mise à jour des analyses dans le menu OBT</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li><p>Si vous filtrez les données dans la feuille patients, cela sera reflété dans les analyses <em>après mise à jour</em> (un texte en rouge vous avertira que c’est le cas).</p></li>
+<li><p>Vous pouvez modifier l’apparence des graphiques (qui sont crées automatiquement et, nous le concédons, sont un peu moches). Vous pouvez pour cela utiliser les <a href="https://support.microsoft.com/fr-fr/office/mettre-en-forme-les-%C3%A9l%C3%A9ments-d-un-graphique-b6c787d5-f90a-41d2-a901-9d3ed9f0dbf0">outils classiques d’Excel</a>, comme vous le feriez pour vos propres figures<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>.</p></li>
+</ol>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;Malheureusement, les modifications des graphiques ne peuvent pas être migrées vers une autre linelist, donc je vous conseille de vous restreindre aux graphes qui sont peu lisibles, ou que vous exportez régulièrement dans des rapports ou présentations, ou qui vous font <em>vraiment</em> saigner les yeux.</p></div></div><p>Nous allons commencer par explorer les analyses sur les données non filtrées.</p>
+<div class="instructions">
+<p>Placez-vous sur la feuille contenant les données patients, tapez sur la touche <strong>F9</strong> (force le calcul de toutes les formules), puis ouvrez le menu OBT et cliquez sur le bouton pour nettoyer tous les filtres. Ensuite, mettez à jour les analyses.</p>
+</div>
+<p>Maintenant que les analyses sont prêtes, nous allons pouvoir les explorer.</p>
+<section id="personnes-analyses-uni-et-bivariées" class="level4">
+<h4 class="anchored" data-anchor-id="personnes-analyses-uni-et-bivariées">Personnes : analyses uni et bivariées</h4>
+<p>Cette feuille contient des tableaux à simple et double entrée et des diagrammes en bâtons décrivant des informations basiques sur les patients : démographie, symptomes, sorties etc.</p>
+<div class="instructions">
+<p>Explorez la feuille et répondez aux questions suivantes :</p>
+<ul>
+<li>Quelle est la durée de séjour moyenne ?</li>
+<li>Combien de patients ont plus de 15 ans ?</li>
+<li>Combien de patients sont des femmes ou des filles ?</li>
+<li>Quel est le pourcentage de rougeole compliquée ?</li>
+<li>Combien de patients sont malnutris sévère (MAS) ?</li>
+<li>Combien de patients sont décédés dans la structure de santé ?</li>
+<li>Combien de patients sont des garçons de moins de cinq ans ?</li>
+<li>Combien des patients MAS sont positifs pour la test palu ?</li>
+</ul>
+</div>
+<p>Intéressons nous à présent aux caractéristiques des patients décédés.</p>
+<div class="instructions">
+<ol type="1">
+<li><p>Retournez dans la feuille des données patients. utilisez les filtres pour sélectionner seulement les patients décédés (dans le centre ou dans la communauté, comme vous voulez).</p></li>
+<li><p>Rafraîchissez les analyses et retournez sur la feuille des tableaux simples.</p></li>
+</ol>
+<ul>
+<li>Combien de filles entre un et quatre ans sont décédées ?</li>
+<li>Combien de patients décédés étaient malnutris modérés (MAM) ?</li>
+</ul>
+</div>
+</section>
+<section id="temps-analyses-temporelles" class="level4">
+<h4 class="anchored" data-anchor-id="temps-analyses-temporelles">Temps : analyses temporelles</h4>
+<p>Maintenant allons sur le feuille “Analyses temporelles”. Sur cette feuille, vous pouvez choisir l’échelle temporelle à explorer : jours, semaines, mois etc. La table contient 53 lignes, et peut donc montrer :</p>
+<ul>
+<li>un zoom sur une période de 53 jours (début de l’épidémie par exemple)</li>
+<li>un an de données (53 semaines)</li>
+<li>53 mois, pour des épidémies longues</li>
+<li>53 quarts d’années ou années (utilisation rare, pas pour une linelist patient)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/007-img-temporal-table.png" class="img-fluid figure-img"></p>
+<figcaption>Paramétrer les analyses temporelles</figcaption>
+</figure>
+</div>
+<p>Les courbes épidémiques sont en dessous des tableaux.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cette liste linéaire contient un seul gros tableau, mais d’autres linelists peuvent contenir plusieurs tableaux, organisés en sections. Les graphiques seront tout le temps après les tables. :::</p>
+</div>
+</div>
+<div class="instructions">
+<ul>
+<li>Enlevez les filtres qui étaient sur les données et mettez à jour les analyses</li>
+<li>Vérifiez les dates de notification des cas minimum et maximum. Quelles sont les unités à considérer pour les analyses temporelles ?</li>
+<li>Dans un premier temps, regardons les tables en unité “semaine”. Est-ce que toutes les données sont représentées dans la table ?</li>
+<li>Combien de patients ont été déchargés lors de la semaine 18 de 2022 ?</li>
+<li>Maintenant, changez la date de début de période pour ne faire afficher que les semaines de 2023.</li>
+<li>Combien de patients étaient hospitalisés dans la seconde semaine de Janvier 2023 ?</li>
+<li>Changez les unités en “Mois”. Combien de patients ont été admis en Janvier 2023 ?</li>
+</ul>
+</div>
+<p>Maintenant, allons voir les graphiques. Vous devriez voir un graphique similaire à celui-ci :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/008-img-temporal-hospit_raw.png" class="img-fluid figure-img"></p>
+<figcaption>Hospitalisations</figcaption>
+</figure>
+</div>
+<p>C’est suffisant pour établir l’état de l’épidémie, mais vous ne voudriez pas exporter la figure en l’état dans un rapport ou une présentation. En plus d’améliorations cosmétiques de l’apparence, il faudrait utiliser les filtrer du graphique pour cachez les semaines vides à la droite du graphique :</p>
+<ul>
+<li>sélectionner le graphe : quelques boutons apparaissent alors dans le coin en haut à droite.</li>
+<li>utiliser le bouton pour filtrer (icone en forme d’entonnoir, le dernier) pour filtrer les catégories que vous ne voulez pas voir</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>N’oubliez pas d’enlever ou d’ajuster les filtres lorsque vous ajoutez de nouvelles données, ou vous ne les verrez pas sur le graphique !</p>
+<p>Le corolaire est que si un collègue vous demande de l’aide sur une linelist où les données sont à jour dans la table mais n’apparaissent pas sur le graphique, les filtres sont probablement la source du problème</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/009-img-temporal-hospit_pimped.png" class="img-fluid figure-img"></p>
+<figcaption>Graphe un peu amélioré pour publication</figcaption>
+</figure>
+</div>
+</section>
+<section id="lieu-analyses-spatiales" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="lieu-analyses-spatiales">Lieu : analyses spatiales</h4>
+<p>Rendons-nous maintenant sur la troisième feuille d’analyses. Elle nous montrer le <strong>top 30</strong> des zones de résidence des cas, et en dessous, le top 30 des zones d’origine des cas (pour les patients qui ne font pas partie de la population d’accueil)<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;Le nombre 30 est défini dans le fichier <strong>setup</strong> et pourrait être différent dans une autre liste linéaire</p></div></div><p>Vous pouvez sélectionner le niveau administratif auquel vous voulez voir les données (1 à 4).</p>
+<div class="instructions">
+<p>Cliquez sur le bouton bleu “<sélectionnez votre="" niveau="" administratif="">” et testez les différentes options.</sélectionnez></p>
+<ul>
+<li>Quels niveaux ont des données (intéressantes) ?</li>
+<li>Combien de patients y-a-t’il à Moissala Est ?</li>
+</ul>
+</div>
+<p>Pour cette linelist, les données intéressantes sont au niveau “zone de responsabilité” (niveau admin 3), mais en fonction de vos données, d’autres niveaux peuvent être pertinents à regarder, si les personnes voyagent beaucoup, ou si vous avez crée une liste linéaire “master” à partir de plusieurs fichiers.</p>
+</section>
+<section id="lieu-et-temps-analyses-spatio-temporelles" class="level4">
+<h4 class="anchored" data-anchor-id="lieu-et-temps-analyses-spatio-temporelles">Lieu et temps :analyses spatio-temporelles</h4>
+<p>La dernière feuille d’analyse est un hybride entre la feuille d’analyse temporelle et celle d’analyse spatiale : elle vous permet de suivre ne nombre de cas dans quelques <em>endroits</em> de votre choix au cours du temps.</p>
+<div class="instructions">
+<ol type="1">
+<li><p>Allez sur la feuille d’analyses spatio-temporelles</p></li>
+<li><p>Placez votre curseur sur une des cellules bleu clair à gauche (commençant à la cellule <code>C14</code>)</p></li>
+<li><p>Cliquez sur le bouton <a href="../how_to/use_geohelper.html">“GeoHelper”</a> du menu OBT et sélectionnez Moissala Est (niveau admin 3)</p></li>
+<li><p>Allez à la cellule bleu suivante, et répétez les étapes pour sélectionner un autre endroit d’intérêt (vous pouvez regarder le top 30 de la feuille d’analyse spatiale pour identifiez des lieux d’intérêt, ou vous intéresser à un lieu avec des cas récents)</p></li>
+</ol>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/010-img-spatio-temporal.png" class="img-fluid figure-img"></p>
+<figcaption>Paramètres des analyses spatio-temporelles</figcaption>
+</figure>
+</div>
+<p>Nous arrivons à la fin de notre grand <em>tour</em> des feuilles d’analyses.</p>
+</section>
+</section>
+</section>
+<section id="partie-3-résolution-des-problèmes-de-la-liste-linéaire" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="partie-3-résolution-des-problèmes-de-la-liste-linéaire">Partie 3 : résolution des problèmes de la liste linéaire</h2>
+<section id="contexte-2" class="level3">
+<h3 class="anchored" data-anchor-id="contexte-2">🧭 Contexte</h3>
+<p>Vous avez déployé la liste linéaire sur le terrain. Une personne chargé de l’entrée des données débute sur le fichier OBT et a des questions…</p>
+<div class="instructions">
+<p>Identifiez la source des problèmes suivants et proposez une solution.</p>
+</div>
+</section>
+<section id="ouverture-du-fichier-et-autorisations" class="level3">
+<h3 class="anchored" data-anchor-id="ouverture-du-fichier-et-autorisations">Ouverture du fichier et autorisations</h3>
+<p><strong>Problème</strong> : votre collègue ouvre le fichier et va sur le menu OBT comme vous lui avez expliqué, mais les boutons ne marchent pas, et n’ont pas de description (ou la description est du charabia).</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Réponse">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Réponse
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Les macros ne s’exécutent pas ou pas correctement. Le plus probable est que les macros ne sont pas autorisées; plus rarement, le projet VBA ne s’est pas lancé correctement ou a planté.</p>
+<p>Demandez leur de fermer et réouvrir le fichier pour voir si ça résout le problème (en particulier si la linelist marchait chez eux avant). Si le problème persiste, vérifiez que le fichier est bien débloqué, et qu’ils ont bien autorisé les macros (voir <a href="#sec-unblock-file" class="quarto-xref">Section&nbsp;3</a>).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="méconnaissance-générale-du-fichier" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="méconnaissance-générale-du-fichier">Méconnaissance générale du fichier</h3>
+<p>De nombreuses questions que vous pourrez avoir vient du fait que les gens ne lisent pas la documentation, y compris quand elle a été explicitement envoyée pour résoudre un problème. En particulier, les gens ignorent souvent l’existence du <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">menu OBT</a>. la bonne nouvelle est que un grand nombre de requêtes sont faciles à régler.</p>
+<section id="plus-de-place" class="level4">
+<h4 class="anchored" data-anchor-id="plus-de-place">Plus de place !</h4>
+<p>Vous recevez le mail suivant :</p>
+<blockquote class="blockquote">
+<p>Hello, j’ai joint une linelist qui nous cause des problèmes. Certaines cellules sont bloquées alors nous ne pouvons pas ajouter de nouveaux cas. Ca nous empêche de travailler alors aidez-nous s’il vous plait.</p>
+</blockquote>
+<p>Comment résoudre le problème ?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Réponse">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Réponse
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Il faut utiliser le bouton “Ajouter des lignes” du menu OBT pour ajouter des lignes au bas de la feuille.</p>
+<p><strong>Note</strong>: les versions récentes de la liste linéaire ajoutent automatiquement cinq nouvelles lignes lorsque l’on rentre des données dans la dernière ligne, donc ce problème devrait devenir moins courant. Par contre, ça veut aussi dire qu’il faudrait migrer les données vers une version plus récente de la linelist !</p>
+</div>
+</div>
+</div>
+</section>
+<section id="lignes-vides-au-milieu" class="level4">
+<h4 class="anchored" data-anchor-id="lignes-vides-au-milieu">Lignes vides au milieu</h4>
+<p>Vous recevez le mail suivant :</p>
+<blockquote class="blockquote">
+<p>Bonjour, j’ai besoin de soutien sur la liste linéaire. Il y a des lignes vides (coloriées en rouge) et je ne peux pas les supprimer parce que le fichier est protégé. Pouvez-vous m’aider ?</p>
+</blockquote>
+<p>Comment résoudre le problème ?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Réponse">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Réponse
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Utilisez le bouton “Redimensionner la table” du menu OBT, qui supprime toutes les lignes vides du tableau.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="données-manquantes" class="level4">
+<h4 class="anchored" data-anchor-id="données-manquantes">Données manquantes</h4>
+<p>Vous recevez le mail suivant :</p>
+<blockquote class="blockquote">
+<p>Bonsoir, nous avons entré des données dans la base de donnée mais des lignes manquent alors que nous ne les avons pas supprimées.</p>
+</blockquote>
+<p>C’est pénible car il peut y avoir plusieurs sources à ce problème (et toutes n’ont pas de solution facile) :</p>
+<ul>
+<li>Il y a un filtre appliqué quelque part et certaines lignes sont cachées</li>
+<li>Le document a été fermé (ou a planté) alors qu’il n’était pas sauvegardé, les données “d’hier” ou de “ce matin” ont été perdues.</li>
+<li>Il y a eu un problème de synchronisation de OneDrive (le fichier local, plus récent, a été écrasé par erreur par la version du serveur, plus ancienne)</li>
+<li>L’utilisateur a supprimé des données par erreur. Vu que la feuille est protégée, ça devrait être rare mais on n’est jamais complètement à l’abris.</li>
+</ul>
+<p>Il faudra discuter avec votre collègue pour essayer de comprendre ce qui a pu se passer et voir si une version peut être récupérer quelque part. mais commencez par vérifier les filtres au cas où ça soit un problème facile à régler. Quel bouton utiliseriez-vous ?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Réponse">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Réponse
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Le bouton “Supprimer tous les filtrer” du menu OBT.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="analyses-non-actualisées" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="analyses-non-actualisées">Analyses non actualisées</h4>
+<p>Vous recevez le mail suivant :</p>
+<blockquote class="blockquote">
+<p>Bonjour, j’ai ajouté des données dans le fichier mais le tableau de bord est vide / pas à jour.</p>
+</blockquote>
+<p>Comment résoudre le problème ?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Réponse">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Réponse
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Utiliser le bouton “Actualiser les analyses” du menu OBT.</p>
+</div>
+</div>
+</div>
+<p>Le jour suivant, vous recevez un autre message :</p>
+<blockquote class="blockquote">
+<p>Bonjour, j’ai utilisé le bouton hier et ça a bien marché. Mais aujourd’hui, j’ai rentré de nouvelles données, utilisé le bouton et les analyses sont barrées. Je ne peux pas enlever le texte barré et je n’ai rien fait d’autre, juste entré les données.</p>
+</blockquote>
+<p>Une mise à jour récente<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> d’Office 365 barre le texte qu’Excel considère comme “obsolètes” (une valeur qui dépend d’autres valeurs, qui elles ont été modifiées). Pour des raisons que nous n’expliquerons pas ici, le bouton “Actualiser les analyses” ne suffit pas (encore) à envoyer le signal à Excel que toutes les cellules ont été recalculées. Le problème va être réglé, mais en attendant, si ça vous arrive :</p>
+<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;Le problème est apparu sur certains ordis à partir de Novembre 2024.</p></div></div><ul>
+<li>Sur la feuille patient, tapez <strong>F9</strong> (raccourcis pour le bouton “Calculer maintenant” du menu Excel “Formules”).</li>
+<li><em>Ensuite</em>, utilisez le bouton “Actualiser les analyses” du menu OBT.</li>
+</ul>
+<p>Si le problème vous gène souvent (et sur d’autres fichiers que les listes linéaires OBT) il est possible de <a href="](https://support.microsoft.com/fr-fr/office/mise-en-forme-des-valeurs-obsolètes-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd)">désactiver</a> cette nouvelle fonctionalité dans Excel</p>
+</section>
+</section>
+<section id="envoi-des-données-vers-le-tableau-de-bord" class="level3">
+<h3 class="anchored" data-anchor-id="envoi-des-données-vers-le-tableau-de-bord">Envoi des données vers le tableau de bord</h3>
+<p>Une autre source commune de problèmes est l’étape du partage des données de la liste linéaire pour qu’elles soient mises sur le tableau de bord. Il est important d’expliquer les <a href="https://epicentre-msf.github.io/outbreak-tools/how_to/send_data_to_dashboard.html">étapes</a> aux collègues qui devront effectuer la manip.</p>
+<p>Pour vous entraîner, voici quelques problèmes communs; pourquoi ça ne marche pas ?</p>
+<ul>
+<li><p>Les données ont été partagées avec le compte <epi-data> via OneDrive, et n’apparaissent pas sur le dashboard.</epi-data></p></li>
+<li><p>Le fichier <code>measles_linelist_moissala.xlsb</code>a été envoyé par mail à <a href="mailto:EPI-DATA@epicentre.msf.org" class="email">EPI-DATA@epicentre.msf.org</a> et une erreur est revenue.</p></li>
+</ul>
+<p>Le fichier <code>measles_linelist_moissala_export_data_20250203-1136.xlsx</code> a été envoyé par mail à <a href="mailto:EPI-DATA@epicentre.msf.org" class="email">EPI-DATA@epicentre.msf.org</a> et une erreur est revenue.</p>
+<p>Le fichier <code>MSL_linelist__MSL24__info_country_code__info_organisation__info_facility_name__anonymous__vb-1003__20250103-1541</code> a été envoyé par mail à <a href="mailto:EPI-DATA@epicentre.msf.org" class="email">EPI-DATA@epicentre.msf.org</a>. Il n’y a pas eu d’erreur, mais les données n’apparaissent pas sur le tableau de bord pour le Tchad…</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Indice">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Indice
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>L’export pour le dashboard devrait être nommé <code>MSL_linelist__MSL24__TCD__MSF-OCP__Mandoul Hospital__anonymous__vb-1003__20250103-1541</code></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Réponse">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Réponse
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Soit le fichier de la liste linéaire entier ou le mauvais export (export pour la migration) ont été envoyés, soit le bon fichier a été envoyé, mais les métadonnées n’étaient pas remplies correctement sur la feuille “Info”.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="problèmes-avancés" class="level3">
+<h3 class="anchored" data-anchor-id="problèmes-avancés">Problèmes avancés</h3>
+<p>Parfois le problème est moins évident, ou peut avoir plusieurs causes entremêlées, et il faut enquêter un peu plus.</p>
+<div class="instructions">
+<p>Ouvrez le fichier Excel <code>troubleshooting.xlsb</code> de l’archive que vous avez téléchargé en début de l’exercice.</p>
+</div>
+<p>Votre collègue vous a contacté. Ille a des données pour le début de Janvier 2023. Les analyses ne sont pas correctes alors qu’elle <em>ont été mises à jour</em>.</p>
+<p><strong>Problème 1.</strong> Il y a des cas positifs à la rougeole dans les données, mais on ne les voit pas dans la table univariée sur le résultat du test.</p>
+<p><strong>Problème 2.</strong> Le registre indique qu’il y a eu 25 notifications la première semaine, et 40 la seconde, mais les chiffres sur la courbe épidémique ne sont pas corrects. Par contre, le résumé du nombre de notification total sur la feuille Univariée est correct (65 patients).</p>
+<p><strong>Problème 3.</strong> Il y a eu cinq patients décédés dans le centre, 3 notifiés en semaine 1 et 2 en semaine 2. Mais les chiffres sur la feuille d’analyse temporelle sont faux.</p>
+<div class="instructions">
+<p>Explorer la liste linéaire et enquêtez pour trouver la cause des problèmes. S’ils sont faciles à résoudre, faites la correction. Réfléchissez à quels retours faire à vos collaborateurs pour qu’ils évitent ces erreurs ou les résolvent eux même.</p>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Indice">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Indice
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Problème 1.</strong> Vérifiez les valeurs dans le dropdown menu pour la colonne incriminée, et les données entrées à l’aide du filtre.</p>
+<p><strong>Problème 2.</strong> Par construction, les analyses temporelles nécessitent des dates.</p>
+<p><strong>Problème 3.</strong> Le problème est multifactoriel. Peut être une des causes a pu disparaitre en fonction de ce que vous avez fait pour les problèmes différents.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Indice supplémentaires">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Indice supplémentaires
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Problème 3.</strong> Est ce que toutes les dates sont correctes ? Est-ce que toutes les catégories de la colonne “Type de sortie” sont valides ? Si oui, qu’est ce qui pourrait affecter une graphe qui nécessite une semaine épidémique ?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Un dernier indice">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Un dernier indice
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Problème 3.</strong> Peut être allez relire la <a href="#sec-customise" class="quarto-xref">Section&nbsp;4.2</a> au cas où il y a un paramètre à changer…</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Réponse">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Réponse
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Problème 1.</strong> Des valeurs qui ne correspondent pas au menu déroulant ont été entré de force dans la colonne. Ces valeurs sont non valides et n’apparaissent pas dans le graphe (“Pos” au lieu de “Positif”)</p>
+<p><strong>Problème 2.</strong> La variable “date de notification” n’a pas été vérifiée et nettoyée, et certaines valeurs ne sont même pas reconnues comme des dates par Excel. Les patients correspondant ne peuvent donc pas apparaître dans les analyses <em>temporelles</em> parce vu que les formules sur la date vont planter. Par contre, le résumé général de la feuille univarié n’est pas conditionnel à la date (pas pour le nombre total de patients en tout cas), et n’est donc pas affecté par le problème.</p>
+<p><strong>Problème 3.</strong> Une des dates de notification était mal rentrée, et pas reconnue comme date. Une des valeurs du type de sortie avait une faute d’orthographe. Enfin, la date de début de semaine était paramétré pour le dimanche, alors que ce devrait être le lundi pour le Tchad. Regardez colonne calculée “semaine de notification”, changez le jour de début de semaine (menu OBT) et voyez la se mettre à jour (type F9 pour recalculer si nécessaire).</p>
+</div>
+</div>
+</div>
+<p>Ce troisième problème était un peu vicieux, mais ça peut facilement se produire dans un pays ou le début de semaine n’est pas le même que par défaut (lundi), si quelqu’un a oublié de paramétrer le fichier.</p>
+</section>
+</section>
+<section id="partie-4-le-tableau-de-bord" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="partie-4-le-tableau-de-bord">Partie 4 : Le tableau de bord</h2>
+<section id="contexte-3" class="level3">
+<h3 class="anchored" data-anchor-id="contexte-3">🧭 Contexte</h3>
+<p>La liste linéaire est déployée sur le terrain, et vous et vos collègues avez décidé que les données devraient être envoyées à Epicentre pour compilation et affichage sur le dashboard. Ainsi, vous pourrez utiliser le tableau de bord pour suivre l’évolution de l’épidémie au Tchad, et avoir accès à la carte des cas.</p>
+</section>
+<section id="accéder-au-tableau-de-bord" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="accéder-au-tableau-de-bord">Accéder au tableau de bord</h3>
+<p>Pour vous connecter au tableau de bord, il vous faut un compte. La création de ce compte est semi-automatique si vous avez une adresse MSF : allez sur <a href="https://reports.msf.net/signup/">cette page</a>.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;Si vous n’avez pas d’adresse MSF mais pensez que vous devriez avoir accès au tableau de bord, contactez l’équipe EpiDS.</p></div></div><p>Une fois que vous avez un compte, connectez vous au <a href="https://apps.epicentre-msf.org/secure/app/intersectional-surveillance">tableau de bord intersection</a> et utilisez votre compte crée pour vous connecter.</p>
+</section>
+<section id="menu-des-filtres" class="level3">
+<h3 class="anchored" data-anchor-id="menu-des-filtres">Menu des filtres</h3>
+<p>Sur la gauche (numéro “1” sur <a href="#fig-dashboard" class="quarto-xref">Figure&nbsp;2</a>) vous avez le menu des options, où vous pouvez filtrer les données (maladies, sections, pays, site, type de sortie etc.) et paramétrer quelques options.</p>
+<div id="fig-dashboard" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dashboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../module_1/images/012-img-dashboard.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dashboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Tableau de bord
+</figcaption>
+</figure>
+</div>
+<div class="instructions">
+<ul>
+<li>Sélectionnez “Rougeole” dans le menu des maladies</li>
+<li>Sélectionnez “Tchad” dans le menu des pays</li>
+<li>Cliquez sur le bouton “Update” en bas de la barre lattérale pour appliquer les filtres et mettre à jour le tableau de bord.</li>
+</ul>
+</div>
+<p>Maintenant, le dashboard ne montre que les cas de rougeole au Tchad.</p>
+</section>
+<section id="la-carte" class="level3">
+<h3 class="anchored" data-anchor-id="la-carte">La carte</h3>
+<p>Intéressons-nous d’abors à la carte.</p>
+<div class="instructions">
+<ul>
+<li>Zoomez sur la carte pour vous focaliser sur le Tchad</li>
+<li>Sélectionnez le niveau ADM1 pour avoir une meilleure résolution. Quelle région de santé a le plus de cas ?</li>
+<li>Sélectionnez le niveau ADM2 pour voir encore plus précisément. Quel district a le plus de cas ? Combien de patients n’ont pas de données géo rentrées ou valides à cette résolution ?</li>
+<li>Sélectionner enfin le niveau ADM3. Que pensez vous de la complétude des données à ce niveau de résolution ?</li>
+</ul>
+</div>
+<p>Le bouton “Options” en haut de la carte vous permet d’ajuster la taille des cercles pour éviter qu’ils ne se recouvrent, et de grouper les données en fonction de certaines variables.</p>
+<div class="instructions">
+<p>Groupez les données en fonction de si les patients sont hospitalisés ou pas. Est-ce qu’il y a une différence entre Moissala et Djodo Gassa ?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Il y a un bouton à gauche de la carte (numéro “3” on <a href="#fig-dashboard" class="quarto-xref">Figure&nbsp;2</a>) qui permet de changer le fond de carte et de cacher / montrer les cercles ou les taux d’attaques pour améliorer la lisibilité</p></li>
+<li><p>Si vous cliquez sur une région donnée, la courbé épidémique et la pyramide d’âge se mettront à jour pour ne montrer que les données des patients de cette région. La région sélectionnée est entourée d’un liseré rouge. Cliquez sur la région une seconde fois pour la désélectionner.</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="la-courbe-épidémique" class="level3">
+<h3 class="anchored" data-anchor-id="la-courbe-épidémique">La courbe épidémique</h3>
+<p>La figure en haut à droite est une courbe épi. Par défaut elle ressemble à ceci pour le Tchad (à l’époque en tout cas).</p>
+<div id="fig-dashboard" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dashboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../module_1/images/013-img-epicurve.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dashboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Apparence par défaut de la courbe épi
+</figcaption>
+</figure>
+</div>
+<div class="instructions">
+<p>Utilisez les options du graphe (numéro 4 on <a href="#fig-dashboard" class="quarto-xref">Figure&nbsp;2</a>) pour le modifier de telle sorte qu’il ressemble à ceci :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/014-img-epicurve-2.png" class="img-fluid figure-img"></p>
+<figcaption>Hospitalisations au cours du temps</figcaption>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>La carte et la courbe épi ont un bouton “focus” en bas à droite, qui apparait quand on passe la souris dessus, et qui permet de passer la figure en plein écran ce qui est pratique si votre écran est petit (numéro 5 on <a href="#fig-dashboard" class="quarto-xref">Figure&nbsp;2</a>).</p></li>
+<li><p>Sur la courbe épi, vous pouvez faire glisser votre souris pour zoomer sur une période donnée. Un bouton “reset” permet de revenir à la vue par défaut.</p></li>
+<li><p>Cliquez sur une barre du graphique pour mettre à jour la pyramide d’âge et la carte pour ne montrer que les cas de cette période. Un fond gris indique qu’une barre est sélectionnée. Cliquez une seconde fois sur la barre pour la désélectionner.</p></li>
+<li><p>Cliquez sur une catégorie dans la légende pour la désélectionner et ne montrer que quelques catégories. Par exemple, sur le graphique ci-dessus vous pourriez décider de ne montrer que les patients hospitalisés en deux clics, ce qui est peut être plus rapide que d’ajuster les filtres globaux avec le menu latéral.</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="a-votre-tour" class="level3">
+<h3 class="anchored" data-anchor-id="a-votre-tour">A votre tour</h3>
+<div class="instructions">
+<p>Explorez le dashboard et répondez aux questions suivantes :</p>
+<ul>
+<li><p>quand est ce que le tableau de bord a été mis à jour pour la dernière fois pour la rougeole ? (Indice : pas besoin de fouiller les sous-menus, c’est marqué à un endroit de la page principale)</p></li>
+<li><p>In 2024, quel pays a eu le plus de cas notifiés vis la liste linéaire ? Combien d’enfants de moins de six mois ont été notifiés ? Et en particulier, combien de filles ?</p></li>
+<li><p>Quand est-ce que le tableau de bord a été mis à jour pour la dernière fois pour l’hépatite E ?</p></li>
+<li><p>Combien de consultations choléra MSF OCG a-t’elle effectué dans les 90 derniers jours ?</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="aller-plus-loin" class="level2">
+<h2 class="anchored" data-anchor-id="aller-plus-loin">Aller plus loin</h2>
+<ul>
+<li>Allez sur le site contenant la <a href="">Documentation</a> and lisez comment <a href="https://epicentre-msf.github.io/outbreak-tools/how_to/migrate_linelist.html">migrer les données et créer une liste linéaire “master”</a></li>
+</ul>
+
+
+</section>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/epicentre-msf\.github\.io\/obt-training\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Developed by <a href="https://epicentre.msf.org/"><img src="images/epicentre.png" class="img-fluid" alt="Epicentre logo" width="65"></a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This website is built with <i class="fa-solid fa-heart" title="a heart" aria-label="heart"></i>, <a href="https://github.com" target="_blank"><i class="fa-brands fa-github" title="GitHub octocat logo" aria-label="github"></i></a>, <a href="https://www.r-project.org/about.html" target="_blank"><i class="fa-brands fa-r-project" title="R Project" aria-label="r-project"></i></a> and <a href="https://quarto.org/" target="_blank">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

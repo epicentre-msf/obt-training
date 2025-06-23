@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="floating nav-fixed quarto-light">
+<body class="floating nav-fixed slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -109,7 +109,11 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../module_1/m1_tutorial.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Tutorial EN</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../module_1/m1_tutorial.fr.html">
+ <span class="dropdown-text">Tutoriel FR</span></a>
   </li>  
     </ul>
   </li>
@@ -140,14 +144,26 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">Table of content</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#setup-file" id="toc-setup-file" class="nav-link" data-scroll-target="#setup-file">Setup file</a>
+  <ul>
+  <li><a href="#structure-of-the-setup-file" id="toc-structure-of-the-setup-file" class="nav-link" data-scroll-target="#structure-of-the-setup-file">Structure of the <strong>setup</strong> file</a></li>
+  <li><a href="#obt-menu" id="toc-obt-menu" class="nav-link" data-scroll-target="#obt-menu">OBT menu</a></li>
+  </ul></li>
+  <li><a href="#designer-file" id="toc-designer-file" class="nav-link" data-scroll-target="#designer-file">Designer file</a></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -168,7 +184,75 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="introduction" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The main idea of OutbreakTools linelist generation is to separate the <strong>content</strong> of the linelist (which <em>variables</em> and <em>analyses</em> are in the linelist) from the file <strong>interface</strong> and functionalities.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;An idea that is not novel, as separating content and presentation (or style) is a classic idea, that you find in HTML/CSS, Markdown, Latex or even Word styles.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;You can think of the <strong>setup file</strong> as a <em>recipe</em> for a given linelist.</p></div></div><p>The content (variables and analyses) is described in a special Excel file, the so-called <strong>setup file</strong>, which is essentially a glorified dictionary<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. You may have encountered similar files when creating a Kobo or Redcap database.</p>
+<p>Another Excel file, the <strong>designer</strong> reads the <strong>setup file</strong> and generates the whole linelist: sheets, variables, analyses, interface…<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;If you think of the <strong>setup file</strong> as a recipe, the designer is the food processor.</p></div></div><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_1/images/002-img-obt-concept.png" class="img-fluid figure-img"></p>
+<figcaption>Creating a linelist with Outbreaktools</figcaption>
+</figure>
+</div>
+<p>The workflow is as follow:</p>
+<ol type="1">
+<li>Fill or modify a <strong>setup file</strong> to define linelist specifications</li>
+<li>Compile the <strong>setup file</strong> using the <strong>designer file</strong></li>
+<li>Test the created linelist</li>
+<li>Correct bugs in the <strong>setup file</strong></li>
+<li>Rinse and repeat until the linelist is functional</li>
+</ol>
+<p>The maintenance of functionalities of the linelist (interface, buttons etc.) is done by a specialist in Epicentre, who generates new versions of the tools. But filling a <strong>setup</strong> and using the <strong>designer</strong> does not require any VBA skills, just a good understanding of data structure, variable type and Excel formulas.</p>
+</section>
+<section id="setup-file" class="level2">
+<h2 class="anchored" data-anchor-id="setup-file">Setup file</h2>
+<p>The <strong>setup file</strong> is an Excel file that describes the various sheets of the linelist to be created, in a <em>predefined</em> and <em>standardised</em> format. It allows you to specify:</p>
+<ul>
+<li>the structure of the data entry sheet(s) of the linelist</li>
+<li>the variables for the data entry sheet(s)</li>
+<li>the basic analyses to be included in the linelist (uni and bivarites, epicurves, geo data etc.)</li>
+<li>data exports</li>
+<li>translations to create linelists in several languages</li>
+</ul>
+<p>Most of the work developing a linelist is spent filling <em>and testing</em> a <strong>setup file</strong> template to define all the aspects of the linelist you want to create.</p>
+<p>Creating a mature linelist takes time and many rounds. The good thing with OBT is that it is easy to migrate data from one linelist version to another <strong>as long as the variable names and categories remain the same</strong>. This means that if you are in a hurry, you should focus first on the dictionary part of the setup: the most important variables, their name and their content (in the case of categorical variables). These are the parts that are going to be horribly painful and time consuming to change later, when data is already collected.</p>
+<p>By opposition, adding <em>new</em> variables, clarifying a <em>label</em>, adding a French or an Arabic translation, a MoH export or new analyses are all actions that can be done at later stages, when data collection has already started.</p>
+<section id="structure-of-the-setup-file" class="level3">
+<h3 class="anchored" data-anchor-id="structure-of-the-setup-file">Structure of the <strong>setup</strong> file</h3>
+<p>We will not dive through the sheets and tables of the setup file one by one in this module, as it would be long and tedious. Instead, we will give an overview of their use, and learn how to modify core components in the tutorial. We will refer you to the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/home_reference.html#category=Setup">documentation</a> for precise details.</p>
+<p>The <strong>setup file</strong> is divided in several sheets, corresponding to one aspect of the linelist to be created.</p>
+<p><strong>Dictionary sheet</strong> This sheet has one big table that describes all the variables to be collected, their format etc. From it you can create several* <em>linelist</em> sheets (typically, we usually create at least a metadata sheet (the <em>Info sheet</em>), and a sheet to enter patient data). Filling this sheet is the longest task when creating a dictionary, and most of the other tables revolve around the variables defined in it.</p>
+<p><strong>Choices sheet</strong> This sheet complements the Dictionary sheet, as it allows to define the categories/levels accepted for categorical variables, in the form of lists. In the linelist, these values will appear as dropdown menus in categorical variables.</p>
+<p><strong>Exports</strong> This sheet has one short table that describes the characteristics of exports, such as protection, choice of variables or sheets to export and export names. This creates the content of the “Export menu” in the linelist, with one or more specific export buttons.</p>
+<p><strong>Analyses</strong> This sheet contains several tables that describe the analyses to be included in the linelist (variables to cross, graphs, etc.).</p>
+<p>It usually takes some time to fill it, but analyses can be added at a later stage.</p>
+<p><strong>Translation</strong> This sheet allow you to provide translations, so that you can decide in which language to generate a linelist. The table on that sheet displays the list of all strings of text/fields found in the setup (in pertinent places) to be translated. The user provides the desired translation in columns (one column = one language), and the designer reads the table to generate linelist in one of the present languages.</p>
+</section>
+<section id="obt-menu" class="level3">
+<h3 class="anchored" data-anchor-id="obt-menu">OBT menu</h3>
+<p>As for in the linelist (and the <strong>designer</strong>), the <strong>setup</strong> file has a dedicated OutbreakTool menu in the top option ribbon from Excel:</p>
+<p><img src="../module_2/images/img-001-ribbon-setup.png" id="fig-setup-ribbon" class="img-fluid quarto-figure quarto-figure-center anchored" alt="OutbreakTools tab in the setup file"> Most of these buttons should be self-explanatory (and we will use a couple of them in the module), but you can find the complete reference <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_setup.html">here</a>.</p>
+</section>
+</section>
+<section id="designer-file" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="designer-file">Designer file</h2>
+<p>The <strong>designer</strong> is another excel file, that contains the code to build a linelist from a <strong>setup file</strong>.</p>
+<p>When the <strong>setup file</strong> is ready (or at least a first draft is), you load it into a <strong>designer</strong>, fill a couple of fields<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> and let the designer build the linelist.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;What is the name of the created linelist, where to save it, should it be password protected and if yes, which password etc.</p></div></div><p>The <strong>designer file</strong> also has a dedicated OutbreakTools section in the top option ribbon from Excel:</p>
+<div id="fig-setup-ribbon" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-setup-ribbon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/img-003-ribbon-designer.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-setup-ribbon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: OutbreakTools tab in the <strong>setup file</strong>
+</figcaption>
+</figure>
+</div>
 
+
+</section>
 
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

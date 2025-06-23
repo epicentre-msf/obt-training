@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Module presentation and objectives – OutbreakTools training</title>
+<title>Tutorial – OutbreakTools training</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,11 +70,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/font-awesome-6.5.2/js/script.js"></script>
 
 
 </head>
 
-<body class="floating nav-fixed quarto-light">
+<body class="floating nav-fixed slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -109,7 +110,11 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../module_1/m1_tutorial.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Tutorial EN</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../module_1/m1_tutorial.fr.html">
+ <span class="dropdown-text">Tutoriel FR</span></a>
   </li>  
     </ul>
   </li>
@@ -144,16 +149,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of content</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#prepare-the-materials" id="toc-prepare-the-materials" class="nav-link" data-scroll-target="#prepare-the-materials">Prepare the materials</a>
+  <li><a href="#about-this-tutorial" id="toc-about-this-tutorial" class="nav-link active" data-scroll-target="#about-this-tutorial">About this tutorial</a>
   <ul>
-  <li><a href="#download-and-unzip-the-materials" id="toc-download-and-unzip-the-materials" class="nav-link" data-scroll-target="#download-and-unzip-the-materials">Download and unzip the materials</a></li>
-  <li><a href="#unlock-files-if-necessary" id="toc-unlock-files-if-necessary" class="nav-link" data-scroll-target="#unlock-files-if-necessary">Unlock files if necessary</a></li>
-  <li><a href="#activate-macros-before-exercises" id="toc-activate-macros-before-exercises" class="nav-link" data-scroll-target="#activate-macros-before-exercises">Activate macros before exercises</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">🎯 Objectives</a></li>
+  <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context">🧭 Context</a></li>
+  <li><a href="#activities" id="toc-activities" class="nav-link" data-scroll-target="#activities">Activities</a></li>
   </ul></li>
-  <li><a href="#exercise-1-getting-started." id="toc-exercise-1-getting-started." class="nav-link" data-scroll-target="#exercise-1-getting-started.">Exercise 1: Getting started.</a></li>
-  <li><a href="#exercise-2-adding-new-variables" id="toc-exercise-2-adding-new-variables" class="nav-link" data-scroll-target="#exercise-2-adding-new-variables">Exercise 2: Adding new variables</a></li>
-  <li><a href="#exercise-3-adding-new-analyses" id="toc-exercise-3-adding-new-analyses" class="nav-link" data-scroll-target="#exercise-3-adding-new-analyses">Exercise 3: Adding new analyses</a></li>
+  <li><a href="#get-ready" id="toc-get-ready" class="nav-link" data-scroll-target="#get-ready">Get ready</a>
+  <ul>
+  <li><a href="#download-and-unzip-the-tutorial-materials" id="toc-download-and-unzip-the-tutorial-materials" class="nav-link" data-scroll-target="#download-and-unzip-the-tutorial-materials">Download and unzip the tutorial materials</a></li>
+  <li><a href="#description-of-the-folder-content" id="toc-description-of-the-folder-content" class="nav-link" data-scroll-target="#description-of-the-folder-content">Description of the folder content</a></li>
+  </ul></li>
+  <li><a href="#sec-unblock-file" id="toc-sec-unblock-file" class="nav-link" data-scroll-target="#sec-unblock-file">Part 0: unlock files and functionalities</a></li>
+  <li><a href="#part-1-first-contact-with-the-setup-file" id="toc-part-1-first-contact-with-the-setup-file" class="nav-link" data-scroll-target="#part-1-first-contact-with-the-setup-file">Part 1: First contact with the <strong>setup</strong> file</a></li>
+  <li><a href="#part-2-generate-a-linelist-from-an-existing-setup" id="toc-part-2-generate-a-linelist-from-an-existing-setup" class="nav-link" data-scroll-target="#part-2-generate-a-linelist-from-an-existing-setup">Part 2: Generate a linelist from an existing setup</a>
+  <ul>
+  <li><a href="#continuous" id="toc-continuous" class="nav-link" data-scroll-target="#continuous">Continuous</a></li>
+  <li><a href="#categorical" id="toc-categorical" class="nav-link" data-scroll-target="#categorical">Categorical</a></li>
+  </ul></li>
+  <li><a href="#part-3-add-columns-to-a-linelist" id="toc-part-3-add-columns-to-a-linelist" class="nav-link" data-scroll-target="#part-3-add-columns-to-a-linelist">Part 3: Add columns to a linelist</a></li>
+  <li><a href="#add-analyses" id="toc-add-analyses" class="nav-link" data-scroll-target="#add-analyses">Add analyses</a></li>
+  <li><a href="#part-4-add-an-moh-export" id="toc-part-4-add-an-moh-export" class="nav-link" data-scroll-target="#part-4-add-an-moh-export">Part 4: Add an MoH export</a></li>
   </ul>
 </nav>
 </nav>
@@ -162,11 +178,11 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Module presentation and objectives</h1>
+<h1 class="title">Tutorial</h1>
 </div>
 
 
@@ -183,180 +199,210 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Excercises and show-case of <a href="https://github.com/epicentre-msf/outbreak-tools/">outbreak-tools</a> and <a href="https://github.com/epicentre-msf/outbreak-tools-setup/">outbreak-tools-setup</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://github.com/epicentre-msf/outbreak-tools-demo/raw/main/demo_materials.zip"><img src="https://github.com/epicentre-msf/outbreak-tools/raw/dev/src/imgs/materials.svg" class="img-fluid figure-img"></a></p>
-<figcaption>Download all the materials of the demo</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://github.com/epicentre-msf/outbreak-tools-setup/raw/main/setup.xlsb"><img src="https://github.com/epicentre-msf/outbreak-tools/raw/main/src/imgs/setup_file.svg" class="img-fluid figure-img"></a></p>
-<figcaption>Download Latest version of setup file</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://github.com/epicentre-msf/outbreak-tools/raw/dev/misc/_ribbontemplate.xlsb"><img src="https://github.com/epicentre-msf/outbreak-tools/raw/dev/src/imgs/ribbon_template.svg" class="img-fluid figure-img"></a></p>
-<figcaption>Download Latest development version of the designer</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://github.com/epicentre-msf/outbreak-tools/raw/dev/src/bin/designer_dev.xlsb"><img src="https://github.com/epicentre-msf/outbreak-tools/raw/dev/src/imgs/dev_designer.svg" class="img-fluid figure-img"></a></p>
-<figcaption>Download ribbon template of linelist</figcaption>
-</figure>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you just want to focus on linelist usage, you can download materials for a short tutorial <a href="https://github.com/epicentre-msf/outbreak-tools-demo/raw/main/demo_materials_usage.zip">here</a></p>
-</div>
-</div>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>In this demo, you’ll familiarise yourself with the various features of the tool and simulate a scenario well known to epidemiologists in the field: upgrading a linelist that already contains data to a new version. This often happens when you want to collect new variables as the epidemic unfold and you need to answer new questions.</p>
-<p>The folders contain all the materials needed to perform the exercises.</p>
-</section>
-<section id="prepare-the-materials" class="level2">
-<h2 class="anchored" data-anchor-id="prepare-the-materials">Prepare the materials</h2>
-<section id="download-and-unzip-the-materials" class="level3">
-<h3 class="anchored" data-anchor-id="download-and-unzip-the-materials">Download and unzip the materials</h3>
-<p>You can download the exercices bundled in a<code>zip</code> file for offline use <a href="https://github.com/epicentre-msf/outbreak-tools-demo/raw/main/demo_materials.zip">here</a>.</p>
-</section>
-<section id="unlock-files-if-necessary" class="level3">
-<h3 class="anchored" data-anchor-id="unlock-files-if-necessary">Unlock files if necessary</h3>
-<p>Sometimes Excel files with macro downloaded from the web are automatically “blocked” for security reasons. You can unblock the files with the following steps:</p>
-<ol type="1">
-<li>Right click on the file</li>
-<li>Select “Properties”<br>
-</li>
-<li>Check the <em>Unblock</em> box on the bottom right (if you don’t see such a button on the bottom right it means that the file is already unprotected - for this level of protections).</li>
-</ol>
-</section>
-<section id="activate-macros-before-exercises" class="level3">
-<h3 class="anchored" data-anchor-id="activate-macros-before-exercises">Activate macros before exercises</h3>
-<p>If you’re going to run the designer to build a linelist, you’ll need to enable VBA macros in Excel, as well as access to the VBA object model:</p>
-<ol type="1">
-<li>Open Excel</li>
-<li>Display the <em>Developer</em> tab in Excel.</li>
-<li>In the <em>Developer</em> tab, click on <em>Macro security</em>. Check the options as shown in the following image:</li>
-</ol>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/macros_security_en.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</section>
-</section>
-<section id="exercise-1-getting-started." class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1-getting-started.">Exercise 1: Getting started.</h2>
+<section id="about-this-tutorial" class="level2">
+<h2 class="anchored" data-anchor-id="about-this-tutorial">About this tutorial</h2>
+<p>In this tutorial you will learn to modify an OBT linelist to add variables and analyses.</p>
+<section id="objectives" class="level3">
+<h3 class="anchored" data-anchor-id="objectives">🎯 Objectives</h3>
 <ul>
-<li><p>Open the linelist <code>linelist_measles_en_ex1.xlsb</code> located in the <code>linelist</code> folder. The file password is 5678. It contains a mock measles dataset.</p></li>
-<li><p>Take a quick look at the different sheets to get an overview of the structure of the file.</p></li>
+<li>Understand the OBT linelist building workflow</li>
+<li>Know how to add variables to an OBT linelist by using the dictionary</li>
+<li>Know how to add analyses (tables and graphs) to an OBT linelist</li>
+<li>Generate a linelist from a dictionary.</li>
 </ul>
-<!-- - In the *Linelist patients* sheet, add one or two patients manually. In particular, use the geo-Helper to enter the patients' origin (see *Data table* section of the [OutbreakTools ribbon](reference/ribbons.qmd#sec-linelist-ribbon)). -->
-<!-- - Explore univariate, bivariate, temporal and spatial analyses. Use button "Refresh analyses" in the [OutbreakTools ribbon](reference/ribbons.qmd#sec-linelist-ribbon) to update the analyses. -->
-<ul>
-<li><p>In the temporal analysis, change the start/end dates as well as the time unit of the analysis.</p></li>
-<li><p>In the spatial analysis, change the administrative level and divide by the population size to get attack rates (note we don’t have population estimates below the health-zone level).</p></li>
-<li><p>Go back to the <em>Linelist patients</em> and use the filters to show only patients under 2 years of age. Then go back to the analyses sheets and recalculate (use button “Refresh analyses”).</p></li>
-</ul>
-<!-- - Export the filtered data using the `anonymous export for MSF` (see *Export button* in the [OutbreakTools ribbon](reference/ribbons.qmd#sec-linelist-ribbon)). Open and browse the exported file. -->
-<!-- - Finally, print a register book for the `Linelist patients` (see the *Register book* section of the [OutbreakTools ribbon](reference/ribbons.qmd#sec-linelist-ribbon)). -->
 </section>
-<section id="exercise-2-adding-new-variables" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-2-adding-new-variables">Exercise 2: Adding new variables</h2>
-<p>Open the setup file <code>setup_measles_base_ex2.xlsb</code> in the <code>setup</code> folder. This setup file corresponds to the linelist you have been working with. Take a look at the different sheets and see how they relate to the linelist.</p>
-<p>Now, we would like to add the following variables:</p>
+<section id="context" class="level3">
+<h3 class="anchored" data-anchor-id="context">🧭 Context</h3>
+<p>MSF has been working in eastern and southern Chad since 2006 where our teams provide medical care and assistance to displaced people and local communities who often struggle with a lack of food.</p>
+<p>A measles OBT linelist was deployed, and need to be tweaked to better serve the needs of the field.</p>
+</section>
+<section id="activities" class="level3">
+<h3 class="anchored" data-anchor-id="activities">Activities</h3>
+<p>In this tutorial, you will get access to several files that we are going to use:</p>
 <ul>
-<li><p>In the <em>Admission</em> section of <em>Linelist patients</em> sheet, just before the <em>hospitalisation</em> sub-section: a variable called <code>muac</code> (MUAC) that can take three values: “Green (125+mm)”, “Yellow (115-124mm)”, “Red (&lt; 115mm)”</p></li>
-<li><p>In the <em>Vaccination</em> section of <em>Linelist patients</em> sheet, just after <em>Vaccination against measles</em>:</p>
-<ul>
-<li>A variable called <code>vacci_measles_doses</code> (Number of doses received) which is a numeric variable.</li>
-<li>Create a data validation rule to ensure that this variable remains between 0 and 4.</li>
-</ul></li>
+<li>a (simplified) dictionary for a measles OBT linelist</li>
+<li>an empty linelist generated by that dictionary</li>
+<li>the most recent designer file</li>
 </ul>
-<!-- - Translate newly added labels into French (see  the [Setup Options ribbon](reference/ribbons.qmd#sec-setup-ribbon) and the [Setup Translation sheet](reference/translations_sheet.qmd)). -->
-<!-- - Check the setup for potential errors (see  the [Setup Options ribbon](reference/ribbons.qmd#sec-setup-ribbon)). -->
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You should normally have a configuration file identical to <code>setup_measles_exercise_two.xlsb</code> in the <code>setup</code> folder. You can also start from this file if you like.</p>
-</div>
-</div>
-<ul>
-<li>Regenerate a new linelist named <code>linelist_measles_en_ex2</code> using the designer located in the <code>designer</code> folder. Save the linelist in the demo folder, making sure you have selected English as the language. You will use the file <code>geobase-cod-2023-03-13_20230612.xlsx</code> in the <code>geobase</code> folder as your geobase.</li>
-</ul>
+<p>We will use this files to discover how to generate linelists from a <strong>setup file</strong>, and modify this <strong>setup file</strong> to generate an improved linelist.</p>
+<p>Explanations will be given in simple text, or boxes (tips, notes etc.) and instructions will be given in instructions boxes:</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning for Mac users
+Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Sometimes generating the linelist using a ribbon file can fail on Mac. In that case, it will default back to a linelist with buttons instead, but you should be able to pursue the exercices with this linelist. We are working to provide full support for Ribbon on Mac Os.</p>
-<p>You might experience screen flickering during the linelist creation process.</p>
+<p>I contain important information!</p>
 </div>
 </div>
-<ul>
-<li><p>You are now ready to migrate your data from the old to the new linelist. You need to proceed in 2 steps: <!-- - First, go back to the linelist `linelist_measles_en_ex1.xlsb` and remove all filters (see the [linelist options ribbon](reference/ribbons.qmd#sec-linelist-ribbon)). Then, export the data (use the *Export data* button in the same ribbon) to a location of your choice. This migration file contains all your data. --></p>
-<!-- - Second, go back to the new linelist `linelist_measles_en_ex2.xlsb` and import the migration file (see the button "Import data" from the [linelist options ribbon](reference/ribbons.qmd#sec-linelist-ribbon)). Look at the importation report and browse the data in the new linelist. --></li>
-</ul>
-</section>
-<section id="exercise-3-adding-new-analyses" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3-adding-new-analyses">Exercise 3: Adding new analyses</h2>
-<p>We have decided to add some analyses on the type of discharge (variable <code>outcome</code>) to the linelist.</p>
-<ul>
-<li><p>Open the setup file <code>setup_measles_base_ex3.xlsb</code> located in the <code>setup</code> folder.</p></li>
-<li><p>In the <em>Analyses</em> sheet, section <em>Univariate Analysis</em>, add a univariate table showing the number of patients by type of discharge. Add percentages and a graph for this table.</p></li>
-<li><p>In the <em>Analyses</em> sheet, section <em>Time Series Analysis</em>, add a temporal table showing the number of patient by type of discharge and notification date. Add percentages by row and add total.</p></li>
-<li><p>In the <em>Analyses</em> sheet, section <em>Labels for Time Series Graphs</em>, add a graph title <em>Deaths</em>. In the section <em>Graph on Time Series</em> graph specifications, add the number of deaths per notification date, in bars.</p></li>
-<li><p>Translate newly added labels into French (see <em>Setup Options</em> ribbon).</p></li>
-<li><p>Check the setup for potential errors (see <em>Setup Options</em> ribbon).</p></li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You should get a configuration file identical to <code>setup_measles_exercise_three.xlsb</code> in the <code>setup</code> folder. You can also start from this file if you like.</p>
+<p>I am a handy bit of information that may be omitted if you are in a hurry, but totally deserve some attention at some point.</p>
 </div>
 </div>
+<div class="instructions">
+<p>Now do <strong>do something</strong>!</p>
+</div>
+</section>
+</section>
+<section id="get-ready" class="level2">
+<h2 class="anchored" data-anchor-id="get-ready">Get ready</h2>
+<section id="download-and-unzip-the-tutorial-materials" class="level3">
+<h3 class="anchored" data-anchor-id="download-and-unzip-the-tutorial-materials">Download and unzip the tutorial materials</h3>
+<p>The files that you are going to use are stored on Github, bundled in a <code>zip</code> archive.</p>
+<div class="instructions">
+<ol type="1">
+<li>Click on the button to download the archive. Save it on your computer (in your <em>Downloads</em> folder for example).</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<a href="https://github.com/epicentre-msf/obt-training/raw/master/tutorials_materials/module_2.zip">
+<button class="btn btn-default"><i class="fa fa-save"></i> Download materials</button>
+</a>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Unzip the whole archive and save the files locally. It is better to save the unzipped folder in a location that is not actively synchronised with OneDrive at the moment.</li>
+</ol>
+</div>
+</section>
+<section id="description-of-the-folder-content" class="level3">
+<h3 class="anchored" data-anchor-id="description-of-the-folder-content">Description of the folder content</h3>
 <ul>
-<li><p>Regenerate a new linelist named <code>linelist_measles_en_ex3</code> using the designer located in the <code>designer</code> folder. Save the linelist in the demo folder, making sure you have selected English as the language. You willl use the file <code>geobase-cod-2023-03-13_20230612.xlsx</code> in the <code>geobase</code> folder as your geobase.</p></li>
-<li><p>You are now ready to migrate your data from the old to the new linelist. You need to proceed in 2 steps:</p>
-<ul>
-<li><p>First, go back to the linelist <code>linelist_measles_en_ex1.xlsb</code> and remove all filters. Then, export the data to a location of your choice. This migration file contains all your data.</p></li>
-<li><p>Second, go back to the new linelist <code>linelist_measles_en_ex3.xlsb</code> and import the migration file. Look at the importation report and browse the data in the new linelist.</p></li>
-</ul></li>
+<li>a <strong>setup file</strong> for a measles OBT linelist</li>
+<li>an empty linelist generated by that dictionary to better help you see how the specs translate into the final product)</li>
+<li>the most recent <strong>designer file</strong></li>
 </ul>
+</section>
+</section>
+<section id="sec-unblock-file" class="level2">
+<h2 class="anchored" data-anchor-id="sec-unblock-file">Part 0: unlock files and functionalities</h2>
+<p>OBT linelists use VBA macros to add functionalities. As a consequence, linelists that come from the internet often need to be unblocked, and macro enabled in them.</p>
+<div class="instructions">
+<p>Unblock your files, or make sure they are already unlocked. If you have never done that before, <a href="../how_to/unblock_files.html">follow the steps from this page</a></p>
+</div>
+</section>
+<section id="part-1-first-contact-with-the-setup-file" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="part-1-first-contact-with-the-setup-file">Part 1: First contact with the <strong>setup</strong> file</h2>
+<p>In this part, we are going to inspect the <strong>setup</strong> file and generate the linelist.</p>
+<div class="instructions">
+<p>Open the <strong>setup file</strong> that you downloaded and inspect it. You should see the following sheets/tables:</p>
+<ul>
+<li>Dictionary</li>
+<li>Choices</li>
+<li>Exports</li>
+<li>Analyses</li>
+<li>Translation</li>
+<li>_checkRep</li>
+</ul>
+<p>Open the associated <strong>linelist file</strong>, as it will help you make the link between the specs and the final product.</p>
+</div>
+<p>The “Dictionary” sheet contains a big table, that we are going to explore little by little. One line of this table contains one <em>variable</em>. The columns contain many properties to describe this variable:</p>
+<ul>
+<li>its name (aka the unique identifier of the variable, that the user will not see by default)</li>
+<li>its label (a longer description that the user will see)</li>
+<li>in which sheet it belongs</li>
+<li>in which section it belong</li>
+<li>should it be mandatory, or can it be hidden?</li>
+<li>what is the type and format of the variable</li>
+<li>etc.</li>
+</ul>
+<p>To start getting a sense of how this work, let’s look at the rows 6 to 12:</p>
+<p><img src="../module_2/images/img-003-dictionary.png" class="img-fluid quarto-figure quarto-figure-center" alt="The start of the dictionary sheet"> We can see seven variables, which names all start with “info_”.</p>
+<div class="instructions page-columns page-full">
+<p>In parallel, go to the “Info” sheet of the linelist. Try to understand how the columns of the <strong>setup</strong> that have content translate in the <strong>linelist</strong>. Some of them should be easy, some of them we will explain:</p>
+<ul>
+<li>labels, sub-labels</li>
+<li>have you found where the “Note” goes?</li>
+<li>Sheet name is obvious. Sheet type… not so much. We will explain.</li>
+<li>Do you understand why you don’t see the “Outbreak code” column in the linelist? Do you know of the steps to make it appear?<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li>Enter some data in the “Info” sheet of the linelist. Does it help you figure out what the “Control” and the “Control Details” column do in general (even if the dropdown might be obscure so far)?</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Hint: There is a button to show and hide variables in the linelist OBT menu.</p></div></div></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_2/images/img-004-info_sheet.png" class="img-fluid figure-img"></p>
+<figcaption>The corresponding Info sheet in the linelist</figcaption>
+</figure>
+</div>
+<p>A couple of things that you need to know:</p>
+<p><strong>Variable name</strong>: the variable name is not obvious in the linelist. In the “Info” sheet, you can see it at the left of the formula bar if you select a cell that contain data (e.g.&nbsp;E5).</p>
+<p><strong>Colours</strong>: some variable names and labels are in colour. This is a choice of the the person who developed this setup, at it helps them differentiate specific variables. You can ignore them, unless it makes sense to you.</p>
+<p><strong>Dev comments</strong>: this free text column is for the sole benefit of the setup file developer, to add technical or practical information. It is not used by the designer and does not affect the generated file. You can ignore it, unless it makes sense to you.</p>
+<p><strong>Sheet type</strong> controls whether the table created is made of variables that contains one value (perfect for metadata, like the “Info” sheet), or several values (a table made of columns, like the “Patient linelist” sheet). More information in the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/dictionary_sheet.html#sec-sheet-types">documentation</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../module_2/images/img-005-sheet-type.png" class="img-fluid figure-img"></p>
+<figcaption>Sheet type</figcaption>
+</figure>
+</div>
+<p><strong>Status</strong> controls the visibility of variables. <em>Mandatory</em> variables are always shown, <em>Hidden</em> are always hidden (good for obscure calculated columns) and *Optional, visible” and “Optional, hidden” can be changed, but have different default values. In our exemple, the Outbreak code is optional but hidden by default, so you don’t see it in the linelist by default. On the other hand “MSF involvment in the facility” is shown by default, but you could hide it using the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html#show-hide-variables">Show/Hide</a>.</p>
+<p><strong>Control</strong>: the “Control” and “Control Details” define the <em>content</em> of the variable.</p>
+<p>Hopefully, you have figured that if the column is empty for a variable, the variable is free (e.g.&nbsp;the “Facility name” variable). You probably also figured out that <em>choice_manual</em> create cells with dropdown menus, like “Organisation” or “Country”. We use these variables as often as possible in our linelist, to improve data quality. For these variables, we need to provide a list of options, categories, to fill the dropdown menu. The “Control Details” contain names, such as “list_organisation”. These lists are defined “Choices” sheet.</p>
+<div class="instructions">
+<p>Go to the “Choices” sheet. Can you find the lists used in the “Info” sheet?</p>
+</div>
+<p>To summarise, the “Choices” sheet in the setup contains all the values for all the dropdown menus. The name of the list (that by convention we often name “list_xxx”) makes the link between the values of the list and the variable in the “Dictionary” sheet.</p>
+<p>Finally, you also figured out that the control <em>formula</em> defines a calculated variable (cell or column), and that in this case the “Control Details” column contains the Excel formula (in English).</p>
+<div class="instructions">
+<p>Let’s look atthe rest of the variables. All of them are for the data entry sheet, the sheet “Patient Linelist” in the <strong>linelist file</strong>. For such a big table the <em>section</em> and <em>supsection</em> columns start to be very useful.</p>
+<ul>
+<li>Going back and forth between the <strong>setup</strong> and the <strong>linelist</strong>, do you understand what the control *choice_custom_ does?</li>
+<li>Which columns are defined as containing personnal informations?</li>
+<li>Do all of the <strong>Variable type</strong> options make sense to you?</li>
+<li>What about the <strong>Variable format</strong>?</li>
+</ul>
+</div>
+<p>If you scroll down rapidly, you will see that there are a lot of variables, in the order that you see them in the linelist. There is a mix of data entry columns and calculated columns. Most of the calculated columns are <em>hidden</em>, or <em>hidden by default</em>, and derive useful quantities, such as age group, or week associated with data columns. Some of the formulas are simple, some of them more complicated and of them are not native to Excel (CASE_WHEN()<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> or CHOICE_FORMULA() for example) and were coded explicitly to simplify Excel syntax.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;R users should be happy about this one!</p></div></div><div class="instructions">
+<p>Have a <em>quick</em> look at the other sheets of the setup.</p>
+<ul>
+<li>How many exports do you think the linelist will do?</li>
+<li>Do you think there will be a sheet with univariate and bivariate analyses encoded? What about Spatio-temporal analyses?</li>
+<li>Which languages are available for the cholera linelist?</li>
+</ul>
+</div>
+</section>
+<section id="part-2-generate-a-linelist-from-an-existing-setup" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-generate-a-linelist-from-an-existing-setup">Part 2: Generate a linelist from an existing setup</h2>
+<p>Ok, now that you understand that the <strong>setup</strong> file contains all the specifications of the linelist, including analyses, exports and even translations, let’s turn this glorified dictionary into a linelist.</p>
+<div class="instructions">
+<ol type="1">
+<li>Save and close the setup file</li>
+<li>Open the designer file</li>
+</ol>
+</div>
+<section id="continuous" class="level3">
+<h3 class="anchored" data-anchor-id="continuous">Continuous</h3>
+</section>
+<section id="categorical" class="level3">
+<h3 class="anchored" data-anchor-id="categorical">Categorical</h3>
+</section>
+</section>
+<section id="part-3-add-columns-to-a-linelist" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-add-columns-to-a-linelist">Part 3: Add columns to a linelist</h2>
+</section>
+<section id="add-analyses" class="level2">
+<h2 class="anchored" data-anchor-id="add-analyses">Add analyses</h2>
+</section>
+<section id="part-4-add-an-moh-export" class="level2">
+<h2 class="anchored" data-anchor-id="part-4-add-an-moh-export">Part 4: Add an MoH export</h2>
 
 
 </section>
+
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

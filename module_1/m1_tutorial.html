@@ -110,7 +110,11 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../module_1/m1_tutorial.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Tutorial EN</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../module_1/m1_tutorial.fr.html">
+ <span class="dropdown-text">Tutoriel FR</span></a>
   </li>  
     </ul>
   </li>
@@ -189,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#persons-uni-and-bivariate-analyses" id="toc-persons-uni-and-bivariate-analyses" class="nav-link" data-scroll-target="#persons-uni-and-bivariate-analyses">Persons: uni and bivariate analyses</a></li>
   <li><a href="#time-temporal-analyses" id="toc-time-temporal-analyses" class="nav-link" data-scroll-target="#time-temporal-analyses">Time: temporal analyses</a></li>
   <li><a href="#place-spatial-analyses" id="toc-place-spatial-analyses" class="nav-link" data-scroll-target="#place-spatial-analyses">Place: spatial analyses</a></li>
-  <li><a href="#place-and-person-spatio-temporal-analyses" id="toc-place-and-person-spatio-temporal-analyses" class="nav-link" data-scroll-target="#place-and-person-spatio-temporal-analyses">Place and person: spatio-temporal analyses</a></li>
+  <li><a href="#place-and-time-spatio-temporal-analyses" id="toc-place-and-time-spatio-temporal-analyses" class="nav-link" data-scroll-target="#place-and-time-spatio-temporal-analyses">Place and time: spatio-temporal analyses</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#part-3-troubleshooting" id="toc-part-3-troubleshooting" class="nav-link" data-scroll-target="#part-3-troubleshooting">Part 3: troubleshooting</a>
@@ -328,7 +332,6 @@ Tip
 <ul>
 <li>The current last version of the OBT measles linelist (standard version), empty</li>
 <li>A linelist with simulated data</li>
-<li>A text file with the password</li>
 </ul>
 </section>
 </section>
@@ -392,7 +395,7 @@ Note
 <figcaption>OutbreakTools menu</figcaption>
 </figure>
 </div>
-<section id="fill-metadata" class="level4 page-columns page-full">
+<section id="fill-metadata" class="level4">
 <h4 class="anchored" data-anchor-id="fill-metadata">Fill metadata</h4>
 <p><strong>Mandatory metadata</strong></p>
 <div class="instructions">
@@ -403,8 +406,8 @@ Note
 <li><code>Name of facility</code>: Moïssala Hospital</li>
 </ul>
 </div>
-<p>Once these fields are correctly filled, they should not be modified: the information will be used to name the exports.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;You may enter the name of the site yourself (if you are sending one or two linelists) or let the data encoders of each site enter fill it (if you are sending a linelist to many sites).</p></div></div><p><strong>Optional metadata</strong></p>
+<p>Once these fields are correctly filled, they should not be modified: the information will be used to name the exports.</p>
+<p><strong>Optional metadata</strong></p>
 <div class="instructions">
 <p>Fill the following fields: <code>Admin 1</code> (Mandoul) and <code>Admin 2</code> (Moissala)</p>
 </div>
@@ -426,12 +429,12 @@ Note
 <div class="instructions">
 <p>Use the “Import geobase” button from the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">OBT menu</a> to import the geobase that you downloaded previously.</p>
 </div>
-<p>After closing the confirmation message you can go to the data entry shee and look for columns with an orange heading background:</p>
+<p>After closing the confirmation message you can go to the data entry sheet and look for columns with an orange heading background:</p>
 <ul>
 <li>The labels of the column should have been updated with the administrative levels present in the geobase (e.g.&nbsp;“adm1_name” will change to “Province” for DRC).</li>
 <li>Loof at the cells of the first column, there should now be a dropdown menu containing the admin 1 of the geobase.</li>
 </ul>
-<p>You can fill the variables either by using the cascading dropdown menus, or by using the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html#sec-geo-helper">GeoHelper button</a> from the ribbon.</p>
+<p>You can fill the variables either by using the cascading dropdown menus (starting with admin 1!), or by using the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html#sec-geo-helper">GeoHelper button</a> from the ribbon.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -454,8 +457,8 @@ Important
 </section>
 <section id="modify-variable-visibility" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="modify-variable-visibility">Modify variable visibility</h4>
-<p>As for the “Info” sheet, you can hide or show optional variables in the patient data sheet. When you prepare a linelist, you will need to decide which variables to keep based on the needed information for this outbreak.^<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;You can hide or unhide variables at a later stage. Of course, you will need to keep in mind that the data will be only partial for these variables (you have it only up to a date, or conversely from a date onwards).</p></div></div><p>For the sake of brevity of the exercise, here you will only perform a couple of actions.</p>
+<p>As for the “Info” sheet, you can hide or show optional variables in the patient data sheet. When you prepare a linelist, you will need to decide which variables to keep based on the needed information for this outbreak.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;You can hide or unhide variables at a later stage. Of course, you will need to keep in mind that the data will be only partial for these variables.</p></div></div><p>For the sake of brevity of the exercise, here you will only perform a couple of actions.</p>
 <div class="instructions">
 <p>Go to the “Linelist patients” sheet. Then click on the “Show/Hide variables” button. Hide all the optional variables, then unhide:</p>
 <ul>
@@ -467,7 +470,7 @@ Important
 <li>MUAC</li>
 <li>Pregnant</li>
 <li>The custom variables at the end</li>
-<li>Any calculated variables that <em>you</em> wish to see displayed for information of quick filtering (epi week, age group etc.)</li>
+<li>Any calculated variables that <em>you</em> wish to see displayed (epi week, age group etc.)</li>
 </ul>
 </div>
 </section>
@@ -476,22 +479,22 @@ Important
 <div class="instructions">
 <p>Click on the “Show register” button in the <a href="https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html">OBT menu</a>.</p>
 </div>
-<p>This opens a usually hidden sheet (that can be hidden again when you are done) to prepare a paper register if you don’t already have one in the site.</p>
+<p>This opens a usually hidden sheet to prepare a paper register if you don’t already have one in the site.</p>
 <p>Typically, there will be less columns in the register than the full linelist, as some information may come from patient files or other sources.</p>
 <div class="instructions">
 <ol type="1">
 <li><p>Click on the “Show/Hide variables” button to open the popup window for the register.</p></li>
 <li><p>Click on the “Match the show/hide from linelist” to align the register visibility on the linelist configuration as a start.</p></li>
-<li><p>Hide variables that are not needed in the register</p></li>
+<li><p>Hide variables that are not needed in the register.</p></li>
 </ol>
 </div>
 <p>Now that you have selected the variables to print, you usually would want to adjust the register to make it more user-friendly:</p>
 <ul>
 <li>Tweak column width so that the data encoder have the space to write</li>
 <li>Change labels orientation, to save some space (for columns with short content)</li>
-<li>Add rows to the table until it fits one page<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></li>
+<li>Add rows to the table until it fits one page<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
 </ul>
-<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;Hint: there is a button in the OBT menu for that!</p></div></div><div class="instructions">
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Hint: there is a button in the OBT menu for that!</p></div></div><div class="instructions">
 <p>Adjust the width of the following columns:</p>
 <ul>
 <li><code>Patient name</code>: wider</li>
@@ -508,9 +511,9 @@ Important
 <ul>
 <li>Hide variables that are collected elsewhere or calculated</li>
 <li>Hide/condense the lines</li>
-<li>Shorten some labels<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></li>
+<li>Shorten some labels<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></li>
 </ul>
-<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;There now is an option in the setup file to provide shorter labels for the CRF from the start to reduce the time fixing label overlap, but they have not been filled for all linelists yet.</p></div></div><p>Preparing a clean CRF is out of the scope of this tutorial, but do not hesitate to open the view (“Show CRF” button) to have a peak at it before hiding it again.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;There now is an option in the setup file to provide shorter labels for the CRF from the start to reduce the time fixing label overlap, but they have not been filled for all linelists yet.</p></div></div><p>Preparing a clean CRF is out of the scope of this tutorial, but do not hesitate to open the view (“Show CRF” button) to have a peak at it before hiding it again.</p>
 </section>
 </section>
 <section id="send-the-linelist" class="level3">
@@ -532,8 +535,8 @@ Important
 <section id="context-1" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="context-1">🧭 Context</h3>
 <p>The linelist was deployed in January 2022 in Moissala and the neighbouring areas. Almost a year later, in April 2023, the measles outbreak is still ongoing and the linelist still in use. You receive the file with data and you want to have a look at it.</p>
-<p>You are now going to work on the file <code>measles_linelist_moissala.xlsb</code>, which contains simulated measles data<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;The data used in this exercise was simulated using parameters from MSF measles data, at least for some major variables, which avoids the problem of working with personnal data</p></div></div></section>
+<p>You are now going to work on the file <code>measles_linelist_moissala.xlsb</code>, which contains simulated measles data<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;The data used in this exercise was simulated using parameters from MSF measles data, at least for some major variables, which avoids the problem of working with personnal data</p></div></div></section>
 <section id="sanity-checks" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="sanity-checks">Sanity checks</h3>
 <p>When you receive an unknown linelist with data, always perform a couple of checks to get a feel of the state of the file and data. These are not the extensive checks you would perform if you were tasked to monitor data entry and quality, or to perform analyses. They might however rapidly hint at the source of a reported problem (a functionality not working as expected).</p>
@@ -567,22 +570,22 @@ Warning
 <section id="very-basic-data-checks" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="very-basic-data-checks">(Very basic) Data checks</h4>
 <ul>
-<li>Are the metadata on the “Info” sheet (still) correctly filled?<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></li>
+<li>Are the metadata on the “Info” sheet (still) correctly filled?<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></li>
 <li>Do patients have IDs?</li>
 <li>Are there replicated IDs?</li>
 <li>Check the filters of a couple of date columns: do the dates correspond to what you expect (min, max) and are there values not recognised as dates?</li>
 <li>Check a couple of categorical columns (<code>sex</code>, <code>outcome</code>…) to see if the categories entered correspond to the expected values.</li>
 <li>Remove any filters applied on the data (there is a shortcut for that in the OBT menu).</li>
 </ul>
-<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;90% of export-dashboard problems come from badly filled metadata</p></div></div><div class="instructions">
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;90% of export-dashboard problems come from badly filled metadata</p></div></div><div class="instructions">
 <p>Do these checks on the file <code>measles_linelist_moissala.xlsb</code>.</p>
 </div>
 </section>
 </section>
 <section id="analyses" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="analyses">Analyses</h3>
-<p>Now let’s investigate the descriptive analyses provided with the linelist. While the general interface of the linelist is the same, the provided analyses may differ from disease to disease, depending on what was requested.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> Most linelists have at least the uni and bivariate tables, the temporal and spatial analyses.</p>
-<div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;Note that more analyses can be requested if needed.</p></div></div><p>There are a couple of important things to remember about the analyses in OBT linelists:</p>
+<p>Now let’s investigate the descriptive analyses provided with the linelist. While the general interface of the linelist is the same, the provided analyses may differ from disease to disease, depending on what was requested.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> Most linelists have at least the uni and bivariate tables, the temporal and spatial analyses.</p>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;Note that more analyses can be requested if needed.</p></div></div><p>There are a couple of important things to remember about the analyses in OBT linelists:</p>
 <ol type="1">
 <li>Analyses need to be <strong>refreshed</strong> before being explored.</li>
 </ol>
@@ -594,9 +597,9 @@ Warning
 </div>
 <ol start="2" type="1">
 <li><p>If you filter data in the main patient sheet, it will be reflected in the analyses <em>after you refresh</em> (a red warning will appear to remind you).</p></li>
-<li><p>You can alter the appearance of the graphs (which are created automatically and admittedly a bit ugly), the same way you would do for your own figures, with any <a href="https://www.howtogeek.com/how-to-format-your-chart-in-excel/">Excel tool</a>.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p></li>
+<li><p>You can alter the appearance of the graphs (which are created automatically and admittedly a bit ugly), the same way you would do for your own figures, with any <a href="https://www.howtogeek.com/how-to-format-your-chart-in-excel/">Excel tool</a>.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p></li>
 </ol>
-<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;Note that graphs modifications will be lost during data migration to a new version of the linelist, so I advise you to restrict the modifications to graphs that you want to export to reports / slides, or which are <em>really</em> making your eyes bleed.</p></div></div><p>We are going to start by looking at the analyses without filters on the data.</p>
+<div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;Note that graphs modifications will be lost during data migration to a new version of the linelist, so I advise you to restrict the modifications to graphs that you want to export to reports / slides, or which are <em>really</em> making your eyes bleed.</p></div></div><p>We are going to start by looking at the analyses without filters on the data.</p>
 <div class="instructions">
 <p>Go to the patient data sheet, navigate to the OBT menu and click on the button to clear all filters. Then refresh analyses.</p>
 </div>
@@ -670,17 +673,17 @@ Note
 </ul>
 </div>
 <p>Now, if you went to have a look at the graphs, you should see one like that in the list of graphs:</p>
-<p>It is fine to look at the shape of the epicurve, but you would not want to use it in a report as it is. Besides cosmetics improvements, you could use filters to remove the empty weeks at the right of the graph:</p>
-<ul>
-<li>Select the graph: some buttons appear at the top right corner.</li>
-<li>Use the “filter” button (the bottom one) to filter out the categories you don’t want to see.</li>
-</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../module_1/images/008-img-temporal-hospit_raw.png" class="img-fluid figure-img"></p>
 <figcaption>Hospitalisations</figcaption>
 </figure>
 </div>
+<p>It is fine to look at the shape of the epicurve, but you would not want to use it in a report as it is. Besides cosmetics improvements, you could use filters to remove the empty weeks at the right of the graph:</p>
+<ul>
+<li>Select the graph: some buttons appear at the top right corner.</li>
+<li>Use the “filter” button (the bottom one) to filter out the categories you don’t want to see.</li>
+</ul>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -703,15 +706,15 @@ Warning
 </section>
 <section id="place-spatial-analyses" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="place-spatial-analyses">Place: spatial analyses</h4>
-<p>Now we navigate to the third analyses sheet. It displays the <strong>top 30 areas</strong> with the most cases, and below the top 30 places of origin (in the case of refugees and displaced people).<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;The number 30 is defined in the <strong>setup file</strong>: another disease might have 10 or 20.</p></div></div><p>You can select the level at which you want to see the data displayed (admin 1 to 4).</p>
+<p>Now we navigate to the third analyses sheet. It displays the <strong>top 30 areas</strong> with the most cases, and below the top 30 places of origin (in the case of refugees and displaced people).<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;The number 30 is defined in the <strong>setup file</strong>: another disease might have 10 or 20.</p></div></div><p>You can select the level at which you want to see the data displayed (admin 1 to 4).</p>
 <div class="instructions">
 <p>Click on the blue button “Select your admin level” and go through the options. Which options have data in it? How many patients are there in Moissala Est?</p>
 </div>
 <p>For this linelist, data is meaningful at the “Zone of responsibility” level (admin 3), but with real data even higher levers may be worth checking if people are travelling a lot, or if you created a master linelist from different files.</p>
 </section>
-<section id="place-and-person-spatio-temporal-analyses" class="level4">
-<h4 class="anchored" data-anchor-id="place-and-person-spatio-temporal-analyses">Place and person: spatio-temporal analyses</h4>
+<section id="place-and-time-spatio-temporal-analyses" class="level4">
+<h4 class="anchored" data-anchor-id="place-and-time-spatio-temporal-analyses">Place and time: spatio-temporal analyses</h4>
 <p>The last analysis sheet that you may encounter in an OBT linelist is a crossover between the temporal analysis and the spatial analysis: it allows you to look at the number of cases (usually) for a couple of chosen administrative levels across time.</p>
 <div class="instructions">
 <ol type="1">
@@ -727,6 +730,7 @@ Warning
 <figcaption>Spatio temporal analysis</figcaption>
 </figure>
 </div>
+<p>It’s the end of out tour of the analyses sheets!</p>
 </section>
 </section>
 </section>
@@ -819,12 +823,12 @@ Answer
 </blockquote>
 <p>This one is trickier, because this could be caused by several problems such as:</p>
 <ul>
+<li>There is a filter applied somewhere on the data and the rows are merely hidden.</li>
 <li>The document was closed without saving (data from “yesterday” or “this morning” were lost)</li>
 <li>OneDrive synchronisation errors (the last file got replaced by an older version from the server).</li>
-<li>There is a filter applied somewhere on the data and the rows are merely hidden.</li>
 <li>The user deleted data by mistake (since the sheet is protected, it is hard to delete data in bulk though, so this is less likely)</li>
 </ul>
-<p>You will have to discuss with them, their setup, who worked on the file to figure out what may have happen, unless it’s the third case, which can be solved in one click. Which button would you use?</p>
+<p>You will have to discuss with them, their setup, who worked on the file to figure out what may have happen, unless it’s the filters case, which can be solved in one click. Which button would you use?</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Answer">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -869,11 +873,10 @@ Answer
 <blockquote class="blockquote">
 <p>Good morning, I used the refresh button yesterday to update the analyses and it woked. But today I entered new data, refreshed but all the data on the analyses sheets are striken. I cannot remove the strikethrough and I did not do anything, just enter data.</p>
 </blockquote>
-<p>A recent update<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a> in Excel 365 uses <a href="https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd">strikethrough</a> to label what Excel considers “stale values” (values that depend on other cells, which were modified). For esoteric reasons, the “Refresh analyses” does not (yet) trigger the removal of the strikethrough. A fix in the OBT is coming, but if this happens now:</p>
-<div class="no-row-height column-margin column-container"><div id="fn11"><p><sup>11</sup>&nbsp;We saw the problem hit computers between November and December 2024</p></div></div><ul>
+<p>A recent update from Office 365<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> in Excel 365 uses <a href="https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd">strikethrough</a> seraches to label what Excel considers “stale values” (values that depend on other cells, which were modified). For esoteric reasons, the “Refresh analyses” does not (yet) trigger the removal of the strikethrough. A fix in the OBT is coming, but if this happens now:</p>
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;We saw the problem hit computers between November and December 2024</p></div></div><ul>
 <li>Hit the <strong>F9</strong> key to force recalculation (or use the “Calculate now” button from the “Formula” Excel menu)</li>
 <li><em>Then</em> hit the “Refresh analyses” button from the OBT menu</li>
-<li>(Advised): ask if there is a more recent version of the linelist with the problem solved</li>
 </ul>
 <p>Alternately, you can <a href="https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd">turn off</a> this option if it bothers you in general.</p>
 </section>
@@ -1012,8 +1015,8 @@ Answers
 </section>
 <section id="access-the-dashboard" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="access-the-dashboard">Access the dashboard</h3>
-<p>You need an account to connect to Epicentre dashboard. The creation of this account is semi-automatic for MSF addresses: go to <a href="https://reports.msf.net/signup/">this page</a>.<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn12"><p><sup>12</sup>&nbsp;If you do not have an MSF address but think you should have access to a dashboard, contact the EpiDS team.</p></div></div><p>Once you have an account, you can go to the intersection dashboard <a href="https://apps.epicentre-msf.org/secure/app/intersectional-surveillance">site</a> and connect with the account you created.</p>
+<p>You need an account to connect to Epicentre dashboard. The creation of this account is semi-automatic for MSF addresses: go to <a href="https://reports.msf.net/signup/">this page</a>.<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn11"><p><sup>11</sup>&nbsp;If you do not have an MSF address but think you should have access to a dashboard, contact the EpiDS team.</p></div></div><p>Once you have an account, you can go to the intersection dashboard <a href="https://apps.epicentre-msf.org/secure/app/intersectional-surveillance">site</a> and connect with the account you created.</p>
 </section>
 <section id="sidebar-filters" class="level3">
 <h3 class="anchored" data-anchor-id="sidebar-filters">Sidebar filters</h3>
@@ -1104,7 +1107,7 @@ Tip
 <ol type="1">
 <li><p>The map and the epicurve have a hidden zoom button that you can see by hovering your mouse at the bottom right corner, which is handy on small screens (see number 5 on <a href="#fig-dashboard" class="quarto-xref">Figure&nbsp;2</a>) .</p></li>
 <li><p>On the epicurve you can drag your mouse left and right to zoom in on some date period. A “Reset zoom” button will appear to undo the view.</p></li>
-<li><p>Click on a bar to update the map and the age pyramid to show only the data related to that time period. A blue band indicated the selected bar. Click on the bar a second time to unselect it.</p></li>
+<li><p>Click on a bar to update the map and the age pyramid to show only the data related to that time period. A grey background highlights the selected bar. Click on the bar a second time to unselect it.</p></li>
 <li><p>Click on legend item to unselect them and only show some categories. For example, in the above graph you could show only the hospitalised patients in two clicks, which is slightly faster than using the sidebar filters in this case.</p></li>
 </ol>
 </div>

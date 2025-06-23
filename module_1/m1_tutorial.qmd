@@ -419,15 +419,12 @@ In this linelist, there is only one very large table. Some other linelists can h
 
 Now, if you went to have a look at the graphs, you should see one like that in the list of graphs:
 
-
+![Hospitalisations](../module_1/images/008-img-temporal-hospit_raw.png){fig-align="center"}
 
 It is fine to look at the shape of the epicurve, but you would not want to use it in a report as it is. Besides cosmetics improvements, you could use filters to remove the empty weeks at the right of the graph:
 
 - Select the graph: some buttons appear at the top right corner.
 - Use the "filter" button (the bottom one) to filter out the categories you don't want to see.
-
-![Hospitalisations](../module_1/images/008-img-temporal-hospit_raw.png){fig-align="center"}
-
 
 
 ::: {.callout-warning}
@@ -449,7 +446,7 @@ Click on the blue button "Select your admin level" and go through the options. W
 For this linelist, data is meaningful at the "Zone of responsibility" level (admin 3), but with real data even higher levers may be worth checking if people are travelling a lot, or if you created a master linelist from different files.
 
 
-#### Place and person: spatio-temporal analyses
+#### Place and time: spatio-temporal analyses
 
 The last analysis sheet that you may encounter in an OBT linelist is a crossover between the temporal analysis and the spatial analysis: it allows you to look at the number of cases (usually) for a couple of chosen administrative levels across time.
 
@@ -464,7 +461,7 @@ The last analysis sheet that you may encounter in an OBT linelist is a crossover
 
 ![Spatio temporal analysis](../module_1/images/010-img-spatio-temporal.png){fig-align="center"}
 
-
+It's the end of out tour of the analyses sheets!
 
 ## Part 3: troubleshooting
 
@@ -526,12 +523,12 @@ You get this mail:
 
 This one is trickier, because this could be caused by several problems such as:
 
+- There is a filter applied somewhere on the data and the rows are merely hidden. 
 - The document was closed without saving (data from "yesterday" or "this morning" were lost)
 - OneDrive synchronisation errors (the last file got replaced by an older version from the server).
-- There is a filter applied somewhere on the data and the rows are merely hidden. 
 - The user deleted data by mistake (since the sheet is protected, it is hard to delete data in bulk though, so this is less likely)
 
-You will have to discuss with them, their setup, who worked on the file to figure out what may have happen, unless it's the third case, which can be solved in one click. Which button would you use?
+You will have to discuss with them, their setup, who worked on the file to figure out what may have happen, unless it's the filters case, which can be solved in one click. Which button would you use?
 
 ::: {.callout-tip title="Answer"  collapse=true}
 Use the "Clear all filters" button from the OBT menu.
@@ -553,11 +550,10 @@ The day after they contact you again:
 
 > Good morning, I used the refresh button yesterday to update the analyses and it woked. But today I entered new data, refreshed but all the data on the analyses sheets are striken. I cannot remove the strikethrough and I did not do anything, just enter data.
 
-A recent update^[We saw the problem hit computers between November and December 2024] in Excel 365 uses [strikethrough](https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) to label what Excel considers "stale values" (values that depend on other cells, which were modified). For esoteric reasons, the "Refresh analyses" does not (yet) trigger the removal of the strikethrough. A fix in the OBT is coming, but if this happens now:
+A recent update from Office 365^[We saw the problem hit computers between November and December 2024] in Excel 365 uses [strikethrough](https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) seraches to label what Excel considers "stale values" (values that depend on other cells, which were modified). For esoteric reasons, the "Refresh analyses" does not (yet) trigger the removal of the strikethrough. A fix in the OBT is coming, but if this happens now:
 
 - Hit the **F9** key to force recalculation (or use the "Calculate now" button from the "Formula" Excel menu)
 - *Then* hit the "Refresh analyses" button from the OBT menu
-- (Advised): ask if there is a more recent version of the linelist with the problem solved
 
 Alternately, you can [turn off](https://support.microsoft.com/en-us/office/stale-value-formatting-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) this option if it bothers you in general.
 
@@ -708,7 +704,7 @@ Use the options of the graph (number 4 on @fig-dashboard) to modify it to look l
 
 2. On the epicurve you can drag your mouse left and right to zoom in on some date period. A "Reset zoom" button will appear to undo the view.
 
-3. Click on a bar to update the map and the age pyramid to show only the data related to that time period. A blue band indicated the selected bar. Click on the bar a second time to unselect it.
+3. Click on a bar to update the map and the age pyramid to show only the data related to that time period. A grey background highlights the selected bar. Click on the bar a second time to unselect it.
 
 4. Click on legend item to unselect them and only show some categories. For example, in the above graph you could show only the hospitalised patients in two clicks, which is slightly faster than using the sidebar filters in this case.
 :::

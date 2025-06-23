@@ -4,14 +4,14 @@ title: "Tutoriel"
 
 ## A propos de ce tutoriel
 
-Dans ce tutoriel vous apprendrez à connaître l'interface des listes linéaires OutbreakTools^[Pour rappel, toutes les listes linéaires OBT ont la même interface] et le tableau de bord correspondant.
+Dans ce tutoriel vous découvrirez l'interface des listes linéaires OutbreakTools^[Pour rappel, toutes les listes linéaires OBT ont la même interface] et le tableau de bord correspondant.
 
 ### 🎯 Objectifs
 
 - Explorer les fonctionnalités de la liste linéaire OBT, en insistant sur la résolution de problèmes et l'exploration des analyses
-- Accéder et savoir utiliser le tableau de bord intersection
+- Accéder au tableau de bord et savoir l'utiliser pour explorer les données
 
-#### 🧭 Contexte
+### 🧭 Contexte
 
 MSF travaille dans l'est et le sud du Tchad depuis 2006 et fournit des soins médicaux et une assistance aux personnes déplacées et aux communautés locales dans un contexte d'accès difficile à la nourriture.
 
@@ -28,9 +28,9 @@ Vous utiliserez plusieurs fichier lors de ce tutoriel :
 - une liste linéaire avec de fausses données pour répliquer une liste linéaire en cours d'utilisation
 - une liste linéaire avec de fausses données et quelques problèmes à résoudre.
 
-Vous visiterez ensuite le tableau de bord Intersection pour explorer les données _réelles_ de MSF sur la rougeole au Tchad.
+Vous visiterez ensuite le tableau de bord intersection pour explorer les données _réelles_ de MSF sur la rougeole au Tchad.
 
-Les explications seront données dans le texte ou dans des encadrés (conseils, notes, etc.) et les instructions seront données dans des encadrés.
+Les explications seront données dans le texte ou dans des encadrés (conseils, notes, etc.) et les instructions seront données dans des encadrés spécifiques :
 
 ::: {.callout-warning}
 Je suis une information importante
@@ -41,7 +41,7 @@ Je suis une information utile mais qui peut être omise si vous êtes pressé pa
 :::
 
 ::: {.instructions}
-A votre tour de faire !
+A votre tour !
 :::
 
 ## Préparation
@@ -66,7 +66,7 @@ downloadthis::download_link(
 )
 ```
 
-2. Dézippez l'archive pour sauver les fichiers localement. Il est conseillé de dézipper vers un emplacement qui n'est pas activement synchronisé avec OneDrive en ce moment.
+2. Dézippez l'archive pour sauvegarder les fichiers localement. Il est conseillé de dézipper vers un emplacement qui n'est pas activement synchronisé avec OneDrive en ce moment.
 :::
 
 
@@ -78,20 +78,20 @@ downloadthis::download_link(
 
 ## Partie 0 : débloquer les fichiers et les macros {#sec-unblock-file}
 
-Les listes linéaires OBT utilisent des macros VBA pour ajouter des fonctionnalités. Cela fait qu'elles doivent souvent être déloquées sur votre ordi lorsque qu'elles viennent d'internet, et vous devrez autoriser l'exécution des macros.
+Les listes linéaires OBT utilisent des macros VBA pour ajouter des fonctionnalités. Cela fait qu'elles doivent souvent être *déloquées* sur votre ordi lorsque qu'elles proviennent d'internet, et vous devrez autoriser l'exécution des macros.
 
 
 ::: {.instructions}
 Débloquez les fichiers ou assurez-vous qu'ils le sont déjà. Si vous ne l'avez jamais fait auparavant, [suivez ces étapes](../how_to/unblock_files.qmd)
-:: :
-
-:: : {.callout-note}
-En fonction du niveau de protection de votre ordinateur et de la source des fichiers, vous arez peut être à le faire ou non. Par contre, les ordinateurs terrain sont souvent plus protégés et et est très probable que certain de vos collègues aient à le faire, donc soyez prêt à expliquer.
 :::
 
-## Partie 1: préparer et déployer une liste linéaire
+::: {.callout-note}
+En fonction du niveau de protection de votre ordinateur et de la source des fichiers, vous aurez peut être à le faire ou non. Par contre, les ordinateurs terrain sont souvent plus protégés et il est très probable que vos collègues aient à le faire, donc soyez prêt à expliquer ces étapes.
+:::
 
-### Obtenir fichiers nécéssaires
+## Partie 1 : préparer et déployer une liste linéaire
+
+### Obtenir les fichiers nécéssaires
 
 #### Un modèle de liste linéaire
 
@@ -105,21 +105,21 @@ Identifiez le fichier correct et faites une copie pour pouvoir travailler dessus
 #### Une géobase adaptée
 
 ::: {.instructions}
-Rendez-vous sur le site [GeoApp](https://reports.msf.net/secure/app/outbreak-tools-geoapp) et téléchargez une base géo pour le Tchad. Vous pouvez lire un résumé des étapes [ici](https://epicentre-msf.github.io/outbreak-tools/how_to/import_geobase.html#sec-geobase-download), ou directement sur le site, à l'ouverture.
+Rendez-vous sur le site de la [GeoApp](https://reports.msf.net/secure/app/outbreak-tools-geoapp) et téléchargez une base géographique pour le Tchad. Vous pouvez lire un résumé des étapes [ici](https://epicentre-msf.github.io/outbreak-tools/how_to/import_geobase.html#sec-geobase-download), ou directement sur le site, à l'ouverture.
 :::
 
 Le fichier n'est pas protégé, vous pouvez l'ouvrir si vous êtes curieux.
 
 
-### Adapter une liste linéaire {#sec-customise}
+### Préparer une liste linéaire {#sec-customise}
 
 ::: {.instructions}
-Ouvrez la liste linéaire et inspectez les (noms des) onglets
+Ouvrez la liste linéaire et inspectez les onglets
 :::
 
-**Notablement**: 
+**Notablement** : 
 
-- La première feuille contient des instructions, il n'y a rien à faire dessus à part les lire
+- La première feuille contient un guide d'utilisation (qui sera bientôt traduit), il n'y a rien à faire dessus
 - La deuxième feuille ("Info") contient des informations sur le projet et le site (métadonnées)
 - La troisième feuille ("Linelist patients") contient les données des patients
 - La plupart des feuilles suivantes contiennent des analyses.
@@ -166,7 +166,7 @@ Une fenêtre pop-up s'ouvre :
 
 ![Fenêtre pop-up](../module_1/images/003-img-obt-show_hide.png){fig-align="center"}
 
-Vous pouvez voir que certaines variables ont un statut `Obligatoire`; ces variables ne peuvent être cachées avec cet outil. D'autres variables ont le statut "Affiché" et elles peuvent être cachées. 
+Vous pouvez voir que certaines variables ont un statut `Obligatoire`; ces variables ne peuvent être cachées avec cet outil. D'autres variables ont le statut `Affiché` et elles peuvent être cachées. 
 
 ::: {.instructions} 
 Cachez les variables que l'on n'a pas remplies. Vous pouvez soit les cacher unes par unes, soit utiliser le bouton "Cachez toutes les variables optionnelles" deux fois et dé-cacher les variables que l'on veut voir.
@@ -176,18 +176,18 @@ Cachez les variables que l'on n'a pas remplies. Vous pouvez soit les cacher unes
 #### Importer la géobase
 
 ::: {.instructions} 
-Cliquez sur le menu "Importer une géobase" dans le [menu OBT](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html) pour importer la base géo que vous avez téléchargé précédemment.
+Cliquez sur le bouton "Importer une géobase" dans le [menu OBT](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html) pour importer la base géo que vous avez téléchargé précédemment.
 :::
 
-Après avoir reçus le message de confirmation, vous pouvez vérifier l'import en allant sur la feuille des données patients, et en regardant les colonnes "géo", celles avec un fond couleur saumon. Si tout s'est bien passé :
+Après avoir reçus le message de confirmation, vous pouvez vérifier l'import en allant sur la feuille des données patients, et en regardant les colonnes "géo" (dont le fond est de couleur saumon). Si tout s'est bien passé :
 
-- Les labels devraient avoir été mis à jour avec les noms des niveaux administratifs présents dans la géobase (e.g. adm1_name” va devenir “Province” pour la RDC).
+- Les labels devraient avoir été mis à jour avec les noms des niveaux administratifs présents dans la géobase (e.g. "adm1_name” va devenir “Province” pour la RDC).
 - Les cellules de la première colonne (admin 1) devraient contenir un menu déroulant avec les valeurs importées depuis la géobase.
 
-Vous pouvez remplir les colonnes géographiques soit à partir des menus déroulants en cascade (en commençant pas le niveau 1 !), soit en utilisant le bouton [GeoHelper](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html#sec-geo-helper) du menu OBT.
+Vous pouvez remplir les colonnes géographiques soit à partir des menus déroulants en cascade (en commençant pas le niveau 1), soit en utilisant le bouton [GeoHelper](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html#sec-geo-helper) du menu OBT.
 
 ::: {.callout-important}
-Il y a une hiérarchie entre les niveaux administratifs: si vous essayez de remplir la colonne 3 *sans avoir rempli les colonnes 1 et 2* le menu déroulant apparaitra comme vide.
+Il y a une hiérarchie entre les niveaux administratifs : si vous essayez de remplir la colonne 3 *sans avoir rempli les colonnes 1 et 2* le menu déroulant apparaitra comme vide.
 :::
 
 
@@ -199,11 +199,11 @@ Cliquez sur le bouton "Début de semaine" du menu OBT et choisissez le "Lundi" c
 
 #### Cachez / montrer des variables
 
-On peut aussi cacher ou montrer les variables optionnelles sur cette feuille (comme pour la feuille "Info"). Lorsque vous préparerez une liste linéaire, il vous faudra décider quelles variables collecter en fonction informations dont vous avez besoin^[Vous pouvez cacher ou montrer des variables plus tard, pendant la collecte des données si besoin, mais dans ce cas gardez en tête que les données pour ces colonnes ne seront que partielles.].
+On peut aussi cacher ou montrer les variables optionnelles sur la feuille des données patients. Lorsque vous préparez une liste linéaire, il vous faut décider quelles variables collecter en fonction informations dont vous avez besoin^[Vous pouvez cacher ou montrer des variables plus tard, pendant la collecte des données si besoin, mais dans ce cas gardez en tête que les données pour ces colonnes ne seront que partielles.].
 
 
 ::: {.instructions} 
-Placez(vous sur la feuille "Linelist Patients" et cliquez sur le bouton "Afficher/Masquer des variables". Cachez toutes les variables optionnelles à l'aide du bouton, et dé-cachez manuellement :
+Placez vous sur la feuille "Linelist Patients" et cliquez sur le bouton "Afficher/Masquer des variables". Cachez toutes les variables optionnelles à l'aide du bouton, et dé-cachez manuellement :
 
 - Structure déclarante
 - Fièvre
@@ -229,9 +229,9 @@ En règle générale, il devrait y avoir moins de colonnes dans le registre que 
 
 ::: {.instructions}
 
-1. Une fois sur la nouvelle feuille créez, cliquez sur le bon vieux bouton "Afficher/masquer les variables" pour ouvrir la fenêtre pop-up pour le registre.
+1. Une fois sur la nouvelle feuille, cliquez sur le bouton "Afficher/masquer les variables" pour ouvrir la fenêtre pop-up pour le registre.
 
-2. Cliquez que le bouton "Correspondre au Show/Hide de la linelist" pour aligner la visibilité des variables du registre sur celles de la feuille patients.
+2. Cliquez sur le bouton "Correspondre au Show/Hide de la linelist" pour aligner la visibilité des variables du registre sur celles de la feuille patients.
 
 3. Cachez les variables qui n'ont pas besoin d'être dans le registre.
 :::
@@ -256,13 +256,13 @@ Une fois que vous avez pris connaissance de ces boutons, vous pouvez sortir de l
 
 #### Préparer un formulaire des cas
 
-Avec la même idée que pour le registre il est possible d'imprimer un formulaire de cas à partir de la liste linéaire s'il n'y en a pas déjà un dans la structure. Un bouton affiche une feuille préparée automatiquement. Créer un CRF propre est au delà de nos capacités pour le moment, mais ce brouillon devrait être une base et vous faire gagner du temps.
+Avec la même idée que pour le registre il est possible d'imprimer un formulaire de cas à partir de la liste linéaire s'il n'y en a pas déjà un dans la structure. Un bouton affiche une feuille préparée automatiquement. Créer un CRF propre est au delà des capacités d'OBT pour le moment, mais ce brouillon devrait être une base et vous faire gagner du temps.
 
-Chose que vous pourriez faire :
+Choses que vous pourriez faire :
 
 - Cacher les variables collectées à un autre endroit ou calculées
-- Cacher / condenser des lignes vide
-- Raccourcir des labels^[Désormais, une option a été rajoutée au ficher **setup** pour donner des labels courts ou des acronymes, mais ils n'ont pas été remplis pour toutes les liste linéaires OBT en circulation pour le moment.].
+- Cacher / condenser les lignes vides
+- Raccourcir des labels^[Désormais, une option a été rajoutée au ficher **setup** pour donner des labels courts ou des acronymes, mais ils n'ont pas été remplis pour toutes les listes linéaires OBT en circulation pour le moment.].
 
 Préparer un CRF propre nous prendrait trop de temps, nous ne le ferons pas lors de ce tutoriel, mais n'hésitez pas à ouvrir la feuille un instant avec le bouton "Afficher le CRF" pour voir à quoi elle ressemble.
 
@@ -284,11 +284,11 @@ Si vos collègues n'ont pas travaillé avec une liste linéaire OBT, il faut leu
 Le plus souvent il devrait y avoir une liste linéaire par site.
 
 
-## Partie 2 : utiliser une liste linéaire au jour le jour
+## Partie 2 : usage de la liste linéaire
 
 ### 🧭 Contexte
 
-La linelist a été déployée en Janvier 2022 à Moissala et les zones alentour. Un peu plus d'un an plus tard, en avril 2023 l'épidémie est malheureusement  toujours en cours, et la linelist toujours utilisée. Vous recevez le fichier avec les données régulièrement pour le suivi de l'épidémie...
+La linelist a été déployée en Janvier 2022 à Moissala et les zones alentour. Un peu plus d'un an plus tard, en avril 2023, l'épidémie fait toujours rage, et la linelist est toujours utilisée. Vous recevez le fichier avec les données régulièrement pour le suivi de l'épidémie...
 
 Nous allons dans cette partie travailler sur le fichier `measles_linelist_moissala.xlsb` qui contient des données rougeole simulées^[En essayant au maximum d'utiliser les paramètres des linelists rougeoles de MSF, au moins pour les variables principales, ce qui nous évite des problèmes de confidentialité.].
 
@@ -297,7 +297,7 @@ Nous allons dans cette partie travailler sur le fichier `measles_linelist_moissa
 
 ### Contrôles de routine
 
-Lorsque vous recevez une liste linéaire avec des données, nous vous conseillons d'effectuer quelques vérifications basiques en routine pour avoir une idée de l'état du fichier et des données. Ce ne sont pas les vérifications longues, complexes ou complètes que vous effectueriez si vous étiez responsables du suivi qualité des données, ou si vous vouliez effectuer des analyses. Mais ces vérifications vont vous aider à  détecter les sources de quelques problèmes plus rapidement.
+Lorsque vous recevez une liste linéaire avec des données, nous vous conseillons d'effectuer quelques vérifications basiques pour avoir une idée de l'état du fichier et des données. Ce ne sont pas les vérifications longues, complexes ou complètes que vous effectueriez si vous étiez responsables du suivi qualité des données, ou si vous vouliez effectuer des analyses. Mais ces vérifications vont vous aider à  détecter les sources de quelques problèmes plus rapidement.
 
 
 #### Contrôle du fichier
@@ -305,7 +305,7 @@ Lorsque vous recevez une liste linéaire avec des données, nous vous conseillon
 **Est-ce que le fichier est endomagé / corrompu ?**
 
 - Est ce que les boutons du menu OBT semblent normaux / leurs étiquettes lisibles ?
-- Testez un bouton (comme le "Montrer / Cacher les variables"): est ce qu'il fonctionne normalement ,
+- Testez un bouton (comme le "Montrer / Cacher les variables") : est ce qu'il fonctionne normalement ?
 - Est ce que les feuilles attendues sont présentes ?
 
 ::: {.callout-warning}
@@ -320,14 +320,14 @@ Effectuez ces vérifications sur le fichier `measles_linelist_moissala.xlsb`.
 :::
 
 
-#### Contrôle (très basique) des données
+#### Contrôle (basiques) des données
 
 - Est-ce que les métadonnées sur la feuille "Info" sont correctement remplies^[90% des problèmes liés à l'export vers le tableau de bord sont liés à ça.]?
 - Est-ce que tous les patients ont un numéro ?
 - Est-ce qu'il y a des numéros de patient dupliqués ?
 - Vérifiez quelques colonnes contenant des dates à l'aide des filtres : est ce que les dates sont dans le bon format et sont raisonnables (min, max) ?
 - Vérifiez quelques colonnes contenant des catégories (`sexe`, `sortie`...) pour voir si les catégories sont rentrée correctement
-- Enlevez tous les filtres présents sur les données (il y a un bouton raccourcis pour ça dans le menu OBT)
+- Enlevez tous les filtres présents sur les données (il y a un bouton dans le menu OBT pour gagner du temps)
 
 ::: {.instructions}
 Effectuez ces vérifications sur le fichier `measles_linelist_moissala.xlsb`.
@@ -337,24 +337,28 @@ Effectuez ces vérifications sur le fichier `measles_linelist_moissala.xlsb`.
 
 Maintenant que nous nous sommes convaincu que le fichier n'est pas cassé, et que les données ne sont pas horribles, penchons nous sur les analyses descriptives embarquées dans la liste linéaire.
 
-Bien que l'interface générale soit la même pour toutes les listes linéaires OBT, les analyses sont encodées dans le fichier **setup** et varient donc d'une maladie à une autre, en fonction de ce qui a été demandé. Ceci étant dit, la majorité des listes linéaires OBT contiennent des analyses uni et bivariées, les analyses temporelles et spatiales.
+Bien que l'interface générale soit la même pour toutes les listes linéaires OBT, les analyses sont encodées dans le fichier **setup** et varient donc d'une maladie à une autre, en fonction de ce qui a été demandé. Ceci étant dit, la majorité des listes linéaires OBT contiennent des analyses uni et bivariées, ainsi que des analyses temporelles et spatiales.
 
 Il y a quelques point à retenir sur les analyses dans les listes linéaires OBT : 
 
-There are a couple of important things to remember about the analyses in OBT linelists:
-
-1. Les analyses doivent être **mises à jour** manuellement avant utilisation.
+1. Les analyses **doivent être mises à jour** manuellement avant utilisation.
 
 ![Bouton de mise à jour des analyses dans le menu OBT](../module_1/images/004-refresh.png){fig-align="center"}
 
 2. Si vous filtrez les données dans la feuille patients, cela sera reflété dans les analyses *après mise à jour* (un texte en rouge vous avertira que c'est le cas).
 
-3. Vous pouvez modifier l'apparence des graphiques (qui sont crées automatiquement et, nous le concédons, sont un peu moches). Vous pouvez pour cela utiliser les [outils classiques d'Excel](https://support.microsoft.com/fr-fr/office/mettre-en-forme-les-%C3%A9l%C3%A9ments-d-un-graphique-b6c787d5-f90a-41d2-a901-9d3ed9f0dbf0), comme vous le feriez pour vos propres figures^[Malheureusement, les modifications des graphiques ne peuvent pas être migrées vers une autre linelist, donc je vous conseille de vous restreindre aux graphes qui sont peu lisibles, ou que vous exportez régulièrement dans des rapports ou présentations, ou qui vous font _vraiment_ saigner les yeux.].
+3. Vous pouvez modifier l'apparence des graphiques (qui sont crées automatiquement et, nous le concédons, peu moches par défaut). Vous pouvez pour cela utiliser les [outils classiques d'Excel](https://support.microsoft.com/fr-fr/office/mettre-en-forme-les-%C3%A9l%C3%A9ments-d-un-graphique-b6c787d5-f90a-41d2-a901-9d3ed9f0dbf0), comme vous le feriez pour vos propres figures^[Malheureusement, les modifications des graphiques ne peuvent pas être migrées vers une autre linelist, donc je vous conseille de vous restreindre aux graphes qui sont peu lisibles, que vous exportez régulièrement dans des rapports ou présentations, ou qui vous font _vraiment_ saigner les yeux.].
 
 Nous allons commencer par explorer les analyses sur les données non filtrées.
 
 ::: {.instructions}
-Placez-vous sur la feuille contenant les données patients, tapez sur la touche **F9** (force le calcul de toutes les formules), puis ouvrez le menu OBT et cliquez sur le bouton pour nettoyer tous les filtres. Ensuite, mettez à jour les analyses.
+1. Placez-vous sur la feuille contenant les données patients
+
+2. Tapez sur la touche **F9** (force le calcul de toutes les formules)
+
+3. Ouvrez le menu OBT et cliquez sur le bouton pour nettoyer tous les filtres. 
+
+4. Ensuite, mettez à jour les analyses.
 :::
 
 Maintenant que les analyses sont prêtes, nous allons pouvoir les explorer.
@@ -374,13 +378,13 @@ Explorez la feuille et répondez aux questions suivantes :
 - Combien de patients sont malnutris sévère (MAS) ?
 - Combien de patients sont décédés dans la structure de santé ?
 - Combien de patients sont des garçons de moins de cinq ans ?
-- Combien des patients MAS sont positifs pour la test palu ?
+- Combien de patients MAS sont positifs au test palu ?
 :::
 
 Intéressons nous à présent aux caractéristiques des patients décédés.
 
 ::: {.instructions}
-1. Retournez dans la feuille des données patients. utilisez les filtres pour sélectionner seulement les patients décédés (dans le centre ou dans la communauté, comme vous voulez).
+1. Retournez dans la feuille des données patients. Utilisez les filtres pour sélectionner seulement les patients décédés (dans le centre ou dans la communauté, comme vous voulez).
 
 2. Rafraîchissez les analyses et retournez sur la feuille des tableaux simples.
 
@@ -404,17 +408,17 @@ Maintenant allons sur le feuille "Analyses temporelles". Sur cette feuille, vous
 Les courbes épidémiques sont en dessous des tableaux.
 
 ::: {.callout-note}
-Cette liste linéaire contient un seul gros tableau, mais d'autres linelists peuvent contenir plusieurs tableaux, organisés en sections. Les graphiques seront tout le temps après les tables. :::
+Cette liste linéaire contient un seul gros tableau, mais d'autres linelists peuvent contenir plusieurs tableaux, organisés en sections. Les graphiques seront tout le temps après les tables.
 :::
 
 ::: {.instructions}
-- Enlevez les filtres qui étaient sur les données et mettez à jour les analyses
+- Enlevez les filtres qui étaient sur les données et mettez à jour les analyses.
 - Vérifiez les dates de notification des cas minimum et maximum. Quelles sont les unités à considérer pour les analyses temporelles ?
-- Dans un premier temps, regardons les tables en unité "semaine". Est-ce que toutes les données sont représentées dans la table ?
+- Dans un premier temps, utilisons l'unité `semaine`. Est-ce que toutes les données sont représentées dans la table ?
 - Combien de patients ont été déchargés lors de la semaine 18 de 2022 ?
 - Maintenant, changez la date de début de période pour ne faire afficher que les semaines de 2023.
 - Combien de patients étaient hospitalisés dans la seconde semaine de Janvier 2023 ?
-- Changez les unités en "Mois". Combien de patients ont été admis en Janvier 2023 ?
+- Changez les unités en `Mois`. Combien de patients ont été admis en Janvier 2023 ?
 :::
 
 Maintenant, allons voir les graphiques. Vous devriez voir un graphique similaire à celui-ci : 
@@ -424,7 +428,7 @@ Maintenant, allons voir les graphiques. Vous devriez voir un graphique similaire
 C'est suffisant pour établir l'état de l'épidémie, mais vous ne voudriez pas exporter la figure en l'état dans un rapport ou une présentation. En plus d'améliorations cosmétiques de l'apparence, il faudrait utiliser les filtrer du graphique pour cachez les semaines vides à la droite du graphique : 
 
 - sélectionner le graphe : quelques boutons apparaissent alors dans le coin en haut à droite.
-- utiliser le bouton pour filtrer (icone en forme d'entonnoir, le dernier) pour filtrer les catégories que vous ne voulez pas voir
+- utiliser le bouton pour filtrer pour filtrer les catégories que vous ne voulez pas voir (icone en forme d'entonnoir, le dernier).
 
 
 ::: {.callout-warning}
@@ -433,7 +437,7 @@ N'oubliez pas d'enlever ou d'ajuster les filtres lorsque vous ajoutez de nouvell
 Le corolaire est que si un collègue vous demande de l'aide sur une linelist où les données sont à jour dans la table mais n'apparaissent pas sur le graphique, les filtres sont probablement la source du problème
 :::
 
-![Graphe un peu amélioré pour publication](../module_1/images/009-img-temporal-hospit_pimped.png){fig-align="center"}
+![Graphe un peu amélioré pour un raport](../module_1/images/009-img-temporal-hospit_pimped.png){fig-align="center"}
 
 
 #### Lieu : analyses spatiales
@@ -444,16 +448,16 @@ Rendons-nous maintenant sur la troisième  feuille d'analyses. Elle nous montrer
 Vous pouvez sélectionner le niveau administratif auquel vous voulez voir les données (1 à 4).
 
 ::: {.instructions}
-Cliquez sur le bouton bleu "<Sélectionnez votre niveau administratif>" et testez les différentes options. 
+Cliquez sur le bouton bleu "Sélectionnez votre niveau administratif" et testez les différentes options. 
 
 - Quels niveaux ont des données (intéressantes) ?
 - Combien de patients y-a-t'il à Moissala Est ?
 :::
 
-Pour cette linelist, les données intéressantes sont au niveau "zone de responsabilité" (niveau admin 3), mais en fonction de vos données, d'autres niveaux peuvent être pertinents à regarder, si les personnes voyagent beaucoup, ou si vous avez crée une liste linéaire "master" à partir de plusieurs fichiers.
+Pour cette linelist, les données intéressantes sont au niveau "zone de responsabilité" (niveau admin 3), mais en fonction de vos données, d'autres niveaux pourraient être pertinents à regarder, si les personnes voyagent beaucoup, ou si vous avez crée une liste linéaire "master" à partir de plusieurs fichiers par exemple.
 
 
-#### Lieu et temps :analyses spatio-temporelles
+#### Lieu et temps : analyses spatio-temporelles
 
 La dernière feuille d'analyse est un hybride entre la feuille d'analyse temporelle et celle d'analyse spatiale : elle vous permet de suivre ne nombre de cas dans quelques *endroits* de votre choix au cours du temps.
 
@@ -471,7 +475,7 @@ La dernière feuille d'analyse est un hybride entre la feuille d'analyse tempore
 
 ![Paramètres des analyses spatio-temporelles](../module_1/images/010-img-spatio-temporal.png){fig-align="center"}
 
-Nous arrivons à la fin de notre grand *tour* des feuilles d'analyses.
+Nous arrivons à la fin de notre *grand tour* des feuilles d'analyses.
 
 
 ## Partie 3 : résolution des problèmes de la liste linéaire 
@@ -489,14 +493,14 @@ Identifiez la source des problèmes suivants et proposez une solution.
 **Problème** : votre collègue ouvre le fichier et va sur le menu OBT comme vous lui avez expliqué, mais les boutons ne marchent pas, et n'ont pas de description (ou la description est du charabia).
 
 ::: {.callout-tip title="Réponse" collapse=true}
-Les macros ne s'exécutent pas ou pas correctement. Le plus probable est que les macros ne sont pas autorisées; plus rarement, le projet VBA ne s'est pas lancé correctement ou a planté.
+Les macros ne s'exécutent pas ou pas correctement. Le plus probable est que les macros ne sont pas autorisées; plus rarement, le projet VBA ne s'est pas lancé correctement ou a planté. Que se passe-t-il ?
 
 Demandez leur de fermer et réouvrir le fichier pour voir si ça résout le problème (en particulier si la linelist marchait chez eux avant). Si le problème persiste, vérifiez que le fichier est bien débloqué, et qu'ils ont bien autorisé les macros (voir @sec-unblock-file).
 :::
 
 ### Méconnaissance générale du fichier
 
-De nombreuses questions que vous pourrez avoir vient du fait que les gens ne lisent pas la documentation, y compris quand elle a été explicitement envoyée pour résoudre un problème. En particulier, les gens ignorent souvent l'existence du [menu OBT](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html). la bonne nouvelle est que un grand nombre de requêtes sont faciles à régler. 
+De nombreuses questions que vous pourrez avoir vient du fait que les gens ne lisent pas la documentation, y compris quand elle a été explicitement envoyée pour résoudre un problème. En particulier, les gens ignorent souvent l'existence du [menu OBT](https://epicentre-msf.github.io/outbreak-tools/reference/ribbons_linelist.html). La bonne nouvelle est que un grand nombre de requêtes sont faciles à régler. 
 
 
 #### Plus de place !
@@ -510,7 +514,7 @@ Comment résoudre le problème ?
 ::: {.callout-tip title="Réponse" collapse=true}
 Il faut utiliser le bouton "Ajouter des lignes" du menu OBT pour ajouter des lignes au bas de la feuille.
 
-**Note**: les versions récentes de la liste linéaire ajoutent automatiquement cinq nouvelles lignes lorsque l'on rentre des données dans la dernière ligne, donc ce problème devrait devenir moins courant. Par contre, ça veut aussi dire qu'il faudrait migrer les données vers une version plus récente de la linelist !
+**Note**: les versions récentes de la liste linéaire ajoutent automatiquement cinq nouvelles lignes lorsque l'on rentre des données dans la dernière ligne, donc ce problème devrait devenir moins courant. Par contre, ça veut dire qu'ils utilisent une *vieille* version et qu'il faudrait migrer les données vers une version plus récente de la linelist !
 :::
 
 
@@ -532,7 +536,7 @@ Utilisez le bouton "Redimensionner la table" du menu OBT, qui supprime toutes le
 
 Vous recevez le mail suivant : 
 
-> Bonsoir, nous avons entré des données dans la base de donnée mais des lignes manquent alors que nous ne les avons pas supprimées.
+> Bonsoir, nous avons entré des données dans la base de données mais des lignes manquent alors que nous ne les avons pas supprimées.
 
 C'est pénible car il peut y avoir plusieurs sources à ce problème (et toutes n'ont pas de solution facile) : 
 
@@ -541,10 +545,10 @@ C'est pénible car il peut y avoir plusieurs sources à ce problème (et toutes 
 - Il y a eu un problème de synchronisation de OneDrive (le fichier local, plus récent, a été écrasé par erreur par la version du serveur, plus ancienne)
 - L'utilisateur a supprimé des données par erreur. Vu que la feuille est protégée, ça devrait être rare mais on n'est jamais complètement à l'abris.
 
-Il faudra discuter avec votre collègue pour essayer de comprendre ce qui a pu se passer et voir si une version peut être récupérer quelque part. mais commencez par vérifier les filtres au cas où ça soit un problème facile à régler. Quel bouton utiliseriez-vous ?
+Il faudra discuter avec votre collègue pour essayer de comprendre ce qui a pu se passer et voir si une version peut être récupérée quelque part. Mais commencez par vérifier les filtres au cas où ça soit un problème facile à régler. Quel bouton utiliseriez-vous ?
 
 ::: {.callout-tip title="Réponse"  collapse=true}
-Le bouton "Supprimer tous les filtrer" du menu OBT.
+Le bouton "Supprimer tous les filtres" du menu OBT.
 :::
 
 
@@ -564,12 +568,12 @@ Le jour suivant, vous recevez un autre message :
 
 > Bonjour, j'ai utilisé le bouton hier et ça a bien marché. Mais aujourd'hui, j'ai rentré de nouvelles données, utilisé le bouton et les analyses sont barrées. Je ne peux pas enlever le texte barré et je n'ai rien fait d'autre, juste entré les données.
 
-Une mise à jour récente^[Le problème est apparu sur certains ordis à partir de Novembre 2024.] d'Office 365 barre le texte qu'Excel considère comme "obsolètes" (une valeur qui dépend d'autres valeurs, qui elles ont été modifiées). Pour des raisons que nous n'expliquerons pas ici, le bouton "Actualiser les analyses" ne suffit pas (encore) à envoyer le signal à Excel que toutes les cellules ont été recalculées. Le problème va être réglé, mais en attendant, si ça vous arrive : 
+Une mise à jour récente^[Le problème est apparu sur certains ordis à partir de Novembre 2024.] d'Office 365 barre les valeurs qu'Excel considère comme "obsolètes" (une valeur qui dépend d'autres valeurs, qui elles ont été modifiées). Pour des raisons que nous n'expliquerons pas ici, le bouton "Actualiser les analyses" ne suffit pas (encore) à envoyer le signal à Excel que toutes les cellules ont été recalculées. Le problème va être réglé, mais en attendant, si ça vous arrive : 
 
-- Sur la feuille patient, tapez **F9** (raccourcis pour le bouton "Calculer maintenant" du menu Excel "Formules").
+- Sur la feuille patient, tapez **F9** (raccourci pour le bouton "Calculer maintenant" du menu Excel "Formules").
 - *Ensuite*, utilisez le bouton "Actualiser les analyses" du menu OBT.
 
-Si le problème vous gène souvent (et sur d'autres fichiers que les listes linéaires OBT) il est possible de [désactiver](](https://support.microsoft.com/fr-fr/office/mise-en-forme-des-valeurs-obsol%C3%A8tes-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) ) cette nouvelle fonctionalité dans Excel
+Si le problème vous gène souvent (et sur d'autres fichiers que les listes linéaires OBT) il est possible de [désactiver](https://support.microsoft.com/fr-fr/office/mise-en-forme-des-valeurs-obsol%C3%A8tes-4b5c63c3-5dc7-4e9b-8e24-88bed1987dbd) cette nouvelle fonctionalité dans Excel.
 
 
 ### Envoi des données vers le tableau de bord
@@ -583,9 +587,9 @@ Pour vous entraîner, voici quelques problèmes communs; pourquoi ça ne marche 
 
 - Le fichier `measles_linelist_moissala.xlsb`a été envoyé par mail à <EPI-DATA@epicentre.msf.org> et une erreur est revenue.
 
-Le fichier `measles_linelist_moissala_export_data_20250203-1136.xlsx` a été envoyé par mail à <EPI-DATA@epicentre.msf.org> et une erreur est revenue.
+- Le fichier `measles_linelist_moissala_export_data_20250203-1136.xlsx` a été envoyé par mail à <EPI-DATA@epicentre.msf.org> et une erreur est revenue.
 
-Le fichier `MSL_linelist__MSL24__info_country_code__info_organisation__info_facility_name__anonymous__vb-1003__20250103-1541` a été envoyé par mail à <EPI-DATA@epicentre.msf.org>. Il n'y a pas eu d'erreur, mais les données n'apparaissent pas sur le tableau de bord pour le Tchad...
+- Le fichier `MSL_linelist__MSL24__info_country_code__info_organisation__info_facility_name__anonymous__vb-1003__20250103-1541` a été envoyé par mail à <EPI-DATA@epicentre.msf.org>. Il n'y a pas eu d'erreur, mais les données n'apparaissent pas sur le tableau de bord pour le Tchad...
 
 
 ::: {.callout-tip collapse=true title="Indice"}
@@ -612,7 +616,7 @@ Votre collègue vous a contacté. Ille a des données pour le début de Janvier 
 
 **Problème 2.** Le registre indique qu'il y a eu 25 notifications la première semaine, et 40 la seconde, mais les chiffres sur la courbe épidémique ne sont pas corrects. Par contre, le résumé du nombre de notification total sur la feuille Univariée est correct (65 patients).
 
-**Problème 3.** Il y a eu cinq patients décédés dans le centre, 3 notifiés en semaine 1 et 2 en semaine 2. Mais les chiffres sur la feuille d'analyse temporelle sont faux.
+**Problème 3.** Il y a eu cinq patients décédés dans le centre, 3 notifiés en semaine 1 et 2 en semaine 2. Mais les chiffres sur la feuille d'analyses temporelles sont faux.
 
 
 ::: {.instructions}
@@ -620,7 +624,7 @@ Explorer la liste linéaire et enquêtez pour trouver la cause des problèmes. S
 :::
 
 
-::: {.callout-note title="Indice" collapse=true}
+::: {.callout-note title="Indices" collapse=true}
 **Problème 1.** Vérifiez les valeurs dans le dropdown menu pour la colonne incriminée, et les données entrées à l'aide du filtre.
 
 **Problème 2.** Par construction, les analyses temporelles nécessitent des dates.
@@ -629,7 +633,7 @@ Explorer la liste linéaire et enquêtez pour trouver la cause des problèmes. S
 :::
 
 
-::: {.callout-note title="Indice supplémentaires" collapse=true}
+::: {.callout-note title="Indices supplémentaires" collapse=true}
 **Problème 3.** Est ce que toutes les dates sont correctes ? Est-ce que toutes les catégories de la colonne "Type de sortie" sont valides ? Si oui, qu'est ce qui pourrait affecter une graphe qui nécessite une semaine épidémique ?
 :::
 
@@ -643,15 +647,15 @@ Explorer la liste linéaire et enquêtez pour trouver la cause des problèmes. S
 **Problème 1.** Des valeurs qui ne correspondent pas au menu déroulant ont été entré de force dans la colonne. Ces valeurs sont non valides et n'apparaissent pas dans le graphe ("Pos" au lieu de "Positif")
 
 
-**Problème 2.** La variable "date de notification" n'a pas été vérifiée et nettoyée, et certaines valeurs ne sont même pas reconnues comme des dates par Excel. Les patients correspondant ne peuvent donc pas apparaître dans les analyses _temporelles_ parce vu que les formules sur la date vont planter. Par contre, le résumé général de la feuille univarié n'est pas conditionnel à la date (pas pour le nombre total de patients en tout cas), et n'est donc pas affecté par le problème.
+**Problème 2.** La variable "date de notification" n'a pas été vérifiée et nettoyée, et certaines valeurs ne sont même pas reconnues comme des dates par Excel. Les patients correspondant ne peuvent donc pas apparaître dans les analyses _temporelles_ vu que les formules sur la date plantent. Par contre, le résumé général de la feuille univarié n'est pas conditionnel à la date (pas pour le nombre total de patients en tout cas), et n'est donc pas affecté par le problème.
 
-**Problème 3.** Une des dates de notification était mal rentrée, et pas reconnue comme date. Une des valeurs du type de sortie avait une faute d'orthographe. Enfin, la date de début de semaine était paramétré pour le dimanche, alors que ce devrait être le lundi pour le Tchad. Regardez colonne calculée "semaine de notification", changez le jour de début de semaine (menu OBT) et voyez la se mettre à jour (type F9 pour recalculer si nécessaire).
+**Problème 3.** Une des dates de notification était mal rentrée, et pas reconnue comme date. Une des valeurs du type de sortie avait une faute d'orthographe. Enfin, la date de début de semaine était paramétré pour le dimanche, alors que ce devrait être le lundi pour le Tchad. Regardez la colonne calculée "semaine de notification", changez le jour de début de semaine (menu OBT) et voyez-la se mettre à jour (utilisez F9 pour recalculer si nécessaire).
 :::
 
 Ce troisième problème était un peu vicieux, mais ça peut facilement se produire dans un pays ou le début de semaine n'est pas le même que par défaut (lundi), si quelqu'un a oublié de paramétrer le fichier.
 
 
-## Partie 4 : Le tableau de bord
+## Partie 4 : le tableau de bord
 
 ### 🧭 Contexte
 
@@ -660,9 +664,9 @@ La liste linéaire est déployée sur le terrain, et vous et vos collègues avez
 
 ### Accéder au tableau de bord
 
-Pour vous connecter au tableau de bord, il vous faut un compte. La création de ce compte est semi-automatique si vous avez une adresse MSF : allez sur  [cette page](https://reports.msf.net/signup/).^[Si vous n'avez pas d'adresse MSF mais pensez que vous devriez avoir accès au tableau de bord, contactez l'équipe EpiDS.]
+Pour vous connecter au tableau de bord, il vous faut un compte; la création de ce compte est semi-automatique si vous avez une adresse MSF : allez sur  [cette page](https://reports.msf.net/signup/).^[Si vous n'avez pas d'adresse MSF mais pensez que vous devriez avoir accès au tableau de bord, contactez l'équipe EpiDS.]
 
-Une fois que vous avez un compte, connectez vous au [tableau de bord intersection](https://apps.epicentre-msf.org/secure/app/intersectional-surveillance) et utilisez votre compte crée pour vous connecter.
+Une fois que vous avez un compte, connectez vous au [tableau de bord intersection](https://apps.epicentre-msf.org/secure/app/intersectional-surveillance) et utilisez votre compte créé pour vous connecter.
 
 
 ### Menu des filtres
@@ -683,7 +687,7 @@ Maintenant, le dashboard ne montre que les cas de rougeole au Tchad.
 
 ### La carte
 
-Intéressons-nous d'abors à la carte.
+Intéressons-nous d'abord à la carte.
 
 ::: {.instructions}
 - Zoomez sur la carte pour vous focaliser sur le Tchad
@@ -733,9 +737,9 @@ Utilisez les options du graphe (numéro 4 on @fig-dashboard) pour le modifier de
 ::: {.instructions}
 Explorez le dashboard et répondez aux questions suivantes :
 
-- quand est ce que le tableau de bord a été mis à jour pour la dernière fois pour la rougeole ? (Indice : pas besoin de fouiller les sous-menus, c'est marqué à un endroit de la page principale)
+- Quand est ce que le tableau de bord a été mis à jour pour la dernière fois pour la rougeole ? (Indice : pas besoin de fouiller les sous-menus, c'est marqué sur la page principale)
 
-- In 2024, quel pays a eu le plus de cas notifiés vis la liste linéaire ? Combien d'enfants de moins de six mois ont été notifiés ? Et en particulier, combien de filles ?
+- Quel pays a eu le plus de cas notifiés vis la liste linéaire en 2024 ? Combien d'enfants de moins de six mois ont été notifiés ? Et en particulier, combien de filles ?
 
 - Quand est-ce que le tableau de bord a été mis à jour pour la dernière fois pour l'hépatite E ?
 

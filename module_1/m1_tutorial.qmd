@@ -356,7 +356,13 @@ There are a couple of important things to remember about the analyses in OBT lin
 We are going to start by looking at the analyses without filters on the data.
 
 ::: {.instructions}
-Go to the patient data sheet, navigate to the OBT menu and click on the button to clear all filters. Then refresh analyses.
+1. Go to the patient data sheet
+
+2. Hit the **F9** key to force the recalculation of all formulas
+
+3. Navigate to the OBT menu and click on the button to clear all filters. 
+
+4. Then refresh analyses.
 :::
 
 Now that the data was refreshed, we can begin checking out the analyses sheets.

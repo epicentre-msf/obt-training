@@ -405,6 +405,7 @@ Les courbes épidémiques sont en dessous des tableaux.
 
 ::: {.callout-note}
 Cette liste linéaire contient un seul gros tableau, mais d'autres linelists peuvent contenir plusieurs tableaux, organisés en sections. Les graphiques seront tout le temps après les tables. :::
+:::
 
 ::: {.instructions}
 - Enlevez les filtres qui étaient sur les données et mettez à jour les analyses

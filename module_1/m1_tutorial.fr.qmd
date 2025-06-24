@@ -231,9 +231,9 @@ En règle générale, il devrait y avoir moins de colonnes dans le registre que 
 
 1. Une fois sur la nouvelle feuille, cliquez sur le bouton "Afficher/masquer les variables" pour ouvrir la fenêtre pop-up pour le registre.
 
-2. Cliquez sur le bouton "Correspondre au Show/Hide de la linelist" pour aligner la visibilité des variables du registre sur celles de la feuille patients.
+<!-- 2. Cliquez sur le bouton "Correspondre au Show/Hide de la linelist" pour aligner la visibilité des variables du registre sur celles de la feuille patients. -->
 
-3. Cachez les variables qui n'ont pas besoin d'être dans le registre.
+2. Cachez les variables qui n'ont pas besoin d'être dans le registre.
 :::
 
 
@@ -373,10 +373,10 @@ Explorez la feuille et répondez aux questions suivantes :
 - Combien de patients ont plus de 15 ans ?
 - Combien de patients sont des femmes ou des filles ?
 - Quel est le pourcentage de rougeole compliquée ?
-- Combien de patients sont malnutris sévère (MAS) ?
+- Combien de patients sont malnutris sévère (SAM) ?
 - Combien de patients sont décédés dans la structure de santé ?
 - Combien de patients sont des garçons de moins de cinq ans ?
-- Combien de patients MAS sont positifs au test palu ?
+- Combien de patients SAM sont positifs au test palu ?
 :::
 
 Intéressons nous à présent aux caractéristiques des patients décédés.
@@ -413,7 +413,7 @@ Cette liste linéaire contient un seul gros tableau, mais d'autres linelists peu
 - Enlevez les filtres qui étaient sur les données et mettez à jour les analyses.
 - Vérifiez les dates de notification des cas minimum et maximum. Quelles sont les unités à considérer pour les analyses temporelles ?
 - Dans un premier temps, utilisons l'unité `semaine`. Est-ce que toutes les données sont représentées dans la table ?
-- Combien de patients ont été déchargés lors de la semaine 18 de 2022 ?
+- Combien de patients ont été déchargés lors de la semaine 18 de 2023 ?
 - Maintenant, changez la date de début de période pour ne faire afficher que les semaines de 2023.
 - Combien de patients étaient hospitalisés dans la seconde semaine de Janvier 2023 ?
 - Changez les unités en `Mois`. Combien de patients ont été admis en Janvier 2023 ?
@@ -432,7 +432,7 @@ C'est suffisant pour établir l'état de l'épidémie, mais vous ne voudriez pas
 ::: {.callout-warning}
 N'oubliez pas d'enlever ou d'ajuster les filtres lorsque vous ajoutez de nouvelles données, ou vous ne les verrez pas sur le graphique !
 
-Le corolaire est que si un collègue vous demande de l'aide sur une linelist où les données sont à jour dans la table mais n'apparaissent pas sur le graphique, les filtres sont probablement la source du problème
+Le corollaire est que si un collègue vous demande de l'aide sur une linelist où les données sont à jour dans la table mais n'apparaissent pas sur le graphique, les filtres sont probablement la source du problème
 :::
 
 ![Graphe un peu amélioré pour un raport](../module_1/images/009-img-temporal-hospit_pimped.png){fig-align="center"}

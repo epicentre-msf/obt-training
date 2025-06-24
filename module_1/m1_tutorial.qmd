@@ -44,7 +44,7 @@ I am a handy bit of information that may be omitted if you are in a hurry, but t
 :::
 
 ::: {.instructions}
-Now do **do something**!
+Now **do something**!
 :::
 
 
@@ -236,10 +236,10 @@ Typically, there will be less columns in the register than the full linelist, as
 ::: {.instructions}
 
 1. Click on the "Show/Hide variables" button to open the popup window for the register.
+<!-- 
+2. Click on the "Match the show/hide from linelist" to align the register visibility on the linelist configuration as a start. -->
 
-2. Click on the "Match the show/hide from linelist" to align the register visibility on the linelist configuration as a start.
-
-3. Hide variables that are not needed in the register.
+2. Hide some variables that are not needed in the register.
 :::
 
 
